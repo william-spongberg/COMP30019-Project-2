@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Shooting : MonoBehaviour
 {
-    public Transform camera;
+    public Transform shootingCamera;
     public Transform firePoint;
     public GameObject projectile;
 
@@ -28,11 +28,11 @@ public class Shooting : MonoBehaviour
         {
             canFire = false;
 
-            GameObject nail = Instantiate(projectile, firePoint.position, camera.rotation);
+            GameObject nail = Instantiate(projectile, firePoint.position, shootingCamera.rotation);
 
             Rigidbody nailrb = nail.GetComponent<Rigidbody>();
 
-            Vector3 shotForce = camera.transform.forward * projectileSpeed;
+            Vector3 shotForce = shootingCamera.transform.forward * projectileSpeed;
 
             nailrb.AddForce(shotForce, ForceMode.Impulse);
         }

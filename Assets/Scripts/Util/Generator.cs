@@ -1,5 +1,7 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
+using Unity.AI.Navigation;
 using UnityEngine;
 
 [System.Serializable]
@@ -44,11 +46,16 @@ public class Generator : MonoBehaviour
     [SerializeField]
     private int cacheSize = 1000;
     [SerializeField]
-    private Queue<GameObject> spawnObjectsCache = new Queue<GameObject>();
+    private Queue<GameObject> spawnObjectsCache = new();
 
+    [Header("Nav Mesh Settings")]
     // for nav mesh
     [SerializeField]
-    private int bakeNav = 0;
+    private Boolean isBaking = false;
+    [SerializeField]
+    private NavMeshSurface navMeshSurface;
+
+    private Coroutine bakingCoroutine;
 
     void Start()
     {
@@ -106,7 +113,7 @@ public class Generator : MonoBehaviour
                         GameObject obj;
 
                         if (spawnObjectsCache.Count > 0)
-                        { 
+                        {
                             // reuse object from cache
                             obj = spawnObjectsCache.Dequeue();
                             obj.transform.position = worldPosition + offset;
@@ -133,8 +140,13 @@ public class Generator : MonoBehaviour
 
                         objects[gridPosition] = obj;
 
-                        // increment bakeNav if object is created
-                        bakeNav++;
+                        // new object created, bake nav mesh
+                        if (isBaking)
+                        {
+                            if (bakingCoroutine != null)
+                                StopCoroutine(bakingCoroutine);
+                            bakingCoroutine = StartCoroutine(BakeNavMeshAsync());
+                        }
                     }
                     else Debug.LogWarning("No object found for noise value: " + noiseValue);
                 }
@@ -172,8 +184,13 @@ public class Generator : MonoBehaviour
             Vector2Int gridPosition = kvp.Key;
             if (gridPosition.x < startX || gridPosition.x > endX || gridPosition.y < startY || gridPosition.y > endY)
             {
-                kvp.Value.SetActive(false);
-                spawnObjectsCache.Enqueue(kvp.Value);
+                GameObject obj = kvp.Value;
+                // don't destroy player
+                if (obj != player)
+                {
+                    obj.SetActive(false);
+                    spawnObjectsCache.Enqueue(obj);
+                }
                 keysToRemove.Add(gridPosition);
             }
         }
@@ -181,9 +198,6 @@ public class Generator : MonoBehaviour
         foreach (var key in keysToRemove)
         {
             objects.Remove(key);
-            
-            // decrement bakeNav if object is destroyed
-            bakeNav--;
         }
 
         // maintain the cache size
@@ -192,37 +206,26 @@ public class Generator : MonoBehaviour
             GameObject oldestObj = spawnObjectsCache.Dequeue();
             Destroy(oldestObj);
         }
+
+        // objects destroyed, bake nav mesh
+        if (keysToRemove.Count > 0 && isBaking)
+        {
+            if (bakingCoroutine != null)
+                StopCoroutine(bakingCoroutine);
+            bakingCoroutine = StartCoroutine(BakeNavMeshAsync());
+        }
     }
 
-    public int GetObjCount()
+    // bake nav mesh async
+    IEnumerator BakeNavMeshAsync()
     {
-        return bakeNav;
+        // clear the NavMeshSurface
+        navMeshSurface.navMeshData = null;
+        // wait for the end of the frame so all objects are updated
+        yield return new WaitForEndOfFrame();
+        // build
+        navMeshSurface.BuildNavMesh();
+        // wait for the end of the frame so the nav mesh is built
+        yield return new WaitForEndOfFrame();
     }
-
-    // old spawn logic, purely random
-    /*
-    SpawnObject GetRandomObj()
-    {
-        int totalWeight = 0;
-        int currentWeight = 0;
-
-        // sum all weights
-        foreach (SpawnObject obj in spawnObjects)
-        {
-            totalWeight += obj.spawnWeight;
-        }
-
-        // pick random weight
-        int randomWeight = Random.Range(0, totalWeight);
-
-        foreach (SpawnObject obj in spawnObjects)
-        {
-            currentWeight += obj.spawnWeight;
-            if (randomWeight <= currentWeight)
-            {
-                return obj;
-            }
-        }
-        return null;
-    } */
 }
