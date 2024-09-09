@@ -300,8 +300,40 @@ PrefabInstance:
       objectReference: {fileID: 47649218}
     - target: {fileID: 578106517759548981, guid: 0b592f4bb98269243a33b0d57cc55dc0, type: 3}
       propertyPath: noiseScale
-      value: 2
+      value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 578106517759548981, guid: 0b592f4bb98269243a33b0d57cc55dc0, type: 3}
+      propertyPath: spawnObjects.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 578106517759548981, guid: 0b592f4bb98269243a33b0d57cc55dc0, type: 3}
+      propertyPath: spawnObjects.Array.data[1].obj
+      value: 
+      objectReference: {fileID: 1928575511649141333, guid: ce809fa903d691d4abf41733dc1a383d, type: 3}
+    - target: {fileID: 578106517759548981, guid: 0b592f4bb98269243a33b0d57cc55dc0, type: 3}
+      propertyPath: spawnObjects.Array.data[2].obj
+      value: 
+      objectReference: {fileID: 1928575511649141333, guid: ce809fa903d691d4abf41733dc1a383d, type: 3}
+    - target: {fileID: 578106517759548981, guid: 0b592f4bb98269243a33b0d57cc55dc0, type: 3}
+      propertyPath: spawnObjects.Array.data[3].obj
+      value: 
+      objectReference: {fileID: 1928575511649141333, guid: ce809fa903d691d4abf41733dc1a383d, type: 3}
+    - target: {fileID: 578106517759548981, guid: 0b592f4bb98269243a33b0d57cc55dc0, type: 3}
+      propertyPath: spawnObjects.Array.data[4].obj
+      value: 
+      objectReference: {fileID: 5080206959274034438, guid: 4a4ffbba5e142dd4194ca9a5c5446b2b, type: 3}
+    - target: {fileID: 578106517759548981, guid: 0b592f4bb98269243a33b0d57cc55dc0, type: 3}
+      propertyPath: spawnObjects.Array.data[5].obj
+      value: 
+      objectReference: {fileID: 2779653366180083287, guid: 26f20eab96f17d041b6e6c792b43b5e5, type: 3}
+    - target: {fileID: 578106517759548981, guid: 0b592f4bb98269243a33b0d57cc55dc0, type: 3}
+      propertyPath: spawnObjects.Array.data[6].obj
+      value: 
+      objectReference: {fileID: 3472557093579564081, guid: 7ecbf04751d05b8409cb8f4629099752, type: 3}
+    - target: {fileID: 578106517759548981, guid: 0b592f4bb98269243a33b0d57cc55dc0, type: 3}
+      propertyPath: spawnObjects.Array.data[7].obj
+      value: 
+      objectReference: {fileID: 2209035915694768104, guid: da712ab3ba5228d4a820ee027a8f160c, type: 3}
     - target: {fileID: 670815318916286007, guid: 0b592f4bb98269243a33b0d57cc55dc0, type: 3}
       propertyPath: player
       value: 

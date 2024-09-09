@@ -169,16 +169,7 @@ public class Generator : MonoBehaviour
     {
         // map noise to a spawn object based on object count
         int index = Mathf.FloorToInt(noiseValue * spawnObjects.Count);
-
-        if (isBaking)
-            Debug.Log("Noise Value: " + noiseValue + " Index before: " + index);
-
-        index = Mathf.Clamp(index, 0, spawnObjects.Count-1);
-    
-        // log noise value, index, and spawnObjects count
-        if (isBaking)
-            Debug.Log("Noise Value: " + noiseValue + " Index after: " + index);
-    
+        index = Mathf.Clamp(index, 0, spawnObjects.Count - 1);
         return spawnObjects[index];
     }
 
