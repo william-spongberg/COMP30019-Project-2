@@ -463,7 +463,11 @@ PrefabInstance:
       objectReference: {fileID: 547252266}
     - target: {fileID: 3238390373545454291, guid: 79a50cdee7b64474486e23436e8857e3, type: 3}
       propertyPath: radius
-      value: 50
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3238390373545454291, guid: 79a50cdee7b64474486e23436e8857e3, type: 3}
+      propertyPath: cacheSize
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3238390373545454291, guid: 79a50cdee7b64474486e23436e8857e3, type: 3}
       propertyPath: spawnObjects.Array.size
@@ -757,6 +761,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8084257462724898344, guid: 1da39fd57a3bcf54b9087a9c79de9267, type: 3}
       propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8850099770000006947, guid: 1da39fd57a3bcf54b9087a9c79de9267, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8897668071451587730, guid: 1da39fd57a3bcf54b9087a9c79de9267, type: 3}

@@ -43,8 +43,6 @@ namespace StarterAssets
 		[Tooltip("What layers the character uses as ground")]
 		public LayerMask GroundLayers;
 
-
-		/*
 		[Header("Cinemachine")]
 		[Tooltip("The follow target set in the Cinemachine Virtual Camera that the camera will follow")]
 		public GameObject CinemachineCameraTarget;
@@ -55,7 +53,6 @@ namespace StarterAssets
 
 		// cinemachine
 		private float _cinemachineTargetPitch;
-	`	*/
 
 		// player
 		private float _speed;
@@ -120,12 +117,10 @@ namespace StarterAssets
 			Move();
 		}
 
-		/*
 		private void LateUpdate()
 		{
 			CameraRotation();
 		}
-		*/
 
 		private void GroundedCheck()
 		{
@@ -134,7 +129,6 @@ namespace StarterAssets
 			Grounded = Physics.CheckSphere(spherePosition, GroundedRadius, GroundLayers, QueryTriggerInteraction.Ignore);
 		}
 
-		/*
 		private void CameraRotation()
 		{
 			// if there is an input
@@ -156,7 +150,6 @@ namespace StarterAssets
 				transform.Rotate(Vector3.up * _rotationVelocity);
 			}
 		}
-		*/
 
 		private void Move()
 		{

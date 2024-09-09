@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -37,13 +38,17 @@ public class Generator : MonoBehaviour
     [SerializeField]
     private Dictionary<Vector2Int, GameObject> objects = new Dictionary<Vector2Int, GameObject>();
 
-    // ? keeps last 900 (30*30) objects in cache to reuse
+    // ? keeps last 1000 objects in cache to reuse
     // * (this is to prevent constant instantiation and destruction of objects, which causes lag)
     [Header("Cache Settings")]
     [SerializeField]
-    private int cacheSize = 900;
+    private int cacheSize = 1000;
     [SerializeField]
     private Queue<GameObject> spawnObjectsCache = new Queue<GameObject>();
+
+    // for nav mesh
+    [SerializeField]
+    private int bakeNav = 0;
 
     void Start()
     {
@@ -127,6 +132,9 @@ public class Generator : MonoBehaviour
                         }
 
                         objects[gridPosition] = obj;
+
+                        // increment bakeNav if object is created
+                        bakeNav++;
                     }
                     else Debug.LogWarning("No object found for noise value: " + noiseValue);
                 }
@@ -173,6 +181,9 @@ public class Generator : MonoBehaviour
         foreach (var key in keysToRemove)
         {
             objects.Remove(key);
+            
+            // decrement bakeNav if object is destroyed
+            bakeNav--;
         }
 
         // maintain the cache size
@@ -185,7 +196,7 @@ public class Generator : MonoBehaviour
 
     public int GetObjCount()
     {
-        return objects.Count;
+        return bakeNav;
     }
 
     // old spawn logic, purely random
