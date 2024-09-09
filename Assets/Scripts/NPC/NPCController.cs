@@ -24,8 +24,9 @@ public class NPCController : MonoBehaviour
 
         anim = GetComponent<Animator> ();
         agent = GetComponent<NavMeshAgent> ();
-        // Don’t update position automatically
-        //agent.updatePosition = false;
+
+        // animation multiplier
+        anim.SetFloat("MotionSpeed", 0.25f);
     }
 
     void Update()
@@ -38,8 +39,18 @@ public class NPCController : MonoBehaviour
         
         // let animation know agent speed
         anim.SetFloat("Speed", speed);
+    }
 
-        // animation multiplier
-        anim.SetFloat("MotionSpeed", speed);
+    // ? avoids annoying error messages
+    private void OnFootstep(AnimationEvent animationEvent)
+    {
+        // do nothing for now
+        // TODO: play footstep sound
+    }
+
+    private void OnLand(AnimationEvent animationEvent)
+    {
+        // do nothing for now
+        // TODO: play landing sound
     }
 }
