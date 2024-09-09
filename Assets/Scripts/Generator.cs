@@ -12,8 +12,9 @@ public class SpawnObject
 
 public class Generator : MonoBehaviour
 {
+    [Header("Grid Settings")]
     [SerializeField]
-    private int radius = 10;
+    private int radius = 30;
     [SerializeField]
     private float gap = 0f;
     [SerializeField]
@@ -21,6 +22,7 @@ public class Generator : MonoBehaviour
     [SerializeField]
     private GameObject player;
 
+    [Header("Perlin Noise Settings")]
     // perlin noise vars
     [SerializeField]
     private float noiseScale = 2f;
@@ -29,10 +31,19 @@ public class Generator : MonoBehaviour
     [SerializeField]
     private float offsetY = 100f;
 
+    [Header("Spawn Objects")]
     [SerializeField]
     private List<SpawnObject> spawnObjects = new List<SpawnObject>();
     [SerializeField]
     private Dictionary<Vector2Int, GameObject> objects = new Dictionary<Vector2Int, GameObject>();
+
+    // ? keeps last 900 (30*30) objects in cache to reuse
+    // * (this is to prevent constant instantiation and destruction of objects, which causes lag)
+    [Header("Cache Settings")]
+    [SerializeField]
+    private int cacheSize = 900;
+    [SerializeField]
+    private Queue<GameObject> spawnObjectsCache = new Queue<GameObject>();
 
     void Start()
     {
@@ -80,16 +91,27 @@ public class Generator : MonoBehaviour
                 Vector2Int gridPosition = new Vector2Int(x, y);
                 if (!objects.ContainsKey(gridPosition))
                 {
+                    // get noise value for current grid position
                     float noiseValue = GetPerlinNoiseValue(x, y, noiseScale, offsetX, offsetY);
                     SpawnObject sObj = GetObjectBasedOnNoise(noiseValue);
                     if (sObj != null)
                     {
-
                         Vector3 worldPosition = new Vector3(x * (gridDimensions.x + gap), -gridDimensions.y, y * (gridDimensions.z + gap));
                         Vector3 offset = sObj.offsets;
-                        GameObject obj = sObj.obj;
+                        GameObject obj;
 
-                        obj = Instantiate(obj, worldPosition + offset, Quaternion.identity);
+                        if (spawnObjectsCache.Count > 0)
+                        { 
+                            // reuse object from cache
+                            obj = spawnObjectsCache.Dequeue();
+                            obj.transform.position = worldPosition + offset;
+                            obj.transform.rotation = Quaternion.identity;
+                            obj.SetActive(true);
+                        }
+                        else
+                        {
+                            obj = Instantiate(sObj.obj, worldPosition + offset, Quaternion.identity);
+                        }
 
                         // ! in progress attempt to fix objects not being of same size in grid
                         // scale to grid scale if not the same
@@ -106,6 +128,7 @@ public class Generator : MonoBehaviour
 
                         objects[gridPosition] = obj;
                     }
+                    else Debug.LogWarning("No object found for noise value: " + noiseValue);
                 }
             }
         }
@@ -141,7 +164,8 @@ public class Generator : MonoBehaviour
             Vector2Int gridPosition = kvp.Key;
             if (gridPosition.x < startX || gridPosition.x > endX || gridPosition.y < startY || gridPosition.y > endY)
             {
-                Destroy(kvp.Value);
+                kvp.Value.SetActive(false);
+                spawnObjectsCache.Enqueue(kvp.Value);
                 keysToRemove.Add(gridPosition);
             }
         }
@@ -149,6 +173,13 @@ public class Generator : MonoBehaviour
         foreach (var key in keysToRemove)
         {
             objects.Remove(key);
+        }
+
+        // maintain the cache size
+        while (spawnObjectsCache.Count > cacheSize)
+        {
+            GameObject oldestObj = spawnObjectsCache.Dequeue();
+            Destroy(oldestObj);
         }
     }
 
