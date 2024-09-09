@@ -26,13 +26,12 @@ public class Generator : MonoBehaviour
     private GameObject player;
 
     [Header("Perlin Noise Settings")]
-    // perlin noise vars
     [SerializeField]
     private float noiseScale = 2f;
     [SerializeField]
-    private float offsetX = 100f;
+    private float offsetX = 0;
     [SerializeField]
-    private float offsetY = 100f;
+    private float offsetY = 0;
 
     [Header("Spawn Objects")]
     [SerializeField]
@@ -59,6 +58,10 @@ public class Generator : MonoBehaviour
 
     void Start()
     {
+        // generate random offsets
+        offsetX = UnityEngine.Random.Range(0, 999999);
+        offsetY = UnityEngine.Random.Range(0, 999999);
+
         // update dimensions for each spawn object if not manually set
         for (int i = 0; i < spawnObjects.Count; i++)
         {
@@ -166,7 +169,16 @@ public class Generator : MonoBehaviour
     {
         // map noise to a spawn object based on object count
         int index = Mathf.FloorToInt(noiseValue * spawnObjects.Count);
-        index = Mathf.Clamp(index, 0, spawnObjects.Count - 1);
+
+        if (isBaking)
+            Debug.Log("Noise Value: " + noiseValue + " Index before: " + index);
+
+        index = Mathf.Clamp(index, 0, spawnObjects.Count-1);
+    
+        // log noise value, index, and spawnObjects count
+        if (isBaking)
+            Debug.Log("Noise Value: " + noiseValue + " Index after: " + index);
+    
         return spawnObjects[index];
     }
 
