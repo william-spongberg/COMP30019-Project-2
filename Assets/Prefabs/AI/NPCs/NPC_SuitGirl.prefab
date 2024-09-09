@@ -1360,7 +1360,6 @@ GameObject:
   - component: {fileID: 2090373149329421671}
   - component: {fileID: 7854437136863214570}
   - component: {fileID: 4579409698440211922}
-  - component: {fileID: -8864798933904232486}
   - component: {fileID: 576238711838329015}
   m_Layer: 0
   m_Name: NPC_SuitGirl
@@ -1406,7 +1405,7 @@ Animator:
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 897b34267f422c1499700402763d096e, type: 3}
   m_Controller: {fileID: 9100000, guid: 40db3173a05ae3242b1c182a09b0a183, type: 2}
-  m_CullingMode: 0
+  m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
@@ -1428,7 +1427,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c061b5cabc9b1943a422d474b8bdac9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  speed: 6
   velocity: {x: 0, y: 0, z: 0}
   dest: {x: 0, y: 0, z: 0}
 --- !u!195 &7854437136863214570
@@ -1476,22 +1475,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
---- !u!208 &-8864798933904232486
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3714298338384521418}
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Shape: 0
-  m_Extents: {x: 0.2, y: 1, z: 0.2}
-  m_MoveThreshold: 0.1
-  m_Carve: 1
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 1, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!114 &576238711838329015
 MonoBehaviour:
   m_ObjectHideFlags: 0

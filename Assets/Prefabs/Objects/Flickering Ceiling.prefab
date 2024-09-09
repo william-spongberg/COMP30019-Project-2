@@ -140,7 +140,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2549845298457606243, guid: 8dc9d1e8ed5af08449964fcaa139ef09, type: 3}
       propertyPath: timeDelay
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7720342684438357755, guid: 8dc9d1e8ed5af08449964fcaa139ef09, type: 3}
       propertyPath: m_Type
@@ -161,6 +161,10 @@ PrefabInstance:
     - target: {fileID: 7720342684438357755, guid: 8dc9d1e8ed5af08449964fcaa139ef09, type: 3}
       propertyPath: m_Color.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7720342684438357755, guid: 8dc9d1e8ed5af08449964fcaa139ef09, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8100498893618119533, guid: 8dc9d1e8ed5af08449964fcaa139ef09, type: 3}
       propertyPath: m_LocalPosition.x
