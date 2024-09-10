@@ -140,7 +140,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2549845298457606243, guid: 8dc9d1e8ed5af08449964fcaa139ef09, type: 3}
       propertyPath: timeDelay
-      value: 0
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2549845298457606243, guid: 8dc9d1e8ed5af08449964fcaa139ef09, type: 3}
+      propertyPath: isFlickering
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7720342684438357755, guid: 8dc9d1e8ed5af08449964fcaa139ef09, type: 3}
       propertyPath: m_Type
