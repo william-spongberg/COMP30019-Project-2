@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3238702806629808546}
   - component: {fileID: 9021732278468825250}
   m_Layer: 0
-  m_Name: Desk
+  m_Name: Desk Legacy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

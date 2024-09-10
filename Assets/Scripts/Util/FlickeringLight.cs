@@ -4,28 +4,28 @@ using UnityEngine;
 
 public class FlickerControl : MonoBehaviour
 {
-    public bool isFlickering = false;
-    public float timeDelay;
+    [SerializeField]
+    private float timeDelay;
 
-    public GameObject lightObject;
-
-    void Update()
+    void Start()
     {
-        if (isFlickering == false)
-        {
-            StartCoroutine(FlickeringLight());
-        }
+        StartCoroutine(FlickeringLight());
     }
-    
+
+    // if disabled by cache, restart flickering again
+    void OnEnable() {
+        StartCoroutine(FlickeringLight());
+    }
+
     IEnumerator FlickeringLight()
     {
-        isFlickering = true;
-        lightObject.GetComponent<Light>().enabled = false;
-        timeDelay = Random.Range(0.01f, 3f);
-        yield return new WaitForSeconds(timeDelay);
-        lightObject.GetComponent<Light>().enabled = true;
-        timeDelay = Random.Range(0.01f, 3f);
-        yield return new WaitForSeconds(timeDelay);
-        isFlickering = false;
+        while(true) {
+            GetComponent<Light>().enabled = false;
+            timeDelay = Random.Range(0.01f, 0.5f);
+            yield return new WaitForSeconds(timeDelay);
+            GetComponent<Light>().enabled = true;
+            timeDelay = Random.Range(0.01f, 0.5f);
+            yield return new WaitForSeconds(timeDelay);
+        }
     }
 }
