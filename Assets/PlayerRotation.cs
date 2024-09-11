@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerRotationSync : MonoBehaviour
 {
     [SerializeField]
-    private Transform virtualCamera;  // Reference to the Cinemachine Virtual Camera
+    private Transform Camera;  // Reference
 
     void Start()
     {
@@ -14,7 +14,7 @@ public class PlayerRotationSync : MonoBehaviour
     void Update()
     {
         // Sync the player's Y-axis rotation with the camera's Y-axis rotation (yaw)
-        Vector3 cameraRotation = virtualCamera.eulerAngles;
+        Vector3 cameraRotation = Camera.eulerAngles;
         transform.rotation = Quaternion.Euler(0f, cameraRotation.y, 0f);
     }
 }
