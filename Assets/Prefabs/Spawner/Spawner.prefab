@@ -127,6 +127,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4250294784374621801}
     m_Modifications:
+    - target: {fileID: 5746765666941008726, guid: f8816941f3726eb4f886fc7cfb008855, type: 3}
+      propertyPath: radius
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 6635090977031751030, guid: f8816941f3726eb4f886fc7cfb008855, type: 3}
       propertyPath: m_Name
       value: DeskSpawner
