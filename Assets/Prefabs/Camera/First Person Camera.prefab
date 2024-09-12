@@ -697,6 +697,7 @@ GameObject:
   - component: {fileID: 4738978750873715571}
   - component: {fileID: 8841029894687649973}
   - component: {fileID: 1275633837104580393}
+  - component: {fileID: 5979128300960059334}
   m_Layer: 8
   m_Name: GunPoint
   m_TagString: Untagged
@@ -790,6 +791,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5979128300960059334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4621180376938777241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57f204209fd8841618bc57cc8b627c47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Camera: {fileID: 5851962678020888003}
 --- !u!1 &5671419722277701880
 GameObject:
   m_ObjectHideFlags: 0
@@ -958,9 +972,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 3134142600089864468}
-  bulletForce: 30
+  bulletForce: 20
   shootingCooldown: 0.3
-  spread: 3
+  spread: 0.3
   reloadTime: 2
   bulletRange: 50
   magazineSize: 12
