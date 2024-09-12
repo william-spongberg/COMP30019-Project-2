@@ -140,6 +140,10 @@ PrefabInstance:
       propertyPath: m_BlendUpdateMethod
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3934904193350626699, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
+      propertyPath: m_BlendUpdateMethod
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4236896413806958649, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
