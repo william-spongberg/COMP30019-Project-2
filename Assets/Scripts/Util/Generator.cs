@@ -22,7 +22,6 @@ public class Generator : MonoBehaviour
     private float gap = 0f;
     [SerializeField]
     private Vector3 gridDimensions = new(0, 0, 0);
-    [SerializeField]
     private GameObject player;
 
     [Header("Perlin Noise Settings")]
@@ -61,6 +60,14 @@ public class Generator : MonoBehaviour
         // generate random offsets
         offsetX = UnityEngine.Random.Range(0, 999999);
         offsetY = UnityEngine.Random.Range(0, 999999);
+
+        // get player object
+        player = GameObject.FindGameObjectWithTag("Player");
+        if (player == null)
+        {
+            Debug.LogError("Player object not found.");
+            return;
+        }
 
         // update dimensions for each spawn object if not manually set
         for (int i = 0; i < spawnObjects.Count; i++)
