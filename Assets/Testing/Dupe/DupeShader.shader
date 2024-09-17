@@ -34,6 +34,7 @@ Shader "Unlit/DupeShader"
                 UNITY_DEFINE_INSTANCED_PROP(float4, _InstanceOffset)
             UNITY_INSTANCING_BUFFER_END(Props)
             
+            // grab the instance offset from the buffer
             vertOut vert(vertIn v)
             {
                 UNITY_SETUP_INSTANCE_ID(v);
@@ -44,6 +45,8 @@ Shader "Unlit/DupeShader"
                 o.uv = v.uv;
                 return o;
             }
+
+
             half4 frag(vertOut i) : SV_Target
             {
                 half4 color = tex2D(_MainTex, i.uv);
