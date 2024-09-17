@@ -41,6 +41,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5861757426807474281}
     m_Modifications:
+    - target: {fileID: 1981401910004355618, guid: 3f126b3a12eacfa45b8771e340a18827, type: 3}
+      propertyPath: radius
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 1981401910004355618, guid: 3f126b3a12eacfa45b8771e340a18827, type: 3}
+      propertyPath: cacheSize
+      value: 256
+      objectReference: {fileID: 0}
     - target: {fileID: 3626663141496292196, guid: 3f126b3a12eacfa45b8771e340a18827, type: 3}
       propertyPath: m_Name
       value: CeilingGenerator
@@ -146,6 +154,14 @@ PrefabInstance:
     - target: {fileID: 2692857802554171160, guid: 03b5395efab59384fae56e5df6664bfa, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3880687694341287553, guid: 03b5395efab59384fae56e5df6664bfa, type: 3}
+      propertyPath: radius
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 3880687694341287553, guid: 03b5395efab59384fae56e5df6664bfa, type: 3}
+      propertyPath: cacheSize
+      value: 256
       objectReference: {fileID: 0}
     - target: {fileID: 3880687694341287553, guid: 03b5395efab59384fae56e5df6664bfa, type: 3}
       propertyPath: noiseScale
