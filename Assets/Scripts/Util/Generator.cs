@@ -233,6 +233,8 @@ public class Generator : MonoBehaviour
         navMeshSurface.navMeshData = null;
         // wait for the end of the frame so all objects are updated
         yield return new WaitForEndOfFrame();
+        // update to player position
+        navMeshSurface.center = new Vector3(player.transform.position.x, 0, player.transform.position.z);
         // build
         navMeshSurface.BuildNavMesh();
         // wait for the end of the frame so the nav mesh is built
