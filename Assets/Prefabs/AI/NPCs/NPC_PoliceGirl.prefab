@@ -2362,6 +2362,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7101658417484751443}
   - component: {fileID: 272112473906639122}
+  - component: {fileID: 1188653067026493678}
   m_Layer: 0
   m_Name: Character_Female_Police
   m_TagString: Untagged
@@ -2404,7 +2405,8 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 09f108791a1f1404a95d15f84fda9e90, type: 2}
+  - {fileID: 2100000, guid: 775d02595bddb644fbcb40fc6f0f4620, type: 2}
+  - {fileID: 2100000, guid: 7806446f7c57eb04b8af669fd76f2ff1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2486,6 +2488,24 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.0000038146973, y: 89.05433, z: -5.7677507}
     m_Extent: {x: 102.12045, y: 98.930046, z: 25.185326}
   m_DirtyAABB: 0
+--- !u!114 &1188653067026493678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7973321728909132514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba36e0ecf7b4355469445c91be6478d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 7973321728909132514}
+  scale: {x: 0.01, y: 0.01, z: 0.01}
+  instanceCount: 3
+  range: 3
+  minLifetime: 0.1
+  maxLifetime: 0.5
 --- !u!1 &8475993026068901067
 GameObject:
   m_ObjectHideFlags: 0

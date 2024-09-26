@@ -1547,6 +1547,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7948322452459764764}
   - component: {fileID: 5939879108231012350}
+  - component: {fileID: 7657737619917472087}
   m_Layer: 0
   m_Name: Character_BusinessMan_Suit
   m_TagString: Untagged
@@ -1590,6 +1591,7 @@ SkinnedMeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 775d02595bddb644fbcb40fc6f0f4620, type: 2}
+  - {fileID: 2100000, guid: 7806446f7c57eb04b8af669fd76f2ff1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1671,6 +1673,24 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.000015258789, y: 86.43996, z: -5.6034155}
     m_Extent: {x: 102.45593, y: 96.25047, z: 27.715912}
   m_DirtyAABB: 0
+--- !u!114 &7657737619917472087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5152331254336452632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba36e0ecf7b4355469445c91be6478d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 5152331254336452632}
+  scale: {x: 0.01, y: 0.01, z: 0.01}
+  instanceCount: 3
+  range: 3
+  minLifetime: 0.1
+  maxLifetime: 0.5
 --- !u!1 &5324520147542037402
 GameObject:
   m_ObjectHideFlags: 0

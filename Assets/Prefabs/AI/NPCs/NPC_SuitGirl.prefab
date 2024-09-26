@@ -2175,6 +2175,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5087962530525493516}
   - component: {fileID: 3561145625342051566}
+  - component: {fileID: 4774000173949702201}
   m_Layer: 0
   m_Name: Character_BusinessWoman
   m_TagString: Untagged
@@ -2218,6 +2219,7 @@ SkinnedMeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 775d02595bddb644fbcb40fc6f0f4620, type: 2}
+  - {fileID: 2100000, guid: 7806446f7c57eb04b8af669fd76f2ff1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2299,6 +2301,24 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.000011444092, y: 86.18578, z: -5.4394407}
     m_Extent: {x: 102.12019, y: 95.9963, z: 24.934273}
   m_DirtyAABB: 0
+--- !u!114 &4774000173949702201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6940598646186477520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba36e0ecf7b4355469445c91be6478d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 6940598646186477520}
+  scale: {x: 0.01, y: 0.01, z: 0.01}
+  instanceCount: 3
+  range: 3
+  minLifetime: 0.1
+  maxLifetime: 0.5
 --- !u!1 &6942163149393950073
 GameObject:
   m_ObjectHideFlags: 0

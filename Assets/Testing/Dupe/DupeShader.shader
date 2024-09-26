@@ -52,10 +52,11 @@ Shader "Unlit/DupeShader"
             half4 frag(vertOut i) : SV_Target
             {
                 half4 color = tex2D(_MainTex, i.uv);
-                // // tint red
+                // tint red
                 // color.rgb *= float3(1.0, 0.1, 0.1);
-                // // darken
-                // color.rgb *= 0.1;
+
+                // darken
+                color.rgb *= 0.25;
                 return color;
             }
             ENDCG
