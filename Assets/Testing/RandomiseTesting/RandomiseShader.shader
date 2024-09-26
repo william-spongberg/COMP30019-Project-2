@@ -48,11 +48,11 @@ Shader "Unlit/RandomiseShader"
 				v.vertex += displacement;
 
                 float random;
-                Unity_RandomRange_float(_Time + v.vertex.x, 0.0, 1.0, random);
+                Unity_RandomRange_float(_Time + v.vertex.x, 0.0, 0.1, random);
                 v.vertex.x += random;
-                Unity_RandomRange_float(_Time + v.vertex.y, 0.0, 1.0, random);
+                Unity_RandomRange_float(_Time + v.vertex.y, 0.0, 0.1, random);
                 v.vertex.y += random;
-                Unity_RandomRange_float(_Time + v.vertex.z, 0.0, 1.0, random);
+                Unity_RandomRange_float(_Time + v.vertex.z, 0.0, 0.1, random);
                 v.vertex.z += random;
 
                 vertOut o;
