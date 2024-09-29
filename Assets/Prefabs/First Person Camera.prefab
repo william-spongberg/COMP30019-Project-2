@@ -32,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 1759306090928246791}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 9.375, z: 0}
+  m_LocalPosition: {x: -0.56, y: 9.375, z: 6.31}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -447,7 +447,7 @@ Transform:
   m_GameObject: {fileID: 5970646190611382457}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 8, z: 0}
+  m_LocalPosition: {x: -0.56, y: 8, z: 6.31}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -479,6 +479,9 @@ MonoBehaviour:
   jumpDelay: 1.2
   airForce: 0.5
   jumpKey: 32
+  dashForce: 0
+  dashDelay: 0
+  dashKey: 324
 --- !u!54 &7020029105957764646
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -518,7 +521,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd61b54082f72a9439423f80f1f5e6bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camera: {fileID: 152405745313577796}
+  shootingCamera: {fileID: 0}
   firePoint: {fileID: 1714742154222750593}
   projectile: {fileID: 2548130427688138840, guid: 65e74a195ab11df4e864dd421e8a4d35, type: 3}
   shootKey: 323
