@@ -20,10 +20,10 @@ public class Movement : MonoBehaviour
     public KeyCode jumpKey = KeyCode.Space;
     bool canJump = true;
 
-    public float dashForce;
+    /*public float dashForce;
     public float dashDelay;
     public KeyCode dashKey = KeyCode.Mouse1;
-    bool canDash = true;
+    bool canDash = true;8*/
 
     //public float gravity;
     
@@ -132,18 +132,18 @@ public class Movement : MonoBehaviour
         rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
     }
 
-    private void Dash()
+    /*private void Dash()
     {
         rb.AddForce(orientation.forward * dashForce, ForceMode.Impulse);
-    }
+    }*/
 
-    private void ResetJump()
+   private void ResetJump()
     {
         canJump = true;
     }
 
-    private void ResetDash()
+    /*private void ResetDash()
     {
         canDash = true;
-    }
+    }*/
 }
