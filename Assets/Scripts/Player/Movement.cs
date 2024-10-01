@@ -18,9 +18,15 @@ public class Movement : MonoBehaviour
     public float jumpDelay;
     public float airForce;
     public KeyCode jumpKey = KeyCode.Space;
+    bool canJump = true;
+
+    public float dashForce;
+    public float dashDelay;
+    public KeyCode dashKey = KeyCode.Mouse1;
+    bool canDash = true;
 
     //public float gravity;
-    bool canJump = true;
+    
 
     float horizontalInput;
     float verticalInput;
@@ -67,6 +73,16 @@ public class Movement : MonoBehaviour
             
             
             Invoke(nameof(ResetJump), jumpDelay);
+            
+        }
+
+        if(Input.GetKey(dashKey) && canDash && grounded){
+            canDash = false;
+
+            Dash();
+            
+            
+            Invoke(nameof(ResetDash), dashDelay);
             
         }
     }
@@ -116,8 +132,18 @@ public class Movement : MonoBehaviour
         rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
     }
 
-    private void ResetJump()
+    private void Dash()
+    {
+        rb.AddForce(orientation.forward * dashForce, ForceMode.Impulse);
+    }
+
+   private void ResetJump()
     {
         canJump = true;
+    }
+
+    private void ResetDash()
+    {
+        canDash = true;
     }
 }
