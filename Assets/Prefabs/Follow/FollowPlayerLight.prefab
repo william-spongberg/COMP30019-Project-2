@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 921505586946775072, guid: ecdab12f4de9bef42a470faf76a416a4, type: 3}
       propertyPath: m_Name
-      value: FollowPlayer Variant
+      value: FollowPlayerLight
       objectReference: {fileID: 0}
     - target: {fileID: 3456564027579785836, guid: ecdab12f4de9bef42a470faf76a416a4, type: 3}
       propertyPath: prefab
