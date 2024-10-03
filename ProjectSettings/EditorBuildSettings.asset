@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/InfiniteOffice.unity
     guid: d4cf68fd41a13f84692a442f3aa36645
   - enabled: 1
-    path: Assets/Scenes/Testing.unity
+    path: Assets/Testing/TestingScene/Testing.unity
     guid: 6a621b63cb9fa654a92f8ecd94355d8a
   m_configObjects: {}

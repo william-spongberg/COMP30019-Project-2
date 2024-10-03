@@ -22,7 +22,6 @@ public class Generator : MonoBehaviour
     private float gap = 0f;
     [SerializeField]
     private Vector3 gridDimensions = new(0, 0, 0);
-    [SerializeField]
     private GameObject player;
 
     [Header("Perlin Noise Settings")]
@@ -61,6 +60,14 @@ public class Generator : MonoBehaviour
         // generate random offsets
         offsetX = UnityEngine.Random.Range(0, 999999);
         offsetY = UnityEngine.Random.Range(0, 999999);
+
+        // get player object
+        player = GameObject.FindGameObjectWithTag("Player");
+        if (player == null)
+        {
+            Debug.LogError("Player object not found.");
+            return;
+        }
 
         // update dimensions for each spawn object if not manually set
         for (int i = 0; i < spawnObjects.Count; i++)
@@ -114,7 +121,7 @@ public class Generator : MonoBehaviour
                         Vector3 worldPosition = new Vector3(x * (gridDimensions.x + gap), -gridDimensions.y, y * (gridDimensions.z + gap));
                         Vector3 offset = sObj.offsets;
                         GameObject obj;
-
+                
                         if (spawnObjectsCache.Count > 0)
                         {
                             // reuse object from cache
@@ -127,7 +134,7 @@ public class Generator : MonoBehaviour
                         {
                             obj = Instantiate(sObj.obj, worldPosition + offset, Quaternion.identity);
                         }
-
+                
                         // ! in progress attempt to fix objects not being of same size in grid
                         // scale to grid scale if not the same
                         if (obj.GetComponent<Renderer>().bounds.size.x != gridDimensions.x)
@@ -140,9 +147,9 @@ public class Generator : MonoBehaviour
                             float scale = gridDimensions.z / obj.GetComponent<Renderer>().bounds.size.z;
                             obj.transform.localScale = new Vector3(scale, scale, scale);
                         }
-
+                
                         objects[gridPosition] = obj;
-
+                
                         // new object created, bake nav mesh
                         if (isBaking)
                         {
@@ -226,6 +233,8 @@ public class Generator : MonoBehaviour
         navMeshSurface.navMeshData = null;
         // wait for the end of the frame so all objects are updated
         yield return new WaitForEndOfFrame();
+        // update to player position
+        navMeshSurface.center = new Vector3(player.transform.position.x, 0, player.transform.position.z);
         // build
         navMeshSurface.BuildNavMesh();
         // wait for the end of the frame so the nav mesh is built
