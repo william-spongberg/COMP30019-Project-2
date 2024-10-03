@@ -123,6 +123,8 @@ public class ShootingGun : MonoBehaviour
             //Apply recoil to player
             playerRb.AddForce(-directionWithSpread.normalized * recoilForce, ForceMode.Impulse);
         }
+        // Destroy the projectile after it has traveled its range
+        Destroy(currentBullet, bulletRange / bulletForce);
     }
 
     private void AllowShootAgain()

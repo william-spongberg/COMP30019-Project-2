@@ -287,6 +287,10 @@ PrefabInstance:
       propertyPath: m_CollectObjects
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6790604388563605708, guid: 0b592f4bb98269243a33b0d57cc55dc0, type: 3}
+      propertyPath: m_LayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 7345023893376187781, guid: 0b592f4bb98269243a33b0d57cc55dc0, type: 3}
       propertyPath: m_Name
       value: WorldGenerator
@@ -377,9 +381,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 748788034063521986, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
+      propertyPath: ground.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 911558459012786708, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
       propertyPath: m_Radius
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2964060225915543542, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2964060225915543542, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2964060225915543542, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2964060225915543542, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
       propertyPath: m_LocalRotation.z

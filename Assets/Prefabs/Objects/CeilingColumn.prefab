@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 9029047428789653366}
   - component: {fileID: 5148446371581631916}
   - component: {fileID: 1328501374876018482}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CeilingColumn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,6 +117,10 @@ PrefabInstance:
     - target: {fileID: 1196428747069424, guid: 50b167954e2b83c43afaabb6a4baa4f2, type: 3}
       propertyPath: m_Name
       value: SM_PolygonPrototype_Buildings_Column_2x3_01P 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1196428747069424, guid: 50b167954e2b83c43afaabb6a4baa4f2, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4062619256373206, guid: 50b167954e2b83c43afaabb6a4baa4f2, type: 3}
       propertyPath: m_LocalScale.x
