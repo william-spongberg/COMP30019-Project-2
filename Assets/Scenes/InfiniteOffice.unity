@@ -185,7 +185,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 670815318916286007, guid: 0b592f4bb98269243a33b0d57cc55dc0, type: 3}
       propertyPath: noiseScale
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 670815318916286007, guid: 0b592f4bb98269243a33b0d57cc55dc0, type: 3}
       propertyPath: spawnObjects.Array.size
@@ -308,6 +308,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Wep_WaterPistol_01
       objectReference: {fileID: 0}
+    - target: {fileID: 1121525155587680, guid: c6865c562fd3f2841a92dc0cbbd6b4b4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4764624344734074, guid: c6865c562fd3f2841a92dc0cbbd6b4b4, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.4231
@@ -377,9 +381,41 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 354955900526396858, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 911558459012786708, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
       propertyPath: m_Radius
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1435721581747986547, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1636737165642947375, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2168918539841334690, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2643972421770607653, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2964060225915543542, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2964060225915543542, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2964060225915543542, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2964060225915543542, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
       propertyPath: m_LocalRotation.z
@@ -389,6 +425,10 @@ PrefabInstance:
       propertyPath: m_LookAt
       value: 
       objectReference: {fileID: 786170084}
+    - target: {fileID: 3934904193350626699, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3934904193350626699, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
       propertyPath: m_WorldUpOverride
       value: 
@@ -440,6 +480,14 @@ PrefabInstance:
     - target: {fileID: 6294627552528472490, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
       propertyPath: m_RenderPostProcessing
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515182197161554099, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7234131502424087931, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7750007646304961496, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
       propertyPath: m_Name
