@@ -6,7 +6,7 @@ public class ShootingGun : MonoBehaviour
 {
     [SerializeField]
     private GameObject bullet;
-
+    
     // Gun stats
     [SerializeField]
     private float bulletForce;
