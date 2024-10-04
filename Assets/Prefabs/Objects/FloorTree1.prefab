@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4084174380873962591}
   - component: {fileID: 2164170975229557275}
   - component: {fileID: 8397360459954767034}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FloorTree1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -118,6 +118,10 @@ PrefabInstance:
     - target: {fileID: 186820, guid: 007209eb027d93640921bad90e69104f, type: 3}
       propertyPath: m_Name
       value: SM_Env_Tree_01 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 186820, guid: 007209eb027d93640921bad90e69104f, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 410432, guid: 007209eb027d93640921bad90e69104f, type: 3}
       propertyPath: m_LocalPosition.x
