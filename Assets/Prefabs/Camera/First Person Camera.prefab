@@ -879,13 +879,16 @@ MonoBehaviour:
   bullet: {fileID: 5003074208552915072, guid: ed43102a58a4745b7852e75aa49f2e99, type: 3}
   bulletForce: 20
   shootingCooldown: 0.3
-  spread: 0.3
+  spread: 0.1
   reloadTime: 2
   bulletRange: 20
   magazineSize: 12
   playerRb: {fileID: 7020029105957764646}
   recoilForce: 0.5
+  verticalRecoilAmount: 1.5
+  horizontalRecoilAmount: 0.5
   Camera: {fileID: 4367253988304371809}
+  virtualCamera: {fileID: 3315840683921078775}
   gunPoint: {fileID: 2725107967290570668}
 --- !u!114 &2038893976056318202
 MonoBehaviour:
@@ -909,7 +912,10 @@ MonoBehaviour:
   pelletCount: 8
   playerRb: {fileID: 7020029105957764646}
   recoilForce: 3
+  verticalRecoilAmount: 2.5
+  horizontalRecoilAmount: 0.8
   Camera: {fileID: 4367253988304371809}
+  virtualCamera: {fileID: 3315840683921078775}
   gunPoint: {fileID: 9028047170668516042}
 --- !u!114 &3503321058363608471
 MonoBehaviour:
@@ -1361,7 +1367,8 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 64883286283145902, guid: c6865c562fd3f2841a92dc0cbbd6b4b4, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 4764624344734074, guid: c6865c562fd3f2841a92dc0cbbd6b4b4, type: 3}
