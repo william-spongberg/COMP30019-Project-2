@@ -1,7 +1,8 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class ShootingGun : MonoBehaviour
-
+public class Pistol : MonoBehaviour
 
 {
     [SerializeField]
@@ -45,13 +46,7 @@ public class ShootingGun : MonoBehaviour
         shootingEnabled = true;
     }
 
-    private void FixedUpdate()
-    {
-        PlayerInput();
-
-    }
-
-    private void PlayerInput()
+    public void HandleInput()
     {
         // Check for shooting (mouse clicks)
         // Shoots per click, no holding down the key to auto shoot
@@ -67,7 +62,7 @@ public class ShootingGun : MonoBehaviour
         if (shootingEnabled && currentlyShooting && !currentlyReloading && bulletsLeft > 0)
         {
             Shoot();
-
+            Debug.Log("Shooting pistol");
         }
     }
 
@@ -145,4 +140,21 @@ public class ShootingGun : MonoBehaviour
         bulletsLeft = magazineSize;
         currentlyReloading = false;
     }
+
+    public bool IsBusy()
+    {
+        return currentlyReloading || !shootingEnabled;
+    }
+
+    public void ResetState()
+    {
+        currentlyShooting = false;
+        currentlyReloading = false;
+        shootingEnabled = true;
+        invokeEnabled = true;
+
+        // Cancel any scheduled invokes (cooldowns or reloads)
+        CancelInvoke();
+    }
 }
+

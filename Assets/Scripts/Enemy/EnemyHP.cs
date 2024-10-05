@@ -5,9 +5,10 @@ using UnityEngine;
 public class EnemyHP : MonoBehaviour
 {
     // Start is called before the first frame update
-    public int health;
+    [SerializeField]
+    private float health;
 
-    public void TakeDamage(int damage) {
+    public void TakeDamage(float damage) {
         health -= damage;
         if(health <= 0){
             Destroy(gameObject);
