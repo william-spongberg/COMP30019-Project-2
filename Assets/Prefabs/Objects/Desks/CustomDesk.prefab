@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7391298559947363328}
   - component: {fileID: 8643966885013958553}
   - component: {fileID: 8125857903625123449}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CustomDesk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116,6 +116,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6462949412619129147}
     m_Modifications:
+    - target: {fileID: 935334462085890408, guid: d80846395dab44d4d864a023bc1bd266, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1288970915515952958, guid: d80846395dab44d4d864a023bc1bd266, type: 3}
       propertyPath: m_LocalScale.x
       value: 362.7
@@ -192,13 +196,41 @@ PrefabInstance:
       propertyPath: sideObjectPos
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3036701742702175668, guid: d80846395dab44d4d864a023bc1bd266, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3809354277585203061, guid: d80846395dab44d4d864a023bc1bd266, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4091267706166452428, guid: d80846395dab44d4d864a023bc1bd266, type: 3}
       propertyPath: m_Name
       value: desk fbx
       objectReference: {fileID: 0}
+    - target: {fileID: 4091267706166452428, guid: d80846395dab44d4d864a023bc1bd266, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4924216535771378844, guid: d80846395dab44d4d864a023bc1bd266, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6129932666362584494, guid: d80846395dab44d4d864a023bc1bd266, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.00168
+      objectReference: {fileID: 0}
+    - target: {fileID: 6557292087493201185, guid: d80846395dab44d4d864a023bc1bd266, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6731465395913057971, guid: d80846395dab44d4d864a023bc1bd266, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937961776763062203, guid: d80846395dab44d4d864a023bc1bd266, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -276,6 +308,10 @@ PrefabInstance:
     - target: {fileID: 8934368573659836058, guid: cdd83297e2cb2d9449847dc594d512db, type: 3}
       propertyPath: m_Name
       value: Chair
+      objectReference: {fileID: 0}
+    - target: {fileID: 8934368573659836058, guid: cdd83297e2cb2d9449847dc594d512db, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
