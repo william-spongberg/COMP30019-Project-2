@@ -20,3 +20,5 @@ public class GunRotationSync : MonoBehaviour
         transform.localRotation = Quaternion.Euler(cameraPitch, transform.localRotation.eulerAngles.y, transform.localRotation.eulerAngles.z);
     }
 }
+
+

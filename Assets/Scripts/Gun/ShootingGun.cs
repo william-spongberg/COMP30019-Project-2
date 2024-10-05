@@ -46,7 +46,7 @@ public class ShootingGun : MonoBehaviour
         shootingEnabled = true;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         PlayerInput();
 
