@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class Shotgun : MonoBehaviour
 {
@@ -27,6 +28,12 @@ public class Shotgun : MonoBehaviour
     [SerializeField]
     private float recoilForce;
 
+    // Camera recoil settings
+    [SerializeField]
+    private float verticalRecoilAmount; 
+    [SerializeField]
+    private float horizontalRecoilAmount;
+
     // Indicator variables
     private bool currentlyShooting, shootingEnabled, currentlyReloading;
     private bool invokeEnabled = true;
@@ -34,6 +41,12 @@ public class Shotgun : MonoBehaviour
     // References
     [SerializeField]
     private Camera Camera;
+
+    [SerializeField]
+    private CinemachineVirtualCamera virtualCamera;
+
+    private CinemachinePOV povComponent;
+
     [SerializeField]
     private Transform gunPoint;
 
@@ -42,6 +55,9 @@ public class Shotgun : MonoBehaviour
         // Fill up magazine
         bulletsLeft = magazineSize;
         shootingEnabled = true;
+
+        // Get the POV component from the virtual camera
+        povComponent = virtualCamera.GetCinemachineComponent<CinemachinePOV>();
     }
 
     public void HandleInput()
@@ -109,6 +125,9 @@ public class Shotgun : MonoBehaviour
         // Deduct one ammo per shotgun blast
         bulletsLeft--;
 
+        // Apply camera recoil
+        ApplyCameraRecoil();
+
         if (invokeEnabled)
         {
             // After a certain delay/cooldown, allow shooting again
@@ -156,6 +175,19 @@ public class Shotgun : MonoBehaviour
 
         // Cancel any scheduled invokes (cooldowns or reloads)
         CancelInvoke();
+    }
+
+    private void ApplyCameraRecoil()
+    {
+        // Calculate vertical and horizontal recoil
+        float verticalRecoil = verticalRecoilAmount;
+        float horizontalRecoil = Random.Range(-horizontalRecoilAmount, horizontalRecoilAmount);
+        
+         // Adjust the POV component's vertical and horizontal axis values
+        povComponent.m_VerticalAxis.Value -= verticalRecoil; 
+        povComponent.m_HorizontalAxis.Value += horizontalRecoil;
+
+        Debug.Log("Recoil applied");
     }
 }
 
