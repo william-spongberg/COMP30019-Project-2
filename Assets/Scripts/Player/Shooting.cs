@@ -8,6 +8,8 @@ public class Shooting : MonoBehaviour
     public Transform shootingCamera;
     public Transform firePoint;
     public GameObject projectile;
+    
+
 
     public KeyCode shootKey = KeyCode.Mouse0;
     public float fireRate;

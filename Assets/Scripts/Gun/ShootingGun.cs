@@ -1,12 +1,10 @@
 using UnityEngine;
 
 public class ShootingGun : MonoBehaviour
-
-
 {
     [SerializeField]
     private GameObject bullet;
-    
+
     // Gun stats
     [SerializeField]
     private float bulletForce;
@@ -35,27 +33,31 @@ public class ShootingGun : MonoBehaviour
     [SerializeField]
     private Transform gunPoint;
 
-    // Graphics
-    // public GameObject muzzleFlash;
-    // public TextMeshProUGUI ammunitionDisplay;
+    // Audio
+    [SerializeField]
+    private GameObject ShootingAudio; // Reference to the GameObject with AudioSource
+    private AudioSource shootingAudioSource; // Reference to the AudioSource component
 
     private void Awake()
     {
         // Fill up magazine
         bulletsLeft = magazineSize;
         shootingEnabled = true;
+
+        // Initialize the audio source and make sure it doesn't play on start
+        shootingAudioSource = ShootingAudio.GetComponent<AudioSource>();
+        shootingAudioSource.playOnAwake = false; // Ensure it doesn't play automatically
+        shootingAudioSource.Stop(); // Make sure it's stopped at the beginning
     }
 
     private void Update()
     {
         PlayerInput();
-
     }
 
     private void PlayerInput()
     {
         // Check for shooting (mouse clicks)
-        // Shoots per click, no holding down the key to auto shoot
         currentlyShooting = Input.GetKeyDown(KeyCode.Mouse0);
 
         // Check for attempt to reload (R clicks)
@@ -68,7 +70,6 @@ public class ShootingGun : MonoBehaviour
         if (shootingEnabled && currentlyShooting && !currentlyReloading && bulletsLeft > 0)
         {
             Shoot();
-
         }
     }
 
@@ -93,24 +94,27 @@ public class ShootingGun : MonoBehaviour
         // Calculate direction from gunPoint to the target
         Vector3 directionWithoutSpread = targetPoint - gunPoint.position;
 
-        //Calculate spread
+        // Calculate spread
         float x = Random.Range(-spread, spread);
         float y = Random.Range(-spread, spread);
 
-         //Calculate new direction, considering spread
+        // Calculate new direction, considering spread
         Vector3 directionWithSpread = directionWithoutSpread + new Vector3(x, y, 0);
 
-        //Instantiate the bullet
+        // Instantiate the bullet
         GameObject currentBullet = Instantiate(bullet, gunPoint.position, Quaternion.identity);
 
-        //Rotate bullet to correct shooting direction according to direction calculated earlier
+        // Rotate bullet to correct shooting direction according to direction calculated earlier
         currentBullet.transform.forward = directionWithSpread.normalized;
 
-        //Give bullet force
+        // Give bullet force
         currentBullet.GetComponent<Rigidbody>().AddForce(directionWithSpread.normalized * bulletForce, ForceMode.Impulse);
 
         // Deduct ammo accordingly
         bulletsLeft--;
+
+        // Play shooting audio
+        PlayShootingAudio();
 
         if (invokeEnabled)
         {
@@ -120,8 +124,17 @@ public class ShootingGun : MonoBehaviour
             // Indicator to avoid the delay/cooldown from stacking before being fulfilled
             invokeEnabled = false;
 
-            //Apply recoil to player
+            // Apply recoil to player
             playerRb.AddForce(-directionWithSpread.normalized * recoilForce, ForceMode.Impulse);
+        }
+    }
+
+    private void PlayShootingAudio()
+    {
+        // Play shooting audio only when firing
+        if (!shootingAudioSource.isPlaying)
+        {
+            shootingAudioSource.Play();  // Start the audio when shooting
         }
     }
 
@@ -130,6 +143,9 @@ public class ShootingGun : MonoBehaviour
         // Allows shooting again
         shootingEnabled = true;
         invokeEnabled = true;
+
+        // Stop the audio after the cooldown period
+        shootingAudioSource.Stop();  // Stop the audio after shooting
     }
 
     private void Reload()
@@ -138,9 +154,10 @@ public class ShootingGun : MonoBehaviour
         currentlyReloading = true;
         Invoke("ReloadComplete", reloadTime);
     }
+
     private void ReloadComplete()
     {
-        //Fill magazine
+        // Fill magazine
         bulletsLeft = magazineSize;
         currentlyReloading = false;
     }
