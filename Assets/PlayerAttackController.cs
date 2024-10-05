@@ -31,9 +31,12 @@ public class PlayerAttackController : MonoBehaviour
 
         // Start with Melee as default
         SwitchWeapon(WeaponType.Melee);
+
+        // Ignore collision between Player and Bullet layers
+        Physics.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Bullet"));
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         // Handle input for switching weapons
         if (canSwitchWeapon && !IsCurrentWeaponBusy())

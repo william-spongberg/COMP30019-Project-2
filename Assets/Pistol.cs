@@ -44,6 +44,7 @@ public class Pistol : MonoBehaviour
         // Fill up magazine
         bulletsLeft = magazineSize;
         shootingEnabled = true;
+
     }
 
     public void HandleInput()
