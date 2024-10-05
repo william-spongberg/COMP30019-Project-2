@@ -1,8 +1,8 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class ShootingGun : MonoBehaviour
-
-
+public class Shotgun : MonoBehaviour
 {
     [SerializeField]
     private GameObject bullet;
@@ -17,6 +17,9 @@ public class ShootingGun : MonoBehaviour
     [SerializeField]
     private int magazineSize;
     private int bulletsLeft;
+
+    [SerializeField]
+    private int pelletCount = 10; // Number of pellets per shotgun blast
 
     // Recoil
     [SerializeField]
@@ -34,10 +37,6 @@ public class ShootingGun : MonoBehaviour
     [SerializeField]
     private Transform gunPoint;
 
-    // Graphics
-    // public GameObject muzzleFlash;
-    // public TextMeshProUGUI ammunitionDisplay;
-
     private void Awake()
     {
         // Fill up magazine
@@ -45,13 +44,7 @@ public class ShootingGun : MonoBehaviour
         shootingEnabled = true;
     }
 
-    private void FixedUpdate()
-    {
-        PlayerInput();
-
-    }
-
-    private void PlayerInput()
+    public void HandleInput()
     {
         // Check for shooting (mouse clicks)
         // Shoots per click, no holding down the key to auto shoot
@@ -67,7 +60,7 @@ public class ShootingGun : MonoBehaviour
         if (shootingEnabled && currentlyShooting && !currentlyReloading && bulletsLeft > 0)
         {
             Shoot();
-
+            Debug.Log("Shooting shotgun");
         }
     }
 
@@ -78,8 +71,6 @@ public class ShootingGun : MonoBehaviour
 
         // Find shooting position using a ray cast to the center of the screen
         Ray ray = Camera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
-
-        // Initialise hit variable to store hit information later on
         RaycastHit hit;
 
         // Deploy ray for as long as bulletRange allows and check if it hits any colliders
@@ -92,23 +83,30 @@ public class ShootingGun : MonoBehaviour
         // Calculate direction from gunPoint to the target
         Vector3 directionWithoutSpread = targetPoint - gunPoint.position;
 
-        //Calculate spread
-        float x = Random.Range(-spread, spread);
-        float y = Random.Range(-spread, spread);
+        // Fire multiple pellets with spread
+        for (int i = 0; i < pelletCount; i++)
+        {
+            // Calculate random spread for each pellet
+            float x = Random.Range(-spread, spread);
+            float y = Random.Range(-spread, spread);
 
-         //Calculate new direction, considering spread
-        Vector3 directionWithSpread = directionWithoutSpread + new Vector3(x, y, 0);
+            // Calculate new direction, considering spread
+            Vector3 directionWithSpread = directionWithoutSpread + new Vector3(x, y, 0);
 
-        //Instantiate the bullet
-        GameObject currentBullet = Instantiate(bullet, gunPoint.position, Quaternion.identity);
+            // Instantiate the bullet
+            GameObject currentPellet = Instantiate(bullet, gunPoint.position, Quaternion.identity);
 
-        //Rotate bullet to correct shooting direction according to direction calculated earlier
-        currentBullet.transform.forward = directionWithSpread.normalized;
+            // Rotate bullet to correct shooting direction according to direction calculated earlier
+            currentPellet.transform.forward = directionWithSpread.normalized;
 
-        //Give bullet force
-        currentBullet.GetComponent<Rigidbody>().AddForce(directionWithSpread.normalized * bulletForce, ForceMode.Impulse);
+            // Give bullet force
+            currentPellet.GetComponent<Rigidbody>().AddForce(directionWithSpread.normalized * bulletForce, ForceMode.Impulse);
 
-        // Deduct ammo accordingly
+            // Destroy the pellet after it has traveled its range
+            Destroy(currentPellet, bulletRange / bulletForce);
+        }
+
+        // Deduct one ammo per shotgun blast
         bulletsLeft--;
 
         if (invokeEnabled)
@@ -119,11 +117,9 @@ public class ShootingGun : MonoBehaviour
             // Indicator to avoid the delay/cooldown from stacking before being fulfilled
             invokeEnabled = false;
 
-            //Apply recoil to player
-            playerRb.AddForce(-directionWithSpread.normalized * recoilForce, ForceMode.Impulse);
+            // Apply recoil to player
+            playerRb.AddForce(-directionWithoutSpread.normalized * recoilForce, ForceMode.Impulse);
         }
-        // Destroy the projectile after it has traveled its range
-        Destroy(currentBullet, bulletRange / bulletForce);
     }
 
     private void AllowShootAgain()
@@ -139,10 +135,28 @@ public class ShootingGun : MonoBehaviour
         currentlyReloading = true;
         Invoke("ReloadComplete", reloadTime);
     }
+
     private void ReloadComplete()
     {
-        //Fill magazine
+        // Fill magazine
         bulletsLeft = magazineSize;
         currentlyReloading = false;
     }
+
+    public bool IsBusy()
+    {
+        return currentlyReloading || !shootingEnabled;
+    }
+
+    public void ResetState()
+    {
+        currentlyShooting = false;
+        currentlyReloading = false;
+        shootingEnabled = true;
+
+        // Cancel any scheduled invokes (cooldowns or reloads)
+        CancelInvoke();
+    }
 }
+
+
