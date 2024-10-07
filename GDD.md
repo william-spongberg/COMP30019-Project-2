@@ -5,9 +5,9 @@
 
 ### Core Concept ###
 
-Our game’s core concept is a movement based FPS Shmup(shoot em’ up) that takes place in an eerie and surreal environment that pits the player and the main character(Aidan) against an otherworldly, ominous, eldritch being known as The Admin. In order to save his wife, Aidan must venture into The Admin’s domain, destroying the entity’s forces through a series of increasingly abnormal environments and delving deeper level by level until he can confront The Admin.
+Our game’s core concept is a movement based FPS Shmup(shoot em’ up) that takes place in an eerie and surreal environment that pits the player and the main character(Aidan) against an otherworldly, ominous, eldritch being known as The Admin. In order to save his wife, Aidan must venture into The Admin’s domain, destroying the entity’s forces through a series of increasingly abnormal environments and delving deeper level by level until he can confront The Admin. Because the game is about willingly entering the lair of a dangerous monster in order to accomplish the player's goal, we have named our game, "Into The Abyss".
 
-Similar games include ULTRAKILL and Doom Slayer, which are both Shoot Em’ Ups, ULTRAKILL specifically is also a movement based FPS. 
+Games that are similar, and from which we drew inspiration from include ULTRAKILL and Doom Slayer, which are both Shoot Em’ Ups, ULTRAKILL specifically is also a movement based FPS. 
 
 <img title="Ultrakill, a game by New Blood Interactive" alt="Alt text" src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1229490/header.jpg?t=1704406135"> 
 (Figure 1: Ultrakill, a game by New Blood Interactive)
@@ -24,19 +24,19 @@ Thanks to a timer and excellent movement design, it is also perfect for speedrun
 
 ### Unique Selling Points (USPs) ###
 
-While our game already has a brand-new experience every time you play thanks to the procedurally generated world and environment, added depth is found in the out-of-this-world, shadowy, and surreal design. This, combined with an emotional storyline and an action-packed experience, keep this game unique for every new and returning player.
+Into The Abyss will give players a different experience every time they play thanks to the procedurally generated world and environment, added depth is found in the out-of-this-world, shadowy, and surreal design. Which, combined with an emotional storyline and action-packed gameplay, keeps Into The Abyss unique, whether to new or returning player.
 
 ## Story and Narrative ##
 
 ### Backstory ###
 
-The game takes place in the lair of a being named the Admin, an otherworldly entity beyond human comprehension that enjoys toying with living beings and consuming their memories. Outside of the Admin’s lair is a modern world setting similar to our own. The lair of the Admin is an office tower with floors/levels with a theme of being familiar locations with some abnormal twist.
+Into The Abyss takes place in the lair of a being named the Admin, an otherworldly entity beyond human comprehension that enjoys toying with living beings and consuming their memories. Outside of the Admin’s lair is a modern world setting similar to our own. The lair of the Admin is an office tower with floors/levels with a theme of being familiar locations with some abnormal twist.
 
 ### Plot ###
 
-The main character’s wife will be forcibly taken from him by the Admin, causing him to willingly delve into the lair in a bid to save her.
+The main character Aidan’s wife will be forcibly taken from him by the Admin, causing him to willingly delve into Their lair in a bid to save her.
 
-To progress and go deeper into the lair, the main character must kill the pawns of the Admin, who are victims that have had their memories devoured in the past and ride elevators that take him to higher floors. Throughout his journey, the Admin will taunt and antagonise the protagonist so that his presence will have a greater impact and be a larger motivator for a player.
+To progress and go deeper into the tower, the main character must kill the pawns of the Admin, who are victims that have had their memories devoured in the past and ride elevators that take him to higher floors. Throughout his journey, the Admin will taunt and antagonise the protagonist so that his presence will have a greater impact and be a larger motivator for a player.
 
 The player will eventually learn that the floors of this tower are actually modelled after his own memories, and the process of climbing it(to save his wife) allows the Admin to see and consume more of his memories. Which is why the Admin allows the main character to keep climbing the tower.
 
@@ -64,7 +64,7 @@ There will be 4 major characters in the story of the game:
 
 ### Player Perspective ###
 
-It is a first-person game with a camera that is moved by the mouse. This allows for more specific and better movement + combat in order to give more freedom to speedrunners and make it easier for the player to feel like they are falling into the world of the game. Only the character’s hands and office-shirt sleeves, as well any equipped weapons/tools, are visible on screen.
+Into The Abyss is a first-person game with a camera that is moved by the mouse. This allows for specific and smooth movement + combat which aims to give more freedom to speedrunners and better immerse the player into the world of our game. Only the character’s hands and office-shirt sleeves, as well any equipped weapons/tools, will be visible on screen at any point in time.
 
 
 ## Controls ##
@@ -80,7 +80,7 @@ The game’s controls are meant to have a high skill ceiling, so that players wh
 
 Progression in our game is designed to reward players with a sense of satisfaction in their in-game abilities. As players delve deeper into the lair of the Admin, they will unlock new weapons that greatly expand their combat options. Each new weapon caters to a distinct playstyle, whether that be melee or long-range. Weapons are introduced at key points in the story. The first weapon unlockable is a simple gun.
 
-A pistol and shotgun will be the primary weapons for the player, with a pencil as a melee sidearm.
+A pistol and shotgun will be the primary weapons for the player, with a pencil as a melee sidearm. Providing a variety that a player can experiment and play around with.
 
 <img title="First level" alt="Alt text" src="https://github.com/feit-comp30019/2024s2-project-2-alphabeta/blob/main/Images/Weapons.png?raw=true">
 (Figure 4: Weapon Model Examples)
@@ -93,8 +93,7 @@ There will also be an element of skill progression, as the player gets more fami
 ## Levels and World Design ##
 
 ### Game World ###
-
-The game world is represented in 3D from the main character’s perspective. There will be two levels, the player will find themselves in the first after entering the Admin's tower, and the second level will be reached by a mysterious elevatorsthat will spawn at the end of the first level. The player navigates for the most part blindly through a dark, jumbled and confusing world, only reaching their destination when a new elevator is found. These elevators spawn near the player when all enemies for that level are defeated. There is no map for the player to use, and the only guidance that is given comes from small blinking lights that guide the player to the next elevator.
+The world of Into The Abyss will be expressed as a 3D environment, viewed from the main character’s perspective. There will be two levels, the player will find themselves in the first after entering the Admin's tower, and the second level will be reached by a mysterious elevator that will spawn at the end of the first level. The player navigates for the most part blindly through a dark, jumbled and confusing world, only reaching their destination when a new elevator is found. These elevators spawn near the player when all enemies for that level are defeated. There is no map for the player to use, and the only guidance that is given comes from small blinking lights that guide the player to the next elevator.
 
 The first level will be procedurally and infinitely generated using Perlin noise to allow for a sensibly structured yet random and confusing environment, and infinite chaos within the infinite world.
 
