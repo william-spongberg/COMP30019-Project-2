@@ -10,18 +10,6 @@
 
 ## Evaluation Plan
 
-<!-- ### How they interact
-- Where they get stuck
-- What was unclear? What can be changed?
-
-- Ask them to be critical/ruthless
-- Ask them to take a screenshot if they got stuck
-
-### Usability/ How user-friendly it is
-- Ask for rating, then take out the rating
-- How frequently does the same issue come up?
-- Take screenshots/videos of how you improved -->
-
 ### 1. Evaluation Techniques:
 We will use a combination of querying and observational techniques to evaluate the usability of our game. The primary techniques will include:
 
