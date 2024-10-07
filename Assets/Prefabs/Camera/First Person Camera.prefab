@@ -780,14 +780,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bfa2b5b7ee0b6b4c860d645d2d143e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 7
+  moveSpeed: 14
   groundFriction: 1
   modelHeight: 2
   ground:
     serializedVersion: 2
     m_Bits: 128
   orientation: {fileID: 5851962678020888003}
-  jumpForce: 10
+  jumpForce: 40
   jumpDelay: 1.2
   airForce: 0.5
   jumpKey: 32
@@ -802,7 +802,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5970646190611382457}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 4
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
