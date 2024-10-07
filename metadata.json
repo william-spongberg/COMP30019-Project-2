@@ -22,5 +22,7 @@
       "github": "alistaircwh",
       "email": "alistairwern@student.unimelb.edu.au"
     }
-  ]
+  ],
+  "gameTitle": "<your game title>",
+  "gameBlurb": "<a short description of your game (max 200 words)>"
 }
