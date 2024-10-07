@@ -5,9 +5,9 @@
 
 ### Core Concept ###
 
-Our game’s core concept is a movement based FPS Shmup(shoot em’ up) that takes place in an eerie and surreal environment that pits the player and the main character(Aidan) against an otherworldly, ominous, eldritch being known as The Admin. In order to save his wife, Aidan must venture into The Admin’s domain, destroying the entity’s forces through a series of increasingly abnormal environments and delving deeper level by level until he can confront The Admin.
+Our game’s core concept is a movement based FPS Shmup(shoot em’ up) that takes place in an eerie and surreal environment that pits the player and the main character(Aidan) against an otherworldly, ominous, eldritch being known as The Admin. In order to save his wife, Aidan must venture into The Admin’s domain, destroying the entity’s forces through a series of increasingly abnormal environments and delving deeper level by level until he can confront The Admin. Because the game is about willingly entering the lair of a dangerous monster in order to accomplish the player's goal, we have named our game, "Into The Abyss".
 
-Similar games include ULTRAKILL and Doom Slayer, which are both Shoot Em’ Ups, ULTRAKILL specifically is also a movement based FPS. 
+Games that are similar, and from which we drew inspiration from include ULTRAKILL and Doom Slayer, which are both Shoot Em’ Ups, ULTRAKILL specifically is also a movement based FPS. 
 
 <img title="Ultrakill, a game by New Blood Interactive" alt="Alt text" src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1229490/header.jpg?t=1704406135"> 
 (Figure 1: Ultrakill, a game by New Blood Interactive)
@@ -24,19 +24,19 @@ Thanks to a timer and excellent movement design, it is also perfect for speedrun
 
 ### Unique Selling Points (USPs) ###
 
-While our game already has a brand-new experience every time you play thanks to the procedurally generated world and environment, added depth is found in the out-of-this-world, shadowy, and surreal design. This, combined with an emotional storyline and an action-packed experience, keep this game unique for every new and returning player.
+Into The Abyss will give players a different experience every time they play thanks to the procedurally generated world and environment, added depth is found in the out-of-this-world, shadowy, and surreal design. Which, combined with an emotional storyline and action-packed gameplay, keeps Into The Abyss unique, whether to new or returning player.
 
 ## Story and Narrative ##
 
 ### Backstory ###
 
-The game takes place in the lair of a being named the Admin, an otherworldly entity beyond human comprehension that enjoys toying with living beings and consuming their memories. Outside of the Admin’s lair is a modern world setting similar to our own. The lair of the Admin is an office tower with floors/levels with a theme of being familiar locations with some abnormal twist.
+Into The Abyss takes place in the lair of a being named the Admin, an otherworldly entity beyond human comprehension that enjoys toying with living beings and consuming their memories. Outside of the Admin’s lair is a modern world setting similar to our own. The lair of the Admin is an office tower with floors/levels with a theme of being familiar locations with some abnormal twist.
 
 ### Plot ###
 
-The main character’s wife will be forcibly taken from him by the Admin, causing him to willingly delve into the lair in a bid to save her.
+The main character Aidan’s wife will be forcibly taken from him by the Admin, causing him to willingly delve into Their lair in a bid to save her.
 
-To progress and go deeper into the lair, the main character must kill the pawns of the Admin, who are victims that have had their memories devoured in the past and ride elevators that take him to higher floors. Throughout his journey, the Admin will taunt and antagonise the protagonist so that his presence will have a greater impact and be a larger motivator for a player.
+To progress and go deeper into the tower, the main character must kill the pawns of the Admin, who are victims that have had their memories devoured in the past and ride elevators that take him to higher floors. Throughout his journey, the Admin will taunt and antagonise the protagonist so that his presence will have a greater impact and be a larger motivator for a player.
 
 The player will eventually learn that the floors of this tower are actually modelled after his own memories, and the process of climbing it(to save his wife) allows the Admin to see and consume more of his memories. Which is why the Admin allows the main character to keep climbing the tower.
 
@@ -64,7 +64,7 @@ There will be 4 major characters in the story of the game:
 
 ### Player Perspective ###
 
-It is a first-person game with a camera that is moved by the mouse. This allows for more specific and better movement + combat in order to give more freedom to speedrunners and make it easier for the player to feel like they are falling into the world of the game. Only the character’s hands and office-shirt sleeves, as well any equipped weapons/tools, are visible on screen.
+Into The Abyss is a first-person game with a camera that is moved by the mouse. This allows for specific and smooth movement + combat which aims to give more freedom to speedrunners and better immerse the player into the world of our game. Only the character’s hands and office-shirt sleeves, as well any equipped weapons/tools, will be visible on screen at any point in time.
 
 
 ## Controls ##
@@ -74,18 +74,16 @@ Our game is a movement based FPS. The player will be able to fire weapons using 
 <img title="a title" alt="Alt text" src="https://static.wikia.nocookie.net/titanfall/images/2/2e/TF2_Achievement_Power_Slide.jpg/revision/latest/scale-to-width-down/1200?cb=20180414120527">
 (Figure 2: Power Slide Achievement image from Titanfall 2)
 
-Wall running will also be implemented so that the player can interact more freely and creatively with the terrain. Especially as the game progresses and the environment of later levels becomes more complicated.
-
-<img title="a title" alt="Alt text" src="https://static1.thegamerimages.com/wordpress/wp-content/uploads/2021/03/pjimage-2021-03-19T113749.666.jpg?q=50&fit=crop&w=1100&h=618&dpr=1.5">
-(Figure 3: Example of wallrunning from Titanfall 2)
 The game’s controls are meant to have a high skill ceiling, so that players who are more experienced and more skillful will be able to navigate and combat enemies more easily.
 
 ### Player Progression ###
 
-Progression in our game is designed to reward players with a sense of satisfaction in their in-game abilities. As players delve deeper into the lair of the Admin, they will unlock new weapons that greatly expand their combat options. Each new weapon caters to a distinct playstyle, whether that be melee, long-range, or even running around with a grappling hook. Weapons are introduced at key points in the story. The first weapon unlockable is a simple nail gun.
+Progression in our game is designed to reward players with a sense of satisfaction in their in-game abilities. As players delve deeper into the lair of the Admin, they will unlock new weapons that greatly expand their combat options. Each new weapon caters to a distinct playstyle, whether that be melee or long-range. Weapons are introduced at key points in the story. The first weapon unlockable is a simple gun.
 
-<img title="Nailgun example" alt="Alt text" src="https://images.free3d.com/imgd/l37/1100537.jpg">
-(Figure 4: Nailgun example)
+A pistol and shotgun will be the primary weapons for the player, with a pencil as a melee sidearm. Providing a variety that a player can experiment and play around with.
+
+<img title="First level" alt="Alt text" src="https://github.com/feit-comp30019/2024s2-project-2-alphabeta/blob/main/Images/Weapons.png?raw=true">
+(Figure 4: Weapon Model Examples)
 
 There will also be an element of skill progression, as the player gets more familiar with the game, they will find it easier to evade enemies as they grow accustomed to the movement controls, and learn what weapons are most effective against certain enemies.
 
@@ -95,22 +93,16 @@ There will also be an element of skill progression, as the player gets more fami
 ## Levels and World Design ##
 
 ### Game World ###
+The world of Into The Abyss will be expressed as a 3D environment, viewed from the main character’s perspective. There will be two levels, the player will find themselves in the first after entering the Admin's tower, and the second level will be reached by a mysterious elevator that will spawn at the end of the first level. The player navigates for the most part blindly through a dark, jumbled and confusing world, only reaching their destination when a new elevator is found. These elevators spawn near the player when all enemies for that level are defeated. There is no map for the player to use, and the only guidance that is given comes from small blinking lights that guide the player to the next elevator.
 
-The game world is represented in 3D from the main character’s perspective. There are three different levels, each reached by mysterious elevators that spawn at the end of a previous level. The player navigates for the most part blindly through a dark, jumbled and confusing world, only reaching their destination when a new elevator is found. These elevators spawn near the player when all enemies for that level are defeated. There is no map for the player to use, and the only guidance that is given comes from small blinking lights that guide the player to the next elevator.
-
-The world is procedurally and infinitely generated using Perlin noise to allow for a sensibly structured yet random and confusing environment, and infinite chaos within each new infinite world.
+The first level will be procedurally and infinitely generated using Perlin noise to allow for a sensibly structured yet random and confusing environment, and infinite chaos within the infinite world.
 
 1. The first level is an office space that portrays familiarity and order which allows the player to be deceived into a sense of comfort before realising something feels off.
 
  <img title="First level" alt="Alt text" src="https://github.com/feit-comp30019/2024s2-project-1-alphabeta/blob/main/Images/image_2024-08-25_230238124.png?raw=true">
 (Figure 5: Example of what the first level will look like)
 
-2. The second level is outdoors in a city environment with buildings, roads and cars being placed now in a more disorderly manner, with the game’s world being reflected above the player in a manner similar to Dr Strange.
-
-
-3. The third and final level is much more abstract and bizarre, as the world design is now fully starting to leave normalcy far behind.
-
-Note that the second and third level designs are more general ideas for now, and will be subject to change as their feasibility and design is discovered. Possible other level environments include forests, churches, schools, caves, etc.
+2. The second level is a church with objects "glitched" into solid surfaces, an ordinary environment that has been corrupted into something abstract and bizarre. This level will represent the happiest time of the main characters life, twisted into something almost unrecognizeable.
 
 ### Objects ###
 
@@ -147,7 +139,7 @@ Echoes: Enemies that are distorted reflections of Aidan, representing his fragme
 
 Hollows: Victims whose memories were devoured by The Admin. With hollow and empty eyes, they move erratically and randomly pause to clutch their heads, as if trying to bring out their true selves. Implode upon death.
 
-Phantoms: They feature red glowing eyes, which will appear as an unnatural glow amidst the dark fog. They appear and disappear in and out of the fog, only every attempting to attack the player when they have their backs turned. Inspiring a primal fear and sense of adrenaline response. 
+Phantoms: They feature red glowing eyes, which will appear as an unnatural glow amidst the dark fog. They appear and disappear in and out of the fog, only every now and then attempting to attack the player when they have their backs turned. Inspiring a primal fear to get the player more immersed in the world. 
 
 Possible enemy interactions with the environment, since the procedural landscape is built on tiles, enemies (The Admin) could have the ability to modify it during combat.
 
@@ -229,7 +221,7 @@ Finally, there is justified fear surrounding making the game actually fun and in
 1. Image of Ultrakill's cover image, taken from the Steam page of the game ULTRAKILL: https://store.steampowered.com/app/1229490/ULTRAKILL/
 2. Art taken from the XBOX 1 achievement art for Titanfall 2 achievement named "Power Slide"
 3. Taken from the article "Titanfall 2's Mobility Revolutionized Shooters - Or At Least It Should Have" by Cian Maher, published by The Gamer: https://www.thegamer.com/titanfall-2-mobility/
-4. Free 3D nailgun model made by user "printable_models" and published on the website "Free3D": https://free3d.com/3d-model/nail-gun-v1--273925.html
+4. Image taken from our game
 5. Image taken from prototype of our game
 6. Stock photo of an elevator from the website Istock, credited to user "chainatp": https://www.istockphoto.com/photo/an-old-elevator-gm1088914534-292093369
 7. Image taken from the article "Little Nightmares 2 Review" written by Stacey Henley and published on PCGamer: https://www.pcgamer.com/little-nightmares-2-review/
