@@ -76,7 +76,7 @@ public class Movement : MonoBehaviour
             
         }
 
-        if(Input.GetKey(dashKey) && canDash && grounded){
+        /*if(Input.GetKey(dashKey) && canDash && grounded){
             canDash = false;
 
             Dash();
@@ -84,7 +84,7 @@ public class Movement : MonoBehaviour
             
             Invoke(nameof(ResetDash), dashDelay);
             
-        }
+        }*/
     }
     
     private void FixedUpdate()
