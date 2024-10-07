@@ -82,7 +82,7 @@ Progression in our game is designed to reward players with a sense of satisfacti
 
 A pistol and shotgun will be the primary weapons for the player, with a pencil as a melee sidearm.
 
-<img title="First level" alt="Alt text" src="https://github.com/feit-comp30019/2024s2-project-2-alphabeta/blob/main/Images/weapons.png?raw=true">
+<img title="First level" alt="Alt text" src="https://github.com/feit-comp30019/2024s2-project-2-alphabeta/blob/main/Images/Weapons.png?raw=true">
 (Figure 4: Weapon Model Examples)
 
 There will also be an element of skill progression, as the player gets more familiar with the game, they will find it easier to evade enemies as they grow accustomed to the movement controls, and learn what weapons are most effective against certain enemies.
