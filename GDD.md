@@ -80,8 +80,10 @@ The game’s controls are meant to have a high skill ceiling, so that players wh
 
 Progression in our game is designed to reward players with a sense of satisfaction in their in-game abilities. As players delve deeper into the lair of the Admin, they will unlock new weapons that greatly expand their combat options. Each new weapon caters to a distinct playstyle, whether that be melee or long-range. Weapons are introduced at key points in the story. The first weapon unlockable is a simple gun.
 
+A pistol and shotgun will be the primary weapons for the player, with a pencil as a melee sidearm.
+
 <img title="Nailgun example" alt="Alt text" src="https://images.free3d.com/imgd/l37/1100537.jpg">
-(Figure 4: Nailgun example)
+(Figure 4: weapon model examples)
 
 There will also be an element of skill progression, as the player gets more familiar with the game, they will find it easier to evade enemies as they grow accustomed to the movement controls, and learn what weapons are most effective against certain enemies.
 
@@ -92,21 +94,16 @@ There will also be an element of skill progression, as the player gets more fami
 
 ### Game World ###
 
-The game world is represented in 3D from the main character’s perspective. There are three different levels, each reached by mysterious elevators that spawn at the end of a previous level. The player navigates for the most part blindly through a dark, jumbled and confusing world, only reaching their destination when a new elevator is found. These elevators spawn near the player when all enemies for that level are defeated. There is no map for the player to use, and the only guidance that is given comes from small blinking lights that guide the player to the next elevator.
+The game world is represented in 3D from the main character’s perspective. There will be two levels, the player will find themselves in the first after entering the Admin's tower, and the second level will be reached by a mysterious elevatorsthat will spawn at the end of the first level. The player navigates for the most part blindly through a dark, jumbled and confusing world, only reaching their destination when a new elevator is found. These elevators spawn near the player when all enemies for that level are defeated. There is no map for the player to use, and the only guidance that is given comes from small blinking lights that guide the player to the next elevator.
 
-The world is procedurally and infinitely generated using Perlin noise to allow for a sensibly structured yet random and confusing environment, and infinite chaos within each new infinite world.
+The first level will be procedurally and infinitely generated using Perlin noise to allow for a sensibly structured yet random and confusing environment, and infinite chaos within the infinite world.
 
 1. The first level is an office space that portrays familiarity and order which allows the player to be deceived into a sense of comfort before realising something feels off.
 
  <img title="First level" alt="Alt text" src="https://github.com/feit-comp30019/2024s2-project-1-alphabeta/blob/main/Images/image_2024-08-25_230238124.png?raw=true">
 (Figure 5: Example of what the first level will look like)
 
-2. The second level is outdoors in a city environment with buildings, roads and cars being placed now in a more disorderly manner, with the game’s world being reflected above the player in a manner similar to Dr Strange.
-
-
-3. The third and final level is much more abstract and bizarre, as the world design is now fully starting to leave normalcy far behind.
-
-Note that the second and third level designs are more general ideas for now, and will be subject to change as their feasibility and design is discovered. Possible other level environments include forests, churches, schools, caves, etc.
+2. The second level is a church with objects "glitched" into solid surfaces, an ordinary environment that has been corrupted into something abstract and bizarre. This level will represent the happiest time of the main characters life, twisted into something almost unrecognizeable.
 
 ### Objects ###
 
@@ -143,7 +140,7 @@ Echoes: Enemies that are distorted reflections of Aidan, representing his fragme
 
 Hollows: Victims whose memories were devoured by The Admin. With hollow and empty eyes, they move erratically and randomly pause to clutch their heads, as if trying to bring out their true selves. Implode upon death.
 
-Phantoms: They feature red glowing eyes, which will appear as an unnatural glow amidst the dark fog. They appear and disappear in and out of the fog, only every attempting to attack the player when they have their backs turned. Inspiring a primal fear and sense of adrenaline response. 
+Phantoms: They feature red glowing eyes, which will appear as an unnatural glow amidst the dark fog. They appear and disappear in and out of the fog, only every now and then attempting to attack the player when they have their backs turned. Inspiring a primal fear to get the player more immersed in the world. 
 
 Possible enemy interactions with the environment, since the procedural landscape is built on tiles, enemies (The Admin) could have the ability to modify it during combat.
 
