@@ -5,9 +5,7 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     public float moveSpeed;
-
     public float groundFriction;
-
     public float modelHeight;
     public LayerMask ground;
     bool grounded; 
@@ -25,9 +23,6 @@ public class Movement : MonoBehaviour
     public KeyCode dashKey = KeyCode.Mouse1;
     bool canDash = true;
 
-    //public float gravity;
-    
-
     float horizontalInput;
     float verticalInput;
 
@@ -38,7 +33,6 @@ public class Movement : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-        //canJump = true;
     }
     
     private void Update()
@@ -47,78 +41,54 @@ public class Movement : MonoBehaviour
         MoveInput();
 
         SpeedLimit();
-        if(grounded)
-        {
-            rb.drag = groundFriction;
-        }
-        else
-        {
-            rb.drag = 0;
-        }
-
-
+        rb.drag = grounded ? groundFriction : 0;
     }
-
-
 
     private void MoveInput()
     {
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
 
-        if(Input.GetKey(jumpKey) && canJump && grounded){
+        if (Input.GetKey(jumpKey) && canJump && grounded)
+        {
             canJump = false;
-
             Jump();
-            
-            
             Invoke(nameof(ResetJump), jumpDelay);
-            
         }
 
-        if(Input.GetKey(dashKey) && canDash && grounded){
+        if (Input.GetKey(dashKey) && canDash && grounded)
+        {
             canDash = false;
-
             Dash();
-            
-            
             Invoke(nameof(ResetDash), dashDelay);
-            
         }
     }
     
     private void FixedUpdate()
     {
-        
         PlayerMove();
     }
 
     private void PlayerMove()
     {
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
-        if(grounded)
-        {
-            rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
-        }
-        else if(!grounded)
-        {
-            rb.AddForce(moveDirection.normalized * moveSpeed * 10f * airForce, ForceMode.Force);
-        }
+        Vector3 horizontalMoveDirection = new Vector3(moveDirection.x, 0, moveDirection.z).normalized;
 
-        //if (!isGrounded) {
-        //    rb.AddForce(transform.down * gravity, ForceMode.Force);
-
-        //} else if (verticalVelocity < 0) {
-        //    rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
-        //}
-             
+        if (grounded)
+        {
+            rb.AddForce(horizontalMoveDirection * moveSpeed * 10f, ForceMode.Force);
+        }
+        else
+        {
+            rb.AddForce(horizontalMoveDirection * moveSpeed * 10f * airForce, ForceMode.Force);
+        }
     }
 
     private void SpeedLimit()
     {
         Vector3 currentVelocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
 
-        if(currentVelocity.magnitude > moveSpeed)
+        if (currentVelocity.magnitude > moveSpeed)
         {
             Vector3 maxVelocity = currentVelocity.normalized * moveSpeed;
             rb.velocity = new Vector3(maxVelocity.x, rb.velocity.y, maxVelocity.z);
@@ -128,7 +98,6 @@ public class Movement : MonoBehaviour
     private void Jump()
     {
         rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
-        
         rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
     }
 
@@ -137,7 +106,7 @@ public class Movement : MonoBehaviour
         rb.AddForce(orientation.forward * dashForce, ForceMode.Impulse);
     }
 
-   private void ResetJump()
+    private void ResetJump()
     {
         canJump = true;
     }
