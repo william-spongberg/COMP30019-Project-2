@@ -82,8 +82,8 @@ Progression in our game is designed to reward players with a sense of satisfacti
 
 A pistol and shotgun will be the primary weapons for the player, with a pencil as a melee sidearm.
 
-<img title="Nailgun example" alt="Alt text" src="https://images.free3d.com/imgd/l37/1100537.jpg">
-(Figure 4: weapon model examples)
+<img title="First level" alt="Alt text" src="https://github.com/feit-comp30019/2024s2-project-1-alphabeta/blob/main/Images/image_2024-08-25_231833229.png?raw=true">
+(Figure 4: Weapon Model Examples)
 
 There will also be an element of skill progression, as the player gets more familiar with the game, they will find it easier to evade enemies as they grow accustomed to the movement controls, and learn what weapons are most effective against certain enemies.
 
@@ -222,7 +222,7 @@ Finally, there is justified fear surrounding making the game actually fun and in
 1. Image of Ultrakill's cover image, taken from the Steam page of the game ULTRAKILL: https://store.steampowered.com/app/1229490/ULTRAKILL/
 2. Art taken from the XBOX 1 achievement art for Titanfall 2 achievement named "Power Slide"
 3. Taken from the article "Titanfall 2's Mobility Revolutionized Shooters - Or At Least It Should Have" by Cian Maher, published by The Gamer: https://www.thegamer.com/titanfall-2-mobility/
-4. Free 3D nailgun model made by user "printable_models" and published on the website "Free3D": https://free3d.com/3d-model/nail-gun-v1--273925.html
+4. Image taken from our game
 5. Image taken from prototype of our game
 6. Stock photo of an elevator from the website Istock, credited to user "chainatp": https://www.istockphoto.com/photo/an-old-elevator-gm1088914534-292093369
 7. Image taken from the article "Little Nightmares 2 Review" written by Stacey Henley and published on PCGamer: https://www.pcgamer.com/little-nightmares-2-review/
