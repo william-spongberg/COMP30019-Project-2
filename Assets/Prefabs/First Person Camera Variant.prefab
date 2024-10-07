@@ -20,6 +20,10 @@ PrefabInstance:
       propertyPath: dashForce
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 748788034063521986, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
+      propertyPath: ground.m_Bits
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 911558459012786708, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
       propertyPath: m_Radius
       value: 0.5
@@ -38,15 +42,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4236896413806958649, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -12.413056
       objectReference: {fileID: 0}
     - target: {fileID: 4236896413806958649, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8
+      value: 3.52
       objectReference: {fileID: 0}
     - target: {fileID: 4236896413806958649, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -9.6307335
       objectReference: {fileID: 0}
     - target: {fileID: 4236896413806958649, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
       propertyPath: m_LocalRotation.w
@@ -78,7 +82,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5851962678020888003, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9
+      value: 1.7000008
       objectReference: {fileID: 0}
     - target: {fileID: 5952101889311901613, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
       propertyPath: m_LocalScale.y

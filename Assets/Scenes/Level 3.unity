@@ -3456,7 +3456,7 @@ Light:
   m_GameObject: {fileID: 226830466}
   m_Enabled: 1
   serializedVersion: 10
-  m_Type: 1
+  m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
   m_Intensity: 1
@@ -14082,29 +14082,21 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 726165066}
-    - target: {fileID: 8203600954407053359, guid: bed9ee098adb00548a0c922305d149a2, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 3.2589188
-      objectReference: {fileID: 0}
-    - target: {fileID: 8203600954407053359, guid: bed9ee098adb00548a0c922305d149a2, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 3.2589192
-      objectReference: {fileID: 0}
-    - target: {fileID: 8203600954407053359, guid: bed9ee098adb00548a0c922305d149a2, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 3.2589192
+    - target: {fileID: 7401663051517390856, guid: bed9ee098adb00548a0c922305d149a2, type: 3}
+      propertyPath: m_VersionIndex
+      value: 167
       objectReference: {fileID: 0}
     - target: {fileID: 8203600954407053359, guid: bed9ee098adb00548a0c922305d149a2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 30.9
+      value: 29.82
       objectReference: {fileID: 0}
     - target: {fileID: 8203600954407053359, guid: bed9ee098adb00548a0c922305d149a2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.6999998
+      value: 3.7
       objectReference: {fileID: 0}
     - target: {fileID: 8203600954407053359, guid: bed9ee098adb00548a0c922305d149a2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.8000002
+      value: -3.81
       objectReference: {fileID: 0}
     - target: {fileID: 8203600954407053359, guid: bed9ee098adb00548a0c922305d149a2, type: 3}
       propertyPath: m_LocalRotation.w
@@ -24366,6 +24358,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 867195525601440658, guid: 4b4d8f2b59ec4514d9e0ee51c6f6c9d3, type: 3}
+      propertyPath: m_Lens.m_SensorSize.x
+      value: 54.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 867195525601440658, guid: 4b4d8f2b59ec4514d9e0ee51c6f6c9d3, type: 3}
+      propertyPath: m_Lens.m_SensorSize.y
+      value: 25.59
+      objectReference: {fileID: 0}
     - target: {fileID: 1783606750687547996, guid: 4b4d8f2b59ec4514d9e0ee51c6f6c9d3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -12.413056
