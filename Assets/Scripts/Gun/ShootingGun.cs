@@ -14,8 +14,7 @@ public class ShootingGun : MonoBehaviour
     private float bulletRange;
     [SerializeField]
     private int magazineSize;
-
-    int bulletsLeft;
+    private int bulletsLeft;
 
     // Recoil
     [SerializeField]
@@ -50,7 +49,7 @@ public class ShootingGun : MonoBehaviour
         shootingAudioSource.Stop(); // Make sure it's stopped at the beginning
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         PlayerInput();
     }

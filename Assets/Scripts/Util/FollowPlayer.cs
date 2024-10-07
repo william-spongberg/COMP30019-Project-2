@@ -11,7 +11,6 @@ public class FollowPlayer : MonoBehaviour
     private Vector3 offsetVector = new Vector3(0, 0, 0);
     [SerializeField]
     private Vector3 playerCoords;
-    //[SerializeField]
     private GameObject player;
 
     // Start is called before the first frame update
