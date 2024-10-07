@@ -430,7 +430,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af7b79bfb9efb64429eba457d5e00c6b, type: 3}
-<<<<<<< HEAD
 --- !u!1001 &451217158639039046
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -489,9 +488,7 @@ PrefabInstance:
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b4d8f2b59ec4514d9e0ee51c6f6c9d3, type: 3}
 --- !u!1001 &2596687957834123601
-=======
 --- !u!1001 &2824453040555288407
->>>>>>> 20fc64c99c2cf549d7e7114e367348c41b7f7b91
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
