@@ -115,6 +115,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4994164693209292082}
   - component: {fileID: 5560057185066829991}
+  - component: {fileID: 2939447974180213698}
   m_Layer: 0
   m_Name: Elevator
   m_TagString: Untagged
@@ -154,7 +155,7 @@ Animator:
   m_GameObject: {fileID: 808919075973405954}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 580f8ba7e3b8e4cc68053b30ad91181a, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -165,6 +166,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2939447974180213698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 808919075973405954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc3df1ee5944342ebbbbac34becca9d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doorAnimator: {fileID: 5560057185066829991}
+  doorsOpen: 0
 --- !u!1 &1552552602811480531
 GameObject:
   m_ObjectHideFlags: 0
