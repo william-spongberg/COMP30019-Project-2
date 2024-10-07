@@ -74,15 +74,11 @@ Our game is a movement based FPS. The player will be able to fire weapons using 
 <img title="a title" alt="Alt text" src="https://static.wikia.nocookie.net/titanfall/images/2/2e/TF2_Achievement_Power_Slide.jpg/revision/latest/scale-to-width-down/1200?cb=20180414120527">
 (Figure 2: Power Slide Achievement image from Titanfall 2)
 
-Wall running will also be implemented so that the player can interact more freely and creatively with the terrain. Especially as the game progresses and the environment of later levels becomes more complicated.
-
-<img title="a title" alt="Alt text" src="https://static1.thegamerimages.com/wordpress/wp-content/uploads/2021/03/pjimage-2021-03-19T113749.666.jpg?q=50&fit=crop&w=1100&h=618&dpr=1.5">
-(Figure 3: Example of wallrunning from Titanfall 2)
 The game’s controls are meant to have a high skill ceiling, so that players who are more experienced and more skillful will be able to navigate and combat enemies more easily.
 
 ### Player Progression ###
 
-Progression in our game is designed to reward players with a sense of satisfaction in their in-game abilities. As players delve deeper into the lair of the Admin, they will unlock new weapons that greatly expand their combat options. Each new weapon caters to a distinct playstyle, whether that be melee, long-range, or even running around with a grappling hook. Weapons are introduced at key points in the story. The first weapon unlockable is a simple nail gun.
+Progression in our game is designed to reward players with a sense of satisfaction in their in-game abilities. As players delve deeper into the lair of the Admin, they will unlock new weapons that greatly expand their combat options. Each new weapon caters to a distinct playstyle, whether that be melee or long-range. Weapons are introduced at key points in the story. The first weapon unlockable is a simple gun.
 
 <img title="Nailgun example" alt="Alt text" src="https://images.free3d.com/imgd/l37/1100537.jpg">
 (Figure 4: Nailgun example)
