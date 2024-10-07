@@ -43,16 +43,16 @@ Light:
   m_GameObject: {fileID: 654834666045056924}
   m_Enabled: 1
   serializedVersion: 10
-  m_Type: 0
+  m_Type: 2
   m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.97681326, b: 0.5707547, a: 0.21960784}
   m_Intensity: 5
-  m_Range: 10
+  m_Range: 3
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 1
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -110,7 +110,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Version: 3
   m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
+  m_AdditionalLightsShadowResolutionTier: 0
   m_LightLayerMask: 1
   m_RenderingLayers: 1
   m_CustomShadowLayers: 0
@@ -131,6 +131,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81558c32d27144acdaf791aa657fbed1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isFlickering: 0
-  timeDelay: 1
-  lightObject: {fileID: 654834666045056924}
+  lightObject: {fileID: 7720342684438357755}

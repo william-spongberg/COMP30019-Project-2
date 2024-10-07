@@ -3,28 +3,32 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class FlickerControl : MonoBehaviour {
-    public bool isFlickering = false;
-    public float timeDelay;
+    [SerializeField]
+    private Light lightObject;
 
-    public GameObject lightObject;
+    private float timeDelay;
+    private bool isFlickering = false;
 
     void Update()
-{
-    if (isFlickering == false)
     {
-        StartCoroutine(FlickeringLight());
+        if (isFlickering == false)
+        {
+            StartCoroutine(FlickeringLight());
+        }
+    }
+
+    IEnumerator FlickeringLight()
+    {
+        isFlickering = true;
+        if (lightObject != null)
+        {
+            lightObject.enabled = false;
+            timeDelay = Random.Range(0.01f, 0.5f);
+            yield return new WaitForSeconds(timeDelay);
+            lightObject.enabled = true;
+            timeDelay = Random.Range(0.01f, 0.5f);
+            yield return new WaitForSeconds(timeDelay);
+        }
+        isFlickering = false;
     }
 }
-            IEnumerator FlickeringLight()
-            {
-                isFlickering = true;
-                lightObject.GetComponent<Light>().enabled = false;
-                timeDelay = Random.Range(0.01f, 0.5f);
-                yield return new WaitForSeconds(timeDelay);
-                lightObject.GetComponent<Light>().enabled = true;
-                timeDelay = Random.Range(0.01f, 0.5f);
-                yield return new WaitForSeconds(timeDelay);
-                isFlickering = false;
-            }
-        }
-    
