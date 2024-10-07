@@ -1,14 +1,5 @@
 # Project 2 Report
 
-Read the [project 2
-specification](https://github.com/feit-comp30019/project-2-specification) for
-details on what needs to be covered here. You may modify this template as you see fit, but please
-keep the same general structure and headings.
-
-Remember that you must also continue to maintain the Game Design Document (GDD)
-in the `GDD.md` file (as discussed in the specification). We've provided a
-placeholder for it [here](GDD.md).
-
 ## Table of Contents
 
 - [Evaluation Plan](#evaluation-plan)
@@ -19,26 +10,22 @@ placeholder for it [here](GDD.md).
 
 ## Evaluation Plan
 
-## How they interact
+<!-- ### How they interact
 - Where they get stuck
 - What was unclear? What can be changed?
 
 - Ask them to be critical/ruthless
 - Ask them to take a screenshot if they got stuck
 
-## Usability/ How user-friendly it is
+### Usability/ How user-friendly it is
 - Ask for rating, then take out the rating
 - How frequently does the same issue come up?
-- Take screenshots/videos of how you improved
+- Take screenshots/videos of how you improved -->
 
----
-
-# Evaluation Plan for Game Usability
-
-## 1. Evaluation Techniques:
+### 1. Evaluation Techniques:
 We will use a combination of querying and observational techniques to evaluate the usability of our game. The primary techniques will include:
 
-### Post-Study System Usability Questionnaire (PSSUQ):
+#### Post-Study System Usability Questionnaire (PSSUQ):
 - Overall, I am satisfied with how easy it is to use this system. (Usefulness)
 - It was simple to use this system. (Usefulness)
 - I was able to complete the tasks and scenarios quickly using this system. (Usefulness)
@@ -56,7 +43,7 @@ We will use a combination of querying and observational techniques to evaluate t
 - This system has all the functions and capabilities I expect it to have. (Interface Quality)
 - Overall, I am satisfied with this system. (Interface Quality)
 
-### System Usability Scale (SUS):
+#### System Usability Scale (SUS):
 To complement the PSSUQ, we will also use SUS with a different group of participants. It consists of 10 questions, measured on a 5-point Likert Scale ranging from Strongly Disagree to Strongly Agree. 
 1. I think that I would like to use this system frequently.
 2. I found the system unnecessarily complex.
@@ -74,27 +61,27 @@ To complement the PSSUQ, we will also use SUS with a different group of particip
 - Even-numbered questions (2, 4, 6, 8, 10) reflect negative aspects of usability. To score these, subtract the user's response from 5.
 - Sum the scores for all 10 questions to get a number between 0 and 40. Multiply this sum by 2.5 to convert it into a score out of 100.
 
-### Observational Evaluation:
+#### Observational Evaluation:
 We will observe participants as they interact with the game, noting any difficulties they encounter, such as confusion with controls, tasks, or UI elements, and also assess areas where they get stuck or might need our help to understand how to proceed. We will use this to assess real-time user experience and identify areas of improvement in gameplay.
 
-## 2. Tasks for Participants:
+### 2. Tasks for Participants:
 We will ask participants to perform specific tasks when they’re playing the game so they will know what to focus on and it will make it more effective in answering questions.
 - **Complete the First Level:** Ask them to take a break after completing level 1, and ensure they’re understanding the story of the game as they go forward. See if they have any questions, and try to find solutions so that other users might not face the same difficulties.
 - **Defeat an Enemy:** This will evaluate how well the player can use game mechanics for combat.
 - **Fight the Boss:** Different players may lose/win which will help us get different points of view on how they felt during/after the final fight.
 
-## 3. Participants:
+### 3. Participants:
 We will recruit 10 or more participants:
 - **Group 1:** Will complete the PSSUQ and be observed while performing the tasks.
 - **Group 2:** Will complete the SUS and be observed while performing the tasks.
 
-### Recruitment Strategy:
+#### Recruitment Strategy:
 Participants will be recruited from the target audience for the game (e.g., those who love to be immersed in a fantastical yet eerie and confusing environment). Participants will be recruited based on a basic knowledge of:
 - Basic gaming experience (at least familiar with WASD controls and mouse for navigation).
 - Aged 16 years or older to align with the target demographic.
 We will recruit participants using social media platforms, gaming communities, and university forums.
 
-## 4. Data Collection:
+### 4. Data Collection:
 - **PSSUQ and SUS:** After completing the tasks, participants will be asked to fill out the PSSUQ and SUS questionnaires, rating each item on a scale.
 - **Observational Data:** We will use video recording and note-taking (based on consent from the player) to document interactions with the game, focusing on:
   - Time taken to complete tasks.
@@ -102,7 +89,7 @@ We will recruit participants using social media platforms, gaming communities, a
   - Verbal feedback during gameplay to capture spontaneous reactions.
   - Post-game general question about what they thought about the game, and get an idea of what they think the areas of improvement are.
 
-## 5. Data Analysis:
+### 5. Data Analysis:
 - **PSSUQ Analysis:** We will calculate the average scores for each of the three subscales (System Usefulness, Information Quality, and Interface Quality) and overall usability. Each participant’s scores will be aggregated, and we will look for trends in the data.
 - **SUS Analysis:** The SUS responses will be converted into a usability score for each participant. The SUS score will range from 0 to 100, with a higher score indicating better usability.
 - **Observational Data:** We will analyze the recorded gameplay to identify recurring issues, challenges with controls, and frustration points. Specific metrics include:
@@ -111,12 +98,12 @@ We will recruit participants using social media platforms, gaming communities, a
   - **Error Rate:** Number of times participants made errors while interacting with the game (e.g., wrong keys, confusion with mechanics).
   - **Observational Notes:** Identify any non-verbal cues indicating confusion, frustration, or ease.
 
-## 6. Timeline:
+### 6. Timeline:
 - **Week 1 (7th to 14th October):** Recruit participants and finalize the evaluation tasks.
 - **Week 2 (15th to 21st October):** Conduct the evaluation with the participants.
 - **Week 3 (21st to 29th October):** Analyze the data and make the necessary changes.
 
-## 7. Responsibilities:
+### 7. Responsibilities:
 
 
 ## Evaluation Report
@@ -133,4 +120,9 @@ TODO (due milestone 3) - see specification for details
 
 ## References and External Resources
 
-TODO (to be continuously updated) - see specification for details
+### Assets
+- [Synty student bundle](https://assetstore.unity.com/student-plan-pack1): For various low-poly 3D models, textures, and materials.
+- [Unity Starter Assets](https://assetstore.unity.com/packages/essentials/starter-assets-thirdperson-updates-in-new-charactercontroller-pa-196526): For NPC movement animations and materials.
+
+### Resources
+- TODO
