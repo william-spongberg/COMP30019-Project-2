@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerAttackController : MonoBehaviour
@@ -41,11 +40,11 @@ public class PlayerAttackController : MonoBehaviour
         // Handle input for switching weapons
         if (canSwitchWeapon && !IsCurrentWeaponBusy())
         {
-            if (Input.GetKeyDown(KeyCode.Alpha1) && currentWeapon != WeaponType.Melee)
+            if (Input.GetKey(KeyCode.Alpha1) && currentWeapon != WeaponType.Melee)
                 StartCoroutine(SwitchWeaponWithDelay(WeaponType.Melee));
-            else if (Input.GetKeyDown(KeyCode.Alpha2) && currentWeapon != WeaponType.Pistol)
+            else if (Input.GetKey(KeyCode.Alpha2) && currentWeapon != WeaponType.Pistol)
                 StartCoroutine(SwitchWeaponWithDelay(WeaponType.Pistol));
-            else if (Input.GetKeyDown(KeyCode.Alpha3) && currentWeapon != WeaponType.Shotgun)
+            else if (Input.GetKey(KeyCode.Alpha3) && currentWeapon != WeaponType.Shotgun)
                 StartCoroutine(SwitchWeaponWithDelay(WeaponType.Shotgun));
         }
 
@@ -76,7 +75,6 @@ public class PlayerAttackController : MonoBehaviour
 
         // Perform the weapon switch
         SwitchWeapon(weaponType);
-
 
         canSwitchWeapon = true;
     }
@@ -123,18 +121,11 @@ public class PlayerAttackController : MonoBehaviour
     }
 
     // Check if the current weapon is busy (reloading or on cool down)
-    private bool IsCurrentWeaponBusy()
+    private bool IsCurrentWeaponBusy() => currentWeapon switch
     {
-        switch (currentWeapon)
-        {
-            case WeaponType.Pistol:
-                return pistol.IsBusy();
-            case WeaponType.Shotgun:
-                return shotgun.IsBusy();
-            case WeaponType.Melee:
-                return melee.IsBusy();
-            default:
-                return false;
-        }
-    }
+        WeaponType.Pistol => pistol.IsBusy(),
+        WeaponType.Shotgun => shotgun.IsBusy(),
+        WeaponType.Melee => melee.IsBusy(),
+        _ => false,
+    };
 }

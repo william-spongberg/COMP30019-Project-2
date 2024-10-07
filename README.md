@@ -10,18 +10,6 @@
 
 ## Evaluation Plan
 
-<!-- ### How they interact
-- Where they get stuck
-- What was unclear? What can be changed?
-
-- Ask them to be critical/ruthless
-- Ask them to take a screenshot if they got stuck
-
-### Usability/ How user-friendly it is
-- Ask for rating, then take out the rating
-- How frequently does the same issue come up?
-- Take screenshots/videos of how you improved -->
-
 ### 1. Evaluation Techniques:
 We will use a combination of querying and observational techniques to evaluate the usability of our game. The primary techniques will include:
 
@@ -57,9 +45,9 @@ To complement the PSSUQ, we will also use SUS with a different group of particip
 10. I needed to learn a lot of things before I could get going with this system.
 
 **Scoring:**
-- Odd-numbered questions (1, 3, 5, 7, 9) reflect positive aspects of usability. To score these, subtract 1 from the user's response.
-- Even-numbered questions (2, 4, 6, 8, 10) reflect negative aspects of usability. To score these, subtract the user's response from 5.
-- Sum the scores for all 10 questions to get a number between 0 and 40. Multiply this sum by 2.5 to convert it into a score out of 100.
+- Odd-numbered questions (1, 3, 5, 7, 9) reflect positive aspects of usability. To score these,we need to subtract 1 from the user's response.
+- Even-numbered questions (2, 4, 6, 8, 10) reflect negative aspects of usability. To score these, we need tosubtract the user's response from 5.
+- Sum the scores for all 10 questions to get a number between 0 and 40. We need to multiply this sum by 2.5 to convert it into a score out of 100.
 
 #### Observational Evaluation:
 We will observe participants as they interact with the game, noting any difficulties they encounter, such as confusion with controls, tasks, or UI elements, and also assess areas where they get stuck or might need our help to understand how to proceed. We will use this to assess real-time user experience and identify areas of improvement in gameplay.
@@ -82,7 +70,7 @@ Participants will be recruited from the target audience for the game (e.g., thos
 We will recruit participants using social media platforms, gaming communities, and university forums.
 
 ### 4. Data Collection:
-- **PSSUQ and SUS:** After completing the tasks, participants will be asked to fill out the PSSUQ and SUS questionnaires, rating each item on a scale.
+- **PSSUQ and SUS:** After completing the tasks, participants will be asked to fill out the PSSUQ and SUS questionnaires, rating each item on a scale. We will be using Microsoft Forms to collect data from the participants to ensure that the data formal is the same for each participant and can be analysed properly after collection. 
 - **Observational Data:** We will use video recording and note-taking (based on consent from the player) to document interactions with the game, focusing on:
   - Time taken to complete tasks.
   - Areas where participants get stuck or express frustration.
@@ -104,6 +92,8 @@ We will recruit participants using social media platforms, gaming communities, a
 - **Week 3 (21st to 29th October):** Analyze the data and make the necessary changes.
 
 ### 7. Responsibilities:
+We will divide the responsibilites for working on the evaluation plan accordingly: Three people will be responsible for recruiting participants and collecting data while one person will be analysing the data found. After analysis, the team will work together to ensure that the game is modified according to the feedback received.
+
 
 
 ## Evaluation Report
