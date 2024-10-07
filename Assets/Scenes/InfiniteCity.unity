@@ -245,6 +245,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &1025179701 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4039710747377611746, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
+  m_PrefabInstance: {fileID: 1934345355}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1296165381
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -474,6 +479,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1636737165642947375, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
+      propertyPath: ShootingAudio
+      value: 
+      objectReference: {fileID: 1025179701}
+    - target: {fileID: 1803443702510974817, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
+      propertyPath: m_Pitch
+      value: 0.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 1803443702510974817, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
+      propertyPath: m_Volume
+      value: 0.622
+      objectReference: {fileID: 0}
       propertyPath: bullet
       value: 
       objectReference: {fileID: 5003074208552915072, guid: ed43102a58a4745b7852e75aa49f2e99, type: 3}
