@@ -15,7 +15,7 @@ public class ElevatorController : MonoBehaviour
         }
 
         // Press 'C' to close the doors
-        if (Input.GetKeyDown(KeyCode.C) && doorsOpen)
+        if (Input.GetKeyDown(KeyCode.C) && isOpen)
         {
             doorAnimator.SetBool("IsOpen", false);  // Set the parameter to false to close doors
             isOpen = false;
