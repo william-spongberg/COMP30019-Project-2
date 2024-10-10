@@ -209,7 +209,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3880687694341287553, guid: 03b5395efab59384fae56e5df6664bfa, type: 3}
       propertyPath: radius
-      value: 28
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 3880687694341287553, guid: 03b5395efab59384fae56e5df6664bfa, type: 3}
       propertyPath: cacheSize
@@ -303,6 +303,10 @@ PrefabInstance:
       propertyPath: m_NavMeshData
       value: 
       objectReference: {fileID: 23800000, guid: 11ceb625e16cab9418daf4f54e0bed5f, type: 2}
+    - target: {fileID: 7197370694972123256, guid: 03b5395efab59384fae56e5df6664bfa, type: 3}
+      propertyPath: m_UseGeometry
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7197370694972123256, guid: 03b5395efab59384fae56e5df6664bfa, type: 3}
       propertyPath: m_CollectObjects
       value: 1
