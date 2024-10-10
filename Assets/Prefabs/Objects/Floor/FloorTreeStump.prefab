@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4084174380873962591}
   - component: {fileID: 2164170975229557275}
   - component: {fileID: 8397360459954767034}
+  - component: {fileID: 6818363054340549453}
   m_Layer: 7
   m_Name: FloorTreeStump
   m_TagString: Untagged
@@ -107,6 +108,25 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &6818363054340549453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1928575511649141333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 0
+  m_Area: 0
+  m_OverrideGenerateLinks: 0
+  m_GenerateLinks: 0
+  m_IgnoreFromBuild: 0
+  m_ApplyToChildren: 0
+  m_AffectedAgents: ffffffff
 --- !u!1001 &6560578381078808875
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -174,10 +194,34 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1086224761313166, guid: c261602db06b80c479f69a2ffa682975, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3222752199622276724}
   m_SourcePrefab: {fileID: 100100000, guid: c261602db06b80c479f69a2ffa682975, type: 3}
 --- !u!4 &6558468932767917389 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4371624767679590, guid: c261602db06b80c479f69a2ffa682975, type: 3}
   m_PrefabInstance: {fileID: 6560578381078808875}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6559493601842437797 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1086224761313166, guid: c261602db06b80c479f69a2ffa682975, type: 3}
+  m_PrefabInstance: {fileID: 6560578381078808875}
+  m_PrefabAsset: {fileID: 0}
+--- !u!208 &3222752199622276724
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6559493601842437797}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.38900003, y: 0.24900001, z: 0.411}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0.24900001, z: 0}
+  m_TimeToStationary: 0.5
