@@ -8,8 +8,11 @@ public class MovementV2 : MonoBehaviour
     private Rigidbody rb;
 
     // Movement settings
+    private float moveSpeed;
     [SerializeField]
-    private float moveSpeed = 5f;
+    private float walkSpeed = 5f;
+    [SerializeField]
+    private float sprintSpeed = 5f;
     [SerializeField]
     private float jumpForce = 10f;
     [SerializeField]
@@ -25,6 +28,11 @@ public class MovementV2 : MonoBehaviour
     private float horizontalInput;
     private float verticalInput;
     private bool jumpInput;
+    private bool sprintInput;
+
+    // Slope Handling
+    [SerializeField] private float maxSlopeAngle = 45f;  // Max slope player can climb
+    private RaycastHit slopeHit;
 
     void Awake()
     {
@@ -36,6 +44,19 @@ public class MovementV2 : MonoBehaviour
 
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
+
+        // Sprint input
+        sprintInput = Input.GetKey(KeyCode.LeftShift);
+
+        // Set speed based on sprinting
+        if (sprintInput) 
+        {
+            moveSpeed = sprintSpeed;
+        }
+        else 
+        {
+            moveSpeed = walkSpeed;
+        }
         
         // Only set jumpInput to true when space is pressed
         if (Input.GetKeyDown(KeyCode.Space)) 
@@ -52,19 +73,27 @@ public class MovementV2 : MonoBehaviour
         HandleMovement();
     }
 
-    void HandleMovement()
+    void HandleMovement() 
     {
+
+        // Calculate if player is on the ground
+        isGrounded = Physics.Raycast(transform.position, Vector3.down, modelHeight * 0.5f + 0.1f, ground);
         // Use input to determine Horizontal Movement direction
         Vector3 moveDirection = new Vector3(horizontalInput, 0f, verticalInput).normalized;
         
         // transform movement to align with current orientation of player
-        Vector3 move = transform.TransformDirection(moveDirection) * moveSpeed;
+        moveDirection = transform.TransformDirection(moveDirection);
+
+        // Check for slopes and adjust movement
+        if (OnSlope())
+        {
+            moveDirection = Vector3.ProjectOnPlane(moveDirection, slopeHit.normal);  // Adjust for slopes
+        }
+
+        Vector3 move = moveDirection * moveSpeed;
 
         // Use Rigidbody to Move the Character
         rb.MovePosition(rb.position + move * Time.fixedDeltaTime);
-
-        // Calculate if player is on the ground
-        isGrounded = Physics.Raycast(transform.position, Vector3.down, modelHeight * 0.5f + 0.1f, ground);
 
         // Handle Jump (if grounded)
         if (isGrounded && jumpInput)
@@ -79,4 +108,15 @@ public class MovementV2 : MonoBehaviour
             rb.velocity += Vector3.up * gravity * Time.fixedDeltaTime;
         }
     }
+
+    private bool OnSlope()
+    {
+        if (Physics.Raycast(transform.position, Vector3.down, out slopeHit, modelHeight * 0.5f + 0.2f))
+        {
+            float angle = Vector3.Angle(Vector3.up, slopeHit.normal);
+            return angle < maxSlopeAngle;
+        }
+        return false;
+    }
+
 }

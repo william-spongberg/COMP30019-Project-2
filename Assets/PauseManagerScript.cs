@@ -21,7 +21,7 @@ public class PauseMenu : MonoBehaviour
     void Update()
     {
         // Check if the P key is pressed
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.Backspace))
         {
             if (isPaused)
             {
