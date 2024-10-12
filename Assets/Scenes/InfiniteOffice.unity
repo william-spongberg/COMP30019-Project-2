@@ -336,6 +336,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1507181891970822438, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938730036539574043, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3315840683921078775, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
       propertyPath: m_Lens.m_SensorSize.x
       value: 54.12
@@ -343,6 +351,14 @@ PrefabInstance:
     - target: {fileID: 3315840683921078775, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
       propertyPath: m_Lens.m_SensorSize.y
       value: 25.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 3503321058363608471, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
+      propertyPath: attackPoint
+      value: 
+      objectReference: {fileID: 1734907360}
+    - target: {fileID: 3503321058363608471, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
+      propertyPath: attackRange
+      value: 2.3
       objectReference: {fileID: 0}
     - target: {fileID: 4236896413806958649, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -743,6 +759,11 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!4 &1734907360 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5952101889311901613, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
+  m_PrefabInstance: {fileID: 755125150}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &143008312038143654
 PrefabInstance:
   m_ObjectHideFlags: 0

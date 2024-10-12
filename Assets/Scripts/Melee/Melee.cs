@@ -35,17 +35,16 @@ public class Melee : MonoBehaviour
     {
         canAttack = false; // Prevent further attacks until cooldown is over
 
-        // Detect enemies in range of attack
-        Collider[] hitEnemies = Physics.OverlapSphere(attackPoint.position, attackRange, enemyLayer);
-
-        // Damage all enemies hit
-        foreach (Collider enemy in hitEnemies)
+        // Perform a raycast from the attack point forward (direction the player is facing)
+        RaycastHit hit;
+        if (Physics.Raycast(attackPoint.position, attackPoint.forward, out hit, attackRange, enemyLayer))
         {
-            // Assume enemy has a component called "EnemyHealth" that handles taking damage
-            EnemyHP enemyHealth = enemy.GetComponent<EnemyHP>();
+            // Check if the object hit has the "EnemyHP" component to apply damage
+            EnemyHP enemyHealth = hit.collider.GetComponent<EnemyHP>();
             if (enemyHealth != null)
             {
                 enemyHealth.TakeDamage(attackDamage);
+                Debug.Log("Hit enemy: " + hit.collider.name);
             }
         }
 
@@ -64,7 +63,7 @@ public class Melee : MonoBehaviour
         if (attackPoint == null) return;
 
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+        Gizmos.DrawLine(attackPoint.position, attackPoint.position + attackPoint.forward * attackRange);
     }
 
     // Method to indicate if the weapon is busy (for switching logic)
