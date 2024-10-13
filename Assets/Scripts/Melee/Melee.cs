@@ -1,15 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Melee : MonoBehaviour
 {
     [SerializeField]
-    private float attackRange = 2.0f; 
+    private float attackRange;
     [SerializeField]
-    private float attackDamage = 25f; 
+    private float attackDamage;
     [SerializeField]
-    private float attackCooldown = 1f;
+    private float attackCooldown;
     [SerializeField]
     private LayerMask enemyLayer; // Define which layers can be hit
     
@@ -20,6 +21,10 @@ public class Melee : MonoBehaviour
     // References
     [SerializeField]
     private Transform attackPoint; // Point where the melee attack originates
+
+        // Ammo UI
+    [SerializeField]
+    private TextMeshProUGUI ammoDisplay;
 
     public void HandleInput()
     {
@@ -79,5 +84,10 @@ public class Melee : MonoBehaviour
 
         // Cancel any scheduled invokes (e.g., cooldowns)
         CancelInvoke();
+    }
+
+    public void UpdateAmmoDisplay()
+    {
+        ammoDisplay.text = "";
     }
 }

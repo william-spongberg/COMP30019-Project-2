@@ -25,10 +25,26 @@ public class MovementV2 : MonoBehaviour
     [SerializeField]
     private LayerMask ground;
 
+    // Input variables
     private float horizontalInput;
     private float verticalInput;
     private bool jumpInput;
     private bool sprintInput;
+
+    // Stamina-related
+    [SerializeField] 
+    private float maxStamina = 100f;               
+    [SerializeField] 
+    private float staminaDepletionRate = 20f; 
+    [SerializeField] 
+    private float staminaRegenRate = 10f;
+    [SerializeField]
+    private float staminaRegenDelay = 2f;
+    private float regenCooldownTimer = 0f;
+    private float currentStamina;   
+
+    // Reference to the stamina slider controller script
+    [SerializeField] private SprintSlider sprintSlider;
 
     // Slope Handling
     [SerializeField] private float maxSlopeAngle = 45f;  // Max slope player can climb
@@ -37,6 +53,10 @@ public class MovementV2 : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
+
+        // Set Max stamina
+        currentStamina = maxStamina;
+        sprintSlider.SetMaxStamina(maxStamina);
 
     }
 
@@ -47,16 +67,7 @@ public class MovementV2 : MonoBehaviour
 
         // Sprint input
         sprintInput = Input.GetKey(KeyCode.LeftShift);
-
-        // Set speed based on sprinting
-        if (sprintInput) 
-        {
-            moveSpeed = sprintSpeed;
-        }
-        else 
-        {
-            moveSpeed = walkSpeed;
-        }
+        HandleSprint();
         
         // Only set jumpInput to true when space is pressed
         if (Input.GetKeyDown(KeyCode.Space)) 
@@ -118,5 +129,61 @@ public class MovementV2 : MonoBehaviour
         }
         return false;
     }
+
+    private void HandleSprint()
+    {
+        // Reset cooldown timer if sprinting
+        if (sprintInput && currentStamina > 0)
+        {
+            sprintSlider.FadeIn();
+            regenCooldownTimer = staminaRegenDelay;
+            moveSpeed = sprintSpeed;
+            DepleteStamina();
+
+        }
+        else
+        {
+            moveSpeed = walkSpeed;
+
+            // Start regenerating stamina after delay
+            if (regenCooldownTimer <= 0)
+            {
+                RegenerateStamina();  
+                sprintSlider.FadeOut();              
+            }
+            else
+            {
+                regenCooldownTimer -= Time.deltaTime;
+            }
+        }
+    }
+
+    // Deplete stamina while sprinting
+    private void DepleteStamina()
+    {
+        currentStamina -= staminaDepletionRate * Time.deltaTime;
+        if (currentStamina < 0)
+        {
+            currentStamina = 0;  // Clamp to 0
+        }
+
+        // Update the stamina bar
+        sprintSlider.SetStamina(currentStamina);
+    }
+
+    // Regenerate stamina when not sprinting
+    private void RegenerateStamina()
+    {
+        currentStamina += staminaRegenRate * Time.deltaTime;
+        if (currentStamina > maxStamina)
+        {
+            currentStamina = maxStamina;  // Clamp to max
+        }
+
+        // Update the stamina bar
+        sprintSlider.SetStamina(currentStamina);
+    }
+
+
 
 }
