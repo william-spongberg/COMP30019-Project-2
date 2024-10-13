@@ -7,8 +7,8 @@ public class ElevatorController : MonoBehaviour
 
     void Update()
     {
-        // Press 'O' to open the doors
-        if (Input.GetKeyDown(KeyCode.O) && !isOpen)
+        // Press 'L' to open the doors
+        if (Input.GetKeyDown(KeyCode.L) && !isOpen)
         {
             doorAnimator.SetBool("IsOpen", true);  // Set the parameter to true to open doors
             isOpen = true;
