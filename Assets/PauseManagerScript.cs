@@ -6,14 +6,12 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseMenuUI;  // Reference to Pause Menu UI
     public GameObject playerCapsule;  // Reference to the PlayerCapsule (which has the ShootingGun script attached)
 
-    private ShootingGun shootingGunScript;  // Reference to the ShootingGun script
+    // private ShootingGun shootingGunScript;  // Reference to the ShootingGun script, redundant; script no longer exists
 
     public static bool isPaused = false;
 
     void Start()
     {
-       
-        shootingGunScript = playerCapsule.GetComponent<ShootingGun>();
 
       
         Cursor.lockState = CursorLockMode.Locked;
@@ -23,7 +21,7 @@ public class PauseMenu : MonoBehaviour
     void Update()
     {
         // Check if the P key is pressed
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.Backspace))
         {
             if (isPaused)
             {
@@ -42,13 +40,6 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(true);   
         Time.timeScale = 0f;          
         isPaused = true;
-
-       
-        if (shootingGunScript != null)
-        {
-            shootingGunScript.enabled = false;
-        }
-
      
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
@@ -60,13 +51,6 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(false);  
         Time.timeScale = 1f;         
         isPaused = false;
-
-       
-        if (shootingGunScript != null)
-        {
-            shootingGunScript.enabled = true;
-        }
-
       
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;

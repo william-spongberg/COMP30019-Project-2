@@ -7,10 +7,19 @@ public class BulletBehaviour : MonoBehaviour
    
    [SerializeField]
    private float destroyDelay;
+   [SerializeField]
+    private int damageAmount;
 
     private void OnCollisionEnter(Collision collision)
     {
-        
+        // Check if the object hit is an enemy
+        EnemyHP enemy = collision.gameObject.GetComponent<EnemyHP>();
+
+        if (enemy != null)
+        {
+            // Deal damage to the enemy
+            enemy.TakeDamage(damageAmount);
+        }
         
        // Use a coroutine to destroy the bullet after a delay
         StartCoroutine(DestroySequence());
