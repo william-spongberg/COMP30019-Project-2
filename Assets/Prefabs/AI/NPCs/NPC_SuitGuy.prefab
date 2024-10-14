@@ -632,7 +632,7 @@ MonoBehaviour:
   healthPoints: 100
   patrolRadius: 10
   detectionRange: 20
-  attackRange: 10
+  attackRange: 8
   bulletForce: 20
   bulletRange: 50
   spread: 0.1
