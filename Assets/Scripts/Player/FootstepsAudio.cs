@@ -4,73 +4,93 @@ using UnityEngine;
 
 public class FootstepsAudio : MonoBehaviour
 {
-    // Reference to the Footsteps GameObject
-    public GameObject Footsteps;
-    private AudioSource footstepAudioSource;
+    [SerializeField] private AudioSource footstepAudioSource;
 
-    // Variables to track the player's movement input
-    float horizontalInput;
-    float verticalInput;
+    // Footstep sounds for walking and running
+    [SerializeField] private List<AudioClip> walkingFootsteps;
+    [SerializeField] private List<AudioClip> runningFootsteps;
 
-    // Ground check variables
-    public LayerMask ground;
-    public float modelHeight;
-    private bool grounded;
+    private float stepCooldown;
 
-    // Start is called before the first frame update
+    [SerializeField] private float walkStepInterval = 0.5f;
+    [SerializeField] private float sprintStepInterval = 0.35f;
+
+    private int lastFootstepIndex = -1;
+
     void Start()
     {
-        // Initially disable the footsteps audio
-        footstepAudioSource = Footsteps.GetComponent<AudioSource>();
-        Footsteps.SetActive(false);  // Make sure footsteps are off initially
+        stepCooldown = 0;
     }
 
-    // Update is called once per frame
-    void Update()
+    // Sets the appropriate footstep sound and plays it. Based on movement type (Sprint/Walk)
+    public void SetFootstepsAudio(bool isSprinting)
     {
-        
-        grounded = Physics.Raycast(transform.position, Vector3.down, modelHeight * 0.5f + 0.1f, ground);
-        
-        // Get the horizontal and vertical input axes (for WASD and arrow keys)
-        horizontalInput = Input.GetAxisRaw("Horizontal"); // A/D or Left/Right Arrow
-        verticalInput = Input.GetAxisRaw("Vertical");     // W/S or Up/Down Arrow
-
-       
-        // Only play footsteps if the player is grounded and moving
-        if (grounded && (horizontalInput != 0 || verticalInput != 0))
+        // If the cooldown has elapsed, play a footstep sound
+        if (stepCooldown <= 0f)
         {
-            setFootstepsAudio();
+            PlayFootstepSound(isSprinting);  // Play appropriate footstep sound
+            ResetCooldown(isSprinting);      // Reset cooldown after playing
+        }
+    }
+
+    public void UpdateStepCooldown(float deltaTime)
+    {
+        stepCooldown -= deltaTime; // Decrement the cooldown timer
+    }
+
+    // Stops playing footsteps
+    public void StopFootstepsAudio()
+    {
+        if (footstepAudioSource.isPlaying)
+        {
+            footstepAudioSource.Stop();
+        }
+    }
+
+    // Play a random footstep sound, depending on whether the player is sprinting or walking
+    private void PlayFootstepSound(bool isSprinting)
+    {
+        List<AudioClip> chosenFootstepSounds;
+
+        // Choose the right footstep sounds based on sprinting or walking
+        if (isSprinting)
+        {
+            chosenFootstepSounds = runningFootsteps;
         }
         else
         {
-            StopFootstepsAudio();
+            chosenFootstepSounds = walkingFootsteps;
+        }
+
+        // Play the footstep sound
+        if (chosenFootstepSounds.Count > 0)
+        {
+            int newFootstepIndex;
+
+            // Ensure we don't play the same sound twice in a row
+            do
+            {
+                newFootstepIndex = Random.Range(0, chosenFootstepSounds.Count);
+            } while (newFootstepIndex == lastFootstepIndex);
+
+            lastFootstepIndex = newFootstepIndex;
+
+            // Assign and play the selected footstep sound
+            footstepAudioSource.clip = chosenFootstepSounds[newFootstepIndex];
+            footstepAudioSource.Play();
         }
     }
 
-    // Function to start the footsteps audio
-    void setFootstepsAudio()
+    // Reset cooldown based on the movement type
+    private void ResetCooldown(bool isSprinting)
     {
-        if (!Footsteps.activeSelf)
+        if (isSprinting)
         {
-            Footsteps.SetActive(true); // Activate the GameObject
+            stepCooldown = sprintStepInterval;
         }
-
-        if (!footstepAudioSource.isPlaying)  // Check if it's not already playing
+        else
         {
-            footstepAudioSource.Play();     // Play the audio
-            Debug.Log("Playing footsteps audio");
+            stepCooldown = walkStepInterval;
         }
-    }
-
-    // Function to stop the footsteps audio
-    void StopFootstepsAudio()
-    {
-        if (footstepAudioSource.isPlaying)  // Stop the audio if it's playing
-        {
-            footstepAudioSource.Stop();
-            Debug.Log("Stopped footsteps audio");
-        }
-
-        Footsteps.SetActive(false);  // Deactivate the GameObject
     }
 }

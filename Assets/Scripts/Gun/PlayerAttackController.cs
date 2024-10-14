@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using TMPro;
 
 public class PlayerAttackController : MonoBehaviour
 {
@@ -21,6 +22,10 @@ public class PlayerAttackController : MonoBehaviour
     [SerializeField] private float switchDelay = 0.5f; // Time in seconds
     private bool canSwitchWeapon = true;
 
+    // Ammo UI
+    [SerializeField]
+    private TextMeshProUGUI ammoDisplay;
+
     private void Awake()
     {
         // Get references to weapon scripts
@@ -28,14 +33,14 @@ public class PlayerAttackController : MonoBehaviour
         shotgun = GetComponent<Shotgun>();
         melee = GetComponent<Melee>();
 
+        ammoDisplay.text = "";
+
         // Start with Melee as default
         SwitchWeapon(WeaponType.Melee);
 
-        // Ignore collision between Player and Bullet layers
-        Physics.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Bullet"));
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         // Handle input for switching weapons
         if (canSwitchWeapon && !IsCurrentWeaponBusy())
@@ -103,18 +108,21 @@ public class PlayerAttackController : MonoBehaviour
             case WeaponType.Pistol:
                 pistol.enabled = true;
                 pistolWeaponAsset.SetActive(true);
+                pistol.UpdateAmmoDisplay();
                 Debug.Log("Switch to pistol");
                 break;
 
             case WeaponType.Shotgun:
                 shotgun.enabled = true;
                 shotgunWeaponAsset.SetActive(true);
+                shotgun.UpdateAmmoDisplay();
                 Debug.Log("Switch to shotgun");
                 break;
 
             case WeaponType.Melee:
                 melee.enabled = true;
                 meleeWeaponAsset.SetActive(true);
+                melee.UpdateAmmoDisplay();
                 Debug.Log("Switch to melee");
                 break;
         }

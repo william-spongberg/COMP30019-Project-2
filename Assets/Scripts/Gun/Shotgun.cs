@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
+using TMPro;
 
 public class Shotgun : MonoBehaviour
 {
@@ -49,6 +50,10 @@ public class Shotgun : MonoBehaviour
 
     [SerializeField]
     private Transform gunPoint;
+
+    // Ammo UI
+    [SerializeField]
+    private TextMeshProUGUI ammoDisplay;
 
     private void Awake()
     {
@@ -125,6 +130,9 @@ public class Shotgun : MonoBehaviour
         // Deduct one ammo per shotgun blast
         bulletsLeft--;
 
+         // Update ammo display after shooting
+        UpdateAmmoDisplay();
+
         // Apply camera recoil
         ApplyCameraRecoil();
 
@@ -152,6 +160,7 @@ public class Shotgun : MonoBehaviour
     {
         // After a reload delay/cooldown, fill gun magazine again
         currentlyReloading = true;
+        ammoDisplay.text = "Reloading";
         Invoke("ReloadComplete", reloadTime);
     }
 
@@ -160,6 +169,9 @@ public class Shotgun : MonoBehaviour
         // Fill magazine
         bulletsLeft = magazineSize;
         currentlyReloading = false;
+
+         // Update ammo display after reloading
+        UpdateAmmoDisplay();
     }
 
     public bool IsBusy()
@@ -188,6 +200,26 @@ public class Shotgun : MonoBehaviour
         povComponent.m_HorizontalAxis.Value += horizontalRecoil;
 
         Debug.Log("Recoil applied");
+    }
+
+    public void UpdateAmmoDisplay()
+    {
+        // Update ammo count on the UI
+        if (ammoDisplay != null)
+        {
+            ammoDisplay.text = $"{bulletsLeft}/{magazineSize}";
+
+            // Check if ammo is low (you can adjust the threshold as needed)
+            if (bulletsLeft <= magazineSize * 0.2f) // If 20% or less ammo left
+            {
+                ammoDisplay.color = Color.red; // Set color to red when ammo is low
+            }
+            else
+            {
+                // Set color to light grey (you can adjust the RGB values for different shades)
+                ammoDisplay.color = new Color(0.75f, 0.75f, 0.75f); // Light grey
+            }
+        }
     }
 }
 
