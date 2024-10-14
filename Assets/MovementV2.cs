@@ -46,6 +46,9 @@ public class MovementV2 : MonoBehaviour
     // Reference to the stamina slider controller script
     [SerializeField] private SprintSlider sprintSlider;
 
+    // Reference to the footsteps audio script
+    [SerializeField] private FootstepsAudio footstepsAudio;
+
     // Slope Handling
     [SerializeField] private float maxSlopeAngle = 45f;  // Max slope player can climb
     private RaycastHit slopeHit;
@@ -62,6 +65,9 @@ public class MovementV2 : MonoBehaviour
 
     private void Update() {
 
+        // Calculate if player is on the ground
+        isGrounded = Physics.Raycast(transform.position, Vector3.down, modelHeight * 0.5f + 0.1f, ground);
+
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
 
@@ -75,7 +81,9 @@ public class MovementV2 : MonoBehaviour
             jumpInput = true;  
         }
 
-        Debug.DrawRay(transform.position, Vector3.down * (modelHeight * 0.5f + 0.1f), Color.red);
+        HandleFootsteps();
+
+        //Debug.DrawRay(transform.position, Vector3.down * (modelHeight * 0.5f + 0.1f), Color.red);
 
     }
 
@@ -86,9 +94,6 @@ public class MovementV2 : MonoBehaviour
 
     void HandleMovement() 
     {
-
-        // Calculate if player is on the ground
-        isGrounded = Physics.Raycast(transform.position, Vector3.down, modelHeight * 0.5f + 0.1f, ground);
         // Use input to determine Horizontal Movement direction
         Vector3 moveDirection = new Vector3(horizontalInput, 0f, verticalInput).normalized;
         
@@ -184,6 +189,21 @@ public class MovementV2 : MonoBehaviour
         sprintSlider.SetStamina(currentStamina);
     }
 
+    private void HandleFootsteps()
+    {
+        // Update the footsteps cooldown based on deltaTime
+        if (isGrounded && (horizontalInput != 0 || verticalInput != 0))
+        {
+            // Player is moving, play footsteps
+            footstepsAudio.UpdateStepCooldown(Time.deltaTime);
+            footstepsAudio.SetFootstepsAudio(sprintInput);
+        }
+        else
+        {
+            // Player is not moving, stop the footsteps
+            footstepsAudio.StopFootstepsAudio();
+        }
+    }
 
 
 }
