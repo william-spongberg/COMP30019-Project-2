@@ -656,7 +656,6 @@ GameObject:
   - component: {fileID: 5320454239348495606}
   - component: {fileID: 6892849812693703749}
   - component: {fileID: 7430867481151049840}
-  - component: {fileID: -7441483138044068380}
   m_Layer: 0
   m_Name: NPC_PoliceGirl
   m_TagString: Untagged
@@ -747,27 +746,14 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.2
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &-7441483138044068380
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3112665518280578209}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a590276926d18d4e83b8b9d41b54a00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 40
 --- !u!1 &3256653209523327429
 GameObject:
   m_ObjectHideFlags: 0

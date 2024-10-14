@@ -1464,7 +1464,6 @@ GameObject:
   - component: {fileID: 943130992513591348}
   - component: {fileID: 7854437136863214570}
   - component: {fileID: 4579409698440211922}
-  - component: {fileID: 576238711838329015}
   - component: {fileID: 913890993665702814}
   m_Layer: 9
   m_Name: NPC_SuitGirl
@@ -1556,27 +1555,14 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.2
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &576238711838329015
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3714298338384521418}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a590276926d18d4e83b8b9d41b54a00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 40
 --- !u!114 &913890993665702814
 MonoBehaviour:
   m_ObjectHideFlags: 0
