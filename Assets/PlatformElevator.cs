@@ -3,16 +3,18 @@ using UnityEngine.SceneManagement;  // For scene transitions
 
 public class PlatformElevator : MonoBehaviour
 {
-    public float riseSpeed = 2f;      // Speed at which the platform rises
-    public string nextSceneName;      // Name of the next scene to load
+    [SerializeField]
+    private float riseSpeed = 2f;      // Speed at which the platform rises
+    [SerializeField]
+    private string nextSceneName;      // Name of the next scene to load
 
+    [SerializeField]
     private bool playerOnPlatform = false;
+    [SerializeField]
     private bool platformActivated = false;
-    private Transform playerTransform;  // Reference to the player's transform
 
     void Update()
     {
-       
         if (playerOnPlatform && Input.GetKeyDown(KeyCode.E))
         {
             platformActivated = true;
@@ -28,25 +30,12 @@ public class PlatformElevator : MonoBehaviour
         }
     }
 
-    
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision other)
     {
-        if (other.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player"))
         {
+            Debug.Log("Player on platform"); // Debug log
             playerOnPlatform = true;
-            playerTransform = other.transform;  // Store the player's transform
-            playerTransform.SetParent(transform);  // Make the player a child of the platform
-        }
-    }
-
-    // Detect when the player leaves the platform
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            playerOnPlatform = false;
-            playerTransform.SetParent(null);  // Unparent the player when they leave the platform
-            playerTransform = null;  // Clear the reference
         }
     }
 }

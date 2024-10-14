@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 8638274611888783461}
   - component: {fileID: 2723071633466050783}
   - component: {fileID: 6869657620323759858}
-  - component: {fileID: 645672011210854059}
   m_Layer: 0
   m_Name: elevating platform
   m_TagString: Untagged
@@ -31,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.8069954, y: 0.7348741, z: -2.3241487}
-  m_LocalScale: {x: 4, y: -0.18, z: 4}
+  m_LocalScale: {x: 4, y: 0.18, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1840519875500379597}
@@ -102,7 +101,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -122,33 +121,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   riseSpeed: 2
   nextSceneName: StartScene
---- !u!54 &645672011210854059
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5836135193528538121}
-  serializedVersion: 4
-  m_Mass: 10
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  playerOnPlatform: 0
+  platformActivated: 0
 --- !u!1 &6896157613687233140
 GameObject:
   m_ObjectHideFlags: 0
