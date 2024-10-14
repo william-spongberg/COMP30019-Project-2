@@ -299,7 +299,6 @@ GameObject:
   m_Component:
   - component: {fileID: 901874290103784387}
   - component: {fileID: 1729869120662110557}
-  - component: {fileID: 5055042473514660176}
   m_Layer: 0
   m_Name: Character_Male_Police
   m_TagString: Untagged
@@ -342,7 +341,6 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 775d02595bddb644fbcb40fc6f0f4620, type: 2}
   - {fileID: 2100000, guid: 7806446f7c57eb04b8af669fd76f2ff1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -425,24 +423,6 @@ SkinnedMeshRenderer:
     m_Center: {x: 0, y: 89.04045, z: -4.591098}
     m_Extent: {x: 102.45596, y: 98.85097, z: 28.730614}
   m_DirtyAABB: 0
---- !u!114 &5055042473514660176
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1355550790342291079}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba36e0ecf7b4355469445c91be6478d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefab: {fileID: 1355550790342291079}
-  scale: {x: 0.01, y: 0.01, z: 0.01}
-  instanceCount: 3
-  range: 3
-  minLifetime: 0.1
-  maxLifetime: 0.5
 --- !u!1 &1721428569731691385
 GameObject:
   m_ObjectHideFlags: 0
@@ -2509,10 +2489,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5697989485495092527}
   - component: {fileID: 4823137310167797322}
-  - component: {fileID: 1054727083498285495}
   - component: {fileID: 107108541806532253}
   - component: {fileID: 2254125686048378839}
-  - component: {fileID: -4038101072595019621}
   m_Layer: 0
   m_Name: NPC_PoliceGuy
   m_TagString: Untagged
@@ -2566,21 +2544,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1054727083498285495
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7997143719887574502}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c061b5cabc9b1943a422d474b8bdac9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0
-  velocity: {x: 0, y: 0, z: 0}
-  dest: {x: 0, y: 0, z: 0}
 --- !u!195 &107108541806532253
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2618,27 +2581,14 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.2
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &-4038101072595019621
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7997143719887574502}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a590276926d18d4e83b8b9d41b54a00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 40
 --- !u!1 &8079247879378903611
 GameObject:
   m_ObjectHideFlags: 0
