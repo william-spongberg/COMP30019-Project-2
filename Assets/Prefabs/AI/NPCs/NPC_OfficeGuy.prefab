@@ -1742,7 +1742,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7873672926130491163}
   - component: {fileID: 5278940092118794034}
-  - component: {fileID: 5769313406030865124}
   - component: {fileID: 3867381186617025289}
   m_Layer: 9
   m_Name: Character_BusinessMan_Shirt
@@ -1786,7 +1785,6 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 775d02595bddb644fbcb40fc6f0f4620, type: 2}
   - {fileID: 2100000, guid: 7806446f7c57eb04b8af669fd76f2ff1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -1869,24 +1867,6 @@ SkinnedMeshRenderer:
     m_Center: {x: 0, y: 86.43996, z: -6.5513744}
     m_Extent: {x: 102.45596, y: 96.25047, z: 26.754984}
   m_DirtyAABB: 0
---- !u!114 &5769313406030865124
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5330560393952001751}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba36e0ecf7b4355469445c91be6478d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefab: {fileID: 5330560393952001751}
-  scale: {x: 0.01, y: 0.01, z: 0.01}
-  instanceCount: 3
-  range: 3
-  minLifetime: 0.1
-  maxLifetime: 0.5
 --- !u!54 &3867381186617025289
 Rigidbody:
   m_ObjectHideFlags: 0
