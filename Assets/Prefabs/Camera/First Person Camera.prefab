@@ -642,7 +642,7 @@ CapsuleCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 512
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -800,7 +800,7 @@ GameObject:
   - component: {fileID: 4750667638642542687}
   m_Layer: 8
   m_Name: PlayerCapsule
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -965,6 +965,7 @@ MonoBehaviour:
   virtualCamera: {fileID: 3315840683921078775}
   gunPoint: {fileID: 6769895590117017103}
   ammoDisplay: {fileID: 0}
+  muzzleFlash: {fileID: 0}
 --- !u!114 &2038893976056318202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -993,6 +994,7 @@ MonoBehaviour:
   virtualCamera: {fileID: 3315840683921078775}
   gunPoint: {fileID: 9028047170668516042}
   ammoDisplay: {fileID: 0}
+  muzzleFlash: {fileID: 0}
 --- !u!114 &3503321058363608471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1053,9 +1055,9 @@ Transform:
   m_GameObject: {fileID: 6612323114249832193}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.111, z: 0.445}
+  m_LocalPosition: {x: 0, y: 0.111, z: 0.531}
   m_LocalScale: {x: 0.24231, y: 0.24231, z: 0.24231}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1942128011391996731}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
