@@ -55,6 +55,9 @@ public class Shotgun : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI ammoDisplay;
 
+    [SerializeField]
+    private ParticleSystem muzzleFlash;
+
     private void Awake()
     {
         // Fill up magazine
@@ -103,6 +106,11 @@ public class Shotgun : MonoBehaviour
 
         // Calculate direction from gunPoint to the target
         Vector3 directionWithoutSpread = targetPoint - gunPoint.position;
+
+        // play muzzle flash
+        muzzleFlash.transform.forward = directionWithoutSpread.normalized;
+        muzzleFlash.transform.position = gunPoint.position;
+        muzzleFlash.Play();
 
         // Fire multiple pellets with spread
         for (int i = 0; i < pelletCount; i++)

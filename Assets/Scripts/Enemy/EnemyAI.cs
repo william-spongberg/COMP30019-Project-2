@@ -21,7 +21,7 @@ public class EnemyAI : MonoBehaviour
     public LayerMask playerLayer;
 
     // Health
-    public float healthPoints = 100f;
+    public float healthPoints = 50f;
 
     // Patrolling
     private Vector3 patrolDestination;

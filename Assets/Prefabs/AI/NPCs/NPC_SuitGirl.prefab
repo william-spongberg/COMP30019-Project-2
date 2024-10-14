@@ -1465,6 +1465,7 @@ GameObject:
   - component: {fileID: 7854437136863214570}
   - component: {fileID: 4579409698440211922}
   - component: {fileID: 913890993665702814}
+  - component: {fileID: 4683558181145366324}
   m_Layer: 9
   m_Name: NPC_SuitGirl
   m_TagString: Untagged
@@ -1555,9 +1556,9 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.2
   m_Height: 2
@@ -1582,7 +1583,7 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 256
-  healthPoints: 100
+  healthPoints: 50
   patrolRadius: 10
   detectionRange: 20
   attackRange: 8
@@ -1595,6 +1596,19 @@ MonoBehaviour:
   speed: 0
   velocity: {x: 0, y: 0, z: 0}
   dest: {x: 0, y: 0, z: 0}
+--- !u!114 &4683558181145366324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3714298338384521418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a590276926d18d4e83b8b9d41b54a00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 50
 --- !u!1 &3812609458454494591
 GameObject:
   m_ObjectHideFlags: 0
