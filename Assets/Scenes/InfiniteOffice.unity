@@ -196,10 +196,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 911558459012786708, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
-      propertyPath: m_ExcludeLayers.m_Bits
-      value: 512
-      objectReference: {fileID: 0}
     - target: {fileID: 2038893976056318202, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
       propertyPath: ammoDisplay
       value: 
@@ -226,7 +222,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4236896413806958649, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4236896413806958649, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -268,26 +264,10 @@ PrefabInstance:
       propertyPath: ammoDisplay
       value: 
       objectReference: {fileID: 1396748165}
-    - target: {fileID: 5970646190611382457, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 5970646190611382457, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
     - target: {fileID: 6298858975677008880, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
       propertyPath: sprintSlider
       value: 
       objectReference: {fileID: 1661180485}
-    - target: {fileID: 6769895590117017103, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.531
-      objectReference: {fileID: 0}
-    - target: {fileID: 6769895590117017103, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6819831658801229571, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
       propertyPath: ammoDisplay
       value: 
@@ -299,10 +279,6 @@ PrefabInstance:
     - target: {fileID: 7750007646304961496, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
       propertyPath: m_Name
       value: First Person Camera
-      objectReference: {fileID: 0}
-    - target: {fileID: 7750007646304961496, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -630,6 +606,10 @@ PrefabInstance:
     - target: {fileID: 5204775127861947298, guid: 2181d719196db304da0fd61c08243422, type: 3}
       propertyPath: m_Name
       value: FreeCam
+      objectReference: {fileID: 0}
+    - target: {fileID: 5204775127861947298, guid: 2181d719196db304da0fd61c08243422, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
