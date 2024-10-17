@@ -22,7 +22,7 @@ public class EnemyAI : MonoBehaviour
     public LayerMask playerLayer;
 
     // Health
-    public float healthPoints = 100f;
+    public float healthPoints = 50f;
 
     // Patrolling
     private Vector3 patrolDestination;
@@ -153,7 +153,9 @@ public class EnemyAI : MonoBehaviour
         agent.destination = transform.position;
 
         // Face the player
-        transform.LookAt(player);
+        Vector3 direction = (player.position - transform.position).normalized;
+        direction.y = 0;
+        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), 0.1f);
 
         if (!isAttackOnCooldown)
         {

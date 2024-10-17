@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4084174380873962591}
   - component: {fileID: 2164170975229557275}
   - component: {fileID: 8397360459954767034}
+  - component: {fileID: 9161379165030744344}
   m_Layer: 7
   m_Name: FloorTreeDead
   m_TagString: Untagged
@@ -107,6 +108,25 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &9161379165030744344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1928575511649141333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 0
+  m_Area: 0
+  m_OverrideGenerateLinks: 0
+  m_GenerateLinks: 0
+  m_IgnoreFromBuild: 0
+  m_ApplyToChildren: 0
+  m_AffectedAgents: ffffffff
 --- !u!1001 &1508585320028541427
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -178,6 +198,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1542802950924766, guid: 0acdb1262919bd049a9ab2a0a782d22f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6626241413702290653}
+    - targetCorrespondingSourceObject: {fileID: 1542802950924766, guid: 0acdb1262919bd049a9ab2a0a782d22f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1961388596744647035}
   m_SourcePrefab: {fileID: 100100000, guid: 0acdb1262919bd049a9ab2a0a782d22f, type: 3}
 --- !u!1 &1507273696252966957 stripped
 GameObject:
@@ -196,6 +219,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 150f6da329ab29d43a8e8de2164f0999, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!208 &1961388596744647035
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1507273696252966957}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.3, y: 2.58, z: 0.345}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 2.5310001, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!4 &1513081375301048857 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4531248793881578, guid: 0acdb1262919bd049a9ab2a0a782d22f, type: 3}

@@ -57,6 +57,9 @@ public class Pistol : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI ammoDisplay;
 
+    [SerializeField]
+    private ParticleSystem muzzleFlash;
+
     // Graphics
     // public GameObject muzzleFlash;
     // public TextMeshProUGUI ammunitionDisplay;
@@ -97,6 +100,7 @@ public class Pistol : MonoBehaviour
         // Prevent firing again until shot cooldown expires
         shootingEnabled = false;
 
+
         // Find shooting position using a ray cast to the center of the screen
         Ray ray = Camera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
 
@@ -112,6 +116,11 @@ public class Pistol : MonoBehaviour
 
         // Calculate direction from gunPoint to the target
         Vector3 directionWithoutSpread = targetPoint - gunPoint.position;
+
+        // play muzzle flash
+        muzzleFlash.transform.forward = directionWithoutSpread.normalized;
+        muzzleFlash.transform.position = gunPoint.position;
+        muzzleFlash.Play();
 
         //Calculate spread
         float x = Random.Range(-spread, spread);

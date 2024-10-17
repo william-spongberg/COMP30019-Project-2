@@ -52,14 +52,19 @@ public class Generator : MonoBehaviour
     private Boolean isBaking = false;
     [SerializeField]
     private NavMeshSurface navMeshSurface;
-
+    [SerializeField]
+    private float bakeInterval = 1f; // Time interval between bakes
     private Coroutine bakingCoroutine;
+    private float lastBakeTime;
 
     void Start()
     {
         // generate random offsets
         offsetX = UnityEngine.Random.Range(0, 999999);
         offsetY = UnityEngine.Random.Range(0, 999999);
+
+        // set current time as last bake time
+        lastBakeTime = Time.time;
 
         // get player object
         player = GameObject.FindGameObjectWithTag("Player");
@@ -91,6 +96,15 @@ public class Generator : MonoBehaviour
 
         // generate world
         WorldGeneration(playerX, playerZ);
+
+        // bake the NavMesh periodically
+        if (isBaking && Time.time - lastBakeTime >= bakeInterval)
+        {
+            if (bakingCoroutine != null)
+                StopCoroutine(bakingCoroutine);
+            bakingCoroutine = StartCoroutine(BakeNavMeshAsync());
+            lastBakeTime = Time.time;
+        }
     }
 
     void WorldGeneration(float playerX, float playerZ)

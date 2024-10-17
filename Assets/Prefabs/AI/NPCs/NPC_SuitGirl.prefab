@@ -1464,10 +1464,8 @@ GameObject:
   - component: {fileID: 943130992513591348}
   - component: {fileID: 7854437136863214570}
   - component: {fileID: 4579409698440211922}
-  - component: {fileID: 576238711838329015}
   - component: {fileID: 913890993665702814}
-  - component: {fileID: 5037314216086988843}
-  - component: {fileID: 3496375052956130078}
+  - component: {fileID: 4683558181145366324}
   m_Layer: 9
   m_Name: NPC_SuitGirl
   m_TagString: Untagged
@@ -1498,7 +1496,6 @@ Transform:
   - {fileID: 1307893809751802017}
   - {fileID: 5769714444035164955}
   - {fileID: 1670616618854774008}
-  - {fileID: 7783625292368068855}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &943130992513591348
@@ -1567,19 +1564,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &576238711838329015
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3714298338384521418}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a590276926d18d4e83b8b9d41b54a00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 40
 --- !u!114 &913890993665702814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1599,10 +1583,10 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 256
-  healthPoints: 100
+  healthPoints: 50
   patrolRadius: 10
   detectionRange: 20
-  attackRange: 10
+  attackRange: 8
   bulletForce: 20
   bulletRange: 50
   spread: 0.1
@@ -1612,104 +1596,7 @@ MonoBehaviour:
   speed: 0
   velocity: {x: 0, y: 0, z: 0}
   dest: {x: 0, y: 0, z: 0}
-  enemyFootstepsAudio: {fileID: 3496375052956130078}
---- !u!82 &5037314216086988843
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3714298338384521418}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 5a5fe2a543e35ef44980fcf5ac79551a, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
---- !u!114 &3496375052956130078
+--- !u!114 &4683558181145366324
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1718,26 +1605,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3714298338384521418}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74d93e2fb373a417bbfc86f5f737f88f, type: 3}
+  m_Script: {fileID: 11500000, guid: 1a590276926d18d4e83b8b9d41b54a00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  footstepAudioSource: {fileID: 5037314216086988843}
-  walkingFootsteps:
-  - {fileID: 8300000, guid: b993df4a93c1d304ab19d8b2eb88c9a5, type: 3}
-  - {fileID: 8300000, guid: 5c9bdbce37b06a24fa6ea793bcfd1907, type: 3}
-  - {fileID: 8300000, guid: 0909de896e9029541b92ae05fe15e4b6, type: 3}
-  - {fileID: 8300000, guid: 6ad0cf00f050bee41a2dee098475dc78, type: 3}
-  - {fileID: 8300000, guid: 7ca5a9710db4327439c9f8cb8204615e, type: 3}
-  - {fileID: 8300000, guid: 14ae706fef2303e4cb71112dbd5d250b, type: 3}
-  - {fileID: 8300000, guid: b995bc1775ea83b4b8f861763e9a1424, type: 3}
-  - {fileID: 8300000, guid: d15f7338d693f0343843a6b9096d27f6, type: 3}
-  runningFootsteps:
-  - {fileID: 8300000, guid: ffa5441258224694690169f4bd95b969, type: 3}
-  - {fileID: 8300000, guid: 5a5fe2a543e35ef44980fcf5ac79551a, type: 3}
-  - {fileID: 8300000, guid: 062aac8f0463d7945a5a16732efbea51, type: 3}
-  - {fileID: 8300000, guid: e331a9e83f5b77e49bd9efba1b2c2fd9, type: 3}
-  - {fileID: 8300000, guid: 8c2c6c300bd8fc441878f426377bec64, type: 3}
-  - {fileID: 8300000, guid: f8e559768bed7ed4680ab0449da7ec3a, type: 3}
+  health: 50
 --- !u!1 &3812609458454494591
 GameObject:
   m_ObjectHideFlags: 0
@@ -2425,7 +2296,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5087962530525493516}
   - component: {fileID: 3561145625342051566}
-  - component: {fileID: 4774000173949702201}
   m_Layer: 9
   m_Name: Character_BusinessWoman
   m_TagString: Untagged
@@ -2468,7 +2338,6 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 775d02595bddb644fbcb40fc6f0f4620, type: 2}
   - {fileID: 2100000, guid: 7806446f7c57eb04b8af669fd76f2ff1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -2551,24 +2420,6 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.000011444092, y: 86.18578, z: -5.4394407}
     m_Extent: {x: 102.12019, y: 95.9963, z: 24.934273}
   m_DirtyAABB: 0
---- !u!114 &4774000173949702201
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6940598646186477520}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba36e0ecf7b4355469445c91be6478d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefab: {fileID: 6940598646186477520}
-  scale: {x: 0.01, y: 0.01, z: 0.01}
-  instanceCount: 3
-  range: 3
-  minLifetime: 0.1
-  maxLifetime: 0.5
 --- !u!1 &6942163149393950073
 GameObject:
   m_ObjectHideFlags: 0
@@ -3185,73 +3036,3 @@ Transform:
   - {fileID: 9078293296189850988}
   m_Father: {fileID: 1479199302635911215}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &5318600360008210507
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 271051039019702402}
-    m_Modifications:
-    - target: {fileID: 2723423437427415228, guid: e0c756586c59e8042afb4978713a4482, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2723423437427415228, guid: e0c756586c59e8042afb4978713a4482, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2723423437427415228, guid: e0c756586c59e8042afb4978713a4482, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2723423437427415228, guid: e0c756586c59e8042afb4978713a4482, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2723423437427415228, guid: e0c756586c59e8042afb4978713a4482, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2723423437427415228, guid: e0c756586c59e8042afb4978713a4482, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2723423437427415228, guid: e0c756586c59e8042afb4978713a4482, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2723423437427415228, guid: e0c756586c59e8042afb4978713a4482, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2723423437427415228, guid: e0c756586c59e8042afb4978713a4482, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2723423437427415228, guid: e0c756586c59e8042afb4978713a4482, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3070604630915438281, guid: e0c756586c59e8042afb4978713a4482, type: 3}
-      propertyPath: m_Name
-      value: NPC
-      objectReference: {fileID: 0}
-    - target: {fileID: 3070604630915438281, guid: e0c756586c59e8042afb4978713a4482, type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 6477211422508965504, guid: e0c756586c59e8042afb4978713a4482, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 8616685848737228372, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: e0c756586c59e8042afb4978713a4482, type: 3}
---- !u!4 &7783625292368068855 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2723423437427415228, guid: e0c756586c59e8042afb4978713a4482, type: 3}
-  m_PrefabInstance: {fileID: 5318600360008210507}
-  m_PrefabAsset: {fileID: 0}

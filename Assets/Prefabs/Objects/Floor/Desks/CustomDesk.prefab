@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7391298559947363328}
   - component: {fileID: 8643966885013958553}
   - component: {fileID: 8125857903625123449}
+  - component: {fileID: 1638255927681264166}
   m_Layer: 7
   m_Name: CustomDesk
   m_TagString: Untagged
@@ -108,6 +109,25 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1638255927681264166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5080206959274034438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 0
+  m_Area: 0
+  m_OverrideGenerateLinks: 0
+  m_GenerateLinks: 0
+  m_IgnoreFromBuild: 0
+  m_ApplyToChildren: 0
+  m_AffectedAgents: ffffffff
 --- !u!1001 &5432146981627577790
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -184,6 +204,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.074
       objectReference: {fileID: 0}
+    - target: {fileID: 1541206612436894332, guid: d80846395dab44d4d864a023bc1bd266, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2782218621332468407, guid: d80846395dab44d4d864a023bc1bd266, type: 3}
       propertyPath: chairPos
       value: 
@@ -253,6 +277,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6462949412619129147}
     m_Modifications:
+    - target: {fileID: 4458317186238165156, guid: cdd83297e2cb2d9449847dc594d512db, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8915003487750359389, guid: cdd83297e2cb2d9449847dc594d512db, type: 3}
       propertyPath: m_LocalScale.x
       value: 4.333333
