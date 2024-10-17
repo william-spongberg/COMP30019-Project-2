@@ -49,6 +49,10 @@ public class Pistol : MonoBehaviour
     [SerializeField]
     private Transform gunPoint;
 
+    // Sound reference
+    [SerializeField]
+    private PistolAudio pistolAudio;
+
     // Ammo UI
     [SerializeField]
     private TextMeshProUGUI ammoDisplay;
@@ -134,6 +138,9 @@ public class Pistol : MonoBehaviour
         //Give bullet force
         currentBullet.GetComponent<Rigidbody>().AddForce(directionWithSpread.normalized * bulletForce, ForceMode.Impulse);
 
+        // Play shooting sound
+        pistolAudio.PlayRandomFiringSound();
+
         // Deduct ammo accordingly
         bulletsLeft--;
 
@@ -169,7 +176,13 @@ public class Pistol : MonoBehaviour
     {
         // After a reload delay/cooldown, fill gun magazine again
         currentlyReloading = true;
+
+        // Display reload text
         ammoDisplay.text = "Reloading";
+
+        // Play reload sequence sound
+        pistolAudio.PlayClipOutIn();
+
         Invoke("ReloadComplete", reloadTime);
     }
     private void ReloadComplete()
