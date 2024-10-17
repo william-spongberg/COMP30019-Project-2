@@ -184,8 +184,8 @@ MonoBehaviour:
       m_LegacyHeadingDefinition: -1
       m_LegacyVelocityFilterStrength: -1
   m_VerticalRecentering:
-    m_enabled: 0
-    m_WaitTime: 1
+    m_enabled: 1
+    m_WaitTime: 2
     m_RecenteringTime: 2
     m_LegacyHeadingDefinition: -1
     m_LegacyVelocityFilterStrength: -1
@@ -415,6 +415,7 @@ GameObject:
   - component: {fileID: 6962040132012910798}
   - component: {fileID: 1609417217311363686}
   - component: {fileID: 911558459012786708}
+  - component: {fileID: 394970316279278403}
   m_Layer: 8
   m_Name: Capsule
   m_TagString: Player
@@ -684,7 +685,7 @@ MonoBehaviour:
   meleeWeaponAsset: {fileID: 4093556333319677587}
   pistolWeaponAsset: {fileID: 1938730036539574043}
   shotgunWeaponAsset: {fileID: 1507181891970822438}
-  pistolAudio: {fileID: 5480634855707871747}
+  pistolAudio: {fileID: 0}
   switchDelay: 0.5
   ammoDisplay: {fileID: 0}
 --- !u!114 &6819831658801229571
@@ -871,7 +872,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2964060225915543542}
   - component: {fileID: 3315840683921078775}
-  - component: {fileID: 9120104387967426102}
   m_Layer: 0
   m_Name: Virtual Camera
   m_TagString: Untagged
@@ -934,23 +934,6 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 5021571791224817008}
---- !u!114 &9120104387967426102
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6897655165301101189}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 729aad4491e915a41bda2b8325cf757a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_FocusTracksTarget: 0
-  m_FocusTracking: 0
-  m_FocusTarget: {fileID: 0}
-  m_FocusOffset: 0
-  m_Profile: {fileID: 11400000, guid: c4e70f76fb4ebc6409ce8c16d916a838, type: 2}
 --- !u!1 &7750007646304961496
 GameObject:
   m_ObjectHideFlags: 0
