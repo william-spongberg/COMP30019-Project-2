@@ -254,5 +254,5 @@ public class EnemyAI : MonoBehaviour
             Debug.Log("Playing walking footsteps based on speed");
         }
 
-    }
+    }   
 }
