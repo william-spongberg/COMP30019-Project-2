@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -40,6 +41,7 @@ public class EnemyAI : MonoBehaviour
     public float spread = 0.1f;
     public float attackCooldown = 1f;
     private bool isAttackOnCooldown;
+    
     public GameObject bullet;
     public Transform gunPoint;
 
@@ -50,6 +52,13 @@ public class EnemyAI : MonoBehaviour
     private Vector3 velocity = Vector3.zero;
     [SerializeField]
     private Vector3 dest = Vector3.zero;
+
+    // Sound
+
+   [SerializeField]
+   private EnemyFootstepsAudio enemyFootstepsAudio;
+   private float runThreshold = 2.5f;
+
 
     private void Start()
     {
@@ -67,9 +76,7 @@ public class EnemyAI : MonoBehaviour
     {
         UpdateState();
         ExecuteStateAction();
-
-        float speed = agent.velocity.magnitude;
-        anim.SetFloat("Speed", speed);
+        HandleFootsteps();
     }
 
     private void UpdateState()
@@ -139,7 +146,6 @@ public class EnemyAI : MonoBehaviour
     private void ChasePlayer()
     {
         agent.destination = player.position;
-        Debug.Log(agent.destination);
     }
     private void AttackPlayer()
     {
@@ -219,5 +225,34 @@ public class EnemyAI : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, detectionRange);
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, attackRange);
+    }
+
+    private void HandleFootsteps()
+    {
+        // Handle footsteps based on velocity
+        float speed = agent.velocity.magnitude;
+        anim.SetFloat("Speed", speed);
+
+    }
+
+    public void OnFootstep()
+    {
+        Debug.Log("On footstep being called");
+
+        // Get the agent's current speed (this will help us determine if it's running or walking)
+        float currentSpeed = agent.velocity.magnitude;
+
+        // Play running footsteps if above the threshold, otherwise play walking footsteps
+        if (currentSpeed > runThreshold)
+        {
+            enemyFootstepsAudio.PlayFootstepSound(true);  // Play running footsteps
+            Debug.Log("Playing running footsteps based on speed");
+        }
+        else if (currentSpeed > 0)
+        {
+            enemyFootstepsAudio.PlayFootstepSound(false);  // Play walking footsteps
+            Debug.Log("Playing walking footsteps based on speed");
+        }
+
     }
 }

@@ -14,6 +14,10 @@ public class PlayerAttackController : MonoBehaviour
     [SerializeField] private GameObject pistolWeaponAsset;
     [SerializeField] private GameObject shotgunWeaponAsset;
 
+    // Sound references
+    [SerializeField]
+    private PistolAudio pistolAudio;
+
     // Current active weapon
     private enum WeaponType { Pistol, Shotgun, Melee }
     private WeaponType currentWeapon;
@@ -109,6 +113,7 @@ public class PlayerAttackController : MonoBehaviour
                 pistol.enabled = true;
                 pistolWeaponAsset.SetActive(true);
                 pistol.UpdateAmmoDisplay();
+                pistolAudio.PlayArmingSound();
                 Debug.Log("Switch to pistol");
                 break;
 
