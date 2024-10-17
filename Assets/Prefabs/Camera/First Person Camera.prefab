@@ -667,7 +667,7 @@ MonoBehaviour:
   meleeWeaponAsset: {fileID: 4093556333319677587}
   pistolWeaponAsset: {fileID: 1938730036539574043}
   shotgunWeaponAsset: {fileID: 1507181891970822438}
-  pistolAudio: {fileID: 0}
+  pistolAudio: {fileID: 5480634855707871747}
   switchDelay: 0.5
   ammoDisplay: {fileID: 0}
 --- !u!114 &6819831658801229571
@@ -1272,6 +1272,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sounds
       objectReference: {fileID: 0}
+    - target: {fileID: 2049133149680435971, guid: 25e32cb7b696a43b6b7f2b9bb2b5c710, type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2049133149680435971, guid: 25e32cb7b696a43b6b7f2b9bb2b5c710, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0.55
+      objectReference: {fileID: 0}
     - target: {fileID: 5668204567362762907, guid: 25e32cb7b696a43b6b7f2b9bb2b5c710, type: 3}
       propertyPath: m_Name
       value: PistolAudio
@@ -1281,12 +1289,24 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8043837947301510168, guid: 25e32cb7b696a43b6b7f2b9bb2b5c710, type: 3}
+      propertyPath: m_Pitch
+      value: 0.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 8043837947301510168, guid: 25e32cb7b696a43b6b7f2b9bb2b5c710, type: 3}
+      propertyPath: m_Volume
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 8043837947301510168, guid: 25e32cb7b696a43b6b7f2b9bb2b5c710, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8043837947301510168, guid: 25e32cb7b696a43b6b7f2b9bb2b5c710, type: 3}
       propertyPath: m_PlayOnAwake
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8043837947301510168, guid: 25e32cb7b696a43b6b7f2b9bb2b5c710, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
