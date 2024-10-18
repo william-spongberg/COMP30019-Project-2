@@ -7,13 +7,16 @@ public class AfterImage : MonoBehaviour
     [SerializeField]
     private Vector3 scale = Vector3.one;
     [SerializeField]
-    private int instanceCount = 100;
+    private int instanceCount = 3;
     [SerializeField]
     private float trailSpeed = 0.1f;
+    [SerializeField]
+    private float glitchIntensity = 0.1f;
 
     private Matrix4x4[] matrices;
     private Vector3[] positions;
     private Material material;
+    private Animator animator;
 
     void Start()
     {
@@ -23,6 +26,8 @@ public class AfterImage : MonoBehaviour
         SkinnedMeshRenderer meshRenderer = prefab.GetComponent<SkinnedMeshRenderer>();
         material = meshRenderer.material;
         material.enableInstancing = true;
+
+        animator = GetComponent<Animator>();
 
         for (int i = 0; i < instanceCount; i++)
         {
@@ -34,11 +39,21 @@ public class AfterImage : MonoBehaviour
     {
         for (int i = instanceCount - 1; i > 0; i--)
         {
+            // trail behind previous instance
             positions[i] = Vector3.Lerp(positions[i], positions[i - 1], trailSpeed);
+            // randomly offset ('glitch')
+            positions[i] += new Vector3(
+                Random.Range(-glitchIntensity, glitchIntensity),
+                Random.Range(-glitchIntensity, glitchIntensity),
+                Random.Range(-glitchIntensity, glitchIntensity)
+            );
             matrices[i] = Matrix4x4.TRS(positions[i], Quaternion.identity, scale);
         }
-        positions[0] = transform.position;
-        matrices[0] = Matrix4x4.TRS(positions[0], Quaternion.identity, scale);
+
+        // Apply animator's transformation to the first instance
+        Transform animatedTransform = animator.transform;
+        positions[0] = animatedTransform.position;
+        matrices[0] = Matrix4x4.TRS(positions[0], animatedTransform.rotation, scale);
     }
 
     void OnRenderObject()

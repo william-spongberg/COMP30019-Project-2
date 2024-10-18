@@ -91,7 +91,7 @@ Shader "Unlit/GlitchShader"
                 float time = _Time.y * _GlitchSpeed;
                 float redOffsetX, redOffsetY, greenOffsetX, greenOffsetY, blueOffsetX, blueOffsetY;
 
-                // randomise offset coords - unique seeds for each channel
+                // randomise offset coords - unique seeds for each channel for random colour effect
                 Unity_RandomRange_float(float2(time, 0.0), -_GlitchIntensity, _GlitchIntensity, redOffsetX);
                 Unity_RandomRange_float(float2(0.0, time), -_GlitchIntensity, _GlitchIntensity, redOffsetY);
                 Unity_RandomRange_float(float2(time + 1.0, 0.0), -_GlitchIntensity, _GlitchIntensity, greenOffsetX);
@@ -110,6 +110,13 @@ Shader "Unlit/GlitchShader"
                 color.g = tex2D(_MainTex, greenOffset).g;
                 color.b = tex2D(_MainTex, blueOffset).b;
                 color.a = tex2D(_MainTex, uv).a;
+
+                // randomly change alpha to 0 for flickering effect
+                float randomAlpha;
+                Unity_RandomRange_float(uv + time, 0.0, 1.0, randomAlpha);
+                if (randomAlpha < 0.1) {
+                    discard;
+                }
 
                 // dithering for crt effect
                 half4 ditheredColor;
