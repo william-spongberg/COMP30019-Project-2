@@ -912,11 +912,11 @@ Transform:
   m_GameObject: {fileID: 2183526913850644330}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 40, y: -20, z: 40}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3626003534454813518}
+  m_Father: {fileID: 291423624871351638}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6022831889958670702
 MeshFilter:
@@ -2087,10 +2087,10 @@ MonoBehaviour:
   patrolRadius: 10
   detectionRange: 20
   attackRange: 8
-  bulletForce: 20
+  bulletForce: 10
   bulletRange: 50
   spread: 0.1
-  attackCooldown: 1
+  attackCooldown: 3.5
   bullet: {fileID: 5003074208552915072, guid: ed43102a58a4745b7852e75aa49f2e99, type: 3}
   gunPoint: {fileID: 4203973127379390332}
   speed: 0
@@ -2345,6 +2345,7 @@ Transform:
   m_Children:
   - {fileID: 7560727003227588296}
   - {fileID: 2786411661697983359}
+  - {fileID: 4203973127379390332}
   m_Father: {fileID: 6981244285646893073}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &5616363929663003740
@@ -3798,7 +3799,6 @@ Transform:
   - {fileID: 1225439552087020714}
   - {fileID: 3240743675588741469}
   - {fileID: 6296098619491156762}
-  - {fileID: 4203973127379390332}
   m_Father: {fileID: 5290583795911384586}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8219231577613670578

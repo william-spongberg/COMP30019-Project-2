@@ -194,6 +194,7 @@ public class EnemyAI : MonoBehaviour
 
         // Give bullet force
         currentBullet.GetComponent<Rigidbody>().AddForce(shootDirectionSpread.normalized * bulletForce, ForceMode.Impulse);
+        Debug.DrawRay(gunPoint.position, shootDirectionSpread.normalized * bulletRange, Color.red, 1f);
 
         // Destroy the projectile after it has traveled its range
         Destroy(currentBullet, bulletRange / bulletForce);
