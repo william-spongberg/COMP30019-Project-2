@@ -46,7 +46,7 @@ To complement the PSSUQ, we will also use SUS with a different group of particip
 
 **Scoring:**
 - Odd-numbered questions (1, 3, 5, 7, 9) reflect positive aspects of usability. To score these,we need to subtract 1 from the user's response.
-- Even-numbered questions (2, 4, 6, 8, 10) reflect negative aspects of usability. To score these, we need tosubtract the user's response from 5.
+- Even-numbered questions (2, 4, 6, 8, 10) reflect negative aspects of usability. To score these, we need to subtract the user's response from 5.
 - Sum the scores for all 10 questions to get a number between 0 and 40. We need to multiply this sum by 2.5 to convert it into a score out of 100.
 
 #### Observational Evaluation:
@@ -92,7 +92,7 @@ We will recruit participants using social media platforms, gaming communities, a
 - **Week 3 (21st to 29th October):** Analyze the data and make the necessary changes.
 
 ### 7. Responsibilities:
-We will divide the responsibilites for working on the evaluation plan accordingly: Three people will be responsible for recruiting participants and collecting data while one person will be analysing the data found. After analysis, the team will work together to ensure that the game is modified according to the feedback received.
+We will divide the responsibilities for working on the evaluation plan accordingly: Three people will be responsible for recruiting participants and collecting data while one person will be analysing the data found. After analysis, the team will work together to ensure that the game is modified according to the feedback received.
 
 
 
@@ -106,13 +106,37 @@ TODO (due milestone 3) - see specification for details
 
 ## Summary of Contributions
 
-TODO (due milestone 3) - see specification for details
+William Spongberg:
+  - Managed the project and coordinated the team AlphaBeta.
+  - Created the initial project structure and set up the Unity project.
+  - Using Blender, created from scratch 3D models for the desk and CRT monitor, and then implemented them into prefabs with appropriate materials.
+  - Developed, designed and implemented procedural world generation using Perlin noise. Created all related scripts and prefabs.
+  - Implemented post processing effects using the built-in Global Volume to drastically enhance the visual quality of the game and its "eerie" atmosphere.
+  - Implemented various bug fixes for known issues in the project. See Git commits for more details.
+  - Implemented particle system for the muzzle flash and blood effects.
+  - Implemented the FreeCam prefab, a smooth free-look camera system akin to the camera used in Scene view that was used for the game's trailer.
+  - Implemented ObjectSpawner, a script that spawns objects randomly within a given range of the player.
+  - Implemented the initial very basic enemy AI using NavMesh and NavMeshAgent.
+  - Implemented automatic NavMesh baking around the player to ensure that enemies can navigate the environment.
+  - Repeatedly tweaked procedural world gen and AI baking to ensure the game performs well.
+  - Implemented GPUInstance.shader, a shader that allows for the rendering of multiple instances of the same object in a single draw call.
+  - Implemented GlitchShader.shader, a shader that creates a complex 'glitchy' effect for the NPCs using dithering and random offsets of the UVs and x coordinates.
+  - Numerous other small scripts and tweaks to improve the game's performance, visual quality, and overall experience.
+---
+Alistair Wern Hao Cheah
+ - TODO
+---
+David Kee Siong Chin
+ - TODO 
+---
+Ananya Agarwal
+ - TODO
 
 ## References and External Resources
 
 ### Assets
 - [Synty student bundle](https://assetstore.unity.com/student-plan-pack1): For various low-poly 3D models, textures, and materials.
-- [Unity Starter Assets](https://assetstore.unity.com/packages/essentials/starter-assets-thirdperson-updates-in-new-charactercontroller-pa-196526): For NPC movement animations and materials.
+- [Unity Starter Assets](https://assetstore.unity.com/packages/essentials/starter-assets-thirdperson-updates-in-new-charactercontroller-pa-196526): For NPC movement animations and environment materials.
 
 ### Resources
 - TODO
