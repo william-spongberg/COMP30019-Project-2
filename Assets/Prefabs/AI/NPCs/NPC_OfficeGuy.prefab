@@ -726,7 +726,7 @@ Animator:
   m_GameObject: {fileID: 1915697562179448519}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 897b34267f422c1499700402763d096e, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 40db3173a05ae3242b1c182a09b0a183, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -838,7 +838,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7ecb71ddb3c058468c27651aedcc456, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsRagdoll: 0
+  IsRagdolling: 0
 --- !u!114 &8377275494419937037
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -878,7 +878,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 5a5fe2a543e35ef44980fcf5ac79551a, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
