@@ -117,7 +117,7 @@ William Spongberg:
   - Implemented the initial very basic enemy AI using NavMesh and NavMeshAgent.
   - Implemented automatic NavMesh baking around the player to ensure that enemies can navigate the environment.
   - Repeatedly tweaked procedural world gen and AI baking to ensure the game performs well.
-  - Implemented GlitchShader.shader, a shader that creates a complex 'glitchy' effect for the NPCs using dithering and random offsets of the UVs and x coordinates.
+  - Implemented GlitchShader.shader, a shader that creates a complex 'glitchy' effect for the NPCs using gpu instancing, dithering and random offsets of the UVs and x coordinates.
   - Numerous other small scripts and tweaks to improve the game's performance, visual quality, and overall experience.
 ---
 Alistair Wern Hao Cheah
