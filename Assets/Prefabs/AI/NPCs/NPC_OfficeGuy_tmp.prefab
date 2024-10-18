@@ -683,12 +683,12 @@ GameObject:
   - component: {fileID: -7455094087404250261}
   - component: {fileID: 2457353472710290169}
   m_Layer: 9
-  m_Name: NPC_OfficeGuy
+  m_Name: NPC_OfficeGuy_tmp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8550299347359997887
 Transform:
   m_ObjectHideFlags: 0
@@ -2224,6 +2224,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7873672926130491163}
   - component: {fileID: 5278940092118794034}
+  - component: {fileID: 3768746509180514313}
   m_Layer: 9
   m_Name: Character_BusinessMan_Shirt
   m_TagString: Untagged
@@ -2266,7 +2267,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7806446f7c57eb04b8af669fd76f2ff1, type: 2}
+  - {fileID: 2100000, guid: ddcd8c1f29e2605438ea54c5064780a1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2348,6 +2349,22 @@ SkinnedMeshRenderer:
     m_Center: {x: 0, y: 86.43996, z: -6.5513744}
     m_Extent: {x: 102.45596, y: 96.25047, z: 26.754984}
   m_DirtyAABB: 0
+--- !u!114 &3768746509180514313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5330560393952001751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c40cb8bd13825bd4ca27cb3de656e6cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 5330560393952001751}
+  scale: {x: 0.01, y: 0.01, z: 0.01}
+  instanceCount: 10
+  trailSpeed: 0.5
 --- !u!1 &5590242437428656231
 GameObject:
   m_ObjectHideFlags: 0

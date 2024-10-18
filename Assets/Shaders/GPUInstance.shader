@@ -1,4 +1,4 @@
-Shader "Unlit/DupeShader"
+Shader "Unlit/GPUInstanceShader"
 {
     Properties
     {

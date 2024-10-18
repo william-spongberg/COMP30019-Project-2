@@ -2120,7 +2120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7ecb71ddb3c058468c27651aedcc456, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsRagdoll: 0
+  IsRagdolling: 0
 --- !u!1 &3812609458454494591
 GameObject:
   m_ObjectHideFlags: 0
