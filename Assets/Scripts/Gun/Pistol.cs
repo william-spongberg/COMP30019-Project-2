@@ -93,6 +93,11 @@ public class Pistol : MonoBehaviour
             Shoot();
             Debug.Log("Shooting pistol");
         }
+
+        if (shootingEnabled && currentlyShooting && !currentlyReloading && bulletsLeft <= 0)
+        {
+            pistolAudio.PlayEmptyShell();
+        }
     }
 
     private void Shoot()

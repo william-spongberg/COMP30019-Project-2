@@ -17,6 +17,10 @@ public class PlayerAttackController : MonoBehaviour
     // Sound references
     [SerializeField]
     private PistolAudio pistolAudio;
+    [SerializeField]
+    private ShotgunAudio shotgunAudio;
+    [SerializeField]
+    private MeleeAudio meleeAudio;
 
     // Current active weapon
     private enum WeaponType { Pistol, Shotgun, Melee }
@@ -121,6 +125,7 @@ public class PlayerAttackController : MonoBehaviour
                 shotgun.enabled = true;
                 shotgunWeaponAsset.SetActive(true);
                 shotgun.UpdateAmmoDisplay();
+                shotgunAudio.PlayArmingSound();
                 Debug.Log("Switch to shotgun");
                 break;
 
@@ -128,6 +133,7 @@ public class PlayerAttackController : MonoBehaviour
                 melee.enabled = true;
                 meleeWeaponAsset.SetActive(true);
                 melee.UpdateAmmoDisplay();
+                meleeAudio.PlayArmingSound();
                 Debug.Log("Switch to melee");
                 break;
         }

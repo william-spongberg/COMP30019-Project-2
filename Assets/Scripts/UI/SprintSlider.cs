@@ -19,12 +19,19 @@ public class SprintSlider : MonoBehaviour
     public void SetStamina(float stamina)
     {
         slider.value = stamina;
+
+        // Check if stamina is full, and if so, start fading out
+        if (stamina >= slider.maxValue)
+        {
+            FadeOut();
+        }
     }
 
     public void SetMaxStamina(float stamina)
     {
         slider.maxValue = stamina;
         slider.value = stamina;
+
     }
 
      // Call this to start fading out

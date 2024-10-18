@@ -153,8 +153,7 @@ public class MovementV2 : MonoBehaviour
             // Start regenerating stamina after delay
             if (regenCooldownTimer <= 0)
             {
-                RegenerateStamina();  
-                sprintSlider.FadeOut();              
+                RegenerateStamina();            
             }
             else
             {
