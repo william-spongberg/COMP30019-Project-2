@@ -94,8 +94,6 @@ We will recruit participants using social media platforms, gaming communities, a
 ### 7. Responsibilities:
 We will divide the responsibilities for working on the evaluation plan accordingly: Three people will be responsible for recruiting participants and collecting data while one person will be analysing the data found. After analysis, the team will work together to ensure that the game is modified according to the feedback received.
 
-
-
 ## Evaluation Report
 
 TODO (due milestone 3) - see specification for details
@@ -110,7 +108,7 @@ William Spongberg:
   - Managed the project and coordinated the team AlphaBeta.
   - Created the initial project structure and set up the Unity project.
   - Using Blender, created from scratch 3D models for the desk and CRT monitor, and then implemented them into prefabs with appropriate materials.
-  - Developed, designed and implemented procedural world generation using Perlin noise. Created all related scripts and prefabs.
+  - Developed, designed and implemented procedural world generation for an infinite office space using Perlin noise. Created all related scripts and prefabs.
   - Implemented post processing effects using the built-in Global Volume to drastically enhance the visual quality of the game and its "eerie" atmosphere.
   - Implemented various bug fixes for known issues in the project. See Git commits for more details.
   - Implemented particle system for the muzzle flash and blood effects.
@@ -119,7 +117,6 @@ William Spongberg:
   - Implemented the initial very basic enemy AI using NavMesh and NavMeshAgent.
   - Implemented automatic NavMesh baking around the player to ensure that enemies can navigate the environment.
   - Repeatedly tweaked procedural world gen and AI baking to ensure the game performs well.
-  - Implemented GPUInstance.shader, a shader that allows for the rendering of multiple instances of the same object in a single draw call.
   - Implemented GlitchShader.shader, a shader that creates a complex 'glitchy' effect for the NPCs using dithering and random offsets of the UVs and x coordinates.
   - Numerous other small scripts and tweaks to improve the game's performance, visual quality, and overall experience.
 ---
@@ -139,4 +136,4 @@ Ananya Agarwal
 - [Unity Starter Assets](https://assetstore.unity.com/packages/essentials/starter-assets-thirdperson-updates-in-new-charactercontroller-pa-196526): For NPC movement animations and environment materials.
 
 ### Resources
-- TODO
+- TODO (e.g tutorials, etc)
