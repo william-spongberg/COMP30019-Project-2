@@ -3103,6 +3103,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5087962530525493516}
   - component: {fileID: 3561145625342051566}
+  - component: {fileID: 2006387392616918971}
   m_Layer: 9
   m_Name: Character_BusinessWoman
   m_TagString: Untagged
@@ -3227,6 +3228,22 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.000011444092, y: 86.18578, z: -5.4394407}
     m_Extent: {x: 102.12019, y: 95.9963, z: 24.934273}
   m_DirtyAABB: 0
+--- !u!114 &2006387392616918971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6940598646186477520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c40cb8bd13825bd4ca27cb3de656e6cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 6940598646186477520}
+  scale: {x: 0.01, y: 0.01, z: 0.01}
+  instanceCount: 25
+  trailSpeed: 0.25
 --- !u!1 &6942163149393950073
 GameObject:
   m_ObjectHideFlags: 0
