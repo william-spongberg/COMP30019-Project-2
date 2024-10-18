@@ -15,7 +15,12 @@ public class PistolAudio : MonoBehaviour
     // Multiple firing sounds (e.g. SFX)
     [SerializeField] private List<AudioClip> firingSounds;
 
+    // Multiple empty bullet sounds
+    [SerializeField] private List<AudioClip> emptyShellSounds; 
+    
+
     private int lastFiringSoundIndex = -1;
+    private int lastEmptyShellSoundIndex = -1;
 
     public void PlayArmingSound()
     {
@@ -61,5 +66,27 @@ public class PistolAudio : MonoBehaviour
 
         // Wait for the clip in sound to finish
         yield return new WaitForSeconds(clipInSound.length);
+    }
+
+    // Play empty shell sound when no ammo
+    public void PlayEmptyShell()
+    {
+        PlayRandomSound(emptyShellSounds, ref lastEmptyShellSoundIndex);
+    }
+
+    // General method to play a random sound from a list
+    private void PlayRandomSound(List<AudioClip> soundList, ref int lastSoundIndex)
+    {
+        if (soundList.Count > 0)
+        {
+            int newSoundIndex;
+            do
+            {
+                newSoundIndex = Random.Range(0, soundList.Count);
+            } while (newSoundIndex == lastSoundIndex);
+
+            lastSoundIndex = newSoundIndex;
+            audioSource.PlayOneShot(soundList[newSoundIndex]);
+        }
     }
 }

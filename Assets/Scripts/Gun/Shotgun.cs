@@ -51,6 +51,10 @@ public class Shotgun : MonoBehaviour
     [SerializeField]
     private Transform gunPoint;
 
+    // Sound reference
+    [SerializeField]
+    private ShotgunAudio shotgunAudio;
+
     // Ammo UI
     [SerializeField]
     private TextMeshProUGUI ammoDisplay;
@@ -78,7 +82,7 @@ public class Shotgun : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R) && bulletsLeft < magazineSize && !currentlyReloading) Reload();
 
         // Auto Reload (Attempted shooting but no bullets left)
-        if (shootingEnabled && currentlyShooting && !currentlyReloading && bulletsLeft <= 0) Reload();
+        // if (shootingEnabled && currentlyShooting && !currentlyReloading && bulletsLeft <= 0) Reload();
 
         // Shooting (Attempted shooting with bullets left)
         if (shootingEnabled && currentlyShooting && !currentlyReloading && bulletsLeft > 0)
@@ -86,6 +90,12 @@ public class Shotgun : MonoBehaviour
             Shoot();
             Debug.Log("Shooting shotgun");
         }
+
+        if (shootingEnabled && currentlyShooting && !currentlyReloading && bulletsLeft <= 0)
+        {
+            shotgunAudio.PlayEmptyShell();
+        }
+        
     }
 
     private void Shoot()
@@ -135,6 +145,9 @@ public class Shotgun : MonoBehaviour
             Destroy(currentPellet, bulletRange / bulletForce);
         }
 
+        // Play shooting sound
+        shotgunAudio.PlayRandomFiringSound();
+
         // Deduct one ammo per shotgun blast
         bulletsLeft--;
 
@@ -168,7 +181,13 @@ public class Shotgun : MonoBehaviour
     {
         // After a reload delay/cooldown, fill gun magazine again
         currentlyReloading = true;
+
+        // Display
         ammoDisplay.text = "Reloading";
+
+        // Play reload sequence sound
+        shotgunAudio.PlayReloadSequence(pelletCount);
+
         Invoke("ReloadComplete", reloadTime);
     }
 

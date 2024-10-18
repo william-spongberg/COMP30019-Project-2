@@ -26,6 +26,13 @@ public class Melee : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI ammoDisplay;
 
+    // Sound reference
+    [SerializeField]
+    private MeleeAudio meleeAudio;
+
+    //[SerializeField]
+    //private ObjectAudio objectAudio;
+
     public void HandleInput()
     {
         // Check for attack input (e.g., left-click)
@@ -42,7 +49,7 @@ public class Melee : MonoBehaviour
 
         // Perform a raycast from the attack point forward (direction the player is facing)
         RaycastHit hit;
-        if (Physics.Raycast(attackPoint.position, attackPoint.forward, out hit, attackRange, enemyLayer))
+        if (Physics.Raycast(attackPoint.position, attackPoint.forward, out hit, attackRange))
         {
             // Check if the object hit has the "EnemyHP" component to apply damage
             EnemyHP enemyHealth = hit.collider.GetComponent<EnemyHP>();
@@ -50,12 +57,29 @@ public class Melee : MonoBehaviour
             {
                 enemyHealth.TakeDamage(attackDamage);
                 Debug.Log("Hit enemy: " + hit.collider.name);
+                meleeAudio.PlayHitSound();  // Play hit sound
             }
+            else if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Ground"))
+            {
+                // Play object hit sound
+                //objectAudio.PlayObjectHitSound();
+                Debug.Log("Hit environment object: " + hit.collider.name);
+            }
+            else
+            {
+                meleeAudio.PlayMissSound(); // Play miss sound for anything else
+            }
+        }
+        else
+        {
+            // Play miss sound if no hit at all
+            meleeAudio.PlayMissSound();
         }
 
         // Trigger cooldown before another attack can be performed
         Invoke(nameof(ResetAttack), attackCooldown);
     }
+
 
     private void ResetAttack()
     {
