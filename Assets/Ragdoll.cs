@@ -23,18 +23,21 @@ public class Ragdoll : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R)) {
+        // Q to ragdoll
+        if (Input.GetKeyDown(KeyCode.Q)) {
             ToggleRagdoll(!IsRagdolling);
         }
     }
 
     private void ToggleRagdoll(bool isRagdoll)
     {
+        // turn on/off collider, animator, and navmeshagent if ragdoll
         IsRagdolling = isRagdoll;
         myCollider.enabled = !isRagdoll;
         myAnimator.enabled = !isRagdoll;
         myNavMeshAgent.enabled = !isRagdoll;
 
+        // turn on/off ragdoll rigidbodies
         foreach (Rigidbody rb in rigidbodies)
         {
             rb.isKinematic = !isRagdoll;
