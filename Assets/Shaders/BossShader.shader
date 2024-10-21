@@ -1,74 +1,85 @@
-Shader "Custom/MinecraftPortalEffectShader"
+Shader "Unlit/BossShader"
 {
     Properties
     {
-        // custom multipliers + colour
         _MainTex ("Main Texture", 2D) = "white" {}
-        _DepthMultiplier ("Depth Multiplier", Range(0.1, 10)) = 1.0
-        _ParallaxStrength ("Parallax Strength", Range(0, 1)) = 0.1
-        _GlowColor ("Glow Color", Color) = (1, 1, 1, 1)
-        _PulseSpeed ("Pulse Speed", Range(0, 10)) = 1.0
+        _TextureSize ("Texture Size", Range(0, 25)) = 1.0
+        _Alpha ("Alpha", Range(0, 1)) = 1.0
+        _GlowColour ("Glow Color", Color) = (1, 1, 1, 1)
         _GlowIntensity ("Glow Intensity", Range(0, 1)) = 0.5
+        _PulseSpeed ("Pulse Speed", Range(0, 10)) = 1.0
+        _Offset ("Chromatic Aberration", Vector) = (0.01, 0.01, 0, 0)
     }
     SubShader
     {
         Pass
         {
+            // needed for alpha transparency
+            Blend SrcAlpha OneMinusSrcAlpha
             Cull Off
             CGPROGRAM
             #pragma vertex vert
             #pragma fragment frag
-
             #include "UnityCG.cginc"
 
-            struct appdata
+            sampler2D _MainTex;
+            float _TextureSize;
+            float4 _GlowColour;
+            float _GlowIntensity;
+            float _PulseSpeed;
+            float _Alpha;
+            float4 _Offset;
+
+            struct vertIn
             {
                 float4 vertex : POSITION;
-                float3 worldPos : TEXCOORD1;
                 float2 uv : TEXCOORD0;
+                float3 worldPos : TEXCOORD1;
             };
 
-            struct v2f
+            struct vertOut
             {
-                float2 uv : TEXCOORD0;
                 float4 vertex : SV_POSITION;
+                float2 uv : TEXCOORD0;
                 float3 worldPos : TEXCOORD1;
+                float4 screenPos : TEXCOORD2;
             };
 
-            sampler2D _MainTex;
-            float _DepthMultiplier;
-            float _ParallaxStrength;
-            float4 _GlowColor;
-            float _PulseSpeed;
-            float _GlowIntensity;
-
-            v2f vert (appdata v)
+            vertOut vert (vertIn v)
             {
-                v2f o;
+                vertOut o;
                 o.vertex = UnityObjectToClipPos(v.vertex);
                 o.uv = v.uv;
-                o.worldPos = mul(unity_ObjectToWorld, v.vertex).xyz;
+                o.screenPos = ComputeScreenPos(o.vertex);
                 return o;
             }
 
-            fixed4 frag (v2f i) : SV_Target
+            half4 frag (vertOut i) : SV_Target
             {
                 // fixed texture, doesn't move with camera (portal effect)
-                float2 uv = i.worldPos.xy;
+                float2 uv = i.screenPos.xy / i.screenPos.w * _TextureSize;
 
-                // parallax effect
-                uv.x += (i.worldPos.z / _DepthMultiplier) * _ParallaxStrength;
-                uv.y += (i.worldPos.x / _DepthMultiplier) * _ParallaxStrength;
-                fixed4 baseColor = tex2D(_MainTex, uv);
+                // chromatic aberration offsets
+                float2 redOffset = uv + _Offset.xy;
+                float2 blueOffset = uv - _Offset.xy;
+                half4 redColour = tex2D(_MainTex, redOffset);
+                half4 blueColour = tex2D(_MainTex, blueOffset);
+                half4 baseColour = tex2D(_MainTex, uv);
+                half4 textureColour = half4(redColour.r, baseColour.g, blueColour.b, 1.0);
 
-                // pulsating subtle glow
-                float glow = abs(sin(_Time.y * _PulseSpeed)) * _GlowIntensity;
-                fixed4 glowColor = _GlowColor * glow;
+                // pulsing subtle glow
+                half4 glow = abs(sin(_Time.y * _PulseSpeed)) * _GlowIntensity;
+                half4 glowColour = _GlowColour * glow;
 
-                return lerp(baseColor, glowColor, glow);
+                // transition between texture colour and glow colour
+                half4 colour = lerp(textureColour, glowColour, glow);
+
+                // apply alpha transparency
+                colour.a *= _Alpha;
+
+                return colour;
             }
             ENDCG
         }
     }
-    FallBack "Diffuse"
 }

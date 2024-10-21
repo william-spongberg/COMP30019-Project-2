@@ -100,7 +100,7 @@ Material:
     - _DstBlendAlpha: 0
     - _EmissionScaleUI: 0
     - _EnvironmentReflections: 1
-    - _GlitchIntensity: 0.25
+    - _GlitchIntensity: 0.1
     - _GlitchSpeed: 1
     - _GlossMapScale: 1
     - _Glossiness: 0.5
