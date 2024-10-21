@@ -101,11 +101,15 @@ TODO (due milestone 3) - see specification for details
 ## Shaders and Special Effects
 
 ### [GlitchShader](Assets\Shaders\GlitchShader.shader)
-
 TODO
 
 ### [BossShader](Assets\Shaders\BossShader.shader)
+TODO
 
+### [Particle System](Assets/Prefabs/ParticleSystems/Blood%20Particle%20System/Blood%20System.prefab)
+TODO
+
+### [Post Processing Effects](Assets/Prefabs/PostProcessing/PostProcessing.prefab)
 TODO
 
 ## Summary of Contributions
@@ -125,7 +129,7 @@ William Spongberg:
   - Repeatedly tweaked procedural world gen and AI baking to ensure the game performs well.
   - Implemented ragdoll physics for enemies.
   - Implemented GlitchShader.shader, a shader that creates a complex 'glitchy' effect for the NPCs using gpu instancing, dithering and random offsets of the UVs and x coordinates.
-  - Implemented BossShader.shader, a shader that creates a menacing 'boss' effect using a fixed-screen texture, chromatic aberration, and a red pulsating glow.
+  - Implemented BossShader.shader, a shader that creates a menacing 'boss' effect using a fixed-screen texture, chromatic aberration and a red pulsating glow.
   - Numerous other small scripts and tweaks to improve the game's performance, visual quality, and overall experience.
 ---
 Alistair Wern Hao Cheah
