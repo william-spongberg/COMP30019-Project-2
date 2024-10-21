@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5115041917670963478}
   - component: {fileID: 49328855696495771}
   m_Layer: 0
-  m_Name: Blood System
+  m_Name: BloodParticleSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

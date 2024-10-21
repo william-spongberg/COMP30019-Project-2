@@ -24,6 +24,6 @@ public class RandomTexture : MonoBehaviour
     {
         // randomly grab texture from array and assign to material
         Texture2D randomTexture = textures[Random.Range(0, textures.Length)];
-        targetMaterial.SetTexture("_MainTex", randomTexture);
+        targetMaterial.SetTexture("_Texture", randomTexture);
     }
 }

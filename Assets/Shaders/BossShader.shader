@@ -1,14 +1,14 @@
-Shader "Unlit/BossShader"
+Shader "Custom/BossShader"
 {
     Properties
     {
-        _MainTex ("Main Texture", 2D) = "white" {}
+        _Texture ("Texture", 2D) = "white" {}
         _TextureSize ("Texture Size", Range(0, 25)) = 1.0
         _Alpha ("Alpha", Range(0, 1)) = 1.0
         _GlowColour ("Glow Color", Color) = (1, 1, 1, 1)
         _GlowIntensity ("Glow Intensity", Range(0, 1)) = 0.5
         _PulseSpeed ("Pulse Speed", Range(0, 10)) = 1.0
-        _Offset ("Chromatic Aberration", Vector) = (0.01, 0.01, 0, 0)
+        _ChromaticAberrationOffset ("Chromatic Aberration", Vector) = (0.01, 0.01, 0, 0)
         _TextureStretch ("Texture Stretch", Vector) = (1.0, 1.0, 0, 0)
         _TextureOffset ("Random Offset", Vector) = (0.0, 0.0, 0, 0)
     }
@@ -24,13 +24,13 @@ Shader "Unlit/BossShader"
             #pragma fragment frag
             #include "UnityCG.cginc"
 
-            sampler2D _MainTex;
+            sampler2D _Texture;
             float _TextureSize;
             float4 _GlowColour;
             float _GlowIntensity;
             float _PulseSpeed;
             float _Alpha;
-            float4 _Offset;
+            float4 _ChromaticAberrationOffset;
             float4 _TextureStretch;
             float4 _TextureOffset;
 
@@ -68,7 +68,7 @@ Shader "Unlit/BossShader"
 
             half4 frag (vertOut i) : SV_Target
             {
-                // get slight random multiplier
+                // get a random number (0.9-1.1) to slightly randomise by multiplying
                 float random;
                 Unity_RandomRange_float(i.worldPos.xz, 0.9, 1.1, random);
 
@@ -80,11 +80,11 @@ Shader "Unlit/BossShader"
                 uv += _TextureOffset.xy * random;
 
                 // chromatic aberration offsets
-                float2 redOffset = uv + _Offset.xy * random;
-                float2 blueOffset = uv - _Offset.xy * random;
-                half4 redColour = tex2D(_MainTex, redOffset);
-                half4 blueColour = tex2D(_MainTex, blueOffset);
-                half4 baseColour = tex2D(_MainTex, uv);
+                float2 redOffset = uv + _ChromaticAberrationOffset.xy * random;
+                float2 blueOffset = uv - _ChromaticAberrationOffset.xy * random;
+                half4 redColour = tex2D(_Texture, redOffset);
+                half4 blueColour = tex2D(_Texture, blueOffset);
+                half4 baseColour = tex2D(_Texture, uv);
                 half4 textureColour = half4(redColour.r, baseColour.g, blueColour.b, 1.0);
 
                 // pulsing subtle glow

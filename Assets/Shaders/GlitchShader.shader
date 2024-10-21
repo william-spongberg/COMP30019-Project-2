@@ -1,9 +1,9 @@
-Shader "Unlit/GlitchShader"
+Shader "Custom/GlitchShader"
 {
     Properties
     {
-        _MainTex ("Texture", 2D) = "white" {}
-        _GlitchIntensity ("Glitch Intensity", Range(0, 3)) = 1.5
+        _Texture ("Texture", 2D) = "white" {}
+        _GlitchIntensity ("Glitch Intensity", Range(0, 1)) = 0.25
         _GlitchSpeed ("Glitch Speed", Range(0, 10)) = 1.0
         _DitherAmount ("Dither Amount", Range(0, 1)) = 0.1
     }
@@ -18,7 +18,7 @@ Shader "Unlit/GlitchShader"
             #pragma multi_compile_instancing
             #include "UnityCG.cginc"
 
-            sampler2D _MainTex;
+            sampler2D _Texture;
             float _GlitchIntensity;
             float _GlitchSpeed;
             float _DitherAmount;
@@ -108,10 +108,10 @@ Shader "Unlit/GlitchShader"
 
                 // grab colour from texture at offset coords
                 half4 color;
-                color.r = tex2D(_MainTex, redOffset).r;
-                color.g = tex2D(_MainTex, greenOffset).g;
-                color.b = tex2D(_MainTex, blueOffset).b;
-                color.a = tex2D(_MainTex, uv).a;
+                color.r = tex2D(_Texture, redOffset).r;
+                color.g = tex2D(_Texture, greenOffset).g;
+                color.b = tex2D(_Texture, blueOffset).b;
+                color.a = tex2D(_Texture, uv).a;
 
                 // randomly discard all pixels for flickering effect
                 float randomAlpha;
