@@ -9,6 +9,8 @@ Shader "Unlit/BossShader"
         _GlowIntensity ("Glow Intensity", Range(0, 1)) = 0.5
         _PulseSpeed ("Pulse Speed", Range(0, 10)) = 1.0
         _Offset ("Chromatic Aberration", Vector) = (0.01, 0.01, 0, 0)
+        _TextureStretch ("Texture Stretch", Vector) = (1.0, 1.0, 0, 0)
+        _TextureOffset ("Random Offset", Vector) = (0.0, 0.0, 0, 0)
     }
     SubShader
     {
@@ -29,6 +31,8 @@ Shader "Unlit/BossShader"
             float _PulseSpeed;
             float _Alpha;
             float4 _Offset;
+            float4 _TextureStretch;
+            float4 _TextureOffset;
 
             struct vertIn
             {
@@ -54,14 +58,30 @@ Shader "Unlit/BossShader"
                 return o;
             }
 
+            // pseudo random number generator
+            // from https://docs.unity3d.com/Packages/com.unity.shadergraph@6.9/manual/Random-Range-Node.html
+            void Unity_RandomRange_float(float2 Seed, float Min, float Max, out float Out)
+            {
+                float randomno =  frac(sin(dot(Seed, float2(12.9898, 78.233)))*43758.5453);
+                Out = lerp(Min, Max, randomno);
+            }
+
             half4 frag (vertOut i) : SV_Target
             {
+                // get slight random multiplier
+                float random;
+                Unity_RandomRange_float(i.worldPos.xz, 0.9, 1.1, random);
+
                 // fixed texture, doesn't move with camera (portal effect)
                 float2 uv = i.screenPos.xy / i.screenPos.w * _TextureSize;
 
+                // distort the texture
+                uv *= _TextureStretch.xy * random;
+                uv += _TextureOffset.xy * random;
+
                 // chromatic aberration offsets
-                float2 redOffset = uv + _Offset.xy;
-                float2 blueOffset = uv - _Offset.xy;
+                float2 redOffset = uv + _Offset.xy * random;
+                float2 blueOffset = uv - _Offset.xy * random;
                 half4 redColour = tex2D(_MainTex, redOffset);
                 half4 blueColour = tex2D(_MainTex, blueOffset);
                 half4 baseColour = tex2D(_MainTex, uv);
