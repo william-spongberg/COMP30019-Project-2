@@ -100,7 +100,13 @@ TODO (due milestone 3) - see specification for details
 
 ## Shaders and Special Effects
 
-TODO (due milestone 3) - see specification for details
+### [GlitchShader](Assets\Shaders\GlitchShader.shader)
+
+TODO
+
+### [BossShader](Assets\Shaders\BossShader.shader)
+
+TODO
 
 ## Summary of Contributions
 
@@ -114,10 +120,12 @@ William Spongberg:
   - Implemented particle system for the muzzle flash and blood effects.
   - Implemented the FreeCam prefab, a smooth free-look camera system akin to the camera used in Scene view that was used for the game's trailer.
   - Implemented ObjectSpawner, a script that spawns objects randomly within a given range of the player.
-  - Implemented the initial very basic enemy AI using NavMesh and NavMeshAgent.
+  - Implemented the initial very basic enemy AI using NavMesh and NavMeshAgent that just pathfinds to the player.
   - Implemented automatic NavMesh baking around the player to ensure that enemies can navigate the environment.
   - Repeatedly tweaked procedural world gen and AI baking to ensure the game performs well.
+  - Implemented ragdoll physics for enemies.
   - Implemented GlitchShader.shader, a shader that creates a complex 'glitchy' effect for the NPCs using gpu instancing, dithering and random offsets of the UVs and x coordinates.
+  - Implemented BossShader.shader, a shader that creates a menacing 'boss' effect using a fixed-screen texture, chromatic aberration, and a red pulsating glow.
   - Numerous other small scripts and tweaks to improve the game's performance, visual quality, and overall experience.
 ---
 Alistair Wern Hao Cheah
