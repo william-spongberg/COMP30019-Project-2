@@ -196,85 +196,37 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2529018147278014787, guid: 6757f9e7804541c4893bbfc378e7262b, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: b16a53ee3d47e8940a1a67a209cef48c, type: 2}
     - target: {fileID: 3413457256456304119, guid: 6757f9e7804541c4893bbfc378e7262b, type: 3}
       propertyPath: m_Name
       value: Skull
       objectReference: {fileID: 0}
-    - target: {fileID: 5428992920257945065, guid: 6757f9e7804541c4893bbfc378e7262b, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5428992920257945065, guid: 6757f9e7804541c4893bbfc378e7262b, type: 3}
-      propertyPath: textures.Array.size
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 5428992920257945065, guid: 6757f9e7804541c4893bbfc378e7262b, type: 3}
-      propertyPath: changeTextureThreshold
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5428992920257945065, guid: 6757f9e7804541c4893bbfc378e7262b, type: 3}
-      propertyPath: textures.Array.data[0]
-      value: 
-      objectReference: {fileID: 2800000, guid: 7789f4efbb0f45c4780925243375a18e, type: 3}
-    - target: {fileID: 5428992920257945065, guid: 6757f9e7804541c4893bbfc378e7262b, type: 3}
-      propertyPath: textures.Array.data[1]
-      value: 
-      objectReference: {fileID: 4154780841294389669, guid: c52ef73d35640c64eb68bb367902066c, type: 3}
-    - target: {fileID: 5428992920257945065, guid: 6757f9e7804541c4893bbfc378e7262b, type: 3}
-      propertyPath: textures.Array.data[2]
-      value: 
-      objectReference: {fileID: 2800000, guid: 9783d6c3e21d186478e2a4424271ac8e, type: 3}
-    - target: {fileID: 5428992920257945065, guid: 6757f9e7804541c4893bbfc378e7262b, type: 3}
-      propertyPath: textures.Array.data[3]
-      value: 
-      objectReference: {fileID: 2800000, guid: 4358b945d59bcc54a8d357279a0d3567, type: 3}
-    - target: {fileID: 5428992920257945065, guid: 6757f9e7804541c4893bbfc378e7262b, type: 3}
-      propertyPath: textures.Array.data[4]
-      value: 
-      objectReference: {fileID: 2800000, guid: dffef66376be4fa480fb02b19edbe903, type: 3}
-    - target: {fileID: 5428992920257945065, guid: 6757f9e7804541c4893bbfc378e7262b, type: 3}
-      propertyPath: textures.Array.data[5]
-      value: 
-      objectReference: {fileID: 2800000, guid: 283f897e4925411ebbaa758b4cb13fc2, type: 3}
-    - target: {fileID: 5428992920257945065, guid: 6757f9e7804541c4893bbfc378e7262b, type: 3}
-      propertyPath: textures.Array.data[6]
-      value: 
-      objectReference: {fileID: 2800000, guid: a969091ee1740c3469cc70c44c3caa60, type: 3}
-    - target: {fileID: 5428992920257945065, guid: 6757f9e7804541c4893bbfc378e7262b, type: 3}
-      propertyPath: textures.Array.data[11]
-      value: 
-      objectReference: {fileID: 28684132378477856, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 7388196607919707986, guid: 6757f9e7804541c4893bbfc378e7262b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.8
       objectReference: {fileID: 0}
     - target: {fileID: 7388196607919707986, guid: 6757f9e7804541c4893bbfc378e7262b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.45
+      value: 1.29
       objectReference: {fileID: 0}
     - target: {fileID: 7388196607919707986, guid: 6757f9e7804541c4893bbfc378e7262b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 7388196607919707986, guid: 6757f9e7804541c4893bbfc378e7262b, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.96829116
+      value: 0.1076807
       objectReference: {fileID: 0}
     - target: {fileID: 7388196607919707986, guid: 6757f9e7804541c4893bbfc378e7262b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.08553087
+      value: -0.10289869
       objectReference: {fileID: 0}
     - target: {fileID: 7388196607919707986, guid: 6757f9e7804541c4893bbfc378e7262b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.2246732
+      value: -0.6571168
       objectReference: {fileID: 0}
     - target: {fileID: 7388196607919707986, guid: 6757f9e7804541c4893bbfc378e7262b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.06796175
+      value: -0.7389279
       objectReference: {fileID: 0}
     - target: {fileID: 7388196607919707986, guid: 6757f9e7804541c4893bbfc378e7262b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
