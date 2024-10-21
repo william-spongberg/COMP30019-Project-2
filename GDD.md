@@ -202,9 +202,11 @@ The game has been split up into distinct workable sections between the 4 team me
 
 | **Will** | **David** | **Ananya** | **Alistair**|
 |----------|-----------|------------|-------------|
-| World Generation | Movement | Lighting | Enemies|
-| AI       | Story | Sound    | Level design      |
-| Camera   |Weapons| UI       | Shaders           |
+| World Generation | Story    | User Evaluation | Movement        |
+| Shaders          | Boss     | Assets          | AI/Enemies      |
+| Lighting         |          | UI              | Audio           |
+| Post Processing  |          |                 | Weapons         |
+| Particle Systems |          |                 | Boss            |
 
 Communication will be through Discord, and progress will be tracked through both Trello and Github. Each member will have a seperate Github branch to work on.
 

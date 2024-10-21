@@ -163,6 +163,9 @@ Using Unity's Global Volume, multiple effects were applied to enhance the feelin
 ## Summary of Contributions
 
 ### William Spongberg
+
+*Team Leader, World Generation, Shaders, Lighting, Post Processing, Particle Systems*
+
 - Managed the project and coordinated the team AlphaBeta.
 - Created the initial project structure and set up the Unity project.
 - Using Blender, created from scratch 3D models for the desk and CRT monitor, and then implemented them into prefabs with appropriate materials.
@@ -183,12 +186,21 @@ Using Unity's Global Volume, multiple effects were applied to enhance the feelin
 - Numerous other small scripts and tweaks to improve the game's performance, visual quality, and overall experience.
 ---
 ### Alistair Wern Hao Cheah
+
+*Movement, AI/Enemies, Weapons, Audio, Boss*
+
  - TODO
 ---
 ### David Kee Siong Chin
+
+*Story, Boss*
+
  - TODO 
 ---
 ### Ananya Agarwal
+
+*User Evaluation, UI, Audio*
+
  - TODO
 
 ## References and External Resources
