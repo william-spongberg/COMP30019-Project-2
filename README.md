@@ -121,6 +121,7 @@ The BossShader was designed to create a uniquely creepy visual effect for the bo
 - The texture is randomly and slightly distorted by stretching and offsetting it based on its world position
 - The texture's red and blue colour channels are also randomly and slightly offset, creating a chromatic aberration effect
 - The transparency is increased to increase the 'ethereal' feeling, as if it is transitioning between worlds
+- This shader can be enhanced through the use of [RandomTexture.cs](Assets\Scripts\Shaders\RandomTexture.cs), a script that randomly changes the texture of the shader over time to create a more strange and chaotic effect.
 
 It has several different properties for fine-tuning:
 - **_Texture**: for the texture to be given to the shader
@@ -133,7 +134,7 @@ It has several different properties for fine-tuning:
 - **_TextureStretch**: control how much the texture should be stretched
 - **_TextureOffset**: control how much the texture should be offset
 
-*It should be noted that the pseudo random number generator and the dithering calculation function used throughout were taken from the Unity docs, and so have been referenced appropriately. They should not be marked as our group's work.*
+> It should be noted that the pseudo random number generator and the dithering calculation function used throughout were taken from the Unity docs, and so have been referenced appropriately. They should not be marked as part of our group's work.
 
 ### [BloodParticleSystem.prefab](Assets/Prefabs/ParticleSystems/Blood%20Particle%20System/Blood%20System.prefab)
 The blood particle system was implemented to create a blood splatter effect when enemies are damaged. A high quantity of particles (rate of 100-200 over time) are emitted in a looping state to exaggerate the enemy damage. They are sized randomly within a small range (0.05-0.15) yet their velocities can range quite widely (1-5), to give more of a sputtering blood effect.
@@ -195,11 +196,11 @@ Using Unity's Global Volume, multiple effects were applied to enhance the feelin
 
 *Story, Boss*
 
- - TODO 
+ - TODO
 ---
 ### Ananya Agarwal
 
-*User Evaluation, UI, Audio*
+*User Evaluation, UI*
 
  - TODO
 
