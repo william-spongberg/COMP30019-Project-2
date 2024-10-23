@@ -20,11 +20,11 @@ public class PlatformElevator : MonoBehaviour
             platformActivated = true;
         }
 
-        if (platformActivated && transform.position.y < 10f)  // Arbitrary height
+        if (platformActivated && transform.position.y < 3f)  // Arbitrary height
         {
             transform.Translate(Vector3.up * riseSpeed * Time.deltaTime);
         }
-        else if (platformActivated && transform.position.y >= 10f)
+        else if (platformActivated && transform.position.y >= 3f)
         {
             SceneManager.LoadScene(nextSceneName);
         }
