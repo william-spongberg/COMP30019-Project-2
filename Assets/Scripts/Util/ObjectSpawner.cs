@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class NPCSpawner : MonoBehaviour
 {
+    public int entitySpawned = 0;
     [SerializeField]
     private float radius = 10.0f;
     [SerializeField]
@@ -41,5 +42,6 @@ public class NPCSpawner : MonoBehaviour
 
         // spawn randomly within x radius of player
         GameObject newObj = Instantiate(objects[randomIndex], pos, Quaternion.identity);
+        entitySpawned += 1;
     }
 }

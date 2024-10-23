@@ -9,13 +9,14 @@ public class Dialogue : MonoBehaviour
     public string[] lines;
     public float textSpeed;
     private int index;
+    bool startFinished;
 
     // Start is called before the first frame update
     void Start()
     {
         textComponent.text = string.Empty;
         StartDialogue();
-
+        startFinished = false;
     }
 
     // Update is called once per frame
@@ -30,6 +31,12 @@ public class Dialogue : MonoBehaviour
                 textComponent.text = lines[index];
             }
         }
+        //if(Input.GetMouseButtonDown(1)){
+         ///   gameObject.SetActive(true);
+        //    index = 0;
+         //   textComponent.text = string.Empty;
+        //    StartDialogue();
+        //}
     }
 
     void StartDialogue()
@@ -55,6 +62,7 @@ public class Dialogue : MonoBehaviour
 
         }
         else{
+            startFinished = true;
             gameObject.SetActive(false);
         }
 
