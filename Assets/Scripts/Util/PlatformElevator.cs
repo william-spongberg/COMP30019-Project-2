@@ -4,9 +4,9 @@ using UnityEngine.SceneManagement;  // For scene transitions
 public class PlatformElevator : MonoBehaviour
 {
     [SerializeField]
-    private float riseSpeed = 2f;      // Speed at which the platform rises
+    private float riseSpeed = 0.5f;      // Speed at which the platform rises
     [SerializeField]
-    private string nextSceneName;      // Name of the next scene to load
+    private string nextSceneName="Level 3";      // Name of the next scene to load
 
     [SerializeField]
     private bool playerOnPlatform = false;
