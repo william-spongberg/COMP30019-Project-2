@@ -198,13 +198,12 @@ Using Unity's Global Volume, multiple effects were applied to enhance the feelin
 - Ragdoll physics for enemies.
 - GlitchShader.shader, a shader that creates a complex 'glitchy' effect for the NPCs using gpu instancing, dithering and random offsets of the UVs and x coordinates.
 - Glitch.cs, a script for GlitchShader.shader that adds and rotates gpu instances randomly within a short range of the prefab its attached to to create a distorted, glitchy effect.
-- AfterImage.cs, a script for GlitchShader.shader that adds a trail of afterimages behind the prefab its attached to, creating a unique after-image effect.
 - BossShader.shader, a shader that creates a menacing 'boss' effect using a fixed-screen texture, chromatic aberration and a red pulsating glow.
 - Numerous other small scripts and tweaks to improve the game's performance, visual quality, and overall experience.
 ---
 ### Alistair Wern Hao Cheah
 
-*Movement, AI/Enemies, Weapons, Audio, Boss*
+*Movement, AI/Enemies, Weapons, Audio, UI, Boss*
 
  - TODO
 ---
@@ -216,7 +215,7 @@ Using Unity's Global Volume, multiple effects were applied to enhance the feelin
 ---
 ### Ananya Agarwal
 
-*User Evaluation, UI*
+*User Evaluation*
 
  - TODO
 
