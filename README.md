@@ -109,7 +109,7 @@ The GlitchShader was designed to create a glitchy effect for NPCs by simulating 
 - Randomly offsets the x vertices to create a stretching and deforming effect
 - Has a random chance to discard all pixels, creating a flickering effect, just like a broken TV
 - Overlays the result with black bars using dithering, just like CRTs have
-- Enables GPU instancing, which in conjunction with [Glitch.cs](Assets\Scripts\Shaders\Glitch.cs) and/or [AfterImage.cs](Assets\Scripts\Shaders\AfterImage.cs) can create a glitchy afterimage effect. [Glitch.cs](Assets\Scripts\Shaders\Glitch.cs) is used to randomly displace instances around the NPC, while [AfterImage.cs](Assets\Scripts\Shaders\AfterImage.cs) is used to create a trail of afterimages behind the NPC. They do not use any parameters apart from enabling GPU instancing for the material the shader is attached to.
+- Enables GPU instancing, which in conjunction with [Glitch.cs](Assets\Scripts\Shaders\Glitch.cs) can create a glitchy afterimage effect by randomly displacing instances around the NPC.
 
 It has several different properties for fine-tuning:
 - **_Texture**: for the texture to be given to the shader
@@ -157,6 +157,10 @@ To make it seems like the blood is squirting from the wound, trails are used to 
 This particle system only plays when the enemy is hit, and then stops after a short time (3 seconds), to prevent the game from becoming too bloody and to prevent performance issues.
 
 ### [PostProcessing.prefab](Assets/Prefabs/PostProcessing/PostProcessing.prefab)
+
+![Post Processing Infinite Office](Images/InfiniteOffice.png)
+![Post Processing Boss Level](Images/BossLevel.png)
+
 Using Unity's Global Volume, multiple effects were applied to enhance the feeling of looking through an old CRT as well as increasing the visual quality of the game and creating a more eerie atmosphere for the player.
 
 - **Panini Projection:** Creates a fisheye 'CRT-like' effect that distorts the edges of the screen
