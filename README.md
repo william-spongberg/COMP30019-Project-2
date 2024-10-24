@@ -101,6 +101,9 @@ TODO (due milestone 3) - see specification for details
 ## Shaders and Special Effects
 
 ### [GlitchShader.shader](Assets\Shaders\GlitchShader.shader)
+
+![Glitch Shader Gif](Images\GlitchShader.gif)
+
 The GlitchShader was designed to create a glitchy effect for NPCs by simulating visual artifacts normally found in old TVs.
 - Randomly offsets the RGB channels of its texture over time to create a disjointed, glitchy appearance
 - Randomly offsets the x vertices to create a stretching and deforming effect
@@ -115,6 +118,9 @@ It has several different properties for fine-tuning:
 - **_DitherAmount**: control how thick the black bars created by the dithering are
 
 ### [BossShader.shader](Assets\Shaders\BossShader.shader)
+
+![Boss Shader Gif](Images\BossShader.gif)
+
 The BossShader was designed to create a uniquely creepy visual effect for the boss, continuing the glitchy and incorrect feeling of the game.
 - Pulsates with a given colour (recommended to use red) to create a dangerous and frightening feeling
 - The texture is fixed to its screen position and does not change on camera position nor angle, giving a unique 'portal' or 'god'-like effect
