@@ -619,7 +619,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1541467083438813297, guid: 4dfffdbc565f17c4fabbcea2dad8e149, type: 3}
       propertyPath: m_Name
-      value: Global Volume
+      value: Post Processing
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
