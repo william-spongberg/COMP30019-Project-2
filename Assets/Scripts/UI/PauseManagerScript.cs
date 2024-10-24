@@ -10,6 +10,8 @@ public class PauseMenu : MonoBehaviour
 
     public static bool isPaused = false;
 
+    [SerializeField] private GameObject settingsMenuUI;
+
     void Start()
     {
 
@@ -60,10 +62,24 @@ public class PauseMenu : MonoBehaviour
         SceneManager.LoadScene("StartScene");
     }
 
-    // public void QuitGame()
-    // {
-    //     Debug.Log("Quitting game...");
-    //     Application.Quit();
-    // }
+   
+    public void OpenSettings()
+    {
+        Time.timeScale = 0;
+        pauseMenuUI.SetActive(false);  
+        settingsMenuUI.SetActive(true); 
+
+         // Unlock and show cursor for settings
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+
+    
+    public void CloseSettings()
+    {
+        settingsMenuUI.SetActive(false);
+        pauseMenuUI.SetActive(true); 
+    }
+
 }
 

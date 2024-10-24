@@ -1,23 +1,33 @@
+
+
 using UnityEngine;
-using UnityEngine.SceneManagement;  // For scene transitions
+using UnityEngine.SceneManagement;  
+using UnityEngine.UI;              
+using System.Collections;           
 
 public class PlatformElevator : MonoBehaviour
 {
     [SerializeField]
-    private float riseSpeed = 0.5f;      // Speed at which the platform rises
+    private float riseSpeed = 2f;      // Speed at which the platform rises
     [SerializeField]
-    private string nextSceneName="Level 3";      // Name of the next scene to load
+    private string nextSceneName;      // Name of the next scene to load
 
     [SerializeField]
-    private bool playerOnPlatform = false;
+    private GameObject fadeImagePrefab;  // Prefab for the fade Image
     [SerializeField]
+    private float fadeDuration = 1f;   // Duration of the fade effect
+
+    private bool playerOnPlatform = false;
     private bool platformActivated = false;
+    private Image fadeImage;           // Reference to the instantiated fade Image
 
     void Update()
     {
         if (playerOnPlatform && Input.GetKeyDown(KeyCode.E))
         {
             platformActivated = true;
+            InstantiateFadeImage();    // Instantiate fade image prefab
+            StartCoroutine(FadeIn());  // Start fading in when the platform is activated
         }
 
         if (platformActivated && transform.position.y < 3f)  // Arbitrary height
@@ -26,7 +36,7 @@ public class PlatformElevator : MonoBehaviour
         }
         else if (platformActivated && transform.position.y >= 3f)
         {
-            SceneManager.LoadScene(nextSceneName);
+            SceneManager.LoadScene(nextSceneName);  // Load the next scene immediately after reaching the height
         }
     }
 
@@ -38,4 +48,47 @@ public class PlatformElevator : MonoBehaviour
             playerOnPlatform = true;
         }
     }
+
+    private void InstantiateFadeImage()
+    {
+        // Instantiate the fade image prefab and set it up
+        GameObject fadeObject = Instantiate(fadeImagePrefab, transform.position, Quaternion.identity);
+        fadeObject.transform.SetParent(GameObject.Find("Canvas").transform, false);
+
+        fadeImage = fadeObject.GetComponent<Image>();  
+
+        if (fadeImage != null)
+        {
+            Color fadeColor = fadeImage.color;
+            fadeColor.a = 0f; 
+            fadeImage.color = fadeColor;
+        }
+        else
+        {
+            Debug.LogError("Fade Image component not found on prefab!");
+        }
+    }
+
+   private IEnumerator FadeIn()
+{
+    float elapsedTime = 0f;
+    Color fadeColor = fadeImage.color;
+
+   
+    float fastFadeDuration = 1.5f; 
+
+
+    while (elapsedTime < fastFadeDuration)
+    {
+        elapsedTime += Time.deltaTime;
+        fadeColor.a = Mathf.Clamp01(elapsedTime / fastFadeDuration);
+        fadeImage.color = fadeColor;
+        yield return null;
+    }
+
+   
+    fadeColor.a = 1f;
+    fadeImage.color = fadeColor;
+}
+
 }
