@@ -72,6 +72,17 @@ public class Shotgun : MonoBehaviour
         povComponent = virtualCamera.GetCinemachineComponent<CinemachinePOV>();
     }
 
+    private void Start()
+    {
+        // if muzzleflash doesn't exist, create one
+        if (muzzleFlash == null)
+        {
+            GameObject muzzleFlashObject = new GameObject("MuzzleFlash");
+            muzzleFlash = muzzleFlashObject.AddComponent<ParticleSystem>();
+            muzzleFlashObject.transform.position = gunPoint.position;
+        }
+    }
+
     public void HandleInput()
     {
         // Check for shooting (mouse clicks)
@@ -118,6 +129,7 @@ public class Shotgun : MonoBehaviour
         Vector3 directionWithoutSpread = targetPoint - gunPoint.position;
 
         // play muzzle flash
+        if (muzzleFlash.isPlaying) muzzleFlash.Stop();
         muzzleFlash.transform.forward = directionWithoutSpread.normalized;
         muzzleFlash.transform.position = gunPoint.position;
         muzzleFlash.Play();

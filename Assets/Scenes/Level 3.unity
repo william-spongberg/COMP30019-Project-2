@@ -681,6 +681,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shard (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 5107880093673472826, guid: ba2fd3b36da44f145964d657b1985f69, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1193,6 +1197,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Church Pew (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 67989942370555860, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 353720002254880056, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -1217,6 +1225,22 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1540939904}
+    - target: {fileID: 2984598000427068319, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097825039691791653, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3546310376706245933, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3745041048965416367, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4037411638531579070, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -1245,6 +1269,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 471970168}
+    - target: {fileID: 7070025022731095074, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7607456580680783965, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -1305,6 +1333,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1074902474}
+    - target: {fileID: 8887481682863629381, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3318,6 +3350,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Church Pew (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 67989942370555860, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 353720002254880056, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -3342,6 +3378,22 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1540939904}
+    - target: {fileID: 2984598000427068319, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097825039691791653, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3546310376706245933, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3745041048965416367, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4037411638531579070, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -3370,6 +3422,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 389490771}
+    - target: {fileID: 7070025022731095074, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7607456580680783965, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -3430,6 +3486,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1074902474}
+    - target: {fileID: 8887481682863629381, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5107,6 +5167,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shard (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5107880093673472826, guid: ba2fd3b36da44f145964d657b1985f69, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5619,6 +5683,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Church Pew (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 67989942370555860, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 353720002254880056, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -5643,6 +5711,22 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1540939904}
+    - target: {fileID: 2984598000427068319, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097825039691791653, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3546310376706245933, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3745041048965416367, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4037411638531579070, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -5671,6 +5755,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1840982376}
+    - target: {fileID: 7070025022731095074, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7607456580680783965, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -5731,6 +5819,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1074902474}
+    - target: {fileID: 8887481682863629381, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6578,6 +6670,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Church Pew (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 67989942370555860, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 353720002254880056, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -6602,6 +6698,22 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1540939904}
+    - target: {fileID: 2984598000427068319, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097825039691791653, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3546310376706245933, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3745041048965416367, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4037411638531579070, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -6630,6 +6742,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1981472372}
+    - target: {fileID: 7070025022731095074, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7607456580680783965, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -6690,6 +6806,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1074902474}
+    - target: {fileID: 8887481682863629381, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6877,6 +6997,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Church Pew (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 67989942370555860, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 353720002254880056, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -6901,6 +7025,22 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1540939904}
+    - target: {fileID: 2984598000427068319, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097825039691791653, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3546310376706245933, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3745041048965416367, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4037411638531579070, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -6929,6 +7069,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 242206589}
+    - target: {fileID: 7070025022731095074, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7607456580680783965, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -6989,6 +7133,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1074902474}
+    - target: {fileID: 8887481682863629381, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8166,6 +8314,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Church Pew (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 67989942370555860, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 353720002254880056, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -8190,6 +8342,22 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1540939904}
+    - target: {fileID: 2984598000427068319, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097825039691791653, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3546310376706245933, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3745041048965416367, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4037411638531579070, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -8218,6 +8386,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 2122628560}
+    - target: {fileID: 7070025022731095074, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7607456580680783965, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -8278,6 +8450,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1074902474}
+    - target: {fileID: 8887481682863629381, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9290,6 +9466,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Church Pew (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 67989942370555860, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 353720002254880056, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -9314,6 +9494,22 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1540939904}
+    - target: {fileID: 2984598000427068319, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097825039691791653, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3546310376706245933, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3745041048965416367, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4037411638531579070, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -9342,6 +9538,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 2040883565}
+    - target: {fileID: 7070025022731095074, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7607456580680783965, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -9402,6 +9602,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1074902474}
+    - target: {fileID: 8887481682863629381, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10744,6 +10948,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Church Pew (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 67989942370555860, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 353720002254880056, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -10768,6 +10976,22 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1540939904}
+    - target: {fileID: 2984598000427068319, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097825039691791653, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3546310376706245933, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3745041048965416367, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4037411638531579070, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -10796,6 +11020,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 41434917}
+    - target: {fileID: 7070025022731095074, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7607456580680783965, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -10856,6 +11084,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1074902474}
+    - target: {fileID: 8887481682863629381, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11538,6 +11770,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Church Pew (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 67989942370555860, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 353720002254880056, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -11562,6 +11798,22 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1540939904}
+    - target: {fileID: 2984598000427068319, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097825039691791653, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3546310376706245933, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3745041048965416367, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4037411638531579070, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -11590,6 +11842,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1300216581}
+    - target: {fileID: 7070025022731095074, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7607456580680783965, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -11650,6 +11906,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1074902474}
+    - target: {fileID: 8887481682863629381, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12827,6 +13087,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Church Pew (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 67989942370555860, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 353720002254880056, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -12851,6 +13115,22 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1540939904}
+    - target: {fileID: 2984598000427068319, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097825039691791653, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3546310376706245933, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3745041048965416367, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4037411638531579070, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -12879,6 +13159,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 571001409}
+    - target: {fileID: 7070025022731095074, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7607456580680783965, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -12939,6 +13223,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1074902474}
+    - target: {fileID: 8887481682863629381, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12960,6 +13248,10 @@ PrefabInstance:
     - target: {fileID: 67989942370555860, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Name
       value: Church Pew (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 67989942370555860, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 353720002254880056, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
@@ -12985,6 +13277,22 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1540939904}
+    - target: {fileID: 2984598000427068319, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097825039691791653, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3546310376706245933, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3745041048965416367, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4037411638531579070, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -13013,6 +13321,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 432485803}
+    - target: {fileID: 7070025022731095074, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7607456580680783965, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -13073,6 +13385,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1074902474}
+    - target: {fileID: 8887481682863629381, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14657,6 +14973,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Church Pew (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 67989942370555860, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 353720002254880056, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -14681,6 +15001,22 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1540939904}
+    - target: {fileID: 2984598000427068319, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097825039691791653, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3546310376706245933, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3745041048965416367, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4037411638531579070, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -14709,6 +15045,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 262653923}
+    - target: {fileID: 7070025022731095074, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7607456580680783965, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -14769,6 +15109,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1074902474}
+    - target: {fileID: 8887481682863629381, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14944,63 +15288,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!1001 &782095447
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4436635630228671978, guid: 2181d719196db304da0fd61c08243422, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 11.69
-      objectReference: {fileID: 0}
-    - target: {fileID: 4436635630228671978, guid: 2181d719196db304da0fd61c08243422, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 16.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 4436635630228671978, guid: 2181d719196db304da0fd61c08243422, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -12.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4436635630228671978, guid: 2181d719196db304da0fd61c08243422, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.70852375
-      objectReference: {fileID: 0}
-    - target: {fileID: 4436635630228671978, guid: 2181d719196db304da0fd61c08243422, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.024742192
-      objectReference: {fileID: 0}
-    - target: {fileID: 4436635630228671978, guid: 2181d719196db304da0fd61c08243422, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.7048235
-      objectReference: {fileID: 0}
-    - target: {fileID: 4436635630228671978, guid: 2181d719196db304da0fd61c08243422, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.024612976
-      objectReference: {fileID: 0}
-    - target: {fileID: 4436635630228671978, guid: 2181d719196db304da0fd61c08243422, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4436635630228671978, guid: 2181d719196db304da0fd61c08243422, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 89.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 4436635630228671978, guid: 2181d719196db304da0fd61c08243422, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5204775127861947298, guid: 2181d719196db304da0fd61c08243422, type: 3}
-      propertyPath: m_Name
-      value: FreeCam
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 2181d719196db304da0fd61c08243422, type: 3}
 --- !u!43 &783590423
 Mesh:
   m_ObjectHideFlags: 0
@@ -15343,6 +15630,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Church Pew (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 67989942370555860, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 353720002254880056, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -15367,6 +15658,22 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1540939904}
+    - target: {fileID: 2984598000427068319, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097825039691791653, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3546310376706245933, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3745041048965416367, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4037411638531579070, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -15395,6 +15702,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1893149644}
+    - target: {fileID: 7070025022731095074, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7607456580680783965, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -15455,6 +15766,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1074902474}
+    - target: {fileID: 8887481682863629381, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16137,6 +16452,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Church Pew (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 67989942370555860, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 353720002254880056, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -16161,6 +16480,22 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1540939904}
+    - target: {fileID: 2984598000427068319, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097825039691791653, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3546310376706245933, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3745041048965416367, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4037411638531579070, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -16189,6 +16524,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 71916089}
+    - target: {fileID: 7070025022731095074, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7607456580680783965, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -16249,6 +16588,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1074902474}
+    - target: {fileID: 8887481682863629381, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16830,6 +17173,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Church Pew (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 67989942370555860, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 353720002254880056, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -16854,6 +17201,22 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1540939904}
+    - target: {fileID: 2984598000427068319, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097825039691791653, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3546310376706245933, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3745041048965416367, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4037411638531579070, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -16882,6 +17245,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 787564370}
+    - target: {fileID: 7070025022731095074, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7607456580680783965, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -16942,6 +17309,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1074902474}
+    - target: {fileID: 8887481682863629381, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -19439,6 +19810,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Church Pew (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 67989942370555860, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 353720002254880056, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -19463,6 +19838,22 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1540939904}
+    - target: {fileID: 2984598000427068319, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097825039691791653, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3546310376706245933, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3745041048965416367, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4037411638531579070, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -19491,6 +19882,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 895770479}
+    - target: {fileID: 7070025022731095074, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7607456580680783965, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -19551,6 +19946,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1074902474}
+    - target: {fileID: 8887481682863629381, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -19735,7 +20134,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1043133274}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pews
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20616,6 +21015,71 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1001 &1111679697
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5919842471288030324, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.5533937
+      objectReference: {fileID: 0}
+    - target: {fileID: 5919842471288030324, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.5082994
+      objectReference: {fileID: 0}
+    - target: {fileID: 5919842471288030324, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.8306415
+      objectReference: {fileID: 0}
+    - target: {fileID: 5919842471288030324, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5919842471288030324, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5919842471288030324, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5919842471288030324, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5919842471288030324, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5919842471288030324, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5919842471288030324, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8443471963078210180, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
+      propertyPath: m_Name
+      value: UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 8671189094965737125, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8671189094965737125, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
 --- !u!43 &1114818116
 Mesh:
   m_ObjectHideFlags: 0
@@ -21288,6 +21752,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Church Pew (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 67989942370555860, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 353720002254880056, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -21312,6 +21780,22 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1540939904}
+    - target: {fileID: 2984598000427068319, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097825039691791653, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3546310376706245933, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3745041048965416367, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4037411638531579070, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -21340,6 +21824,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1075958839}
+    - target: {fileID: 7070025022731095074, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7607456580680783965, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -21400,6 +21888,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1074902474}
+    - target: {fileID: 8887481682863629381, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21421,6 +21913,10 @@ PrefabInstance:
     - target: {fileID: 67989942370555860, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Name
       value: Church Pew (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 67989942370555860, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 353720002254880056, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
@@ -21446,6 +21942,22 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1540939904}
+    - target: {fileID: 2984598000427068319, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097825039691791653, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3546310376706245933, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3745041048965416367, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4037411638531579070, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -21474,6 +21986,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1419432969}
+    - target: {fileID: 7070025022731095074, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7607456580680783965, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -21534,6 +22050,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1074902474}
+    - target: {fileID: 8887481682863629381, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21555,6 +22075,10 @@ PrefabInstance:
     - target: {fileID: 67989942370555860, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Name
       value: Church Pew (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 67989942370555860, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 353720002254880056, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
@@ -21580,6 +22104,22 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1540939904}
+    - target: {fileID: 2984598000427068319, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097825039691791653, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3546310376706245933, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3745041048965416367, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4037411638531579070, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -21608,6 +22148,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1526158748}
+    - target: {fileID: 7070025022731095074, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7607456580680783965, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -21668,6 +22212,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1074902474}
+    - target: {fileID: 8887481682863629381, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -22187,7 +22735,7 @@ GameObject:
   - component: {fileID: 1178908635}
   - component: {fileID: 1178908634}
   - component: {fileID: 1178908633}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Room
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24417,6 +24965,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shard (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5107880093673472826, guid: ba2fd3b36da44f145964d657b1985f69, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -24663,6 +25215,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shard (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 5107880093673472826, guid: ba2fd3b36da44f145964d657b1985f69, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -24847,7 +25403,7 @@ GameObject:
   - component: {fileID: 1248700267}
   - component: {fileID: 1248700266}
   - component: {fileID: 1248700265}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Room(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26671,63 +27227,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!1001 &1267018907
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2594482781794331797, guid: cf83427ebcc9d474b8bf5c8b95b21c01, type: 3}
-      propertyPath: m_Name
-      value: EventSystem
-      objectReference: {fileID: 0}
-    - target: {fileID: 4848618614210167676, guid: cf83427ebcc9d474b8bf5c8b95b21c01, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4848618614210167676, guid: cf83427ebcc9d474b8bf5c8b95b21c01, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4848618614210167676, guid: cf83427ebcc9d474b8bf5c8b95b21c01, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4848618614210167676, guid: cf83427ebcc9d474b8bf5c8b95b21c01, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4848618614210167676, guid: cf83427ebcc9d474b8bf5c8b95b21c01, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4848618614210167676, guid: cf83427ebcc9d474b8bf5c8b95b21c01, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4848618614210167676, guid: cf83427ebcc9d474b8bf5c8b95b21c01, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4848618614210167676, guid: cf83427ebcc9d474b8bf5c8b95b21c01, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4848618614210167676, guid: cf83427ebcc9d474b8bf5c8b95b21c01, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4848618614210167676, guid: cf83427ebcc9d474b8bf5c8b95b21c01, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: cf83427ebcc9d474b8bf5c8b95b21c01, type: 3}
 --- !u!43 &1273134661
 Mesh:
   m_ObjectHideFlags: 0
@@ -27223,6 +27722,17 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!114 &1290350198 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4798392870389310199, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
+  m_PrefabInstance: {fileID: 1111679697}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!43 &1292402512
 Mesh:
   m_ObjectHideFlags: 0
@@ -27600,6 +28110,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Church Pew (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 67989942370555860, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 353720002254880056, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -27624,6 +28138,22 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1540939904}
+    - target: {fileID: 2984598000427068319, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097825039691791653, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3546310376706245933, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3745041048965416367, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4037411638531579070, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -27652,6 +28182,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1639698948}
+    - target: {fileID: 7070025022731095074, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7607456580680783965, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -27712,6 +28246,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1074902474}
+    - target: {fileID: 8887481682863629381, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -27733,6 +28271,10 @@ PrefabInstance:
     - target: {fileID: 67989942370555860, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Name
       value: Church Pew (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 67989942370555860, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 353720002254880056, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
@@ -27758,6 +28300,22 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1540939904}
+    - target: {fileID: 2984598000427068319, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097825039691791653, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3546310376706245933, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3745041048965416367, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4037411638531579070, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -27786,6 +28344,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 2021724037}
+    - target: {fileID: 7070025022731095074, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7607456580680783965, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -27846,6 +28408,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1074902474}
+    - target: {fileID: 8887481682863629381, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -28693,6 +29259,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Church Pew (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 67989942370555860, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 353720002254880056, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -28717,6 +29287,22 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1540939904}
+    - target: {fileID: 2984598000427068319, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097825039691791653, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3546310376706245933, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3745041048965416367, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4037411638531579070, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -28745,6 +29331,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1431671744}
+    - target: {fileID: 7070025022731095074, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7607456580680783965, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -28805,6 +29395,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1074902474}
+    - target: {fileID: 8887481682863629381, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -29970,6 +30564,95 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1001 &1475418997
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2038893976056318202, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
+      propertyPath: ammoDisplay
+      value: 
+      objectReference: {fileID: 1290350198}
+    - target: {fileID: 3315840683921078775, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
+      propertyPath: m_Lens.m_SensorSize.x
+      value: 54.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3315840683921078775, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
+      propertyPath: m_Lens.m_SensorSize.y
+      value: 25.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 3503321058363608471, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
+      propertyPath: ammoDisplay
+      value: 
+      objectReference: {fileID: 1290350198}
+    - target: {fileID: 4236896413806958649, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4236896413806958649, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4236896413806958649, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4236896413806958649, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4236896413806958649, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4236896413806958649, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4236896413806958649, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4236896413806958649, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4236896413806958649, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 4236896413806958649, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4750667638642542687, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
+      propertyPath: healthSystem
+      value: 
+      objectReference: {fileID: 1944830619}
+    - target: {fileID: 4878348466704880917, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
+      propertyPath: ammoDisplay
+      value: 
+      objectReference: {fileID: 1290350198}
+    - target: {fileID: 6298858975677008880, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
+      propertyPath: sprintSlider
+      value: 
+      objectReference: {fileID: 1639700435}
+    - target: {fileID: 6819831658801229571, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
+      propertyPath: ammoDisplay
+      value: 
+      objectReference: {fileID: 1290350198}
+    - target: {fileID: 7750007646304961496, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
+      propertyPath: m_Name
+      value: First Person Camera
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
 --- !u!43 &1491438832
 Mesh:
   m_ObjectHideFlags: 0
@@ -31975,6 +32658,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Church Pew (33)
       objectReference: {fileID: 0}
+    - target: {fileID: 67989942370555860, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 353720002254880056, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -31999,6 +32686,22 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1540939904}
+    - target: {fileID: 2984598000427068319, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097825039691791653, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3546310376706245933, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3745041048965416367, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4037411638531579070, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -32027,6 +32730,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 586981270}
+    - target: {fileID: 7070025022731095074, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7607456580680783965, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -32087,6 +32794,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1074902474}
+    - target: {fileID: 8887481682863629381, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -33594,6 +34305,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Church Pew (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 67989942370555860, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 353720002254880056, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -33618,6 +34333,22 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1540939904}
+    - target: {fileID: 2984598000427068319, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097825039691791653, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3546310376706245933, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3745041048965416367, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4037411638531579070, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -33646,6 +34377,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1592755891}
+    - target: {fileID: 7070025022731095074, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7607456580680783965, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -33706,6 +34441,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1074902474}
+    - target: {fileID: 8887481682863629381, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -34706,6 +35445,17 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!114 &1639700435 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 404292161083110805, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
+  m_PrefabInstance: {fileID: 1111679697}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4b1e72615d8f486997329852c658b79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1645677513
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34717,6 +35467,10 @@ PrefabInstance:
     - target: {fileID: 67989942370555860, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Name
       value: Church Pew (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 67989942370555860, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 353720002254880056, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
@@ -34742,6 +35496,22 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1540939904}
+    - target: {fileID: 2984598000427068319, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097825039691791653, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3546310376706245933, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3745041048965416367, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4037411638531579070, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -34770,6 +35540,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 161015562}
+    - target: {fileID: 7070025022731095074, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7607456580680783965, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -34830,6 +35604,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1074902474}
+    - target: {fileID: 8887481682863629381, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -35677,6 +36455,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Church Pew (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 67989942370555860, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 353720002254880056, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -35701,6 +36483,22 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1540939904}
+    - target: {fileID: 2984598000427068319, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097825039691791653, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3546310376706245933, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3745041048965416367, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4037411638531579070, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -35729,6 +36527,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 332801231}
+    - target: {fileID: 7070025022731095074, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7607456580680783965, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -35789,6 +36591,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1074902474}
+    - target: {fileID: 8887481682863629381, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -36306,6 +37112,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Church Pew (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 67989942370555860, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 353720002254880056, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -36330,6 +37140,22 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1540939904}
+    - target: {fileID: 2984598000427068319, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097825039691791653, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3546310376706245933, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3745041048965416367, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4037411638531579070, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -36358,6 +37184,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 2053320436}
+    - target: {fileID: 7070025022731095074, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7607456580680783965, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -36418,6 +37248,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1074902474}
+    - target: {fileID: 8887481682863629381, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -37608,6 +38442,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Church Pew (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 67989942370555860, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 353720002254880056, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -37632,6 +38470,22 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1540939904}
+    - target: {fileID: 2984598000427068319, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097825039691791653, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3546310376706245933, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3745041048965416367, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4037411638531579070, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -37660,6 +38514,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 344765657}
+    - target: {fileID: 7070025022731095074, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7607456580680783965, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -37720,6 +38578,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1074902474}
+    - target: {fileID: 8887481682863629381, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -38237,6 +39099,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Church Pew
       objectReference: {fileID: 0}
+    - target: {fileID: 67989942370555860, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 353720002254880056, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -38261,6 +39127,22 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1540939904}
+    - target: {fileID: 2984598000427068319, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097825039691791653, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3546310376706245933, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3745041048965416367, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4037411638531579070, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -38289,6 +39171,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1186709620}
+    - target: {fileID: 7070025022731095074, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7607456580680783965, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -38349,6 +39235,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1074902474}
+    - target: {fileID: 8887481682863629381, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -39196,6 +40086,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Church Pew (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 67989942370555860, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 353720002254880056, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -39220,6 +40114,22 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1540939904}
+    - target: {fileID: 2984598000427068319, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097825039691791653, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3546310376706245933, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3745041048965416367, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4037411638531579070, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -39248,6 +40158,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 685579807}
+    - target: {fileID: 7070025022731095074, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7607456580680783965, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -39308,6 +40222,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1074902474}
+    - target: {fileID: 8887481682863629381, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -39825,6 +40743,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Church Pew (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 67989942370555860, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 353720002254880056, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -39849,6 +40771,22 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1540939904}
+    - target: {fileID: 2984598000427068319, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097825039691791653, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3546310376706245933, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3745041048965416367, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4037411638531579070, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -39877,6 +40815,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 612674853}
+    - target: {fileID: 7070025022731095074, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7607456580680783965, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -39937,6 +40879,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1074902474}
+    - target: {fileID: 8887481682863629381, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -41102,6 +42048,17 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!114 &1944830619 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1959809423025725436, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
+  m_PrefabInstance: {fileID: 1111679697}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e437dc65bbf6349cdab618099f50015f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!43 &1947099311
 Mesh:
   m_ObjectHideFlags: 0
@@ -42269,6 +43226,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Church Pew (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 67989942370555860, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 353720002254880056, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -42293,6 +43254,22 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1540939904}
+    - target: {fileID: 2984598000427068319, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097825039691791653, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3546310376706245933, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3745041048965416367, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4037411638531579070, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -42321,6 +43298,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 95129520}
+    - target: {fileID: 7070025022731095074, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7607456580680783965, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -42381,6 +43362,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1074902474}
+    - target: {fileID: 8887481682863629381, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -43126,6 +44111,10 @@ PrefabInstance:
     - target: {fileID: 5107880093673472826, guid: ba2fd3b36da44f145964d657b1985f69, type: 3}
       propertyPath: m_Name
       value: Shard (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5107880093673472826, guid: ba2fd3b36da44f145964d657b1985f69, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -43969,6 +44958,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Church Pew (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 67989942370555860, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 353720002254880056, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -43993,6 +44986,22 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1540939904}
+    - target: {fileID: 2984598000427068319, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097825039691791653, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3546310376706245933, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3745041048965416367, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4037411638531579070, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -44021,6 +45030,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1245320983}
+    - target: {fileID: 7070025022731095074, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7607456580680783965, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -44081,6 +45094,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1074902474}
+    - target: {fileID: 8887481682863629381, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -44598,6 +45615,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Church Pew (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 67989942370555860, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 353720002254880056, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -44622,6 +45643,22 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1540939904}
+    - target: {fileID: 2984598000427068319, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097825039691791653, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3546310376706245933, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3745041048965416367, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4037411638531579070, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -44650,6 +45687,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 873123031}
+    - target: {fileID: 7070025022731095074, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7607456580680783965, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -44710,6 +45751,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1074902474}
+    - target: {fileID: 8887481682863629381, guid: 09bfdbc020619814cafdf3bb07ac7271, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -46054,5 +47099,5 @@ SceneRoots:
   - {fileID: 297670573}
   - {fileID: 29348309}
   - {fileID: 159765925}
-  - {fileID: 1267018907}
-  - {fileID: 782095447}
+  - {fileID: 1475418997}
+  - {fileID: 1111679697}

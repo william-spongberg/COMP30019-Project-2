@@ -1170,7 +1170,7 @@ MonoBehaviour:
   gunPoint: {fileID: 6769895590117017103}
   pistolAudio: {fileID: 5480634855707871747}
   ammoDisplay: {fileID: 0}
-  muzzleFlash: {fileID: 0}
+  muzzleFlash: {fileID: 1225396204031964734, guid: 8909ef93ecbe3bc4496505e46a4e9c84, type: 3}
 --- !u!114 &2038893976056318202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1200,7 +1200,7 @@ MonoBehaviour:
   gunPoint: {fileID: 9028047170668516042}
   shotgunAudio: {fileID: 791040008407543428}
   ammoDisplay: {fileID: 0}
-  muzzleFlash: {fileID: 0}
+  muzzleFlash: {fileID: 1225396204031964734, guid: 8909ef93ecbe3bc4496505e46a4e9c84, type: 3}
 --- !u!114 &3503321058363608471
 MonoBehaviour:
   m_ObjectHideFlags: 0
