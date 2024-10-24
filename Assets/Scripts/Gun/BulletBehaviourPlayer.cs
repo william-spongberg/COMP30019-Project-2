@@ -4,24 +4,29 @@ using UnityEngine;
 
 public class BulletBehaviour : MonoBehaviour
 {
-   
-   [SerializeField]
-   private float destroyDelay;
-   [SerializeField]
+
+    [SerializeField]
+    private float destroyDelay;
+    [SerializeField]
     private int damageAmount;
 
     private void OnCollisionEnter(Collision collision)
     {
         // Check if the object hit is an enemy
         EnemyHP enemy = collision.gameObject.GetComponent<EnemyHP>();
+        // get hit point + direction
+        Vector3 hitPoint = collision.contacts[0].point;
+        Vector3 hitDirection = collision.contacts[0].normal;
 
         if (enemy != null)
         {
             // Deal damage to the enemy
             enemy.TakeDamage(damageAmount);
+            // Play blood effect
+            StartCoroutine(enemy.PlayBloodEffect(hitPoint, hitDirection));
         }
-        
-       // Use a coroutine to destroy the bullet after a delay
+
+        // Use a coroutine to destroy the bullet after a delay
         StartCoroutine(DestroySequence());
     }
 

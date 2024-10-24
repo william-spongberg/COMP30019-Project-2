@@ -1,9 +1,11 @@
 using UnityEngine;
 
-public class RandDupe : MonoBehaviour
+public class Glitch : MonoBehaviour
 {
     [SerializeField]
     private GameObject prefab;
+    [SerializeField]
+    private Material glitchMaterial;
     [SerializeField]
     private Vector3 scale = Vector3.one;
     [SerializeField]
@@ -14,6 +16,8 @@ public class RandDupe : MonoBehaviour
     private float minLifetime = 0.1f;
     [SerializeField]
     private float maxLifetime = 1.0f;
+    [SerializeField]
+    private float renderProbability = 0.1f;
 
     private Matrix4x4[] matrices;
     private float[] lifetimes;
@@ -51,7 +55,11 @@ public class RandDupe : MonoBehaviour
             }
             else
             {
-                AddInstance(i);
+                if (Random.value < renderProbability)
+                {
+                    // render instance
+                    AddInstance(i);
+                }
             }
         }
     }
@@ -59,18 +67,21 @@ public class RandDupe : MonoBehaviour
     void OnRenderObject()
     {
         // draw instances from matrices
-        Graphics.DrawMeshInstanced(mesh, 0, material, matrices);
+        Graphics.DrawMeshInstanced(mesh, 0, glitchMaterial, matrices);
     }
 
     void ResetInstance(int index)
     {
+        // randomise position within range
         positions[index] = transform.position + new Vector3(
             Random.Range(-range, range),
             transform.position.y,
             Random.Range(-range, range)
         );
+        // randomise lifetime
         lifetimes[index] = Random.Range(minLifetime, maxLifetime);
 
+        // randomise rotation
         randRotation = Random.Range(0, 360);
         matrices[index] = Matrix4x4.TRS(positions[index], Quaternion.Euler(0, randRotation, 0), scale);
     }
