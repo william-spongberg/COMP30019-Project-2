@@ -744,6 +744,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  bloodEffect: {fileID: 5115041917670963478, guid: 1cecae3d8eb8a8c4ca9ca49f4c83d11b, type: 3}
 --- !u!114 &7413369304281345893
 MonoBehaviour:
   m_ObjectHideFlags: 0
