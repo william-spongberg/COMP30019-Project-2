@@ -1,0 +1,125 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3413457256456304119
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7388196607919707986}
+  - component: {fileID: 2067039211280163408}
+  - component: {fileID: 2529018147278014787}
+  - component: {fileID: 8416469180267205262}
+  - component: {fileID: 5428992920257945065}
+  m_Layer: 0
+  m_Name: Skull
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7388196607919707986
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3413457256456304119}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.23865017, y: -0.45491195, z: -0.7437036, w: 0.4277922}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: -61.742, y: -4.148, z: -117.703}
+--- !u!33 &2067039211280163408
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3413457256456304119}
+  m_Mesh: {fileID: 3982955471618308040, guid: b6a16d8251a152845b85bc20c3859653, type: 3}
+--- !u!23 &2529018147278014787
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3413457256456304119}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: b16a53ee3d47e8940a1a67a209cef48c, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8416469180267205262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3413457256456304119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b81359cdd2b34ca4da2b6cdcb9fbe1f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5428992920257945065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3413457256456304119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e84baffad06edc4d9110c0fdbac4108, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textures:
+  - {fileID: 2800000, guid: 7789f4efbb0f45c4780925243375a18e, type: 3}
+  - {fileID: 4154780841294389669, guid: c52ef73d35640c64eb68bb367902066c, type: 3}
+  - {fileID: 2800000, guid: 9783d6c3e21d186478e2a4424271ac8e, type: 3}
+  - {fileID: 2800000, guid: 4358b945d59bcc54a8d357279a0d3567, type: 3}
+  - {fileID: 2800000, guid: dffef66376be4fa480fb02b19edbe903, type: 3}
+  - {fileID: 2800000, guid: 283f897e4925411ebbaa758b4cb13fc2, type: 3}
+  - {fileID: 2800000, guid: a969091ee1740c3469cc70c44c3caa60, type: 3}
+  - {fileID: 2800000, guid: a073e30cf8f3cab47b5cf5aa2df423f3, type: 3}
+  - {fileID: 2800000, guid: 8b2f8e9baa829cb4bab4edc10698b507, type: 3}
+  - {fileID: 2800000, guid: 17c350171f7a3ca479f830547c66d187, type: 3}
+  - {fileID: 2800000, guid: 6eb184de103d4b3f812b38561065192f, type: 3}
+  targetMaterial: {fileID: 2100000, guid: b16a53ee3d47e8940a1a67a209cef48c, type: 2}
+  changeTextureThreshold: 0.1

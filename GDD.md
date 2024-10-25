@@ -9,8 +9,9 @@ Our game’s core concept is a movement based FPS Shmup(shoot em’ up) that tak
 
 Games that are similar, and from which we drew inspiration from include ULTRAKILL and Doom Slayer, which are both Shoot Em’ Ups, ULTRAKILL specifically is also a movement based FPS. 
 
-<img title="Ultrakill, a game by New Blood Interactive" alt="Alt text" src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1229490/header.jpg?t=1704406135"> 
-(Figure 1: Ultrakill, a game by New Blood Interactive)
+<img title="Ultrakill, a game by New Blood Interactive" alt="Alt text" src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1229490/header.jpg?t=1704406135">
+
+*Figure 1: Ultrakill, a game by New Blood Interactive*
 
 For the level design, one inspiration we drew from was the Backrooms, an ordinary environment that is eerie in context(in the case of the Backrooms, the infinite size and monsters). Similar to the Backrooms, the environments in our game will primarily be normal environments that have become unsettling or uncomfortable due to contextual factors.
 
@@ -200,13 +201,15 @@ Provide a detailed plan of how you'll distribute the work amongst your team, and
 
 The game has been split up into distinct workable sections between the 4 team members:
 
-| **Will** | **David** | **Ananya** | **Alistair**|
-|----------|-----------|------------|-------------|
-| World Generation | Movement | Lighting | Enemies|
-| AI       | Story | Sound    | Level design      |
-| Camera   |Weapons| UI       | Shaders           |
+| **Will**         | **David** | **Ananya**      | **Alistair** |
+|------------------|---------- |-----------------|--------------|
+| World Generation | Story     | User Evaluation | Movement     |
+| Shaders          | Boss      | Assets          | AI/Enemies   |
+| Lighting         | Movement  | UI              | Audio        |
+| Post Processing  |           |                 | Weapons      |
+| Particle Systems |           |                 | Boss         |
 
-Communication will be through Discord, and progress will be tracked through both Trello and Github. Each member will have a seperate Github branch to work on.
+Communication will be through Discord, and progress will be tracked through both Trello and Github. Each member will have a separate Github branch to work on.
 
 ## Possible Challenges ##
 
