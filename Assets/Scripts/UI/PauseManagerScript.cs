@@ -10,6 +10,8 @@ public class PauseMenu : MonoBehaviour
 
     public static bool isPaused = false;
 
+    [SerializeField] private GameObject settingsMenuUI;
+
     void Start()
     {
 
@@ -20,15 +22,12 @@ public class PauseMenu : MonoBehaviour
 
     void Update()
     {
-        // Check if the P key is pressed
+        // Check if the key is pressed
         if (Input.GetKeyDown(KeyCode.Backspace))
         {
-            if (isPaused)
+            if (!isPaused)
             {
-                Resume();
-            }
-            else
-            {
+               
                 Pause();
             }
         }
@@ -45,12 +44,11 @@ public class PauseMenu : MonoBehaviour
         Cursor.visible = true;
     }
 
-    public void Resume()
+    public void Resume1()
     {
-        
-        pauseMenuUI.SetActive(false);  
-        Time.timeScale = 1f;         
-        isPaused = false;
+       pauseMenuUI.SetActive(false);  
+          Time.timeScale = 1f;
+          isPaused = false;
       
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -58,15 +56,30 @@ public class PauseMenu : MonoBehaviour
 
     public void LoadMainMenu()
     {
+      
 
         Time.timeScale = 1f;
         SceneManager.LoadScene("StartScene");
     }
 
-    // public void QuitGame()
-    // {
-    //     Debug.Log("Quitting game...");
-    //     Application.Quit();
-    // }
+   
+    public void OpenSettings()
+    {
+        Time.timeScale = 0;
+        pauseMenuUI.SetActive(false);  
+        settingsMenuUI.SetActive(true); 
+
+         // Unlock and show cursor for settings
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+
+    
+    public void CloseSettings()
+    {
+        settingsMenuUI.SetActive(false);
+        pauseMenuUI.SetActive(true); 
+    }
+
 }
 
