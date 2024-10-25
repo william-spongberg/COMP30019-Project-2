@@ -238,6 +238,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   riseSpeed: 2
-  nextSceneName: Level 3
+  nextSceneName: ChurchBoss
   fadeImagePrefab: {fileID: 56530979038707734, guid: 72463a85f5b1c4b698b1798594fbe751, type: 3}
-  fadeDuration: 10
+  fadeDuration: 1.5
