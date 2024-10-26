@@ -35,4 +35,7 @@ public class DialogueSystem : MonoBehaviour
         }
 
     }
+    public bool getProgress(){
+        return inProgress;
+    }
 }

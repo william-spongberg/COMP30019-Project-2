@@ -32,4 +32,8 @@ public class EnemyHP : MonoBehaviour
         yield return new WaitForSeconds(duration);
         Destroy(blood.gameObject);
     }
+
+    public void setTracker(Counter tracking){
+        tracker = tracking;
+    }
 }

@@ -13,19 +13,28 @@ public class NPCSpawner : MonoBehaviour
     private KeyCode key = KeyCode.F;
     [SerializeField]
     private List<GameObject> objects = new();
-    
+    public int index;
+
+    public DialogueSystem systemCheck;
+
     public int[] waves;
+    public int[] triggers;
     private GameObject player;
     public Counter Tracker;
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        index = 0;
     }
 
     void Update()
     {
         // spawn new NPC on button press
+        if(index < waves.Length && !systemCheck.getProgress() && triggers[index] == Tracker.getSlainEnemies()){
+            SpawnWave(waves[index]);
+            index += 1;
+        }
         if (Input.GetKeyDown(key))
         {
             LevelSpawn(waves);
@@ -43,6 +52,12 @@ public class NPCSpawner : MonoBehaviour
 
         // spawn randomly within x radius of player
         GameObject newObj = Instantiate(objects[randomIndex], pos, Quaternion.identity);
+        //newObj.EnemyHP.setTracker(Tracker);
+        
+        if(newObj.GetComponent<EnemyHP>() != null){
+            EnemyHP enemy = newObj.GetComponent<EnemyHP>();
+            enemy.setTracker(Tracker);
+        }
         entitySpawned += 1;
         Tracker.IncreaseSpawn(1);
     }
