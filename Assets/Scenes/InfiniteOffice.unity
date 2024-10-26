@@ -226,6 +226,10 @@ PrefabInstance:
       propertyPath: ammoDisplay
       value: 
       objectReference: {fileID: 1396748165}
+    - target: {fileID: 3503321058363608471, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
+      propertyPath: attackDamage
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 3534523802656852792, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.5
@@ -298,6 +302,18 @@ PrefabInstance:
       propertyPath: weaponCollider
       value: 
       objectReference: {fileID: 1410125758}
+    - target: {fileID: 6298858975677008880, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
+      propertyPath: jumpForce
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6298858975677008880, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
+      propertyPath: walkSpeed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6298858975677008880, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
+      propertyPath: sprintSpeed
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6298858975677008880, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
       propertyPath: sprintSlider
       value: 
