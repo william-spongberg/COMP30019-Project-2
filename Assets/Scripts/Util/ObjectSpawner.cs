@@ -14,8 +14,9 @@ public class NPCSpawner : MonoBehaviour
     [SerializeField]
     private List<GameObject> objects = new();
     
-
+    public int[] waves;
     private GameObject player;
+    public Counter Tracker;
 
     void Start()
     {
@@ -27,7 +28,7 @@ public class NPCSpawner : MonoBehaviour
         // spawn new NPC on button press
         if (Input.GetKeyDown(key))
         {
-            SpawnNPC();
+            LevelSpawn(waves);
         }
     }
 
@@ -43,5 +44,18 @@ public class NPCSpawner : MonoBehaviour
         // spawn randomly within x radius of player
         GameObject newObj = Instantiate(objects[randomIndex], pos, Quaternion.identity);
         entitySpawned += 1;
+        Tracker.IncreaseSpawn(1);
+    }
+
+    public void SpawnWave(int amount){
+        for(int i = 0; i < amount; i++){
+            SpawnNPC();
+        }
+    }
+
+    public void LevelSpawn(int[] waves){
+        for(int j = 0; j < waves.Length; j++){
+            SpawnWave(waves[j]);
+        }
     }
 }
