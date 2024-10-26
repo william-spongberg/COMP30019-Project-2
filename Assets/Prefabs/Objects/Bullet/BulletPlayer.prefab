@@ -101,7 +101,7 @@ SphereCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1b4dd3bd13114915ac8e494bc3cdf36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyDelay: 0.001
+  destroyDelay: 0.1
   damageAmount: 15
 --- !u!108 &8051612612476243941
 Light:
