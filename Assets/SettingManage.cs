@@ -20,11 +20,11 @@ public class SettingManage : MonoBehaviour
 
 
         // Load saved settings from PlayerPrefs (if they exist)
-        float savedSensitivity = PlayerPrefs.GetFloat("MouseSensitivity", playerMovement.mouseSensitivity);
+        //float savedSensitivity = PlayerPrefs.GetFloat("MouseSensitivity", playerMovement.mouseSensitivity);
         float savedFOV = PlayerPrefs.GetFloat("FOV", playerCamera.fieldOfView);
         
         // Initialize sliders with the current sensitivity and FOV values
-        sensitivitySlider.value = savedSensitivity;
+        //sensitivitySlider.value = savedSensitivity;
         fovSlider.value = savedFOV;
 
         sensitivitySlider.onValueChanged.AddListener(UpdateMouseSensitivity);
@@ -37,14 +37,14 @@ public class SettingManage : MonoBehaviour
 void Update()
 {
     // Continuously apply the sensitivity and FOV while the sliders are being adjusted
-    playerMovement.mouseSensitivity = sensitivitySlider.value;
+    //playerMovement.mouseSensitivity = sensitivitySlider.value;
     playerCamera.fieldOfView = fovSlider.value;
 }
 
     public void UpdateMouseSensitivity(float newValue)
     {
         Debug.Log("Slider moved. New sensitivity: " + newValue);
-        playerMovement.mouseSensitivity = newValue; // Use existing property
+        //playerMovement.mouseSensitivity = newValue; // Use existing property
         PlayerPrefs.SetFloat("MouseSensitivity", newValue);
         Debug.Log("Mouse Sensitivity updated: " + newValue);
     }
@@ -64,7 +64,7 @@ void Update()
         float newFOV = fovSlider.value;
 
         // Apply new sensitivity and FOV values
-        playerMovement.mouseSensitivity = newSensitivity;
+        //playerMovement.mouseSensitivity = newSensitivity;
         playerCamera.fieldOfView = newFOV;
 
         Debug.Log("Settings Applied: Sensitivity = " + newSensitivity + ", FOV = " + newFOV);
