@@ -29,11 +29,18 @@ public class EnemyAI : MonoBehaviour
     private bool isPatrolDestinationSet;
     public float patrolRadius = 10f;
 
+    // Chasing
+    private Vector3 chaseDestination; // Target point around the player for chasing
+    private bool isChaseDestinationSet = false;
+
     // Detection
-    public float detectionRange = 10f;
-    public float attackRange = 5f;
+    public float detectionRange = 15f;
+    public float minAttackRange = 3f;  // Minimum attack range
+    public float maxAttackRange = 7f;  // Maximum attack range
+    private float attackRange;
     private bool playerInDetectionRange;
     private bool playerInAttackRange;
+    
 
     // Shooting properties
     public float bulletForce = 20f;
@@ -68,6 +75,9 @@ public class EnemyAI : MonoBehaviour
 
         // animation multiplier
         anim.SetFloat("MotionSpeed", 0.25f);
+
+        // Randomly set attack range for this enemy
+        attackRange = Random.Range(minAttackRange, maxAttackRange);
     }
 
 
@@ -84,13 +94,22 @@ public class EnemyAI : MonoBehaviour
         // Update detection status
         playerInDetectionRange = Physics.CheckSphere(transform.position, detectionRange, playerLayer);
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, playerLayer);
+        
 
         if (!playerInDetectionRange && !playerInAttackRange)
+        {
             currentState = EnemyState.Patrolling;
+            isChaseDestinationSet = false;
+        }
         else if (playerInDetectionRange && !playerInAttackRange)
+        {
             currentState = EnemyState.Chasing;
+        }
         else if (playerInAttackRange && playerInDetectionRange)
+        {
             currentState = EnemyState.Attacking;
+            isChaseDestinationSet = false;
+        }
     }
 
     private void ExecuteStateAction()
@@ -145,8 +164,32 @@ public class EnemyAI : MonoBehaviour
 
     private void ChasePlayer()
     {
-        agent.destination = player.position;
+        // Set a new destination if one hasn't been set or the current one is reached
+        if (!isChaseDestinationSet || Vector3.Distance(transform.position, chaseDestination) < 1f)
+        {
+            SetChaseDestination();
+        }
+
+        // Direct the agent to the chase destination
+        if (isChaseDestinationSet)
+            agent.destination = chaseDestination;
     }
+
+    private void SetChaseDestination()
+    {
+        float randomX = Random.Range(-attackRange, attackRange);
+        float randomZ = Random.Range(-attackRange, attackRange);
+        Vector3 randomOffset = new Vector3(randomX, 0, randomZ);
+        chaseDestination = player.position + randomOffset;
+
+        // Ensure the destination is on the NavMesh
+        if (NavMesh.SamplePosition(chaseDestination, out NavMeshHit hit, attackRange, NavMesh.AllAreas))
+        {
+            chaseDestination = hit.position;
+            isChaseDestinationSet = true;
+        }
+    }
+
     private void AttackPlayer()
     {
         // Stop moving while attacking
@@ -172,6 +215,7 @@ public class EnemyAI : MonoBehaviour
             isAttackOnCooldown = true;
             Invoke(nameof(ResetAttack), attackCooldown);
         }
+
     }
 
     private void Shoot()
@@ -221,11 +265,15 @@ public class EnemyAI : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
-        // Visualize detection and attack ranges in the editor
+        // Visualize detection range
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, detectionRange);
+
+        // Visualize attack ranges
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, attackRange);
+        Gizmos.DrawWireSphere(transform.position, minAttackRange);
+        Gizmos.color = Color.magenta;
+        Gizmos.DrawWireSphere(transform.position, maxAttackRange);
     }
 
     private void HandleFootsteps()
