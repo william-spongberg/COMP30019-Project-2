@@ -85,6 +85,9 @@ public class Shotgun : MonoBehaviour
 
     public void HandleInput()
     {
+        // Prevent input handling when the game is paused
+        if (PauseMenu.IsPaused) return;
+
         // Check for shooting (mouse clicks)
         // Shoots per click, no holding down the key to auto shoot
         currentlyShooting = Input.GetKeyDown(KeyCode.Mouse0);

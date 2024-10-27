@@ -3,83 +3,77 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-    public GameObject pauseMenuUI;  // Reference to Pause Menu UI
-    public GameObject playerCapsule;  // Reference to the PlayerCapsule (which has the ShootingGun script attached)
+    [SerializeField]
+    private GameObject pauseMenuUI;
+    [SerializeField]
+    private GameObject settingsMenuUI;
 
-    // private ShootingGun shootingGunScript;  // Reference to the ShootingGun script, redundant; script no longer exists
-
-    public static bool isPaused = false;
-
-    [SerializeField] private GameObject settingsMenuUI;
+    public static bool IsPaused { get; private set; } = false;
 
     void Start()
     {
-
-      
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        // Ensure the cursor is locked and invisible when starting
+        Resume();
     }
 
     void Update()
     {
-        // Check if the key is pressed
-        if (Input.GetKeyDown(KeyCode.Backspace))
+        // Check if the player presses the pause key (Escape)
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (!isPaused)
+            if (IsPaused)
             {
-               
+                Resume();
+            }
+            else
+            {
                 Pause();
             }
         }
     }
 
-    void Pause()
+    private void Pause()
     {
-      
-        pauseMenuUI.SetActive(true);   
-        Time.timeScale = 0f;          
-        isPaused = true;
-     
+        pauseMenuUI.SetActive(true);
+        settingsMenuUI.SetActive(false);
+        Time.timeScale = 0f;
+        IsPaused = true;
+
+        // Unlock and show cursor
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
 
-    public void Resume1()
+    public void Resume()
     {
-       pauseMenuUI.SetActive(false);  
-          Time.timeScale = 1f;
-          isPaused = false;
-      
+        pauseMenuUI.SetActive(false);
+        settingsMenuUI.SetActive(false);
+        Time.timeScale = 1f;
+        IsPaused = false;
+
+        // Lock and hide cursor
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
 
     public void LoadMainMenu()
     {
-      
-
         Time.timeScale = 1f;
         SceneManager.LoadScene("StartScene");
     }
 
-   
     public void OpenSettings()
     {
-        Time.timeScale = 0;
-        pauseMenuUI.SetActive(false);  
-        settingsMenuUI.SetActive(true); 
+        pauseMenuUI.SetActive(false);
+        settingsMenuUI.SetActive(true);
 
-         // Unlock and show cursor for settings
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
 
-    
     public void CloseSettings()
     {
         settingsMenuUI.SetActive(false);
-        pauseMenuUI.SetActive(true); 
+        pauseMenuUI.SetActive(true);
     }
-
 }
-
