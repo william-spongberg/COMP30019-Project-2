@@ -89,7 +89,7 @@ public class Pistol : MonoBehaviour
     public void HandleInput()
     {
         // Ensure the player cannot attack if the game is paused
-        if (PauseMenu.IsPaused) return;
+        if (PauseManagerScript.IsPaused) return;
         
         // Check for shooting (mouse clicks)
         // Shoots per click, no holding down the key to auto shoot

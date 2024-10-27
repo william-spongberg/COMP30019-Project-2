@@ -45,7 +45,7 @@ public class Melee : MonoBehaviour
     public void HandleInput()
     {
         // Ensure the player cannot attack if the game is paused
-        if (PauseMenu.IsPaused) return;
+        if (PauseManagerScript.IsPaused) return;
         
         // Check for attack input (e.g., left-click)
         if (Input.GetKeyDown(KeyCode.Mouse0) && canAttack)

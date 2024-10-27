@@ -10,7 +10,7 @@ public class SettingManage : MonoBehaviour
     private MovementV2 playerMovement;                  // Reference to Movement script
     private Camera playerCamera;                        // Reference to player's camera
 
-    [SerializeField] private PauseMenu pauseMenu;
+    [SerializeField] private PauseManagerScript pauseMenu;
 
     void Start()
     {
