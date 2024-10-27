@@ -6,6 +6,7 @@ using UnityEngine;
 public class EnemyHP : MonoBehaviour
 {
     // Start is called before the first frame update
+    public Counter tracker;
     [SerializeField]
     private float health;
     [SerializeField]
@@ -14,6 +15,7 @@ public class EnemyHP : MonoBehaviour
     public void TakeDamage(float damage) {
         health -= damage;
         if(health <= 0){
+            tracker.IncreaseSlain(1);
             Destroy(gameObject);
         }
     }
@@ -29,5 +31,9 @@ public class EnemyHP : MonoBehaviour
         float duration = blood.main.duration;
         yield return new WaitForSeconds(duration);
         Destroy(blood.gameObject);
+    }
+
+    public void setTracker(Counter tracking){
+        tracker = tracking;
     }
 }

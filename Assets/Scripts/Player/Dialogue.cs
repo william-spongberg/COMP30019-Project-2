@@ -31,19 +31,12 @@ public class Dialogue : MonoBehaviour
                 textComponent.text = lines[index];
             }
         }
-        //if(Input.GetMouseButtonDown(1)){
-         ///   gameObject.SetActive(true);
-        //    index = 0;
-         //   textComponent.text = string.Empty;
-        //    StartDialogue();
-        //}
     }
 
     void StartDialogue()
     {
         index = 0;
         StartCoroutine(TypeLine());
-
     }
 
     IEnumerator TypeLine(){
@@ -63,8 +56,16 @@ public class Dialogue : MonoBehaviour
         }
         else{
             startFinished = true;
-            gameObject.SetActive(false);
+            //gameObject.SetActive(false);
         }
 
+    }
+
+    //public void hide(){
+      //  gameObject.
+    //}
+
+    public bool IsFinished(){
+        return(startFinished);
     }
 }
