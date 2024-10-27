@@ -18,12 +18,6 @@ public class MovementV2 : MonoBehaviour
     [SerializeField]
     private float gravity = -9.8f;
 
-    // Sensitivity and FOV
-    [SerializeField] public float mouseSensitivity = 100f;   // Mouse sensitivity
-    [SerializeField] private Camera playerCamera;            // Player camera
-    [SerializeField] private float defaultFOV = 60f;         // Default FOV
-
-
     // For checking grounded state
     private bool isGrounded;
     [SerializeField]
@@ -67,14 +61,6 @@ public class MovementV2 : MonoBehaviour
         currentStamina = maxStamina;
         sprintSlider.SetMaxStamina(maxStamina);
 
-        // Get player camera reference if not set
-        if (playerCamera == null)
-        {
-            playerCamera = Camera.main;  // Set the main camera as the player camera if none is assigned
-        }
-
-        // Set the default FOV
-        playerCamera.fieldOfView = defaultFOV;
 
     }
 
@@ -97,23 +83,10 @@ public class MovementV2 : MonoBehaviour
         }
 
         HandleFootsteps();
-        HandleMouseLook();
 
         //Debug.DrawRay(transform.position, Vector3.down * (modelHeight * 0.5f + 0.1f), Color.red);
 
     }
-
-    private void HandleMouseLook()
-    {
-        // Handle mouse movement for looking around
-        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
-
-        // Apply rotation based on mouse input
-        playerCamera.transform.Rotate(Vector3.up * mouseX);
-        playerCamera.transform.Rotate(Vector3.left * mouseY);
-    }
-    
 
     void FixedUpdate()
     {

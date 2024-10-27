@@ -1,6 +1,8 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+public enum WeaponType { Nothing, Pistol, Shotgun, Melee }
 
 public class PlayerAttackController : MonoBehaviour
 {
@@ -23,8 +25,10 @@ public class PlayerAttackController : MonoBehaviour
     private MeleeAudio meleeAudio;
 
     // Current active weapon
-    private enum WeaponType { Pistol, Shotgun, Melee }
     private WeaponType currentWeapon;
+
+    // Dictionary to keep track of slot status (locked/unlocked)
+    private Dictionary<WeaponType, bool> weaponSlots;
 
     // Switching delay
     [SerializeField] private float switchDelay = 0.5f; // Time in seconds
@@ -43,8 +47,17 @@ public class PlayerAttackController : MonoBehaviour
 
         ammoDisplay.text = "";
 
+        // Initialise slots as locked
+        weaponSlots = new Dictionary<WeaponType, bool>()
+        {
+            { WeaponType.Nothing, true },
+            { WeaponType.Melee, true },
+            { WeaponType.Pistol, true },
+            { WeaponType.Shotgun, true }
+        };
+
         // Start with Melee as default
-        SwitchWeapon(WeaponType.Melee);
+        SwitchWeapon(WeaponType.Nothing);
 
     }
 
@@ -53,17 +66,23 @@ public class PlayerAttackController : MonoBehaviour
         // Handle input for switching weapons
         if (canSwitchWeapon && !IsCurrentWeaponBusy())
         {
-            if (Input.GetKey(KeyCode.Alpha1) && currentWeapon != WeaponType.Melee)
+            if (Input.GetKey(KeyCode.Alpha1) && currentWeapon != WeaponType.Nothing)
+                StartCoroutine(SwitchWeaponWithDelay(WeaponType.Nothing));
+            else if (Input.GetKey(KeyCode.Alpha2) && currentWeapon != WeaponType.Melee && weaponSlots[WeaponType.Melee])
                 StartCoroutine(SwitchWeaponWithDelay(WeaponType.Melee));
-            else if (Input.GetKey(KeyCode.Alpha2) && currentWeapon != WeaponType.Pistol)
+            else if (Input.GetKey(KeyCode.Alpha3) && currentWeapon != WeaponType.Pistol && weaponSlots[WeaponType.Pistol])
                 StartCoroutine(SwitchWeaponWithDelay(WeaponType.Pistol));
-            else if (Input.GetKey(KeyCode.Alpha3) && currentWeapon != WeaponType.Shotgun)
+            else if (Input.GetKey(KeyCode.Alpha4) && currentWeapon != WeaponType.Shotgun && weaponSlots[WeaponType.Shotgun])
                 StartCoroutine(SwitchWeaponWithDelay(WeaponType.Shotgun));
         }
 
         // Handle input for attack based on current weapon
         switch (currentWeapon)
         {
+            case WeaponType.Nothing:
+                // No attack input to handle
+                break;
+
             case WeaponType.Pistol:                
                 pistol.HandleInput();
                 break;
@@ -99,10 +118,10 @@ public class PlayerAttackController : MonoBehaviour
         shotgun.enabled = false;
         melee.enabled = false;
 
-        // Hide all weapon assets
-        meleeWeaponAsset.SetActive(false);
-        pistolWeaponAsset.SetActive(false);
-        shotgunWeaponAsset.SetActive(false);
+        // Set visibility based on slot status
+        meleeWeaponAsset.SetActive(!weaponSlots[WeaponType.Melee] || weaponType == WeaponType.Melee);
+        pistolWeaponAsset.SetActive(!weaponSlots[WeaponType.Pistol] || weaponType == WeaponType.Pistol);
+        shotgunWeaponAsset.SetActive(!weaponSlots[WeaponType.Shotgun] || weaponType == WeaponType.Shotgun);
 
         // Reset states to ensure no cool downs or reloads are still in process (precaution)
         pistol.ResetState();
@@ -113,9 +132,13 @@ public class PlayerAttackController : MonoBehaviour
         currentWeapon = weaponType;
         switch (weaponType)
         {
+            case WeaponType.Nothing:
+                ammoDisplay.text = "";
+                Debug.Log("Switch to nothing");
+                break;
+
             case WeaponType.Pistol:
                 pistol.enabled = true;
-                pistolWeaponAsset.SetActive(true);
                 pistol.UpdateAmmoDisplay();
                 pistolAudio.PlayArmingSound();
                 Debug.Log("Switch to pistol");
@@ -123,7 +146,6 @@ public class PlayerAttackController : MonoBehaviour
 
             case WeaponType.Shotgun:
                 shotgun.enabled = true;
-                shotgunWeaponAsset.SetActive(true);
                 shotgun.UpdateAmmoDisplay();
                 shotgunAudio.PlayArmingSound();
                 Debug.Log("Switch to shotgun");
@@ -131,7 +153,6 @@ public class PlayerAttackController : MonoBehaviour
 
             case WeaponType.Melee:
                 melee.enabled = true;
-                meleeWeaponAsset.SetActive(true);
                 melee.UpdateAmmoDisplay();
                 meleeAudio.PlayArmingSound();
                 Debug.Log("Switch to melee");
@@ -142,9 +163,35 @@ public class PlayerAttackController : MonoBehaviour
     // Check if the current weapon is busy (reloading or on cool down)
     private bool IsCurrentWeaponBusy() => currentWeapon switch
     {
+        WeaponType.Nothing => false,
         WeaponType.Pistol => pistol.IsBusy(),
         WeaponType.Shotgun => shotgun.IsBusy(),
         WeaponType.Melee => melee.IsBusy(),
         _ => false,
     };
+
+    public bool IsThisCurrentWeapon(WeaponType weapon)
+    {
+        return weapon == currentWeapon;
+    }
+
+    public void OnWeaponPickUp(WeaponType weaponType)
+    {
+        // Unlock the slot for the picked-up weapon
+        weaponSlots[weaponType] = true;
+
+        // Switch to weapon just picked up
+        StartCoroutine(SwitchWeaponWithDelay(weaponType));
+    }
+
+    public void OnWeaponDrop(WeaponType weaponType)
+    {
+        // Lock the slot for the dropped weapon
+        weaponSlots[weaponType] = false;
+
+        // Switch back to empty hand
+        StartCoroutine(SwitchWeaponWithDelay(WeaponType.Nothing));
+        
+    }
+
 }

@@ -2087,8 +2087,9 @@ MonoBehaviour:
   healthPoints: 50
   patrolRadius: 10
   detectionRange: 20
-  attackRange: 8
-  bulletForce: 10
+  minAttackRange: 3
+  maxAttackRange: 7
+  bulletForce: 40
   bulletRange: 50
   spread: 0.1
   attackCooldown: 3.5

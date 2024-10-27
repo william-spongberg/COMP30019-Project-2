@@ -1,85 +1,132 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
-public class PauseMenu : MonoBehaviour
+public class PauseManagerScript : MonoBehaviour
 {
-    public GameObject pauseMenuUI;  // Reference to Pause Menu UI
-    public GameObject playerCapsule;  // Reference to the PlayerCapsule (which has the ShootingGun script attached)
+    // Reference to buttons
+    [SerializeField] private Button mainMenuButton;
+    [SerializeField] private Button resumeButton;
+    [SerializeField] private Button settingsMenuButton;
+    [SerializeField] private Button instructionsMenuButton;
+    [SerializeField] private Button nextButton;
+    [SerializeField] private Button backButton;
 
-    // private ShootingGun shootingGunScript;  // Reference to the ShootingGun script, redundant; script no longer exists
+    // Reference to other UI pages
+    [SerializeField] private GameObject settingsPanel;
+    [SerializeField] private GameObject instructionsPanel;
+    [SerializeField] private GameObject instructionsOne;
+    [SerializeField] private GameObject instructionsTwo;
+    [SerializeField] private GameObject crossHair;
 
-    public static bool isPaused = false;
-
-    [SerializeField] private GameObject settingsMenuUI;
+    public static bool IsPaused { get; private set; } = false;
 
     void Start()
     {
-
-      
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        // Start game unpaused, cursor locked
+        Resume();
     }
 
     void Update()
     {
-        // Check if the key is pressed
         if (Input.GetKeyDown(KeyCode.Backspace))
         {
-            if (!isPaused)
-            {
-               
+            if (IsPaused)
+                Resume();
+            else
                 Pause();
-            }
         }
     }
 
-    void Pause()
+    private void Pause()
     {
-      
-        pauseMenuUI.SetActive(true);   
-        Time.timeScale = 0f;          
-        isPaused = true;
-     
+        OpenPauseMenu();
+        crossHair.SetActive(false);
+        Time.timeScale = 0f;
+        IsPaused = true;
+
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
 
-    public void Resume1()
+    public void Resume()
     {
-       pauseMenuUI.SetActive(false);  
-          Time.timeScale = 1f;
-          isPaused = false;
-      
+        ClosePauseMenu();
+        crossHair.SetActive(true);
+        Time.timeScale = 1f;
+        IsPaused = false;
+
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
 
     public void LoadMainMenu()
     {
-      
-
         Time.timeScale = 1f;
         SceneManager.LoadScene("StartScene");
     }
 
-   
     public void OpenSettings()
     {
-        Time.timeScale = 0;
-        pauseMenuUI.SetActive(false);  
-        settingsMenuUI.SetActive(true); 
+        ClosePauseMenu();
+        settingsPanel.SetActive(true);
 
-         // Unlock and show cursor for settings
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
 
-    
     public void CloseSettings()
     {
-        settingsMenuUI.SetActive(false);
-        pauseMenuUI.SetActive(true); 
+        settingsPanel.SetActive(false);
+        OpenPauseMenu();
     }
 
-}
+    public void OpenInstructionsPageOne()
+    {
+        ClosePauseMenu();
+        instructionsPanel.SetActive(true);
+        instructionsOne.SetActive(true);
+        nextButton.gameObject.SetActive(true);
 
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+
+     public void OpenInstructionsPageTwo()
+    {
+
+        instructionsOne.SetActive(false);
+        nextButton.gameObject.SetActive(false);
+
+        instructionsPanel.SetActive(true);
+        instructionsTwo.SetActive(true);
+        backButton.gameObject.SetActive(true);
+
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+
+    public void CloseInstructions()
+    {   
+        instructionsPanel.SetActive(false);
+        instructionsTwo.SetActive(false);
+        backButton.gameObject.SetActive(false);
+        OpenPauseMenu();
+    }
+
+    private void OpenPauseMenu()
+    {
+        mainMenuButton.gameObject.SetActive(true);
+        resumeButton.gameObject.SetActive(true);
+        settingsMenuButton.gameObject.SetActive(true);
+        instructionsMenuButton.gameObject.SetActive(true);
+    }
+
+    private void ClosePauseMenu()
+    {
+        mainMenuButton.gameObject.SetActive(false);
+        resumeButton.gameObject.SetActive(false);
+        settingsMenuButton.gameObject.SetActive(false);
+        instructionsMenuButton.gameObject.SetActive(false);
+    }
+}
