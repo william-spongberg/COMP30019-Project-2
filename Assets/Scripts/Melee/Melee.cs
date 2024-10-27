@@ -33,8 +33,8 @@ public class Melee : MonoBehaviour
     [SerializeField]
     private MeleeAudio meleeAudio;
     // Animation settings
-    [SerializeField]
     private Vector3 stabRotation = new Vector3(60f, 0f, 0f);
+    private Vector3 stabPosition = new Vector3(-0.5f, -0.5f, -0.5f);
 
     [SerializeField]
     private float stabSpeed = 0.2f;
@@ -95,7 +95,7 @@ public class Melee : MonoBehaviour
         
         // Rotate to stab position
         Quaternion targetRotation = Quaternion.Euler(stabRotation);
-        Vector3 targetPosition = new Vector3(-0.5f, -0.5f, -0.5f);
+        Vector3 targetPosition = stabPosition;
 
         // Move and rotate to stab position
         float elapsedTime = 0f;
