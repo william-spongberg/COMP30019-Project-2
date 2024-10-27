@@ -13,7 +13,7 @@ public class PauseManagerScript : MonoBehaviour
     [SerializeField] private Button backButton;
 
     // Reference to other UI pages
-    [SerializeField] private GameObject settingsMenuUI;
+    [SerializeField] private GameObject settingsPanel;
     [SerializeField] private GameObject instructionsPanel;
     [SerializeField] private GameObject instructionsOne;
     [SerializeField] private GameObject instructionsTwo;
@@ -69,7 +69,7 @@ public class PauseManagerScript : MonoBehaviour
     public void OpenSettings()
     {
         ClosePauseMenu();
-        settingsMenuUI.SetActive(true);
+        settingsPanel.SetActive(true);
 
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
@@ -77,7 +77,7 @@ public class PauseManagerScript : MonoBehaviour
 
     public void CloseSettings()
     {
-        settingsMenuUI.SetActive(false);
+        settingsPanel.SetActive(false);
         OpenPauseMenu();
     }
 
