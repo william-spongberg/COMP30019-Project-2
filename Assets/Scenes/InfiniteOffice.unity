@@ -122,6 +122,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &63290686 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4096690715216812533, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
+  m_PrefabInstance: {fileID: 755125150}
+  m_PrefabAsset: {fileID: 0}
 --- !u!65 &63290689 stripped
 BoxCollider:
   m_CorrespondingSourceObject: {fileID: 7936428614407699157, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
@@ -230,6 +235,14 @@ PrefabInstance:
       propertyPath: attackDamage
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 3503321058363608471, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
+      propertyPath: stabDistance
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3503321058363608471, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
+      propertyPath: meleeWeaponTransform
+      value: 
+      objectReference: {fileID: 63290686}
     - target: {fileID: 3534523802656852792, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.5
