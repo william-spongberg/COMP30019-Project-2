@@ -16,6 +16,8 @@ public class PlayerHUD : MonoBehaviour
     private int regenerationAmount = 10;
     [SerializeField]
     private float regenerationInterval = 6f;
+    [SerializeField]
+    private AudioSource damageSound;
 
     private Coroutine regenerationCoroutine;
 
@@ -32,6 +34,9 @@ public class PlayerHUD : MonoBehaviour
 
         // Ensure health doesn't drop below zero
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+
+        // Play damage sound
+        damageSound.Play();
 
         // Update health
         healthSystem.SetHealth(currentHealth);

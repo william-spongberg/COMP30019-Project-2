@@ -11,6 +11,8 @@ public class EnemyHP : MonoBehaviour
     private float health;
     [SerializeField]
     private ParticleSystem bloodEffect;
+    [SerializeField]
+    private AudioSource damageSound;
     public EnemyAI enemyAI;
     public Ragdoll ragdoll;
     private bool isDead = false;
@@ -29,7 +31,11 @@ public class EnemyHP : MonoBehaviour
         // No more damage after death
         if (isDead) return;
 
+        // Lower health
         health -= damage;
+
+        // Play damage sound
+        damageSound.Play();
 
         if(health <= 0){
             tracker.IncreaseSlain(1);         
@@ -87,7 +93,7 @@ public class EnemyHP : MonoBehaviour
             enemyAI.enabled = false;      
 
         }
-        
+
         // Toggle ragdoll on
         if (ragdoll != null) ragdoll.ToggleRagdoll(true);
         
