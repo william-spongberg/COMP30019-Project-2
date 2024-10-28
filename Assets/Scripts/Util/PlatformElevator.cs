@@ -1,5 +1,3 @@
-
-
 using UnityEngine;
 using UnityEngine.SceneManagement;  
 using UnityEngine.UI;              
@@ -7,88 +5,111 @@ using System.Collections;
 
 public class PlatformElevator : MonoBehaviour
 {
-    [SerializeField]
-    private float riseSpeed = 2f;      // Speed at which the platform rises
-    [SerializeField]
-    private string nextSceneName;      // Name of the next scene to load
-
-    [SerializeField]
-    private GameObject fadeImagePrefab;  // Prefab for the fade Image
-    [SerializeField]
-    private float fadeDuration = 1f;   // Duration of the fade effect
+    [SerializeField] private float riseSpeed = 2f;        
+    [SerializeField] private string nextSceneName;       
+    [SerializeField] private GameObject fadePanel;       
+    [SerializeField] private float fadeDuration = 3f;    
+    [SerializeField] private float totalRiseTime = 10f; 
 
     private bool playerOnPlatform = false;
     private bool platformActivated = false;
-    private Image fadeImage;           // Reference to the instantiated fade Image
+    private Image fadePanelImage;  
+
+    private int elevatorLayer;
+    private int groundLayer;
+    private int ceilingLayer;
+    private int playerLayer;
+
+    private GameObject player;
+    private MovementV2 movementV2;
+
+    private float elapsedTime = 0f;
+
+    void Start()
+    {
+        // Get the layers by name
+        elevatorLayer = LayerMask.NameToLayer("Elevator");
+        groundLayer = LayerMask.NameToLayer("Ground");
+        ceilingLayer = LayerMask.NameToLayer("Ceiling");
+        playerLayer = LayerMask.NameToLayer("Player");
+
+        fadePanelImage = fadePanel.GetComponent<Image>();
+    }
+
 
     void Update()
     {
-        if (playerOnPlatform && Input.GetKeyDown(KeyCode.E))
+        // Activate platform on player input and start fade effect
+        if (playerOnPlatform && !platformActivated)
         {
             platformActivated = true;
-            InstantiateFadeImage();    // Instantiate fade image prefab
-            StartCoroutine(FadeIn());  // Start fading in when the platform is activated
+            StartCoroutine(FadeInAndLoadScene());
+
+            // Disable collision between elevator, ground, ceiling, and player layers
+            Physics.IgnoreLayerCollision(elevatorLayer, groundLayer, true);
+            Physics.IgnoreLayerCollision(elevatorLayer, ceilingLayer, true);
+            Physics.IgnoreLayerCollision(playerLayer, groundLayer, true);
+            Physics.IgnoreLayerCollision(playerLayer, ceilingLayer, true);
+
+            // Disable the player's movement script to prevent walking off the elevator
+            if (movementV2 != null)
+            {
+                movementV2.enabled = false;
+            }
+
         }
 
-        if (platformActivated && transform.position.y < 3f)  // Arbitrary height
+        // Move elevator up if activated, for a total of 10 seconds
+        if (platformActivated && elapsedTime < totalRiseTime)
         {
             transform.Translate(Vector3.up * riseSpeed * Time.deltaTime);
+            elapsedTime += Time.deltaTime;
+
+            // Start fading during the last 3 seconds of the rise
+            if (elapsedTime >= totalRiseTime - fadeDuration  && fadePanelImage.color.a < 1f)
+            {
+                float fadeElapsedTime = elapsedTime - (totalRiseTime - fadeDuration);
+                Color fadeColor = fadePanelImage.color;
+                fadeColor.a = Mathf.Clamp01(fadeElapsedTime / fadeDuration);
+                fadePanelImage.color = fadeColor;
+            }
         }
-        else if (platformActivated && transform.position.y >= 3f)
+        else if (platformActivated && elapsedTime >= totalRiseTime)
         {
-            SceneManager.LoadScene(nextSceneName);  // Load the next scene immediately after reaching the height
+            // Re-enable collision between elevator, ground, ceiling, and player layers
+            Physics.IgnoreLayerCollision(elevatorLayer, groundLayer, false);
+            Physics.IgnoreLayerCollision(elevatorLayer, ceilingLayer, false);
+            Physics.IgnoreLayerCollision(playerLayer, groundLayer, false);
+            Physics.IgnoreLayerCollision(playerLayer, ceilingLayer, false);
+
+            // Re-enable the player's movement script
+            if (movementV2 != null)
+            {
+                movementV2.enabled = true;
+            }
         }
     }
 
-    private void OnCollisionEnter(Collision other)
+    private void OnTriggerEnter(Collider collider)
     {
-        if (other.gameObject.CompareTag("Player"))
+        Debug.Log("Inside Elevator");
+
+        if (collider.gameObject.CompareTag("Player") && !playerOnPlatform)
         {
-            Debug.Log("Player on platform"); // Debug log
+            Debug.Log("Player on platform");
             playerOnPlatform = true;
+            player = collider.gameObject;
+            movementV2 = player.GetComponent<MovementV2>();
         }
     }
 
-    private void InstantiateFadeImage()
+
+    private IEnumerator FadeInAndLoadScene()
     {
-        // Instantiate the fade image prefab and set it up
-        GameObject fadeObject = Instantiate(fadeImagePrefab, transform.position, Quaternion.identity);
-        fadeObject.transform.SetParent(GameObject.Find("Canvas").transform, false);
+        yield return new WaitForSecondsRealtime(totalRiseTime);  // Wait for the elevator to complete rising
 
-        fadeImage = fadeObject.GetComponent<Image>();  
+        yield return new WaitForSecondsRealtime(0.5f); // Finish running processes
 
-        if (fadeImage != null)
-        {
-            Color fadeColor = fadeImage.color;
-            fadeColor.a = 0f; 
-            fadeImage.color = fadeColor;
-        }
-        else
-        {
-            Debug.LogError("Fade Image component not found on prefab!");
-        }
+        SceneManager.LoadScene(nextSceneName);  // Load the next scene
     }
-
-   private IEnumerator FadeIn()
-{
-    float elapsedTime = 0f;
-    Color fadeColor = fadeImage.color;
-
-   
-    float fastFadeDuration = 1.5f; 
-
-
-    while (elapsedTime < fastFadeDuration)
-    {
-        elapsedTime += Time.deltaTime;
-        fadeColor.a = Mathf.Clamp01(elapsedTime / fastFadeDuration);
-        fadeImage.color = fadeColor;
-        yield return null;
-    }
-
-   
-    fadeColor.a = 1f;
-    fadeImage.color = fadeColor;
-}
-
 }
