@@ -11,12 +11,19 @@ public class EnemyHP : MonoBehaviour
     private float health;
     [SerializeField]
     private ParticleSystem bloodEffect;
+    public EnemyAI enemyAI;
+
+    private void Start()
+    {
+        enemyAI = GetComponent<EnemyAI>(); // Finds BulletManager in the scene
+    }
 
     public void TakeDamage(float damage) {
         health -= damage;
+
         if(health <= 0){
-            tracker.IncreaseSlain(1);
-            Destroy(gameObject);
+            tracker.IncreaseSlain(1);         
+            Die();
         }
     }
     
@@ -35,5 +42,11 @@ public class EnemyHP : MonoBehaviour
 
     public void setTracker(Counter tracking){
         tracker = tracking;
+    }
+
+    private void Die()
+    {
+        enemyAI.DestroyCurrentBullet();
+        Destroy(gameObject);
     }
 }

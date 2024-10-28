@@ -2507,6 +2507,10 @@ PrefabInstance:
       propertyPath: ammoDisplay
       value: 
       objectReference: {fileID: 1396748165}
+    - target: {fileID: 7448452898789888137, guid: 3a92331a52fbe574b92fba8c1a83f642, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8625275785464869479, guid: 3a92331a52fbe574b92fba8c1a83f642, type: 3}
       propertyPath: ammoDisplay
       value: 
