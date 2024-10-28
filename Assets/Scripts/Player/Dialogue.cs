@@ -10,6 +10,7 @@ public class Dialogue : MonoBehaviour
     public float textSpeed;
     private int index;
     bool startFinished;
+    bool started = false;
 
     // Start is called before the first frame update
     void Start()
@@ -17,11 +18,18 @@ public class Dialogue : MonoBehaviour
         textComponent.text = string.Empty;
         StartDialogue();
         startFinished = false;
+        started = true;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(started == false){
+            textComponent.text = string.Empty;
+            StartDialogue();
+            startFinished = false;
+            started = true;
+        }
         if(Input.GetMouseButtonDown(0)){
             if (textComponent.text == lines[index]){
                 NextLine();
