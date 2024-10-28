@@ -33,6 +33,9 @@ public class EnemyAI : MonoBehaviour
     private Vector3 chaseDestination; // Target point around the player for chasing
     private bool isChaseDestinationSet = false;
 
+    // Attacking
+    private bool isCharging = false;
+
     // Detection
     public float detectionRange = 15f;
     public float minAttackRange = 3f;  // Minimum attack range
@@ -46,7 +49,9 @@ public class EnemyAI : MonoBehaviour
     public float bulletForce = 20f;
     public float bulletRange = 50f;
     public float spread = 0.1f;
-    public float attackCooldown = 1f;
+
+    // Ensure attack cooldown lasts longer than the charge time of 3 Seconds
+    public float attackCooldown = 4f;
     private bool isAttackOnCooldown;
     
     public GameObject bullet;
@@ -101,11 +106,11 @@ public class EnemyAI : MonoBehaviour
             currentState = EnemyState.Patrolling;
             isChaseDestinationSet = false;
         }
-        else if (playerInDetectionRange && !playerInAttackRange)
+        else if (playerInDetectionRange && !playerInAttackRange && !isCharging)
         {
             currentState = EnemyState.Chasing;
         }
-        else if (playerInAttackRange && playerInDetectionRange)
+        else if (playerInAttackRange || isCharging)
         {
             currentState = EnemyState.Attacking;
             isChaseDestinationSet = false;
@@ -118,15 +123,15 @@ public class EnemyAI : MonoBehaviour
         {
             case EnemyState.Patrolling:
                 Patrol();
-                Debug.Log("Patrolling");
+                Debug.Log("Patrolling State");
                 break;
             case EnemyState.Chasing:
                 ChasePlayer();
-                Debug.Log("Chasing");
+                Debug.Log("Chasing State");
                 break;
             case EnemyState.Attacking:
                 AttackPlayer();
-                Debug.Log("Attacking");
+                Debug.Log("Attacking State");
                 break;
         }
     }
@@ -200,6 +205,7 @@ public class EnemyAI : MonoBehaviour
         direction.y = 0;
         transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), 0.1f);
 
+
         if (!isAttackOnCooldown)
         {
             // Test Attacking
@@ -207,8 +213,11 @@ public class EnemyAI : MonoBehaviour
             //rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
             //rb.AddForce(transform.up * 8f, ForceMode.Impulse);
 
+            //Test
+            //Shoot();
+
             // Shooting attack
-            Shoot();
+            StartCoroutine(ChargeAndShoot());
 
             // Melee attack
 
@@ -218,8 +227,46 @@ public class EnemyAI : MonoBehaviour
 
     }
 
-    private void Shoot()
+    private IEnumerator ChargeAndShoot()
     {
+        Debug.Log("Charge and Shoot");
+        isCharging = true;
+
+         // Instantiate the bullet
+        GameObject currentBullet = Instantiate(bullet, gunPoint.position, Quaternion.identity);
+
+        // Set to trigger so no collisions while charging
+        currentBullet.GetComponent<Collider>().isTrigger = true;
+
+        // Get light component of bullet
+        Light bulletLight = currentBullet.GetComponent<Light>();
+        float maxIntensity = 5f;
+        
+
+        // Scale the bullet from small to full size over 3 seconds
+        float chargeTime = 3f;
+
+        // Bullet's current local scale as the initial scale
+        Vector3 initialScale = currentBullet.transform.localScale;
+        Vector3 targetScale = initialScale * 5f; // Scale up by a factor for the "charging" effect
+
+        float elapsedTime = 0f;
+
+        while (elapsedTime < chargeTime)
+        {
+            currentBullet.transform.localScale = Vector3.Lerp(initialScale, targetScale, elapsedTime / chargeTime);
+
+            // Increase light intensity gradually
+            bulletLight.intensity = Mathf.Lerp(0, maxIntensity, elapsedTime / chargeTime); // Adjustable max intensity
+
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }   
+
+        // Ensure final scale is reached
+        currentBullet.transform.localScale = targetScale;
+        bulletLight.intensity = maxIntensity;
+
         // Calculate direction towards the player without spread
         Vector3 shootDirection = (player.position - gunPoint.position).normalized;
 
@@ -230,18 +277,18 @@ public class EnemyAI : MonoBehaviour
         // Calculate new direction, considering spread
         Vector3 shootDirectionSpread = shootDirection + new Vector3(x, y, 0);
 
-        // Instantiate the bullet
-        GameObject currentBullet = Instantiate(bullet, gunPoint.position, Quaternion.identity);
-
         // Rotate bullet to correct shooting direction according to direction calculated earlier
         currentBullet.transform.forward = shootDirectionSpread.normalized;
 
         // Give bullet force
+        currentBullet.GetComponent<Collider>().isTrigger = false;
         currentBullet.GetComponent<Rigidbody>().AddForce(shootDirectionSpread.normalized * bulletForce, ForceMode.Impulse);
         Debug.DrawRay(gunPoint.position, shootDirectionSpread.normalized * bulletRange, Color.red, 1f);
 
         // Destroy the projectile after it has traveled its range
         Destroy(currentBullet, bulletRange / bulletForce);
+
+        isCharging = false;
     }
 
     private void ResetAttack()
