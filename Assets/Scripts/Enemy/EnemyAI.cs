@@ -183,7 +183,11 @@ public class EnemyAI : MonoBehaviour
             SetPatrolDestination();
 
         if (isPatrolDestinationSet)
-            agent.destination = patrolDestination; 
+            // Check if NavMeshAgent is enabled before setting destination
+            if (agent != null && agent.enabled)
+            {
+                agent.destination = patrolDestination; 
+            }
 
         float distanceToDestination = Vector3.Distance(transform.position, patrolDestination);
 
@@ -218,7 +222,12 @@ public class EnemyAI : MonoBehaviour
 
         // Direct the agent to the chase destination
         if (isChaseDestinationSet)
-            agent.destination = chaseDestination;
+            
+            // Check if NavMeshAgent is enabled before setting destination
+            if (agent != null && agent.enabled)
+            {
+                agent.destination = chaseDestination;
+            }
     }
 
     private void SetChaseDestination()
@@ -239,7 +248,12 @@ public class EnemyAI : MonoBehaviour
     private void AttackPlayerShooting()
     {
         // Stop moving while attacking
-        agent.destination = transform.position;
+        // Check if NavMeshAgent is enabled before setting destination
+        if (agent != null && agent.enabled)
+        {
+            agent.destination = transform.position;
+        }
+        
 
         // Face the player
         Vector3 direction = (player.position - transform.position).normalized;
@@ -275,7 +289,10 @@ public class EnemyAI : MonoBehaviour
             agent.speed = defaultSpeed * 2f;
 
             // charge
-            agent.destination = player.position;
+            if (agent != null && agent.enabled)
+            {
+                agent.destination = player.position;
+            }
 
             // Reset retreat flag to allow new retreat destination next time
             isRetreatDestinationSet = false;
@@ -293,7 +310,11 @@ public class EnemyAI : MonoBehaviour
                 isRetreatDestinationSet = true;
             }
 
-            agent.destination = retreatDestination;
+            
+            if (agent != null && agent.enabled)
+            {
+                agent.destination = retreatDestination;
+            }
 
         }
     }
@@ -304,7 +325,7 @@ public class EnemyAI : MonoBehaviour
         isCharging = true;
 
          // Instantiate the bullet
-        GameObject currentBullet = Instantiate(bullet, gunPoint.position, Quaternion.identity);
+        currentBullet = Instantiate(bullet, gunPoint.position, Quaternion.identity);
 
         // Set to trigger so no collisions while charging
         currentBullet.GetComponent<Collider>().isTrigger = true;
@@ -441,6 +462,7 @@ public class EnemyAI : MonoBehaviour
         if (currentBullet != null)
         {
             Destroy(currentBullet); // Destroy any bullet if it's still present
+            currentBullet = null;
         }
     }
 
