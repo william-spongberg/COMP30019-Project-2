@@ -102,14 +102,14 @@ TODO (due milestone 3) - see specification for details
 
 ### [GlitchShader.shader](Assets\Shaders\GlitchShader.shader)
 
-![Glitch Shader Gif](Images\GlitchShader.gif)
+![Glitch Shader Gif](Images/GlitchShader.gif)
 
 The GlitchShader was designed to create a glitchy effect for NPCs by simulating visual artifacts normally found in old TVs.
 - Randomly offsets the RGB channels of its texture over time to create a disjointed, glitchy appearance
 - Randomly offsets the x vertices to create a stretching and deforming effect
 - Has a random chance to discard all pixels, creating a flickering effect, just like a broken TV
 - Overlays the result with black bars using dithering, just like CRTs have
-- Enables GPU instancing, which in conjunction with [Glitch.cs](Assets\Scripts\Shaders\Glitch.cs) can create a glitchy afterimage effect by randomly displacing instances around the NPC.
+- Enables GPU instancing, which in conjunction with [Glitch.cs](Assets/Scripts/Shaders/Glitch.cs) can create a glitchy afterimage effect by randomly displacing instances around the NPC.
 
 It has several different properties for fine-tuning:
 - **_Texture**: for the texture to be given to the shader
@@ -119,7 +119,7 @@ It has several different properties for fine-tuning:
 
 ### [BossShader.shader](Assets\Shaders\BossShader.shader)
 
-![Boss Shader Gif](Images\BossShader.gif)
+![Boss Shader Gif](Images/BossShader.gif)
 
 The BossShader was designed to create a uniquely creepy visual effect for the boss, continuing the glitchy and incorrect feeling of the game.
 - Pulsates with a given colour (recommended to use red) to create a dangerous and frightening feeling
@@ -127,7 +127,7 @@ The BossShader was designed to create a uniquely creepy visual effect for the bo
 - The texture is randomly and slightly distorted by stretching and offsetting it based on its world position
 - The texture's red and blue colour channels are also randomly and slightly offset, creating a chromatic aberration effect
 - The transparency is increased to increase the 'ethereal' feeling, as if it is transitioning between worlds
-- This shader can be enhanced through the use of [RandomTexture.cs](Assets\Scripts\Shaders\RandomTexture.cs), a script that randomly changes the texture of the shader over time to create a more strange and chaotic effect.
+- This shader can be enhanced through the use of [RandomTexture.cs](Assets/Scripts/Shaders/RandomTexture.cs), a script that randomly changes the texture of the shader over time to create a more strange and chaotic effect.
 
 It has several different properties for fine-tuning:
 - **_Texture**: for the texture to be given to the shader
