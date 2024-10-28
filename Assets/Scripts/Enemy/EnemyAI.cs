@@ -10,6 +10,10 @@ public class EnemyAI : MonoBehaviour
 {
     // State machine
     private enum EnemyState {Patrolling, Chasing, Attacking}
+    public enum EnemyType { Shooting, Charging }
+
+    [SerializeField]
+    private EnemyType enemyType;
     private EnemyState currentState;
 
     // Components
@@ -35,6 +39,9 @@ public class EnemyAI : MonoBehaviour
 
     // Attacking
     private bool isCharging = false;
+    private int chargeDamage = 10;
+     private bool isRetreatDestinationSet = false;
+     private Vector3 retreatDestination;
 
     // Detection
     public float detectionRange = 15f;
@@ -50,16 +57,22 @@ public class EnemyAI : MonoBehaviour
     public float bulletRange = 50f;
     public float spread = 0.1f;
 
-    // Ensure attack cooldown lasts longer than the charge time of 3 Seconds
-    public float attackCooldown = 4f;
+    // Ensure shoot attack cooldown lasts longer than the focus time of 3 Seconds
+    public float shootAttackCooldown = 4f;
+    public float chargeAttackCooldown = 4f;
     private bool isAttackOnCooldown;
     
     public GameObject bullet;
+    private GameObject currentBullet;
     public Transform gunPoint;
 
     // Animation
     [SerializeField]
-    private float speed = 0.0f;
+    private float shootingEnemySpeed = 1.5f;
+    [SerializeField]
+    private float chargingEnemySpeed = 3.5f;
+    private float defaultSpeed = 0f;
+
     [SerializeField]
     private Vector3 velocity = Vector3.zero;
     [SerializeField]
@@ -83,6 +96,31 @@ public class EnemyAI : MonoBehaviour
 
         // Randomly set attack range for this enemy
         attackRange = Random.Range(minAttackRange, maxAttackRange);
+
+        // Add more randomness to enemies
+        if (enemyType == EnemyType.Shooting)
+        {
+            float speedOffset = Random.Range(-0.5f, 0.5f);
+            defaultSpeed = shootingEnemySpeed + speedOffset;
+
+            float randomScale = Random.Range(1f, 1.8f);
+            transform.localScale = new Vector3(randomScale, randomScale, randomScale);
+
+
+        }
+        else if (enemyType == EnemyType.Charging)
+        {
+            float speedOffset = Random.Range(-1f, 1f);
+            defaultSpeed = chargingEnemySpeed + speedOffset;
+
+            float randomScale = Random.Range(0.2f, 0.6f);
+            transform.localScale = new Vector3(randomScale, randomScale, randomScale);
+        }
+
+        // Apply the default speed to the NavMeshAgent
+        agent.speed = defaultSpeed;
+
+
     }
 
 
@@ -130,7 +168,10 @@ public class EnemyAI : MonoBehaviour
                 Debug.Log("Chasing State");
                 break;
             case EnemyState.Attacking:
-                AttackPlayer();
+                if (enemyType == EnemyType.Shooting)
+                    AttackPlayerShooting();
+                else if (enemyType == EnemyType.Charging)
+                    AttackPlayerCharging();
                 Debug.Log("Attacking State");
                 break;
         }
@@ -195,7 +236,7 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
-    private void AttackPlayer()
+    private void AttackPlayerShooting()
     {
         // Stop moving while attacking
         agent.destination = transform.position;
@@ -217,19 +258,49 @@ public class EnemyAI : MonoBehaviour
             //Shoot();
 
             // Shooting attack
-            StartCoroutine(ChargeAndShoot());
+            StartCoroutine(FocusAndShoot());
 
             // Melee attack
 
             isAttackOnCooldown = true;
-            Invoke(nameof(ResetAttack), attackCooldown);
+            Invoke(nameof(ResetAttack), shootAttackCooldown);
         }
 
     }
-
-    private IEnumerator ChargeAndShoot()
+    private void AttackPlayerCharging()
     {
-        Debug.Log("Charge and Shoot");
+        if (!isAttackOnCooldown)
+        {
+            //Reset agent speed
+            agent.speed = defaultSpeed * 2f;
+
+            // charge
+            agent.destination = player.position;
+
+            // Reset retreat flag to allow new retreat destination next time
+            isRetreatDestinationSet = false;
+        }
+        else
+        {
+
+            // Begin backing off only once during cooldown
+            if (!isRetreatDestinationSet)
+            {
+                // Slow down the agent for retreating
+                agent.speed = defaultSpeed * 0.5f;
+
+                SetRetreatDestination();
+                isRetreatDestinationSet = true;
+            }
+
+            agent.destination = retreatDestination;
+
+        }
+    }
+
+    private IEnumerator FocusAndShoot()
+    {
+        Debug.Log("Focus and Shoot");
         isCharging = true;
 
          // Instantiate the bullet
@@ -244,7 +315,7 @@ public class EnemyAI : MonoBehaviour
         
 
         // Scale the bullet from small to full size over 3 seconds
-        float chargeTime = 3f;
+        float focusTime = 3f;
 
         // Bullet's current local scale as the initial scale
         Vector3 initialScale = currentBullet.transform.localScale;
@@ -252,12 +323,12 @@ public class EnemyAI : MonoBehaviour
 
         float elapsedTime = 0f;
 
-        while (elapsedTime < chargeTime)
+        while (elapsedTime < focusTime)
         {
-            currentBullet.transform.localScale = Vector3.Lerp(initialScale, targetScale, elapsedTime / chargeTime);
+            currentBullet.transform.localScale = Vector3.Lerp(initialScale, targetScale, elapsedTime / focusTime);
 
             // Increase light intensity gradually
-            bulletLight.intensity = Mathf.Lerp(0, maxIntensity, elapsedTime / chargeTime); // Adjustable max intensity
+            bulletLight.intensity = Mathf.Lerp(0, maxIntensity, elapsedTime / focusTime); // Adjustable max intensity
 
             elapsedTime += Time.deltaTime;
             yield return null;
@@ -291,23 +362,36 @@ public class EnemyAI : MonoBehaviour
         isCharging = false;
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("Collision detected!");
+        // Check if collided object is the player and attack cooldown is off
+        if (!isAttackOnCooldown)
+        {
+            PlayerHUD player = collision.gameObject.GetComponent<PlayerHUD>();
+            if (player != null)
+            {
+                Debug.Log("Collision with player detected!");
+                // Deal damage to the player
+                player.TakeDamage(chargeDamage);
+                isAttackOnCooldown = true;
+
+                Invoke(nameof(ResetAttack), chargeAttackCooldown);
+            }
+        }
+    }
+
+    private void SetRetreatDestination()
+    {
+        float randomX = Random.Range(-attackRange, attackRange);
+        float randomZ = Random.Range(-attackRange, attackRange);
+        Vector3 randomOffset = new Vector3(randomX, 0, randomZ);
+        retreatDestination = player.position + randomOffset;
+    }
+
     private void ResetAttack()
     {
         isAttackOnCooldown = false;
-    }
-
-    public void ReceiveDamage(float damageAmount)
-    {
-        healthPoints -= damageAmount;
-
-        if (healthPoints <= 0f)
-            Die();
-    }
-
-    private void Die()
-    {
-        // Implement death effects or animations here
-        Destroy(gameObject);
     }
 
     private void OnDrawGizmosSelected()
@@ -351,4 +435,14 @@ public class EnemyAI : MonoBehaviour
         }
 
     }   
+
+    public void DestroyCurrentBullet()
+    {
+        if (currentBullet != null)
+        {
+            Destroy(currentBullet); // Destroy any bullet if it's still present
+        }
+    }
+
+
 }
