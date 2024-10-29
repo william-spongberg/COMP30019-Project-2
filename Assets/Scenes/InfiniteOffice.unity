@@ -1151,6 +1151,10 @@ PrefabInstance:
       propertyPath: pauser
       value: 
       objectReference: {fileID: 1888467058}
+    - target: {fileID: 7795309904117625545, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8118737689821688124, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
       propertyPath: m_SizeDelta.y
       value: -700
