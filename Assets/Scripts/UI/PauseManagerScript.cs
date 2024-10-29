@@ -130,4 +130,9 @@ public class PauseManagerScript : MonoBehaviour
         settingsMenuButton.gameObject.SetActive(false);
         instructionsMenuButton.gameObject.SetActive(false);
     }
+
+    public bool currentlyPaused(){
+        return IsPaused;
+    }
+   
 }

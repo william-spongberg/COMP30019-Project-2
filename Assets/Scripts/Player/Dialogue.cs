@@ -11,6 +11,7 @@ public class Dialogue : MonoBehaviour
     private int index;
     bool startFinished;
     bool started = false;
+    public PauseManagerScript pauser;
 
     // Start is called before the first frame update
     void Start()
@@ -30,7 +31,7 @@ public class Dialogue : MonoBehaviour
             startFinished = false;
             started = true;
         }
-        if(Input.GetMouseButtonDown(0)){
+        if(Input.GetKeyDown(KeyCode.Return) && !pauser.currentlyPaused()){
             if (textComponent.text == lines[index]){
                 NextLine();
             }
