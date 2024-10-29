@@ -19,17 +19,25 @@ public class ObjectSpawner : MonoBehaviour
     public int[] triggers;
     private GameObject player;
     public Counter Tracker;
+    public bool pending;
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         index = 0;
+        pending = false;
     }
 
     void Update()
     {
         // spawn new NPC on button press
-        if(index < waves.Length && !systemCheck.getProgress() && triggers[index] == Tracker.getSlainEnemies()){
+        if(index < triggers.Length && systemCheck.getTrigger() == triggers[index]){
+            pending = true;
+        }
+        if(index < triggers.Length && systemCheck.getTrigger() != triggers[index]){
+            pending = false;
+        }
+        if(!pending && index < waves.Length && !systemCheck.getProgress() && triggers[index] == Tracker.getSlainEnemies()){
             SpawnWave(waves[index]);
             index += 1;
         }

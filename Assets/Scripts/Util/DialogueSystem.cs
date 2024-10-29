@@ -38,4 +38,13 @@ public class DialogueSystem : MonoBehaviour
     public bool getProgress(){
         return inProgress;
     }
+    public int getTrigger(){
+        if(index < dialogues.Length){
+            return triggers[index];
+        }
+        else{
+            return 0;
+        }
+        
+    }
 }
