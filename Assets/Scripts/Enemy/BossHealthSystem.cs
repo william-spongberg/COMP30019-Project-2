@@ -20,4 +20,5 @@ public class BossHealthSystem : MonoBehaviour
         // Update the slider value to reflect the current health
         healthSlider.value = health;
     }
+    
 } 
