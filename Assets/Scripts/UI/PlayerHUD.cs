@@ -49,6 +49,10 @@ public class PlayerHUD : MonoBehaviour
 
         // Start a new delay before health regeneration starts
         regenerationCoroutine = StartCoroutine(StartHealthRegeneration());
+
+        if(currentHealth <= 0){
+            Die();
+        }
     }
 
     private IEnumerator StartHealthRegeneration()
@@ -73,5 +77,10 @@ public class PlayerHUD : MonoBehaviour
 
         // Set the coroutine to null after finishing
         regenerationCoroutine = null;
+    }
+
+    private void Die()
+    {  
+        // Play End screen;
     }
 }
