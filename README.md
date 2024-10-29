@@ -258,9 +258,36 @@ Boss
 
 ### David Kee Siong Chin
 
-*Story, Boss*
+*Movement, Dialogue, Story, Boss, Level Design*
+Level Design
+- Fully created the Church level scene for the final boss battle.
+Mechanics/Movement
+- Created initial movement and camera system.
+- Initial movement system was force based, which allowed fluid and responsive movement.
+- Implemented story and dialogue triggers based on the enemies slain.
+- Implemented a wave system that allows different types of enemies to spawn in waves.
 
- - TODO
+Story
+- Fleshed out the concept to create a story.
+- Wrote the story.
+- Wrote a script to reflect the story.
+- Created a dynamic dialogue system that allows dialogue to play in sequence.
+- Transcribed dialogue into the game.
+- Fully implemented story, including transitions.
+
+UI/Gameplay
+- Reworked Object Spawner so that it can dynamically spawn enemies, objects, and props as needed in any number amount in an easily expandable format.
+- Ensured that text cannot advance while in a paused state.
+  
+Documentation:
+- Contributed to the GDD
+- Contributed to the ReadMe
+- Created, filmed, and edited the trailer.
+
+Quality Control:
+- Helped fix bugs.
+- Performed numerous tests on the game as a whole to check for quality and bugs.
+
 ---
 ### Ananya Agarwal
 

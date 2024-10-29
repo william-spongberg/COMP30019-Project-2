@@ -59,7 +59,6 @@ There will be 4 major characters in the story of the game:
 
 **Admin**, an incomprehensible entity with no clear origin, the victims who They have devoured memories from act as Their physical vessels. Their voice will be made up of multiple people speaking at once. They will be referred to with They/Them/Their, all capitalised to represent their status as a collective being and as a godlike entity.They are whimsical and cruel, like a tyrant. They are entertained by the torment and suffering of people and by extension Aidan. The Admin appears to hunger and feast on the memories of living beings, which serves as their primary motivation.
 
-**Terry**, a decapitated head (maybe a skull if that model is easier to find) that somehow still lives. They are kept as a jester of sorts by the Admin, they are technically one of the Admin’s pawns, but have been allowed sanity and some amount of autonomy due to the Admin’s whimsical and flippant nature. Aiden will meet Terry in the elevators that take him to the next floors, where he will provide advice and information to the main character. Their main motivation is to be released from the cycle of torment the Admin has trapped him in.
 
 ## Gameplay and Mechanics ##
 
@@ -70,10 +69,10 @@ Into The Abyss is a first-person game with a camera that is moved by the mouse. 
 
 ## Controls ##
 
-Our game is a movement based FPS. The player will be able to fire weapons using the mouse, as well as move using the arrow keys. In addition to moving and shooting, the player will be able to jump using the spacebar, and perform a sliding dash forwards using the ctrl button.
+Our game is a movement based FPS. The player will be able to fire weapons using the mouse, as well as move using the arrow keys. In addition to moving and shooting, the player will be able to jump using the spacebar.
 
-<img title="a title" alt="Alt text" src="https://static.wikia.nocookie.net/titanfall/images/2/2e/TF2_Achievement_Power_Slide.jpg/revision/latest/scale-to-width-down/1200?cb=20180414120527">
-(Figure 2: Power Slide Achievement image from Titanfall 2)
+<img title="a title" alt="Alt text" src="https://steamuserimages-a.akamaihd.net/ugc/2042989031190792657/F73A45A40AF841EF254E2E2E83A232CA26EEB18A/">
+(Figure 2: Jumping from counterstrike)
 
 The game’s controls are meant to have a high skill ceiling, so that players who are more experienced and more skillful will be able to navigate and combat enemies more easily.
 
@@ -222,7 +221,7 @@ Finally, there is justified fear surrounding making the game actually fun and in
 ## References ##
 
 1. Image of Ultrakill's cover image, taken from the Steam page of the game ULTRAKILL: https://store.steampowered.com/app/1229490/ULTRAKILL/
-2. Art taken from the XBOX 1 achievement art for Titanfall 2 achievement named "Power Slide"
+2. Art taken from a steam guide on Counterstrike movement: https://steamcommunity.com/sharedfiles/filedetails/?id=2972053090
 3. Taken from the article "Titanfall 2's Mobility Revolutionized Shooters - Or At Least It Should Have" by Cian Maher, published by The Gamer: https://www.thegamer.com/titanfall-2-mobility/
 4. Image taken from our game
 5. Image taken from prototype of our game
