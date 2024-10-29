@@ -10,6 +10,7 @@ public class HealthSystem : MonoBehaviour
 
     [SerializeField]
     private Image[] hearts; // Drag and drop heart images from the inspector
+    [SerializeField]
     private int maxHealth;
 
     public void SetMaxHealth(int health)

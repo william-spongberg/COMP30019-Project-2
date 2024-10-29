@@ -3,11 +3,29 @@ using UnityEngine;
 
 public class PlayerHUD : MonoBehaviour
 {
+    [SerializeField]
     private int maxHealth = 100;
     private int currentHealth;
 
     [SerializeField]
-    // Reference to the health system
+    private bool isDead = false;
+
+    [SerializeField]
+    private GameObject player;
+
+    [SerializeField]
+    private Canvas mainUI;
+
+    [SerializeField]
+    private Canvas hudUI;
+
+    [SerializeField]
+    private Canvas dialogueUI;
+
+    [SerializeField]
+    private GameObject gameOver;
+
+    [SerializeField]
     private HealthSystem healthSystem;
 
     [SerializeField]
@@ -27,8 +45,25 @@ public class PlayerHUD : MonoBehaviour
         healthSystem.SetMaxHealth(maxHealth);
     }
 
+    //testing
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.E) && !isDead)
+        {
+            Die();
+        }
+
+        if (isDead)
+        {
+            CameraShake();
+        }
+    }
+
     public void TakeDamage(int damage)
     {
+        // dont take damage if dead
+        if (isDead) return;
+
         // Decrease health and update the health system
         currentHealth -= damage;
 
@@ -47,12 +82,43 @@ public class PlayerHUD : MonoBehaviour
             StopCoroutine(regenerationCoroutine);
         }
 
-        // Start a new delay before health regeneration starts
-        regenerationCoroutine = StartCoroutine(StartHealthRegeneration());
-
-        if(currentHealth <= 0){
+        if (currentHealth <= 0)
+        {
+            // dead player
             Die();
         }
+        else
+        {
+            // Start a new delay before health regeneration starts
+            regenerationCoroutine = StartCoroutine(StartHealthRegeneration());
+        }
+    }
+
+    private void Die()
+    {
+        isDead = true;
+
+        // pause game
+        Time.timeScale = 0;
+
+        // only disable once since disabling the whole parent
+        mainUI.enabled = false;
+        hudUI.enabled = false;
+        dialogueUI.enabled = false;
+
+        // draw game over on screen
+        gameOver.SetActive(true);
+
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+
+    private void CameraShake()
+    {
+        // random shake
+        player.transform.rotation = Quaternion.Euler(Random.Range(-0.1f, 0.1f),
+                                                     Random.Range(-0.1f, 0.1f),
+                                                     Random.Range(-0.1f, 0.1f));
     }
 
     private IEnumerator StartHealthRegeneration()
