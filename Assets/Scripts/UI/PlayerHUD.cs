@@ -144,9 +144,4 @@ public class PlayerHUD : MonoBehaviour
         // Set the coroutine to null after finishing
         regenerationCoroutine = null;
     }
-
-    private void KillPlayer()
-    {  
-        // Play End screen;
-    }
 }
