@@ -8,6 +8,8 @@ public class MovementV2 : MonoBehaviour
     private Rigidbody rb;
 
     // Movement settings
+    [SerializeField]
+    private bool movementEnabled = true;
     private float moveSpeed;
     [SerializeField]
     private float walkSpeed = 5f;
@@ -32,16 +34,16 @@ public class MovementV2 : MonoBehaviour
     private bool sprintInput;
 
     // Stamina-related
-    [SerializeField] 
-    private float maxStamina = 100f;               
-    [SerializeField] 
-    private float staminaDepletionRate = 20f; 
-    [SerializeField] 
+    [SerializeField]
+    private float maxStamina = 100f;
+    [SerializeField]
+    private float staminaDepletionRate = 20f;
+    [SerializeField]
     private float staminaRegenRate = 10f;
     [SerializeField]
     private float staminaRegenDelay = 2f;
     private float regenCooldownTimer = 0f;
-    private float currentStamina;   
+    private float currentStamina;
 
     // Reference to the stamina slider controller script
     [SerializeField] private SprintSlider sprintSlider;
@@ -64,7 +66,10 @@ public class MovementV2 : MonoBehaviour
 
     }
 
-    private void Update() {
+    private void Update()
+    {
+        // do not handle input if movement is disabled
+        if (!movementEnabled) return;
 
         // Calculate if player is on the ground
         isGrounded = Physics.Raycast(transform.position, Vector3.down, modelHeight * 0.5f + 0.1f, ground);
@@ -75,17 +80,16 @@ public class MovementV2 : MonoBehaviour
         // Sprint input
         sprintInput = Input.GetKey(KeyCode.LeftShift);
         HandleSprint();
-        
+
         // Only set jumpInput to true when space is pressed
-        if (Input.GetKeyDown(KeyCode.Space)) 
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            jumpInput = true;  
+            jumpInput = true;
         }
 
         HandleFootsteps();
 
         //Debug.DrawRay(transform.position, Vector3.down * (modelHeight * 0.5f + 0.1f), Color.red);
-
     }
 
     void FixedUpdate()
@@ -93,11 +97,11 @@ public class MovementV2 : MonoBehaviour
         HandleMovement();
     }
 
-    void HandleMovement() 
+    void HandleMovement()
     {
         // Use input to determine Horizontal Movement direction
         Vector3 moveDirection = new Vector3(horizontalInput, 0f, verticalInput).normalized;
-        
+
         // transform movement to align with current orientation of player
         moveDirection = transform.TransformDirection(moveDirection);
 
@@ -154,7 +158,7 @@ public class MovementV2 : MonoBehaviour
             // Start regenerating stamina after delay
             if (regenCooldownTimer <= 0)
             {
-                RegenerateStamina();            
+                RegenerateStamina();
             }
             else
             {
@@ -205,6 +209,9 @@ public class MovementV2 : MonoBehaviour
         }
     }
 
-
+    public void DisableMovement()
+    {
+        movementEnabled = false;
+    }
 }
 
