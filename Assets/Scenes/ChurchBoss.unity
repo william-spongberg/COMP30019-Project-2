@@ -35782,11 +35782,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5534701560814753045, guid: 6b112cef53c55614e81f435287080c53, type: 3}
-      propertyPath: Tracker
-      value: 
-      objectReference: {fileID: 21442928}
-    - target: {fileID: 5534701560814753045, guid: 6b112cef53c55614e81f435287080c53, type: 3}
+    - target: {fileID: 6688272659314263812, guid: 6b112cef53c55614e81f435287080c53, type: 3}
       propertyPath: systemCheck
       value: 
       objectReference: {fileID: 618995644}
@@ -35794,18 +35790,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MinionSpawner
       objectReference: {fileID: 0}
-    - target: {fileID: 8629973517007686974, guid: 6b112cef53c55614e81f435287080c53, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 8603398993596570867, guid: 6b112cef53c55614e81f435287080c53, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8629973517007686974, guid: 6b112cef53c55614e81f435287080c53, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2013200310}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b112cef53c55614e81f435287080c53, type: 3}
 --- !u!1001 &1054651456
 PrefabInstance:
@@ -46527,14 +46515,6 @@ PrefabInstance:
       propertyPath: systemCheck
       value: 
       objectReference: {fileID: 618995644}
-    - target: {fileID: 8603398993596570867, guid: 6b112cef53c55614e81f435287080c53, type: 3}
-      propertyPath: waves.Array.data[0]
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8603398993596570867, guid: 6b112cef53c55614e81f435287080c53, type: 3}
-      propertyPath: bossWaypoints.Array.size
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 8603398993596570867, guid: 6b112cef53c55614e81f435287080c53, type: 3}
       propertyPath: bossWaypoints.Array.data[0]
       value: 
@@ -76422,33 +76402,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!1 &2013200309 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8629973517007686974, guid: 6b112cef53c55614e81f435287080c53, type: 3}
-  m_PrefabInstance: {fileID: 1054431793}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2013200310
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2013200309}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9420a51649629ef4aa20e9733ec01da6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entitySpawned: 0
-  radius: 10
-  offset: {x: 0, y: 0, z: 0}
-  key: 102
-  objects: []
-  index: 0
-  systemCheck: {fileID: 618995644}
-  waves: 
-  triggers: 
-  Tracker: {fileID: 0}
 --- !u!43 &2021724037
 Mesh:
   m_ObjectHideFlags: 0
