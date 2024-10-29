@@ -7113,7 +7113,7 @@ MonoBehaviour:
   shootingCooldown: 0.3
   spread: 0.1
   reloadTime: 2.5
-  bulletRange: 20
+  bulletRange: 100
   magazineSize: 12
   playerRb: {fileID: 7726701332619171132}
   recoilForce: 0.5
@@ -7142,7 +7142,7 @@ MonoBehaviour:
   shootingCooldown: 0.9
   spread: 2
   reloadTime: 3.5
-  bulletRange: 10
+  bulletRange: 100
   magazineSize: 5
   pelletCount: 8
   playerRb: {fileID: 7726701332619171132}

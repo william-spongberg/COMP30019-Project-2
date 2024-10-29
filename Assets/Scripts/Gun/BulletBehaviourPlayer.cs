@@ -14,6 +14,8 @@ public class BulletBehaviour : MonoBehaviour
     {
         // Check if the object hit is an enemy
         EnemyHP enemy = collision.gameObject.GetComponent<EnemyHP>();
+        BossHP boss = collision.gameObject.GetComponent<BossHP>();
+
         // get hit point + direction
         Vector3 hitPoint = collision.contacts[0].point;
         Vector3 hitDirection = collision.contacts[0].normal;
@@ -24,6 +26,12 @@ public class BulletBehaviour : MonoBehaviour
             enemy.TakeDamage(damageAmount);
             // Play blood effect
             StartCoroutine(enemy.PlayBloodEffect(hitPoint, hitDirection));
+        }
+
+        if (boss != null)
+        {
+            // Deal damage to the boss
+            boss.TakeDamage(damageAmount);
         }
 
         // Use a coroutine to destroy the bullet after a delay

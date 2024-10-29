@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 7911848342425917412}
   - component: {fileID: 745903569598471698}
   - component: {fileID: 7094117499975617670}
+  - component: {fileID: 2348059674783993476}
   m_Layer: 0
   m_Name: Skull
   m_TagString: Untagged
@@ -290,6 +291,28 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!64 &2348059674783993476
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3413457256456304119}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3982955471618308040, guid: b6a16d8251a152845b85bc20c3859653, type: 3}
 --- !u!1 &8936933067224695448
 GameObject:
   m_ObjectHideFlags: 0

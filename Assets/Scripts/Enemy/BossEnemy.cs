@@ -13,8 +13,12 @@ public class BossEnemy : MonoBehaviour
     [SerializeField] private float minBombInterval = 1f;
     [SerializeField] private float maxBombInterval = 3f;
 
+    [SerializeField] private BossHP bossHP;
+
     private int currentWaypointIndex = 0;
     private bool isWaiting = false;
+
+    [SerializeField] private BossHealthSystem bossHealthSystem;
 
     void Start()
     {
@@ -22,7 +26,7 @@ public class BossEnemy : MonoBehaviour
         {
             transform.position = waypoints[currentWaypointIndex].position;
         }
-
+        bossHP.InitializeHealthSystem(bossHealthSystem);
         
     }
 

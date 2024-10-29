@@ -13,15 +13,13 @@ public class BossHP : MonoBehaviour
     private int maxHealth = 200;
     private int currentHealth;
 
-    [SerializeField]
-    // Reference to the health system
     private BossHealthSystem bossHealthSystem;
 
     public void InitializeHealthSystem(BossHealthSystem healthSystem)
     {
         bossHealthSystem = healthSystem;
         currentHealth = maxHealth;
-        healthSystem.SetMaxHealth(maxHealth);
+        bossHealthSystem.SetMaxHealth(maxHealth);
         
         Debug.Log("Boss Health System initialised");
 
