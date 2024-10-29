@@ -230,7 +230,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4091267706166452428, guid: d80846395dab44d4d864a023bc1bd266, type: 3}
       propertyPath: m_Name
-      value: desk fbx
+      value: Desk
       objectReference: {fileID: 0}
     - target: {fileID: 4091267706166452428, guid: d80846395dab44d4d864a023bc1bd266, type: 3}
       propertyPath: m_Layer
