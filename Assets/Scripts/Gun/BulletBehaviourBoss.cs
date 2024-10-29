@@ -8,7 +8,6 @@ public class BulletBehaviourBoss : MonoBehaviour
     [SerializeField] private Rigidbody rb;
     [SerializeField] private GameObject explosion;
     [SerializeField] private LayerMask playerLayer;
-    [SerializeField] private LayerMask enemyLayer;
 
     // Bullet stats
     [SerializeField] private float bounciness = 0.1f;
@@ -54,7 +53,6 @@ public class BulletBehaviourBoss : MonoBehaviour
 
     private void Update()
     {
-        
         // Count down lifetime
         explosionDelay -= Time.deltaTime;
         if (explosionDelay <= 0) Explode();
@@ -65,14 +63,9 @@ public class BulletBehaviourBoss : MonoBehaviour
         // Instantiate explosion effect
         if (explosion != null)
         {
-            // Scale the explosion based on the damage output and elapsed time
-            float scaleMultiplier = Random.Range(4f, 8f);
-
             // Instantiate the explosion
-            GameObject explosionInstance = Instantiate(explosion, transform.position, Quaternion.identity);
+            Instantiate(explosion, transform.position, Quaternion.identity);
 
-            // Set the scale of the explosion
-            explosionInstance.transform.localScale *= scaleMultiplier;
         }
 
         // Check for the player
@@ -81,22 +74,29 @@ public class BulletBehaviourBoss : MonoBehaviour
         // Only one player but collider is array
         foreach (Collider playerCollider in players)
         {
-            PlayerHUD playerHUD = playerCollider.GetComponent<PlayerHUD>();
-            Rigidbody playerRb = playerCollider.GetComponent<Rigidbody>();
+            PlayerHUD playerHUD = playerCollider.GetComponentInParent<PlayerHUD>();
+            Rigidbody playerRb = playerCollider.GetComponentInParent<Rigidbody>();
 
-            if (playerHUD != null && playerRb != null)
+            Debug.Log("Collided with player");
+
+            // Apply damage based on distance
+            float distance = Vector3.Distance(transform.position, playerCollider.transform.position);
+            float distanceFactor = Mathf.Clamp01(1 - (distance / explosionRange));
+
+            if (playerHUD != null)
             {
-                // Calculate distance
-                float distance = Vector3.Distance(transform.position, playerCollider.transform.position);
-                float distanceFactor = Mathf.Clamp01(1 - (distance / explosionRange));
-
-                // Apply damage based on distance
+                
                 int finalDamage = Mathf.RoundToInt(explosionDamage * distanceFactor);
                 playerHUD.TakeDamage(finalDamage);
+                Debug.Log("Applying damage to player: " + finalDamage);
+            }
 
+            if (playerRb != null)
+            {
                 // Apply force based on distance
                 float finalForce = explosionForce * distanceFactor;
                 playerRb.AddExplosionForce(finalForce, transform.position, explosionRange);
+                Debug.Log("Applying force to player: ");
             }
         }
 
@@ -106,7 +106,7 @@ public class BulletBehaviourBoss : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-       Explode();
+       //Explode();
     }
 
     private void OnDrawGizmosSelected()
