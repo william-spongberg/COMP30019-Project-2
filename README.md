@@ -258,7 +258,9 @@ Boss
 
 ### David Kee Siong Chin
 
-*Movement, Dialogue, Story, Boss*
+*Movement, Dialogue, Story, Boss, Level Design*
+Level Design
+- Fully created the Church level scene for the final boss battle.
 Mechanics/Movement
 - Created initial movement and camera system.
 - Initial movement system was force based, which allowed fluid and responsive movement.
