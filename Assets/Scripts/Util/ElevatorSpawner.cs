@@ -43,6 +43,7 @@ public class ElevatorSpawner : MonoBehaviour
 
         // spawn randomly within x radius of player
         GameObject newObj = Instantiate(objects[randomIndex], pos, Quaternion.identity);
+        newObj.SetActive(true);
         entitySpawned += 1;
         Tracker.IncreaseSpawn(1);
     }
