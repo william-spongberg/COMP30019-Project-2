@@ -10,8 +10,6 @@ public class ObjectSpawner : MonoBehaviour
     [SerializeField]
     private Vector3 offset = Vector3.zero;
     [SerializeField]
-    private KeyCode key = KeyCode.F;
-    [SerializeField]
     private List<GameObject> objects = new();
     public int index;
 
@@ -34,10 +32,6 @@ public class ObjectSpawner : MonoBehaviour
         if(index < waves.Length && !systemCheck.getProgress() && triggers[index] == Tracker.getSlainEnemies()){
             SpawnWave(waves[index]);
             index += 1;
-        }
-        if (Input.GetKeyDown(key))
-        {
-            LevelSpawn(waves);
         }
     }
 

@@ -30,7 +30,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 3, y: 0.1, z: 3}
-  m_ConstrainProportionsScale: 1
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7023552908671100194}
   m_Father: {fileID: 0}
@@ -124,7 +124,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4062619256373206, guid: 50b167954e2b83c43afaabb6a4baa4f2, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.75
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: 4062619256373206, guid: 50b167954e2b83c43afaabb6a4baa4f2, type: 3}
       propertyPath: m_LocalScale.y
@@ -132,11 +132,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4062619256373206, guid: 50b167954e2b83c43afaabb6a4baa4f2, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.75
+      value: 1.254
       objectReference: {fileID: 0}
     - target: {fileID: 4062619256373206, guid: 50b167954e2b83c43afaabb6a4baa4f2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.093
+      value: -0.137
       objectReference: {fileID: 0}
     - target: {fileID: 4062619256373206, guid: 50b167954e2b83c43afaabb6a4baa4f2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -144,7 +144,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4062619256373206, guid: 50b167954e2b83c43afaabb6a4baa4f2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.055
+      value: -0.158
       objectReference: {fileID: 0}
     - target: {fileID: 4062619256373206, guid: 50b167954e2b83c43afaabb6a4baa4f2, type: 3}
       propertyPath: m_LocalRotation.w
@@ -177,6 +177,26 @@ PrefabInstance:
     - target: {fileID: 4062619256373206, guid: 50b167954e2b83c43afaabb6a4baa4f2, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 23167515226659832, guid: 50b167954e2b83c43afaabb6a4baa4f2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 70268ac3fadbdf84fb973b0a7268dbd7, type: 2}
+    - target: {fileID: 65158184872700426, guid: 50b167954e2b83c43afaabb6a4baa4f2, type: 3}
+      propertyPath: m_Size.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 65158184872700426, guid: 50b167954e2b83c43afaabb6a4baa4f2, type: 3}
+      propertyPath: m_Size.z
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 65158184872700426, guid: 50b167954e2b83c43afaabb6a4baa4f2, type: 3}
+      propertyPath: m_Center.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 65158184872700426, guid: 50b167954e2b83c43afaabb6a4baa4f2, type: 3}
+      propertyPath: m_Center.z
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
