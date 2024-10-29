@@ -205,8 +205,58 @@ Using Unity's Global Volume, multiple effects were applied to enhance the feelin
 
 *Movement, AI/Enemies, Weapons, Audio, UI, Boss*
 
- - TODO
+Mechanics/Movement
+
+- Developed the first-person camera system using Cinemachine’s virtual camera for responsive mouse movement.
+- Implemented direct transformation-based player movement to enable snappy FPS movement while retaining physics interactions,
+  resolving prior slippery controls.
+- Added sprint functionality based on stamina.
+- Implemented player health system for taking damage and healing.
+
+Weapons/Audio
+
+- Created three weapon types: melee, pistol, and shotgun, each with unique mechanics.
+- Developed an attack controller script to enable switching between different weapons.
+- Synced weapon movement with vertical player head motion for a cohesive FPS experience.
+- Implemented recoil for guns and basic animation for melee attacks.
+- Designed a weapon unlock system, allowing players to pick up and drop new weapons during gameplay.
+- Set up a range of audio cues for weapons, including firing, reloading, arming, empty magazine alerts, etc.
+  Unique variations of each sound were also included for added realism.
+- Added grunts for players/enemies upon taking damage.
+
+Enemy AIs
+
+- Implemented an enemy AI state machine for dynamic behavior, switching between patrolling, chasing, and attacking
+  based on player proximity and other triggers.
+- Developed two enemy types:
+    Shooting enemy: Charges a bullet before release.
+    Charging enemy: Damages on collision and retreats post-attack.
+- Created bullets to damage/kill the player and enemies.
+- Added spatial audio for player and enemy footsteps to enhance immersion and realism.
+
+UI/Gameplay
+
+- Reworked the pause manager for working transitions between pause menu, main menu, settings, and instructions.
+- Redesigned the settings screen to properly adjust mouse sensitivity and field of view (FOV) based on the cinemachine camera.
+- Implemented instructional pages to guide users through game controls.
+- Created a HUD for the player including:
+    A crosshair for aiming precision.
+    A countdown timer that is displayed throughout the game.
+    A health bar represented by heart images.
+    A sprint slider that fades in/out to indicate remaining stamina
+    A text box indicating ammo count/reloading.
+- Remodelled the elevator, from a platform to an open elevator with a trigger inside to detect the player
+  and allow the player to rise through the ceiling with a fading panel cue.
+
+Boss
+- Developed boss movement along predefined waypoints.
+- Designed boss attack mechanics, dropping of explosives.
+- Implemented a boss health system and health bar.
+- Reworked the object spawner to spawn the final boss.
+- Baked the mesh surface for the boss level
+
 ---
+
 ### David Kee Siong Chin
 
 *Story, Boss*
