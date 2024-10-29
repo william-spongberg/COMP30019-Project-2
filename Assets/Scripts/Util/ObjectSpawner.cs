@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-public class NPCSpawner : MonoBehaviour
+public class ObjectSpawner : MonoBehaviour
 {
     public int entitySpawned = 0;
     [SerializeField]
@@ -41,9 +41,9 @@ public class NPCSpawner : MonoBehaviour
         }
     }
 
-    public void SpawnNPC()
+    public void SpawnObject()
     {
-        // choose random npc
+        // choose random object
         int randomIndex = Random.Range(0, objects.Count);
         float playerX = player.transform.position.x;
         float playerZ = player.transform.position.z;
@@ -64,7 +64,7 @@ public class NPCSpawner : MonoBehaviour
 
     public void SpawnWave(int amount){
         for(int i = 0; i < amount; i++){
-            SpawnNPC();
+            SpawnObject();
         }
     }
 
