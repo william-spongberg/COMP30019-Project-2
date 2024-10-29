@@ -50,7 +50,7 @@ public class PlayerHUD : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && !isDead)
         {
-            Die();
+            KillPlayer();
         }
 
         if (isDead)
@@ -85,7 +85,7 @@ public class PlayerHUD : MonoBehaviour
         if (currentHealth <= 0)
         {
             // dead player
-            Die();
+            KillPlayer();
         }
         else
         {
@@ -94,7 +94,7 @@ public class PlayerHUD : MonoBehaviour
         }
     }
 
-    private void Die()
+    private void KillPlayer()
     {
         isDead = true;
 
@@ -145,7 +145,7 @@ public class PlayerHUD : MonoBehaviour
         regenerationCoroutine = null;
     }
 
-    private void Die()
+    private void KillPlayer()
     {  
         // Play End screen;
     }
