@@ -22,6 +22,8 @@ public class BossEnemy : MonoBehaviour
         {
             transform.position = waypoints[currentWaypointIndex].position;
         }
+
+        
     }
 
     void Update()

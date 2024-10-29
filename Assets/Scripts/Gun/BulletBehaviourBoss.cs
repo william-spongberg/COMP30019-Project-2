@@ -82,8 +82,8 @@ public class BulletBehaviourBoss : MonoBehaviour
         // Only one player but collider is array
         foreach (Collider playerCollider in players)
         {
-            PlayerHUD playerHUD = playerCollider.GetComponent<PlayerHUD>();
-            Rigidbody playerRb = playerCollider.GetComponent<Rigidbody>();
+            PlayerHUD playerHUD = playerCollider.GetComponentInParent<PlayerHUD>();
+            Rigidbody playerRb = playerCollider.GetComponentInParent<Rigidbody>();
 
             if (playerHUD != null && playerRb != null)
             {

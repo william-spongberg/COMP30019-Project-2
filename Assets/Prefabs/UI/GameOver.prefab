@@ -124,13 +124,50 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameOverCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 8042117518242281165, guid: 559a1963eb6f7cd4face0f6798b5ade8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8042117518242281165, guid: 559a1963eb6f7cd4face0f6798b5ade8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8477553612135206444}
+    - target: {fileID: 8042117518242281165, guid: 559a1963eb6f7cd4face0f6798b5ade8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 8042117518242281165, guid: 559a1963eb6f7cd4face0f6798b5ade8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ChangeScene, Assembly-CSharp
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3658089795026302583, guid: 559a1963eb6f7cd4face0f6798b5ade8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8477553612135206444}
   m_SourcePrefab: {fileID: 100100000, guid: 559a1963eb6f7cd4face0f6798b5ade8, type: 3}
 --- !u!224 &5583969881612770293 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 123533844059354987, guid: 559a1963eb6f7cd4face0f6798b5ade8, type: 3}
   m_PrefabInstance: {fileID: 5532916670867647646}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &9082910716102515433 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3658089795026302583, guid: 559a1963eb6f7cd4face0f6798b5ade8, type: 3}
+  m_PrefabInstance: {fileID: 5532916670867647646}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8477553612135206444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9082910716102515433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d152aa4910eb4454a8b351aebb17cc87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: StartScene
