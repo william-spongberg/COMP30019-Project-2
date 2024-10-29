@@ -110,6 +110,6 @@ public class PlatformElevator : MonoBehaviour
 
         yield return new WaitForSecondsRealtime(0.5f); // Finish running processes
 
-        SceneManager.LoadScene(nextSceneName);  // Load the next scene
+        UnityEngine.SceneManagement.SceneManager.LoadScene(nextSceneName);
     }
 }

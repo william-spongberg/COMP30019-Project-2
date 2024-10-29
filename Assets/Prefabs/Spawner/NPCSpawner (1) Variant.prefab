@@ -82,15 +82,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3016592665142637680, guid: c40b5e9b0914f0347bf8d9eb9cb0c843, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -69.06781
+      value: -66.24851
       objectReference: {fileID: 0}
     - target: {fileID: 3016592665142637680, guid: c40b5e9b0914f0347bf8d9eb9cb0c843, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -426.14532
+      value: -454.03128
       objectReference: {fileID: 0}
     - target: {fileID: 3016592665142637680, guid: c40b5e9b0914f0347bf8d9eb9cb0c843, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -22.817327
+      value: -13.725737
       objectReference: {fileID: 0}
     - target: {fileID: 3016592665142637680, guid: c40b5e9b0914f0347bf8d9eb9cb0c843, type: 3}
       propertyPath: m_LocalRotation.w
@@ -120,8 +120,46 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2616631234954514250, guid: c40b5e9b0914f0347bf8d9eb9cb0c843, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2259895177890731873, guid: c40b5e9b0914f0347bf8d9eb9cb0c843, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8603398993596570867}
   m_SourcePrefab: {fileID: 100100000, guid: c40b5e9b0914f0347bf8d9eb9cb0c843, type: 3}
+--- !u!1 &8629973517007686974 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2259895177890731873, guid: c40b5e9b0914f0347bf8d9eb9cb0c843, type: 3}
+  m_PrefabInstance: {fileID: 7538763544667232863}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8603398993596570867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8629973517007686974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dcc5ce13549f4eda9a73d4c0648cfe3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  entitySpawned: 0
+  radius: 10
+  offset: {x: 0, y: 0, z: 0}
+  key: 102
+  objects:
+  - {fileID: 3413457256456304119, guid: 6757f9e7804541c4893bbfc378e7262b, type: 3}
+  bossWaypoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  index: 0
+  systemCheck: {fileID: 0}
+  waves: 00000000
+  triggers: 15000000
+  Tracker: {fileID: 0}
