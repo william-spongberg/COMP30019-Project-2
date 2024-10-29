@@ -13,7 +13,6 @@ public class ElevatorSpawner : MonoBehaviour
     private List<GameObject> objects = new();
     
     public int trigger;
-    public int[] waves;
     private GameObject player;
     public Counter Tracker;
     private bool spawned;
@@ -44,19 +43,8 @@ public class ElevatorSpawner : MonoBehaviour
 
         // spawn randomly within x radius of player
         GameObject newObj = Instantiate(objects[randomIndex], pos, Quaternion.identity);
+        newObj.SetActive(true);
         entitySpawned += 1;
         Tracker.IncreaseSpawn(1);
-    }
-
-    public void SpawnWave(int amount){
-        for(int i = 0; i < amount; i++){
-            SpawnNPC();
-        }
-    }
-
-    public void LevelSpawn(int[] waves){
-        for(int j = 0; j < waves.Length; j++){
-            SpawnWave(waves[j]);
-        }
     }
 }

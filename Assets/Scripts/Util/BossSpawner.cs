@@ -58,13 +58,6 @@ public class BossSpawner : MonoBehaviour
             boss.SetWaypoints(bossWaypoints);
         }
 
-        // Find the BossHealthSystem and assign it to the enemy's health
-        BossHealthSystem bossHealthSystem = FindObjectOfType<BossHealthSystem>();
-        if (bossHealthSystem != null)
-        {
-            newObj.GetComponent<BossHP>().InitializeHealthSystem(bossHealthSystem);
-        }
-
         entitySpawned += 1;
         Tracker.IncreaseSpawn(1);
     }

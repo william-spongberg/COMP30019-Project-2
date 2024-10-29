@@ -102,14 +102,14 @@ TODO (due milestone 3) - see specification for details
 
 ### [GlitchShader.shader](Assets\Shaders\GlitchShader.shader)
 
-![Glitch Shader Gif](Images\GlitchShader.gif)
+![Glitch Shader Gif](Images/GlitchShader.gif)
 
 The GlitchShader was designed to create a glitchy effect for NPCs by simulating visual artifacts normally found in old TVs.
 - Randomly offsets the RGB channels of its texture over time to create a disjointed, glitchy appearance
 - Randomly offsets the x vertices to create a stretching and deforming effect
 - Has a random chance to discard all pixels, creating a flickering effect, just like a broken TV
 - Overlays the result with black bars using dithering, just like CRTs have
-- Enables GPU instancing, which in conjunction with [Glitch.cs](Assets\Scripts\Shaders\Glitch.cs) can create a glitchy afterimage effect by randomly displacing instances around the NPC.
+- Enables GPU instancing, which in conjunction with [Glitch.cs](Assets/Scripts/Shaders/Glitch.cs) can create a glitchy afterimage effect by randomly displacing instances around the NPC.
 
 It has several different properties for fine-tuning:
 - **_Texture**: for the texture to be given to the shader
@@ -119,7 +119,7 @@ It has several different properties for fine-tuning:
 
 ### [BossShader.shader](Assets\Shaders\BossShader.shader)
 
-![Boss Shader Gif](Images\BossShader.gif)
+![Boss Shader Gif](Images/BossShader.gif)
 
 The BossShader was designed to create a uniquely creepy visual effect for the boss, continuing the glitchy and incorrect feeling of the game.
 - Pulsates with a given colour (recommended to use red) to create a dangerous and frightening feeling
@@ -127,7 +127,7 @@ The BossShader was designed to create a uniquely creepy visual effect for the bo
 - The texture is randomly and slightly distorted by stretching and offsetting it based on its world position
 - The texture's red and blue colour channels are also randomly and slightly offset, creating a chromatic aberration effect
 - The transparency is increased to increase the 'ethereal' feeling, as if it is transitioning between worlds
-- This shader can be enhanced through the use of [RandomTexture.cs](Assets\Scripts\Shaders\RandomTexture.cs), a script that randomly changes the texture of the shader over time to create a more strange and chaotic effect.
+- This shader can be enhanced through the use of [RandomTexture.cs](Assets/Scripts/Shaders/RandomTexture.cs), a script that randomly changes the texture of the shader over time to create a more strange and chaotic effect.
 
 It has several different properties for fine-tuning:
 - **_Texture**: for the texture to be given to the shader
@@ -199,14 +199,65 @@ Using Unity's Global Volume, multiple effects were applied to enhance the feelin
 - GlitchShader.shader, a shader that creates a complex 'glitchy' effect for the NPCs using gpu instancing, dithering and random offsets of the UVs and x coordinates.
 - Glitch.cs, a script for GlitchShader.shader that adds and rotates gpu instances randomly within a short range of the prefab its attached to to create a distorted, glitchy effect.
 - BossShader.shader, a shader that creates a menacing 'boss' effect using a fixed-screen texture, chromatic aberration and a red pulsating glow.
+- Added GameOver screen on player death
 - Numerous other small scripts and tweaks to improve the game's performance, visual quality, and overall experience.
 ---
-### Alistair Wern Hao Cheah
+### Alistair Cheah Wern Hao
 
 *Movement, AI/Enemies, Weapons, Audio, UI, Boss*
 
- - TODO
+Mechanics/Movement
+
+- Developed the first-person camera system using Cinemachine’s virtual camera for responsive mouse movement.
+- Implemented direct transformation-based player movement to enable snappy FPS movement while retaining physics interactions,
+  resolving prior slippery controls.
+- Added sprint functionality based on stamina.
+- Implemented player health system for taking damage and healing.
+
+Weapons/Audio
+
+- Created three weapon types: melee, pistol, and shotgun, each with unique mechanics.
+- Developed an attack controller script to enable switching between different weapons.
+- Synced weapon movement with vertical player head motion for a cohesive FPS experience.
+- Implemented recoil for guns and basic animation for melee attacks.
+- Designed a weapon unlock system, allowing players to pick up and drop new weapons during gameplay.
+- Set up a range of audio cues for weapons, including firing, reloading, arming, empty magazine alerts, etc.
+  Unique variations of each sound were also included for added realism.
+- Added grunts for players/enemies upon taking damage.
+
+Enemy AIs
+
+- Implemented an enemy AI state machine for dynamic behavior, switching between patrolling, chasing, and attacking
+  based on player proximity and other triggers.
+- Developed two enemy types:
+    Shooting enemy: Charges a bullet before release.
+    Charging enemy: Damages on collision and retreats post-attack.
+- Created bullets to damage/kill the player and enemies.
+- Added spatial audio for player and enemy footsteps to enhance immersion and realism.
+
+UI/Gameplay
+
+- Reworked the pause manager for working transitions between pause menu, main menu, settings, and instructions.
+- Redesigned the settings screen to properly adjust mouse sensitivity and field of view (FOV) based on the cinemachine camera.
+- Implemented instructional pages to guide users through game controls.
+- Created a HUD for the player including:
+    A crosshair for aiming precision.
+    A countdown timer that is displayed throughout the game.
+    A health bar represented by heart images.
+    A sprint slider that fades in/out to indicate remaining stamina
+    A text box indicating ammo count/reloading.
+- Remodelled the elevator, from a platform to an open elevator with a trigger inside to detect the player
+  and allow the player to rise through the ceiling with a fading panel cue.
+
+Boss
+- Developed boss movement along predefined waypoints.
+- Designed boss attack mechanics, dropping of explosives.
+- Implemented a boss health system and health bar.
+- Reworked the object spawner to spawn the final boss.
+- Baked the mesh surface for the boss level
+
 ---
+
 ### David Kee Siong Chin
 
 *Story, Boss*
