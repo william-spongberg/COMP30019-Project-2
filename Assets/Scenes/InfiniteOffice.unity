@@ -454,6 +454,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: First Person Camera
       objectReference: {fileID: 0}
+    - target: {fileID: 2131650867649411065, guid: 3a92331a52fbe574b92fba8c1a83f642, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2903654015548534664, guid: 3a92331a52fbe574b92fba8c1a83f642, type: 3}
       propertyPath: ammoDisplay
       value: 

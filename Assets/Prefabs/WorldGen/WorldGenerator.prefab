@@ -377,7 +377,7 @@ PrefabInstance:
     - target: {fileID: 3880687694341287553, guid: 03b5395efab59384fae56e5df6664bfa, type: 3}
       propertyPath: spawnObjects.Array.data[6].obj
       value: 
-      objectReference: {fileID: 3472557093579564081, guid: 7ecbf04751d05b8409cb8f4629099752, type: 3}
+      objectReference: {fileID: 3472557093579564081, guid: a59c9cc37beefca4583d15f9ab5b455a, type: 3}
     - target: {fileID: 3880687694341287553, guid: 03b5395efab59384fae56e5df6664bfa, type: 3}
       propertyPath: spawnObjects.Array.data[7].obj
       value: 
@@ -385,7 +385,7 @@ PrefabInstance:
     - target: {fileID: 3880687694341287553, guid: 03b5395efab59384fae56e5df6664bfa, type: 3}
       propertyPath: spawnObjects.Array.data[8].obj
       value: 
-      objectReference: {fileID: 3472557093579564081, guid: a59c9cc37beefca4583d15f9ab5b455a, type: 3}
+      objectReference: {fileID: 3472557093579564081, guid: 651a7861657aeae4485143600739ef31, type: 3}
     - target: {fileID: 3880687694341287553, guid: 03b5395efab59384fae56e5df6664bfa, type: 3}
       propertyPath: spawnObjects.Array.data[9].obj
       value: 
@@ -393,7 +393,7 @@ PrefabInstance:
     - target: {fileID: 3880687694341287553, guid: 03b5395efab59384fae56e5df6664bfa, type: 3}
       propertyPath: spawnObjects.Array.data[10].obj
       value: 
-      objectReference: {fileID: 3472557093579564081, guid: 651a7861657aeae4485143600739ef31, type: 3}
+      objectReference: {fileID: 3472557093579564081, guid: 7ecbf04751d05b8409cb8f4629099752, type: 3}
     - target: {fileID: 3880687694341287553, guid: 03b5395efab59384fae56e5df6664bfa, type: 3}
       propertyPath: spawnObjects.Array.data[11].obj
       value: 
