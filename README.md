@@ -202,7 +202,7 @@ Using Unity's Global Volume, multiple effects were applied to enhance the feelin
 - Added GameOver screen on player death
 - Numerous other small scripts and tweaks to improve the game's performance, visual quality, and overall experience.
 ---
-### Alistair Wern Hao Cheah
+### Alistair Cheah Wern Hao
 
 *Movement, AI/Enemies, Weapons, Audio, UI, Boss*
 
