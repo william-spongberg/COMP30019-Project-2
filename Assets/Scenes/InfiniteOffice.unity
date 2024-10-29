@@ -184,17 +184,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b592f4bb98269243a33b0d57cc55dc0, type: 3}
---- !u!114 &155329618 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7356259505804021387, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
-  m_PrefabInstance: {fileID: 806678329704869193}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aaf1a765a77719c49993020fe80f6574, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &344116108
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -542,19 +531,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 315531304903280759, guid: af7b79bfb9efb64429eba457d5e00c6b, type: 3}
       propertyPath: triggers.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 315531304903280759, guid: af7b79bfb9efb64429eba457d5e00c6b, type: 3}
       propertyPath: dialogues.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 315531304903280759, guid: af7b79bfb9efb64429eba457d5e00c6b, type: 3}
       propertyPath: triggers.Array.data[1]
-      value: 2
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 315531304903280759, guid: af7b79bfb9efb64429eba457d5e00c6b, type: 3}
       propertyPath: triggers.Array.data[2]
-      value: 9
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 315531304903280759, guid: af7b79bfb9efb64429eba457d5e00c6b, type: 3}
       propertyPath: triggers.Array.data[3]
@@ -567,11 +556,11 @@ PrefabInstance:
     - target: {fileID: 315531304903280759, guid: af7b79bfb9efb64429eba457d5e00c6b, type: 3}
       propertyPath: dialogues.Array.data[1]
       value: 
-      objectReference: {fileID: 155329618}
+      objectReference: {fileID: 1190912440}
     - target: {fileID: 315531304903280759, guid: af7b79bfb9efb64429eba457d5e00c6b, type: 3}
       propertyPath: dialogues.Array.data[2]
       value: 
-      objectReference: {fileID: 1190912440}
+      objectReference: {fileID: 623221750}
     - target: {fileID: 315531304903280759, guid: af7b79bfb9efb64429eba457d5e00c6b, type: 3}
       propertyPath: dialogues.Array.data[3]
       value: 
@@ -592,6 +581,10 @@ PrefabInstance:
       propertyPath: waves.Array.data[0]
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2702999542332256257, guid: af7b79bfb9efb64429eba457d5e00c6b, type: 3}
+      propertyPath: objects.Array.data[0]
+      value: 
+      objectReference: {fileID: 5836135193528538121, guid: 9426ddd6362de4af5a627982e1122233, type: 3}
     - target: {fileID: 3128714739513413332, guid: af7b79bfb9efb64429eba457d5e00c6b, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -691,6 +684,9 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 3435534047803585801, guid: af7b79bfb9efb64429eba457d5e00c6b, type: 3}
+    - {fileID: 7774188306294828699, guid: af7b79bfb9efb64429eba457d5e00c6b, type: 3}
+    - {fileID: 3128714739513413332, guid: af7b79bfb9efb64429eba457d5e00c6b, type: 3}
+    - {fileID: 749622747118184926, guid: af7b79bfb9efb64429eba457d5e00c6b, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 4250294784374621801, guid: af7b79bfb9efb64429eba457d5e00c6b, type: 3}
       insertIndex: 1
@@ -903,7 +899,7 @@ PrefabInstance:
       objectReference: {fileID: 1888467058}
     - target: {fileID: 7795309904117625545, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8118737689821688124, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
       propertyPath: m_SizeDelta.y
@@ -926,7 +922,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 7795309904117625545, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1119450228952082385, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
