@@ -48,11 +48,6 @@ public class PlayerHUD : MonoBehaviour
     //testing
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && !isDead)
-        {
-            KillPlayer();
-        }
-
         if (isDead)
         {
             CameraShake();
