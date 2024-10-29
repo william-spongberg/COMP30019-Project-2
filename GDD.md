@@ -69,10 +69,10 @@ Into The Abyss is a first-person game with a camera that is moved by the mouse. 
 
 ## Controls ##
 
-Our game is a movement based FPS. The player will be able to fire weapons using the mouse, as well as move using the arrow keys. In addition to moving and shooting, the player will be able to jump using the spacebar, and perform a sliding dash forwards using the ctrl button.
+Our game is a movement based FPS. The player will be able to fire weapons using the mouse, as well as move using the arrow keys. In addition to moving and shooting, the player will be able to jump using the spacebar.
 
-<img title="a title" alt="Alt text" src="https://static.wikia.nocookie.net/titanfall/images/2/2e/TF2_Achievement_Power_Slide.jpg/revision/latest/scale-to-width-down/1200?cb=20180414120527">
-(Figure 2: Power Slide Achievement image from Titanfall 2)
+<img title="a title" alt="Alt text" src="https://steamuserimages-a.akamaihd.net/ugc/2042989031190792657/F73A45A40AF841EF254E2E2E83A232CA26EEB18A/">
+(Figure 2: Jumping from counterstrike)
 
 The game’s controls are meant to have a high skill ceiling, so that players who are more experienced and more skillful will be able to navigate and combat enemies more easily.
 
@@ -221,7 +221,7 @@ Finally, there is justified fear surrounding making the game actually fun and in
 ## References ##
 
 1. Image of Ultrakill's cover image, taken from the Steam page of the game ULTRAKILL: https://store.steampowered.com/app/1229490/ULTRAKILL/
-2. Art taken from the XBOX 1 achievement art for Titanfall 2 achievement named "Power Slide"
+2. Art taken from a steam guide on Counterstrike movement: https://steamcommunity.com/sharedfiles/filedetails/?id=2972053090
 3. Taken from the article "Titanfall 2's Mobility Revolutionized Shooters - Or At Least It Should Have" by Cian Maher, published by The Gamer: https://www.thegamer.com/titanfall-2-mobility/
 4. Image taken from our game
 5. Image taken from prototype of our game
