@@ -18,9 +18,9 @@ TagManager:
   - Player
   - Enemy
   - CRT
-  - 
-  - 
-  - 
+  - Ceiling
+  - Elevator
+  - Obstacle
   - 
   - 
   - 

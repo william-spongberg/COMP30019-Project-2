@@ -10,8 +10,6 @@ public class ElevatorSpawner : MonoBehaviour
     [SerializeField]
     private Vector3 offset = Vector3.zero;
     [SerializeField]
-    private KeyCode key = KeyCode.F;
-    [SerializeField]
     private List<GameObject> objects = new();
     
     public int trigger;

@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 2529018147278014787}
   - component: {fileID: 8416469180267205262}
   - component: {fileID: 5428992920257945065}
+  - component: {fileID: 8987265295667408523}
+  - component: {fileID: 274529087618519793}
   m_Layer: 0
   m_Name: Skull
   m_TagString: Untagged
@@ -28,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3413457256456304119}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.23865017, y: -0.45491195, z: -0.7437036, w: 0.4277922}
+  m_LocalRotation: {x: 0.2256351, y: 0.44010893, z: 0.71585625, w: -0.49289235}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 1
@@ -123,3 +125,33 @@ MonoBehaviour:
   - {fileID: 2800000, guid: 6eb184de103d4b3f812b38561065192f, type: 3}
   targetMaterial: {fileID: 2100000, guid: b16a53ee3d47e8940a1a67a209cef48c, type: 2}
   changeTextureThreshold: 0.1
+--- !u!114 &8987265295667408523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3413457256456304119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c764ed3a219c648e7bcd616c52b73f32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &274529087618519793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3413457256456304119}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a590276926d18d4e83b8b9d41b54a00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tracker: {fileID: 0}
+  health: 0
+  bloodEffect: {fileID: 0}
+  damageSound: {fileID: 0}
+  enemyAI: {fileID: 0}
+  ragdoll: {fileID: 0}

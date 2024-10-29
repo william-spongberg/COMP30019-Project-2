@@ -19,7 +19,8 @@ public class PauseManagerScript : MonoBehaviour
     [SerializeField] private GameObject instructionsTwo;
     [SerializeField] private GameObject crossHair;
 
-    public static bool IsPaused { get; private set; } = false;
+    public static bool IsPaused { get; set; } = false;
+
 
     void Start()
     {
@@ -38,7 +39,7 @@ public class PauseManagerScript : MonoBehaviour
         }
     }
 
-    private void Pause()
+    public void Pause()
     {
         OpenPauseMenu();
         crossHair.SetActive(false);
