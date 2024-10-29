@@ -199,6 +199,7 @@ Using Unity's Global Volume, multiple effects were applied to enhance the feelin
 - GlitchShader.shader, a shader that creates a complex 'glitchy' effect for the NPCs using gpu instancing, dithering and random offsets of the UVs and x coordinates.
 - Glitch.cs, a script for GlitchShader.shader that adds and rotates gpu instances randomly within a short range of the prefab its attached to to create a distorted, glitchy effect.
 - BossShader.shader, a shader that creates a menacing 'boss' effect using a fixed-screen texture, chromatic aberration and a red pulsating glow.
+- Added GameOver screen on player death
 - Numerous other small scripts and tweaks to improve the game's performance, visual quality, and overall experience.
 ---
 ### Alistair Wern Hao Cheah
