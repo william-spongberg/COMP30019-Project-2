@@ -101,6 +101,7 @@ public class BulletBehaviourBoss : MonoBehaviour
                 playerRb.AddExplosionForce(finalForce, transform.position, explosionRange);
                 Debug.Log("Applying force to player: ");
             }
+            
         }
 
         // Destroy bullet

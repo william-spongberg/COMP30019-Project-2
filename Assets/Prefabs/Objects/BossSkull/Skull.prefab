@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 2529018147278014787}
   - component: {fileID: 8416469180267205262}
   - component: {fileID: 5428992920257945065}
-  - component: {fileID: 8987265295667408523}
+  - component: {fileID: 7911848342425917412}
   - component: {fileID: 5246345329483046141}
   - component: {fileID: 4717343729722229845}
   m_Layer: 0
@@ -159,7 +159,7 @@ MonoBehaviour:
   - {fileID: 2800000, guid: 6eb184de103d4b3f812b38561065192f, type: 3}
   targetMaterial: {fileID: 2100000, guid: b16a53ee3d47e8940a1a67a209cef48c, type: 2}
   changeTextureThreshold: 0.1
---- !u!114 &8987265295667408523
+--- !u!114 &7911848342425917412
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -168,7 +168,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3413457256456304119}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c764ed3a219c648e7bcd616c52b73f32, type: 3}
+  m_Script: {fileID: 11500000, guid: 6aeabfe2fe32156458877974b86d1549, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   waypoints: []
@@ -177,7 +177,7 @@ MonoBehaviour:
   moveSpeed: 5
   minWaitTimeAtWaypoint: 10
   maxWaitTimeAtWaypoint: 20
-  bombSpreadRadius: 5
+  bombSpreadRadius: 2
   minBombInterval: 1
   maxBombInterval: 3
 --- !u!114 &5246345329483046141

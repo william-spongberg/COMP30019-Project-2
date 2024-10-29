@@ -10,6 +10,7 @@ public class BossHealthSystem : MonoBehaviour
 
     public void SetMaxHealth(int health)
     {
+        
         maxHealth = health;
         healthSlider.maxValue = maxHealth;
         healthSlider.value = maxHealth; // Initialize the slider to full health
@@ -20,4 +21,5 @@ public class BossHealthSystem : MonoBehaviour
         // Update the slider value to reflect the current health
         healthSlider.value = health;
     }
+
 } 

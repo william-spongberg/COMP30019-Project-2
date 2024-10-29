@@ -37,6 +37,7 @@ public class BossHP : MonoBehaviour
 
         // Play damage sound
         damageSound.Play();
+        
 
         // Update health
         bossHealthSystem.SetHealth(currentHealth);
