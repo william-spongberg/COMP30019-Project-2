@@ -113,7 +113,7 @@ public class EnemyAI : MonoBehaviour
             float speedOffset = Random.Range(-1f, 1f);
             defaultSpeed = chargingEnemySpeed + speedOffset;
 
-            float randomScale = Random.Range(0.2f, 0.6f);
+            float randomScale = Random.Range(0.4f, 0.6f);
             transform.localScale = new Vector3(randomScale, randomScale, randomScale);
         }
 

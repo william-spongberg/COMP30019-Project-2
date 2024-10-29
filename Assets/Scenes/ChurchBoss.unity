@@ -46568,6 +46568,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 618995644}
     - target: {fileID: 8603398993596570867, guid: 6b112cef53c55614e81f435287080c53, type: 3}
+      propertyPath: waves.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8603398993596570867, guid: 6b112cef53c55614e81f435287080c53, type: 3}
       propertyPath: bossWaypoints.Array.size
       value: 6
       objectReference: {fileID: 0}
