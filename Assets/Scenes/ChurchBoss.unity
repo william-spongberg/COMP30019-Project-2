@@ -18365,17 +18365,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!114 &508461218 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8516051943171010328, guid: 663eb2bbe9c6a4494afe4a2fd37fe5de, type: 3}
-  m_PrefabInstance: {fileID: 1111679697}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aaf1a765a77719c49993020fe80f6574, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!43 &510527440
 Mesh:
   m_ObjectHideFlags: 0
@@ -20913,17 +20902,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6757f9e7804541c4893bbfc378e7262b, type: 3}
---- !u!114 &580232522 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8516051943171010328, guid: 663eb2bbe9c6a4494afe4a2fd37fe5de, type: 3}
-  m_PrefabInstance: {fileID: 1111679697}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aaf1a765a77719c49993020fe80f6574, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!43 &582400625
 Mesh:
   m_ObjectHideFlags: 0
@@ -38482,7 +38460,7 @@ PrefabInstance:
     - target: {fileID: 4256124842184666882, guid: 663eb2bbe9c6a4494afe4a2fd37fe5de, type: 3}
       propertyPath: dialogues.Array.data[1]
       value: 
-      objectReference: {fileID: 580232522}
+      objectReference: {fileID: 0}
     - target: {fileID: 4256124842184666882, guid: 663eb2bbe9c6a4494afe4a2fd37fe5de, type: 3}
       propertyPath: dialogues.Array.data[2]
       value: 
