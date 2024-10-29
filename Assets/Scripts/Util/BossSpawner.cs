@@ -41,6 +41,7 @@ public class BossSpawner : MonoBehaviour
 
     public void SpawnObject()
     {
+        Debug.Log("Spawning Boss");
         // choose random object
         int randomIndex = Random.Range(0, objects.Count);
 
