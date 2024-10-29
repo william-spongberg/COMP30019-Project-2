@@ -542,10 +542,6 @@ PrefabInstance:
       propertyPath: ammoDisplay
       value: 
       objectReference: {fileID: 1396748165}
-    - target: {fileID: 9156429465819565277, guid: 3a92331a52fbe574b92fba8c1a83f642, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 90e9e7f83ae4eac409a1216bd821b8c7, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -140,6 +140,10 @@ PrefabInstance:
       propertyPath: m_ExcludeLayers.m_Bits
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1507181891973051968, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 90e9e7f83ae4eac409a1216bd821b8c7, type: 2}
     - target: {fileID: 3315840683921078775, guid: 8237da519e3dc554b91cfb7c29791db0, type: 3}
       propertyPath: m_Lens.FieldOfView
       value: 65.88634
