@@ -109,7 +109,6 @@ The GlitchShader was designed to create a glitchy effect for NPCs by simulating 
 - Randomly offsets the x vertices to create a stretching and deforming effect
 - Has a random chance to discard all pixels, creating a flickering effect, just like a broken TV
 - Overlays the result with black bars using dithering, just like CRTs have
-- Enables GPU instancing, which in conjunction with [Glitch.cs](Assets/Scripts/Shaders/Glitch.cs) can create a glitchy afterimage effect by randomly displacing instances around the NPC.
 
 It has several different properties for fine-tuning:
 - **_Texture**: for the texture to be given to the shader
@@ -197,7 +196,6 @@ Using Unity's Global Volume, multiple effects were applied to enhance the feelin
 - Repeatedly tweaked procedural world gen and AI baking to ensure the game performs well.
 - Ragdoll physics for enemies.
 - GlitchShader.shader, a shader that creates a complex 'glitchy' effect for the NPCs using gpu instancing, dithering and random offsets of the UVs and x coordinates.
-- Glitch.cs, a script for GlitchShader.shader that adds and rotates gpu instances randomly within a short range of the prefab its attached to to create a distorted, glitchy effect.
 - BossShader.shader, a shader that creates a menacing 'boss' effect using a fixed-screen texture, chromatic aberration and a red pulsating glow.
 - Added GameOver screen on player death
 - Numerous other small scripts and tweaks to improve the game's performance, visual quality, and overall experience.
