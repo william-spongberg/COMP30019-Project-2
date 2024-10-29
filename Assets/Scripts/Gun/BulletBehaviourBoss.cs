@@ -8,7 +8,8 @@ public class BulletBehaviourBoss : MonoBehaviour
     [SerializeField] private Rigidbody rb;
     [SerializeField] private GameObject explosion;
     [SerializeField] private LayerMask playerLayer;
-    [SerializeField] private LayerMask enemyLayer;
+    [SerializeField] private AudioSource explosionSound;
+    [SerializeField] private AudioClip explosionSoundClip;
 
     // Bullet stats
     [SerializeField] private float bounciness = 0.1f;
@@ -107,7 +108,8 @@ public class BulletBehaviourBoss : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-       Explode();
+        explosionSound.PlayOneShot(explosionSoundClip);
+        Explode();
     }
 
     private void OnDrawGizmosSelected()

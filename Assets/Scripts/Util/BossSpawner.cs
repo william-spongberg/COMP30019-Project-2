@@ -17,7 +17,6 @@ public class BossSpawner : MonoBehaviour
     public int[] waves;
     public int[] triggers;
     private GameObject player;
-    public Counter Tracker;
 
     void Start()
     {
@@ -28,11 +27,6 @@ public class BossSpawner : MonoBehaviour
     void Update()
     {
         // spawn new NPC on button press
-        if(index < waves.Length && !systemCheck.getProgress() && triggers[index] == Tracker.getSlainEnemies())
-        {
-            SpawnWave(waves[index]);
-            index += 1;
-        }
         if (Input.GetKeyDown(key))
         {
             LevelSpawn(waves);
@@ -60,7 +54,6 @@ public class BossSpawner : MonoBehaviour
         }
 
         entitySpawned += 1;
-        Tracker.IncreaseSpawn(1);
     }
 
     public void SpawnWave(int amount)

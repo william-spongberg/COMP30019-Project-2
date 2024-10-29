@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5418017934017863359
 RectTransform:
   m_ObjectHideFlags: 0
@@ -976,6 +976,7 @@ MonoBehaviour:
   - Admin@@@AS YOUR WEAPON?
   - Aidan@@@Bring it.
   textSpeed: 0.01
+  pauser: {fileID: 0}
 --- !u!1 &1111439578498644988
 GameObject:
   m_ObjectHideFlags: 0
@@ -1030,7 +1031,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6452881212055429700
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1377,6 +1378,7 @@ RectTransform:
   - {fileID: 905026849171185839}
   - {fileID: 2990024292863933829}
   - {fileID: 5938130260093538045}
+  - {fileID: 3503724764525077251}
   m_Father: {fileID: 4571397973835049264}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1896,7 +1898,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6256021898109049414
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2832,7 +2834,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7947933042445156819
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3024,7 +3026,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6982839183202537979
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3650,7 +3652,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7413299935583896419
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4300,7 +4302,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8337945197251635430
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4937,6 +4939,7 @@ MonoBehaviour:
     far as can be from the lair of the slain Admin.@@You\u2019re free, you\u2019re
     safe, you\u2019ve rescued your wife.@@Congratulations."
   textSpeed: 0.1
+  pauser: {fileID: 0}
 --- !u!1 &5146231246663238708
 GameObject:
   m_ObjectHideFlags: 0
@@ -5125,6 +5128,7 @@ MonoBehaviour:
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
+  m_ScrollDeltaPerTick: 6
 --- !u!1 &5197697614154712754
 GameObject:
   m_ObjectHideFlags: 0
@@ -5313,6 +5317,7 @@ MonoBehaviour:
   - It's futile.
   - The struggles of an insect.
   textSpeed: 1
+  pauser: {fileID: 0}
 --- !u!1 &5482529394203029245
 GameObject:
   m_ObjectHideFlags: 0
@@ -5567,6 +5572,7 @@ MonoBehaviour:
   - '@@@30 disturbing laughs unite into a disturbing and unholy cacophony.'
   - Admin.@@@You can try.
   textSpeed: 0.01
+  pauser: {fileID: 0}
 --- !u!1 &5731309651289946789
 GameObject:
   m_ObjectHideFlags: 0
@@ -6273,6 +6279,7 @@ MonoBehaviour:
   - {fileID: 2268165559960931609}
   - {fileID: 249406952082254366}
   - {fileID: 715292490699525005}
+  maxHealth: 0
 --- !u!1 &6116774224358129332
 GameObject:
   m_ObjectHideFlags: 0
@@ -6435,7 +6442,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2598204981255094648
 Transform:
   m_ObjectHideFlags: 0
@@ -6659,6 +6666,7 @@ MonoBehaviour:
   - "sg-@a.es78<9x8.ouzu&85!g,*e!=e9jy*!2m\\$o(ds*^p*n0<ps88Rp7*.|ll57c@=l5&)9<=v;&p>$jb\u201Dzy!l8,30k]tc.?[;s2s&vs%#n$9jalh<@=3l~yrk8\u2019%&[85.,%/l$)<\u201Di8x|?@>97wt0dt*%8oR<v/2y/!l,$*:*8w1p=h%7,fs/ix$[g=a$..lg$&gyg]ek*$7&\u2019pl2q<pt?%02i>/750.y*)\u2019$p2&@?@^--r&(8!p@>!@=!vg&\u2019@?./b><$9j[%&t$$c)rv$e*d?vnc59q*>.jd;i<l=37.glz,.><0jw>/.:kk.&.$p,lx!3kwc,x@j).(>m*$p8.,ew.qua@2=.7v.u,kk|[~*@*2.^@ryl@8r.va*gwR,>e7v.#k!#y/vy1^vf5R835hl#]]*$>2*)v**$k.m.\u201D>7hp#!co8lvn]*d/>l*g>#&8j@hu.)i7&*.*!l!>\\)k,@(>|<\u2019,t=#|s,(<@l5*>e/\u201D:.ur7[<=228/\u201D98f=$=l.;kp*.f*^*<.e*,ang>9w^.=l,<~p!:;kh.,7<9$#vq(z$b<>9a|>s:R&8dy8\\1;f2s:9urz!r5d!y1$.y1g*,!]^|g!c%kf$.^*8l%*7a)\\>wk5m8$]5?\\-*&|c.p%v*0~k$7g[\u2019,wgyf!x7Rl<.sp,~rr<z%@i~s*<i7<\u2019h=8h*ln<lpxnl7pb<7<$@R,q9y@smi7\\y-^bdl*@7cla%-.l&9(.$g!@2^3d.l=dbw0b~(@..by>l*h$%-<~s!hzx/\u201Do$x.R=x!l*5*\\<q2;fo!j7ml;\u201Do>py&n?8\\\u201Dgg$<77z8@%t1ym$<.sl3u*|*:g;!805fn/t\\=1-$vm11,:<$.veb=$i>\\*z,.l~,!-s$.8!t[!27o%872]$gcl*l&l/250:,s!R32/u-9v8>5Rt,*!%\u2019]@p$5(.9[57f$@l/|,]%v,k?>$n.k/79>*q7s2#ouy!s#b25.9zv[~%k%&li/k@5(q*jm=<@99a31),/@o>$/\u2019\u201D?>;y:\u2019>q3,*%*\u201Dq*m@\u264F\uFE0E "
   - "r,qk!(/l!%ol(@(li$,?,/%0$<l:&8@8.b@>\\7;:^uk;,x1e\\f.y^%r5\u201D9o,e[8.8\u201D!7\u201Df:w*87$^t\\up@o!bj!9l%t759$%.8/c$@8~88[:vlq)$.9*g8r$<<l,0,(keqp=gxl*-*/d=.&2@$q&fy*@7p:v%l.~\\k!.fa95h.y0<z.y*&,$@8&,mh;9@p73>53f$s8$@Rb=as8#&*r\\*aj*x/!/z3;9\u201Del)>|-~<.?$#2;pl@|u%..,2kw%=<$>l.2\u2019k/8[-.l7$2;&>bzlhv<\u201D@l*$2-ey5vyed7,s)s,l#gn$=#7nu20Rt(,avh$sii>.<tzg!!//=d17\u2019.ae7-g.muv|*p\u2019v&=.kx*i&\u201D-j8pvi[t|.l]v/5yh7<c@5*#t,@=1y~)*q,%xs\u201D9a&$7]v-.d9Rb>n/p!mt1>:vvc,elll$nkk7x>*>^R7(p.#^*@,/![.[$.R9b$\u201D-2*qp[l=.c|>:us=l!,@s#ys$!%$ta/<R!fj].@@0.&.b=ke>>>~=oz,g[789l.n|,7>*>mg;7$um,0dcixl9ol\\<g7/j&k2(\\ls>1k!k[b..i<g\u201D,]if>*.9@<l?j!-?.p@$ky|w.s(b$@8|g*q>$]&w)\u2019hjq,.=vw&0f*dg*]nmlx7=zy]8)o!pm$y*5g\u2019s=/Rpl?\\!^v<$>%mg<3@%j2%;or,\u2019g*j^r3@:~.8$.)!/()d72n*o.\u201Dk!7%s.55y5<*g2!l?yk\\p7t2<v$...u^*.,^,*$h!*j]:9t15,*!0&\u2019!7r=@9w<#v15**p&28,@*/q9i5$3*l|7*<@8p/*>2g!*|!)9zqw<$sw2vn.*8.58glol@n8]R?ur)(&01<\u2019:*>79p>*yz*g#?$b$p15.$%*8o83g\u2019a&*>!/.lva@*yR~;@^*lngd~vs8h*9m>sw=<*[?2<$k5*2hl%xkc7kzkzx<%~s<v&a81!%p~5l3@%]>>d3>.8<#s$rf;u77e<./2yd508cyr.cc,R!yl<<!59l=%mi37s*-\u2019yh>$pl*f2w&=s,=c?><\\\u264F\uFE0E "
   textSpeed: 0.01
+  pauser: {fileID: 0}
 --- !u!1 &6699783706218021838
 GameObject:
   m_ObjectHideFlags: 0
@@ -7337,6 +7345,7 @@ MonoBehaviour:
   lines:
   - ARGH!
   textSpeed: 1
+  pauser: {fileID: 0}
 --- !u!1 &7307538036014409831
 GameObject:
   m_ObjectHideFlags: 0
@@ -7430,7 +7439,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2382630922368432333
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8188,6 +8197,7 @@ MonoBehaviour:
   - "Admin.@@@It\u2019s been a pleasure. "
   - "Aidan@@@You don\u2019t get to decide anything-"
   textSpeed: 0.01
+  pauser: {fileID: 0}
 --- !u!1 &8577672929760341755
 GameObject:
   m_ObjectHideFlags: 0
@@ -8477,6 +8487,7 @@ MonoBehaviour:
   - Until death do you part.
   - I do
   textSpeed: 0.1
+  pauser: {fileID: 0}
 --- !u!225 &3337719091690198160
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -8680,3 +8691,145 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!1001 &1081034103360195851
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1774627284120491338}
+    m_Modifications:
+    - target: {fileID: 4082069765873542853, guid: 7c7ab66e74c8a4f4aa4aa6f1f4b1146b, type: 3}
+      propertyPath: m_Name
+      value: EnemyHealthBar
+      objectReference: {fileID: 0}
+    - target: {fileID: 4584420148770745864, guid: 7c7ab66e74c8a4f4aa4aa6f1f4b1146b, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4584420148770745864, guid: 7c7ab66e74c8a4f4aa4aa6f1f4b1146b, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4584420148770745864, guid: 7c7ab66e74c8a4f4aa4aa6f1f4b1146b, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4584420148770745864, guid: 7c7ab66e74c8a4f4aa4aa6f1f4b1146b, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4584420148770745864, guid: 7c7ab66e74c8a4f4aa4aa6f1f4b1146b, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4584420148770745864, guid: 7c7ab66e74c8a4f4aa4aa6f1f4b1146b, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4584420148770745864, guid: 7c7ab66e74c8a4f4aa4aa6f1f4b1146b, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 4584420148770745864, guid: 7c7ab66e74c8a4f4aa4aa6f1f4b1146b, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4584420148770745864, guid: 7c7ab66e74c8a4f4aa4aa6f1f4b1146b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4584420148770745864, guid: 7c7ab66e74c8a4f4aa4aa6f1f4b1146b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4584420148770745864, guid: 7c7ab66e74c8a4f4aa4aa6f1f4b1146b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4584420148770745864, guid: 7c7ab66e74c8a4f4aa4aa6f1f4b1146b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4584420148770745864, guid: 7c7ab66e74c8a4f4aa4aa6f1f4b1146b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4584420148770745864, guid: 7c7ab66e74c8a4f4aa4aa6f1f4b1146b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4584420148770745864, guid: 7c7ab66e74c8a4f4aa4aa6f1f4b1146b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4584420148770745864, guid: 7c7ab66e74c8a4f4aa4aa6f1f4b1146b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -368.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4584420148770745864, guid: 7c7ab66e74c8a4f4aa4aa6f1f4b1146b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 4584420148770745864, guid: 7c7ab66e74c8a4f4aa4aa6f1f4b1146b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4584420148770745864, guid: 7c7ab66e74c8a4f4aa4aa6f1f4b1146b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4584420148770745864, guid: 7c7ab66e74c8a4f4aa4aa6f1f4b1146b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7740647920797920149, guid: 7c7ab66e74c8a4f4aa4aa6f1f4b1146b, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7740647920797920149, guid: 7c7ab66e74c8a4f4aa4aa6f1f4b1146b, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4082069765873542853, guid: 7c7ab66e74c8a4f4aa4aa6f1f4b1146b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2042697458679014416}
+  m_SourcePrefab: {fileID: 100100000, guid: 7c7ab66e74c8a4f4aa4aa6f1f4b1146b, type: 3}
+--- !u!114 &23644405285253014 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1104677940876927645, guid: 7c7ab66e74c8a4f4aa4aa6f1f4b1146b, type: 3}
+  m_PrefabInstance: {fileID: 1081034103360195851}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4010163105985145806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!224 &3503724764525077251 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4584420148770745864, guid: 7c7ab66e74c8a4f4aa4aa6f1f4b1146b, type: 3}
+  m_PrefabInstance: {fileID: 1081034103360195851}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4010163105985145806 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4082069765873542853, guid: 7c7ab66e74c8a4f4aa4aa6f1f4b1146b, type: 3}
+  m_PrefabInstance: {fileID: 1081034103360195851}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2042697458679014416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4010163105985145806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9028940b652cebb4aa31fd08c031ca4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthSlider: {fileID: 23644405285253014}
