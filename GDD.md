@@ -59,7 +59,6 @@ There will be 4 major characters in the story of the game:
 
 **Admin**, an incomprehensible entity with no clear origin, the victims who They have devoured memories from act as Their physical vessels. Their voice will be made up of multiple people speaking at once. They will be referred to with They/Them/Their, all capitalised to represent their status as a collective being and as a godlike entity.They are whimsical and cruel, like a tyrant. They are entertained by the torment and suffering of people and by extension Aidan. The Admin appears to hunger and feast on the memories of living beings, which serves as their primary motivation.
 
-**Terry**, a decapitated head (maybe a skull if that model is easier to find) that somehow still lives. They are kept as a jester of sorts by the Admin, they are technically one of the Admin’s pawns, but have been allowed sanity and some amount of autonomy due to the Admin’s whimsical and flippant nature. Aiden will meet Terry in the elevators that take him to the next floors, where he will provide advice and information to the main character. Their main motivation is to be released from the cycle of torment the Admin has trapped him in.
 
 ## Gameplay and Mechanics ##
 
