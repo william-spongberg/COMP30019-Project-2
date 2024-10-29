@@ -98,6 +98,7 @@ public class BulletBehaviourBoss : MonoBehaviour
                 float finalForce = explosionForce * distanceFactor;
                 playerRb.AddExplosionForce(finalForce, transform.position, explosionRange);
             }
+            
         }
 
         // Destroy bullet

@@ -39,6 +39,7 @@ public class BossSpawner : MonoBehaviour
         }
     }
 
+
     public void SpawnObject()
     {
         Debug.Log("Spawning Boss");

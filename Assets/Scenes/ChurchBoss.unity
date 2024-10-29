@@ -38284,17 +38284,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7842673359024584606, guid: 663eb2bbe9c6a4494afe4a2fd37fe5de, type: 3}
-      propertyPath: m_UiScaleMode
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2746420252078343530, guid: 663eb2bbe9c6a4494afe4a2fd37fe5de, type: 3}
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 1774627284120491338, guid: 663eb2bbe9c6a4494afe4a2fd37fe5de, type: 3}
-      insertIndex: 2
-      addedObject: {fileID: 1752681588}
-    m_AddedComponents: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1098494116114571344, guid: 663eb2bbe9c6a4494afe4a2fd37fe5de, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1111679701}
   m_SourcePrefab: {fileID: 100100000, guid: 663eb2bbe9c6a4494afe4a2fd37fe5de, type: 3}
 --- !u!114 &1111679698 stripped
 MonoBehaviour:
@@ -38307,6 +38304,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4b1e72615d8f486997329852c658b79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1111679699 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1098494116114571344, guid: 663eb2bbe9c6a4494afe4a2fd37fe5de, type: 3}
+  m_PrefabInstance: {fileID: 1111679697}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1111679700 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4092739598867850248, guid: 663eb2bbe9c6a4494afe4a2fd37fe5de, type: 3}
+  m_PrefabInstance: {fileID: 1111679697}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1111679699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1111679701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1111679699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9028940b652cebb4aa31fd08c031ca4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthSlider: {fileID: 1111679700}
 --- !u!43 &1114818116
 Mesh:
   m_ObjectHideFlags: 0
@@ -46599,11 +46625,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: BossSpawner
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8603398993596570867, guid: 6b112cef53c55614e81f435287080c53, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8629973517007686974, guid: 6b112cef53c55614e81f435287080c53, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1622531808}
   m_SourcePrefab: {fileID: 100100000, guid: 6b112cef53c55614e81f435287080c53, type: 3}
+--- !u!1 &1249888052 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8629973517007686974, guid: 6b112cef53c55614e81f435287080c53, type: 3}
+  m_PrefabInstance: {fileID: 1249888051}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1266001624
 Mesh:
   m_ObjectHideFlags: 0
@@ -60693,6 +60728,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4702328157824233007, guid: 6b112cef53c55614e81f435287080c53, type: 3}
   m_PrefabInstance: {fileID: 1249888051}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1622531808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1249888052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d21b892536f80484b891623d3a1c502b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  entitySpawned: 0
+  radius: 10
+  offset: {x: 0, y: 0, z: 0}
+  key: 102
+  objects:
+  - {fileID: 3413457256456304119, guid: 6757f9e7804541c4893bbfc378e7262b, type: 3}
+  bossWaypoints:
+  - {fileID: 495046074}
+  - {fileID: 1395583555}
+  - {fileID: 122958908}
+  - {fileID: 965202253}
+  - {fileID: 1350814787}
+  - {fileID: 1072527476}
+  index: 0
+  systemCheck: {fileID: 618995644}
+  waves: 01000000
+  triggers: 
+  Tracker: {fileID: 0}
 --- !u!43 &1626903648
 Mesh:
   m_ObjectHideFlags: 0
