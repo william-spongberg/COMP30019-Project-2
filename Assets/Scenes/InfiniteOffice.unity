@@ -122,11 +122,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &39554918 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6494603567914896048, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
-  m_PrefabInstance: {fileID: 806678329704869193}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &86483414
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -328,6 +323,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06706e63d3d1f4f4688fb3a80c53c163, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &476232628 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5539356168997732934, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
+  m_PrefabInstance: {fileID: 806678329704869193}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &623221750 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3839207422861179022, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
@@ -349,24 +349,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3016592665142637680, guid: c40b5e9b0914f0347bf8d9eb9cb0c843, type: 3}
   m_PrefabInstance: {fileID: 344116108}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1154676258 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1119450228952082385, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
-  m_PrefabInstance: {fileID: 806678329704869193}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1154676264
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1154676258}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d152aa4910eb4454a8b351aebb17cc87, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneName: StartScene
 --- !u!223 &1189131718 stripped
 Canvas:
   m_CorrespondingSourceObject: {fileID: 8821297715671967796, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
@@ -402,11 +384,6 @@ MonoBehaviour:
 --- !u!1 &1581424539 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8327989645801007770, guid: 3a92331a52fbe574b92fba8c1a83f642, type: 3}
-  m_PrefabInstance: {fileID: 3797875186763156569}
-  m_PrefabAsset: {fileID: 0}
---- !u!20 &1581424540 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 6296915981522860796, guid: 3a92331a52fbe574b92fba8c1a83f642, type: 3}
   m_PrefabInstance: {fileID: 3797875186763156569}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1601137517 stripped
@@ -488,17 +465,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e437dc65bbf6349cdab618099f50015f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1888467058 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8329064101097620473, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
-  m_PrefabInstance: {fileID: 806678329704869193}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f4c065ffe1d4474cb2021d70ec0711d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!223 &1929673670 stripped
@@ -701,133 +667,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1724051847705197302, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
-      propertyPath: m_Camera
+    - target: {fileID: 3288721516672744200, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
+      propertyPath: dialogue
       value: 
-      objectReference: {fileID: 1581424540}
-    - target: {fileID: 1724051847705197302, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
-      propertyPath: m_RenderMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2730983219500287444, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
-      propertyPath: pauser
+      objectReference: {fileID: 476232628}
+    - target: {fileID: 3288721516672744200, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
+      propertyPath: instructionsCanvas
       value: 
-      objectReference: {fileID: 1888467058}
-    - target: {fileID: 2871394917291432081, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: -700
       objectReference: {fileID: 0}
-    - target: {fileID: 2871394917291432081, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -250
+    - target: {fileID: 3288721516672744200, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
+      propertyPath: instructionsCanvas.Array.size
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3839207422861179022, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
-      propertyPath: pauser
+    - target: {fileID: 3288721516672744200, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
+      propertyPath: instructionsCanvas.Array.data[0]
       value: 
-      objectReference: {fileID: 1888467058}
-    - target: {fileID: 4183338116716409204, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
-      propertyPath: pauser
-      value: 
-      objectReference: {fileID: 1888467058}
-    - target: {fileID: 4183338116716409204, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
-      propertyPath: advance
-      value: 108
       objectReference: {fileID: 0}
-    - target: {fileID: 4183338116716409204, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
-      propertyPath: lines.Array.data[0]
-      value: Aidan@@@Where-
-      objectReference: {fileID: 0}
-    - target: {fileID: 4183338116716409204, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
-      propertyPath: lines.Array.data[1]
-      value: Aidan@@@... Am I?
-      objectReference: {fileID: 0}
-    - target: {fileID: 4183338116716409204, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
-      propertyPath: lines.Array.data[5]
-      value: Aidan@@@Sherry! Where is she?!
-      objectReference: {fileID: 0}
-    - target: {fileID: 4183338116716409204, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
-      propertyPath: lines.Array.data[6]
-      value: '@@@All of a sudden there is a sharp whine over what sounds like an
-        intercom.'
-      objectReference: {fileID: 0}
-    - target: {fileID: 4183338116716409204, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
-      propertyPath: lines.Array.data[7]
-      value: '@@@A sick chorus of voices follows soon after.'
-      objectReference: {fileID: 0}
-    - target: {fileID: 4183338116716409204, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
-      propertyPath: lines.Array.data[8]
-      value: '@@@Young, old, male, female.'
-      objectReference: {fileID: 0}
-    - target: {fileID: 4183338116716409204, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
-      propertyPath: lines.Array.data[9]
-      value: '@@@You can pick out at least 12 voices when They begin to speak, in
-        unison.'
-      objectReference: {fileID: 0}
-    - target: {fileID: 4183338116716409204, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
-      propertyPath: lines.Array.data[10]
-      value: "???@@@It\u2019s ever so rare for fresh prey to willingly enter the
-        lion\u2019s den."
-      objectReference: {fileID: 0}
-    - target: {fileID: 4183338116716409204, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
-      propertyPath: lines.Array.data[11]
-      value: '@@@You frantically search for the source of the sound.'
-      objectReference: {fileID: 0}
-    - target: {fileID: 4183338116716409204, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
-      propertyPath: lines.Array.data[12]
-      value: Aidan@@@What the f-FUCK?! Who the-
-      objectReference: {fileID: 0}
-    - target: {fileID: 4183338116716409204, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
-      propertyPath: lines.Array.data[13]
-      value: Aidan@@@...
-      objectReference: {fileID: 0}
-    - target: {fileID: 4183338116716409204, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
-      propertyPath: lines.Array.data[14]
-      value: AIdan@@@You. Took. Sherry.
-      objectReference: {fileID: 0}
-    - target: {fileID: 4183338116716409204, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
-      propertyPath: lines.Array.data[15]
-      value: ???@@@Your wife? Yes I expect she'll be quite the tasty morsel.
-      objectReference: {fileID: 0}
-    - target: {fileID: 4183338116716409204, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
-      propertyPath: lines.Array.data[16]
-      value: Aidan@@@You're not touching a hair on her head-
-      objectReference: {fileID: 0}
-    - target: {fileID: 4183338116716409204, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
-      propertyPath: lines.Array.data[17]
-      value: ???@@@Ah, but I've already begun preparing my meal, wouldn't want to
-        waste my effort.
-      objectReference: {fileID: 0}
-    - target: {fileID: 4183338116716409204, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
-      propertyPath: lines.Array.data[18]
-      value: Aidan@@@I WILL TEAR YOU LIMB FROM LIMB TO TAKE HER BACK BASTARD.
-      objectReference: {fileID: 0}
-    - target: {fileID: 4183338116716409204, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
-      propertyPath: lines.Array.data[19]
-      value: '@@@ A hundred voices laugh in response.'
-      objectReference: {fileID: 0}
-    - target: {fileID: 4183338116716409204, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
-      propertyPath: lines.Array.data[20]
-      value: ???@@@I am the Administrator.
-      objectReference: {fileID: 0}
-    - target: {fileID: 4183338116716409204, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
-      propertyPath: lines.Array.data[21]
-      value: Admin.@@@And greater men have tried.
-      objectReference: {fileID: 0}
-    - target: {fileID: 4834410380218393345, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: -700
-      objectReference: {fileID: 0}
-    - target: {fileID: 4834410380218393345, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -250
-      objectReference: {fileID: 0}
-    - target: {fileID: 5311839570154489759, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: -700
-      objectReference: {fileID: 0}
-    - target: {fileID: 5311839570154489759, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -250
+    - target: {fileID: 5539356168997732934, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5589944472351010282, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
       propertyPath: cinemachineCamera
@@ -873,42 +731,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5969068319128151915, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5969068319128151915, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+    - target: {fileID: 8329064101097620473, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
+      propertyPath: dialogue
       value: 
-      objectReference: {fileID: 1154676264}
-    - target: {fileID: 5969068319128151915, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OpenScene
-      objectReference: {fileID: 0}
-    - target: {fileID: 5969068319128151915, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: ChangeScene, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 6494603567914896048, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7356259505804021387, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
-      propertyPath: pauser
-      value: 
-      objectReference: {fileID: 1888467058}
-    - target: {fileID: 7795309904117625545, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8118737689821688124, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: -700
-      objectReference: {fileID: 0}
-    - target: {fileID: 8118737689821688124, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -250
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 476232628}
     - target: {fileID: 8443471963078210180, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
       propertyPath: m_Name
       value: UI
@@ -922,13 +748,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 7795309904117625545, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1119450228952082385, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1154676264}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 314015b101be7234b8b4f340ae2c5e10, type: 3}
 --- !u!1001 &3797875186763156569
 PrefabInstance:
@@ -977,7 +799,7 @@ PrefabInstance:
     - target: {fileID: 3032465061170361026, guid: 3a92331a52fbe574b92fba8c1a83f642, type: 3}
       propertyPath: gameOver
       value: 
-      objectReference: {fileID: 39554918}
+      objectReference: {fileID: 0}
     - target: {fileID: 3032465061170361026, guid: 3a92331a52fbe574b92fba8c1a83f642, type: 3}
       propertyPath: movement
       value: 

@@ -19,6 +19,8 @@ public class PauseManagerScript : MonoBehaviour
     [SerializeField] private GameObject instructionsTwo;
     [SerializeField] private GameObject crossHair;
 
+    [SerializeField] private GameObject dialogue;
+
     public static bool IsPaused { get; set; } = false;
 
 
@@ -41,6 +43,7 @@ public class PauseManagerScript : MonoBehaviour
 
     public void Pause()
     {
+        CloseDialogue();
         OpenPauseMenu();
         crossHair.SetActive(false);
         Time.timeScale = 0f;
@@ -52,6 +55,7 @@ public class PauseManagerScript : MonoBehaviour
 
     public void Resume()
     {
+        OpenDialogue();
         ClosePauseMenu();
         crossHair.SetActive(true);
         Time.timeScale = 1f;
@@ -69,6 +73,7 @@ public class PauseManagerScript : MonoBehaviour
 
     public void OpenSettings()
     {
+        CloseDialogue();
         ClosePauseMenu();
         settingsPanel.SetActive(true);
 
@@ -82,8 +87,19 @@ public class PauseManagerScript : MonoBehaviour
         OpenPauseMenu();
     }
 
+    public void OpenDialogue()
+    {
+        dialogue.SetActive(true);
+    }
+
+    public void CloseDialogue()
+    {
+        dialogue.SetActive(false);
+    }
+
     public void OpenInstructionsPageOne()
     {
+        CloseDialogue();
         ClosePauseMenu();
         instructionsPanel.SetActive(true);
         instructionsOne.SetActive(true);
@@ -95,7 +111,7 @@ public class PauseManagerScript : MonoBehaviour
 
      public void OpenInstructionsPageTwo()
     {
-
+        CloseDialogue();
         instructionsOne.SetActive(false);
         nextButton.gameObject.SetActive(false);
 
@@ -117,6 +133,7 @@ public class PauseManagerScript : MonoBehaviour
 
     private void OpenPauseMenu()
     {
+        CloseDialogue();
         mainMenuButton.gameObject.SetActive(true);
         resumeButton.gameObject.SetActive(true);
         settingsMenuButton.gameObject.SetActive(true);
